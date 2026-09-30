@@ -1,12 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from 'next';
-import { ArrowRight, Scale, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ChevronDown, Scale, ShieldCheck } from 'lucide-react';
 import { CaseStoryCard } from '@/components/marketing/CaseStoryPage';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ResultsExplorer } from '@/components/marketing/ResultsExplorer';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
-import { caseStories } from '@/lib/marketing/data/caseStories';
+import { caseStoryLinks } from '@/lib/marketing/data/caseStories';
 import { caseStoryPath, flagshipResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 
@@ -16,24 +16,11 @@ export const metadata: Metadata = {
   alternates: localizedAlternates('/results'),
 };
 
-const recentPublications = [
-  {
-    amount: '$2.3M',
-    label: 'Jury verdict',
-    title: 'Riverside Superior Court jury verdict',
-    date: 'December 26, 2024',
-    href: '/news/riverside-jury-verdict-2-3-million',
-  },
-  {
-    amount: '$2.2M',
-    label: 'Confidential settlement',
-    title: 'Sexual molestation and sexual battery lawsuit',
-    date: 'December 26, 2024',
-    href: '/news/sexual-molestation-battery-settlement-2-2-million',
-  },
-];
+/** The case stories section shows this many, newest first; the rest open on request. */
+const STORIES_SHOWN = 6;
 
 export default function ResultsPage() {
+  const storyLinks = caseStoryLinks();
   return (
     <main className="results-page">
       <SiteHeader />
@@ -65,17 +52,22 @@ export default function ResultsPage() {
       </section>
 
       <section className="recent-results case-stories-section" aria-labelledby="case-stories-title">
-        <div className="recent-results-heading"><div><p className="eyebrow">Case stories</p><h2 id="case-stories-title">The story behind the result.</h2></div><p>How selected cases unfolded, from what happened to the verdict or settlement.</p></div>
-        <div className="case-story-grid">
-          {caseStories.map((story) => <CaseStoryCard story={story} key={story.slug} />)}
+        <div className="recent-results-heading"><div><p className="eyebrow">Case stories</p><h2 id="case-stories-title">The story behind the result.</h2></div><p>How selected cases unfolded, from what happened to the verdict or settlement. Newest first.</p></div>
+        <div className="case-story-grid is-compact">
+          {storyLinks.slice(0, STORIES_SHOWN).map((link) => <CaseStoryCard link={link} key={link.href} />)}
         </div>
-      </section>
-
-      <section className="recent-results" aria-labelledby="recent-results-title">
-        <div className="recent-results-heading"><div><p className="eyebrow">Recently published</p><h2 id="recent-results-title">Recent firm announcements.</h2></div><p>These published firm updates provide more context about two recent outcomes.</p></div>
-        <div className="recent-results-grid">
-          {recentPublications.map((item) => <a href={item.href} key={item.href}><span>{item.label} · {item.date}</span><strong>{item.amount}</strong><h3>{item.title}</h3><p>Read the announcement <ArrowRight aria-hidden="true" /></p></a>)}
-        </div>
+        {storyLinks.length > STORIES_SHOWN ? (
+          <details className="case-story-all">
+            <summary>
+              <span className="case-story-all-closed">Show all {storyLinks.length} case stories</span>
+              <span className="case-story-all-open">Show fewer</span>
+              <ChevronDown aria-hidden="true" />
+            </summary>
+            <div className="case-story-grid is-compact">
+              {storyLinks.slice(STORIES_SHOWN).map((link) => <CaseStoryCard link={link} key={link.href} />)}
+            </div>
+          </details>
+        ) : null}
       </section>
 
       <ResultsExplorer />

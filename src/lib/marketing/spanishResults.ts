@@ -22,6 +22,7 @@ const titles: Record<string, string> = {
   'Elementary school boys molested by a teacher': 'Alumnos de primaria abusados sexualmente por un maestro',
   'Huntington Beach student molested by her teacher and coach': 'Estudiante de Huntington Beach abusada por su maestro y entrenador',
   'Student suffers skull fracture and brain bleed': 'Estudiante sufre fractura de cráneo y hemorragia cerebral',
+  'Mother and her children hurt in a Fontana intersection crash': 'Madre e hijos lesionados en un choque en una intersección de Fontana',
   'Riverside Superior Court jury verdict': 'Veredicto del jurado en el Tribunal Superior de Riverside',
   'Sexual molestation and sexual battery lawsuit': 'Demanda por abuso sexual y agresión sexual',
   'Personal injury settlement': 'Acuerdo por lesiones personales',
@@ -113,6 +114,7 @@ function translateDetail(detail: string) {
     .replaceAll('Orange County', 'Condado de Orange')
     .replaceAll('Riverside County', 'Condado de Riverside')
     .replaceAll('Settlement and arbitration award', 'Acuerdo y laudo arbitral')
+    .replaceAll('Combined settlement for five injured people', 'Acuerdo combinado para cinco personas lesionadas')
     .replaceAll('Details not published', 'Detalles no publicados')
     .replaceAll('Details confidential', 'Detalles confidenciales')
     .replaceAll('Confidential matter', 'Asunto confidencial')

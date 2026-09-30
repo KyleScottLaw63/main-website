@@ -39,9 +39,9 @@ Each card states only what the firm's own record supports. The $5.75M card (Kody
   - $697,500: an email states $45,000;
   - $430,000: another closing statement shows $255,000.
 
-**"$50+ million recovered."** The home page's trust strip ("Más de $50 millones recuperados" on /es, both over "Published verdicts & settlements") states the total of the published results: $54,016,288.54 on 2026-10-01. `results.test.ts` fails if removing results takes that total under $50 million; the claim must then change with them. The labels in that strip wrap within their cell rather than running into the next one.
+**"$50+ million recovered."** The home page's trust strip ("Más de $50 millones recuperados" on /es, both over "Published verdicts & settlements") states the total of the published results: $56,716,288.54 on 2026-10-01, with the $2.7M settlement from its case story. `results.test.ts` fails if removing results takes that total under $50 million; the claim must then change with them. The labels in that strip wrap within their cell rather than running into the next one.
 
-**Case stories.** The story behind a result, on its own page, attached to that result's card: [case-stories.md](case-stories.md). Only stories the attorney approved, never a matter on hold, and never the drafts' internal amounts or notes.
+**Case stories.** The story behind a result, on its own page: [case-stories.md](case-stories.md). Only stories the attorney approved (all twelve of the 2026-09-30 draft, per the owner on 2026-10-01), and never the drafts' internal amounts or notes. A confidential settlement's story shows no amount and is never paired with a result card. The $2.7M Fontana settlement came onto the results list with its story, as a combined figure for five injured people, and says so on its card.
 
 ## Fees and costs: what a client pays without a recovery
 

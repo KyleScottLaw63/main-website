@@ -4,28 +4,34 @@ import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
-import { caseStories, caseStoryResult, type CaseStory } from '@/lib/marketing/data/caseStories';
+import { caseStoryHeadline, caseStoryLinks, type CaseStory, type CaseStoryLink } from '@/lib/marketing/data/caseStories';
 import { caseStoryPath, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { SITE_URL } from '@/lib/marketing/site';
 
-/** A case story's card: in the case stories section of /results and under "More case stories". */
-export function CaseStoryCard({ story }: { story: CaseStory }) {
-  const result = caseStoryResult(story);
+/** Figures that are words ("Confidential", "New trial") are set smaller than amounts; long amounts too. */
+function figureClass(base: string, figure: string) {
+  if (!figure.startsWith('$')) return `${base} is-text`;
+  return figure.length > 8 ? `${base} is-long` : base;
+}
+
+/** One story behind a result: a case story or a published case announcement (the case stories section of /results, "More case stories"). */
+export function CaseStoryCard({ link }: { link: CaseStoryLink }) {
   return (
-    <Link className="case-story-card" href={caseStoryPath(story.slug)}>
-      <span className="case-story-card-kicker">{resultOutcomeLabel(result)}</span>
-      <strong>{result.amount}</strong>
-      <h3>{result.title}</h3>
-      <p>{story.summary}</p>
-      <span className="case-story-card-cta">Read the case story <ArrowRight aria-hidden="true" /></span>
+    <Link className="case-story-card" href={link.href}>
+      <span className="case-story-card-kicker">{link.kicker}</span>
+      <strong className={figureClass('case-story-card-figure', link.figure)}>{link.figure}</strong>
+      <h3>{link.title}</h3>
+      <p>{link.summary}</p>
+      <span className="case-story-card-cta">Read the story <ArrowRight aria-hidden="true" /></span>
     </Link>
   );
 }
 
 export function CaseStoryPage({ story }: { story: CaseStory }) {
-  const result = caseStoryResult(story);
-  const pageUrl = `${SITE_URL}${caseStoryPath(story.slug)}`;
-  const moreStories = caseStories.filter((item) => item.slug !== story.slug);
+  const headline = caseStoryHeadline(story);
+  const path = caseStoryPath(story.slug);
+  const pageUrl = `${SITE_URL}${path}`;
+  const moreStories = caseStoryLinks().filter((link) => link.href !== path).slice(0, 3);
   const largest = Math.max(...(story.comparison?.figures ?? []).map((figure) => figure.value));
   const schema = {
     '@context': 'https://schema.org',
@@ -34,7 +40,7 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
         '@type': 'Article',
         '@id': `${pageUrl}#article`,
         url: pageUrl,
-        headline: result.title,
+        headline: headline.title,
         description: story.summary,
         datePublished: story.published,
         dateModified: story.published,
@@ -49,7 +55,7 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
           { '@type': 'ListItem', position: 2, name: 'Verdicts & Settlements', item: `${SITE_URL}/results` },
-          { '@type': 'ListItem', position: 3, name: result.title, item: pageUrl },
+          { '@type': 'ListItem', position: 3, name: headline.title, item: pageUrl },
         ],
       },
     ],
@@ -68,15 +74,15 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
             </nav>
             <div className="case-story-hero-grid">
               <div>
-                <p className="case-story-kicker"><span>Case story</span>{resultOutcomeLabel(result)}</p>
-                <strong className={result.amount.length > 8 ? 'case-story-amount is-long' : 'case-story-amount'}>{result.amount}</strong>
-                <h1 id="case-story-title">{result.title}</h1>
+                <p className="case-story-kicker"><span>Case story</span>{resultOutcomeLabel(headline)}</p>
+                <strong className={figureClass('case-story-amount', headline.figure)}>{headline.figure}</strong>
+                <h1 id="case-story-title">{headline.title}</h1>
                 <p className="case-story-dek">{story.summary}</p>
               </div>
               <aside className="case-story-facts" aria-label="Case at a glance">
                 <dl>
-                  <div><dt><Gavel aria-hidden="true" />Outcome</dt><dd>{result.outcome}</dd></div>
-                  {result.year ? <div><dt><CalendarDays aria-hidden="true" />Year</dt><dd>{result.year}</dd></div> : null}
+                  <div><dt><Gavel aria-hidden="true" />Outcome</dt><dd>{headline.confidential ? 'Confidential settlement' : headline.outcome}</dd></div>
+                  {headline.year ? <div><dt><CalendarDays aria-hidden="true" />Year</dt><dd>{headline.year}</dd></div> : null}
                   <div><dt><Landmark aria-hidden="true" />Court</dt><dd>{story.court}</dd></div>
                   <div><dt><Scale aria-hidden="true" />Practice area</dt><dd><Link href={story.practiceArea.href}>{story.practiceArea.label}</Link></dd></div>
                 </dl>
@@ -139,9 +145,9 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
         <section className="case-story-more" aria-labelledby="case-story-more-title">
           <div className="case-story-more-heading">
             <div><p className="eyebrow">More case stories</p><h2 id="case-story-more-title">Read another case.</h2></div>
-            <Link href="/results">All verdicts and settlements <ArrowRight aria-hidden="true" /></Link>
+            <Link href="/results#case-stories-title">All case stories <ArrowRight aria-hidden="true" /></Link>
           </div>
-          <div className="case-story-grid">{moreStories.map((item) => <CaseStoryCard story={item} key={item.slug} />)}</div>
+          <div className="case-story-grid is-compact">{moreStories.map((link) => <CaseStoryCard link={link} key={link.href} />)}</div>
         </section>
       ) : null}
 

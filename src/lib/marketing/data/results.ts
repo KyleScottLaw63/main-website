@@ -74,6 +74,18 @@ export const flagshipResults: CaseResult[] = [
 
 export const historicalResults: CaseResult[] = [
   {
+    // Its case story (2026-10-01): the insurer accepted a joint demand for five injured people, three of
+    // them the firm's clients; the firm's records date the acceptance to September 2026. The card, like
+    // the story, gives the combined figure and says so.
+    amount: '$2.7M',
+    title: 'Mother and her children hurt in a Fontana intersection crash',
+    detail: 'San Bernardino Superior Court · Combined settlement for five injured people',
+    category: 'Auto & transportation',
+    outcome: 'Settlement',
+    year: 2026,
+    story: 'fontana-intersection-crash-settlement',
+  },
+  {
     // The firm's post of Dec. 26, 2024 (kjslaw.com/2024/12/26/kyle-scott-wins-jury-verdict-in-riverside-superior-court/,
     // now /news/riverside-jury-verdict-2-3-million); it published no facts about the parties or the claim.
     amount: '$2.3M',
