@@ -98,7 +98,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 .primary-button:hover, .primary-button:focus-visible { transform: translateY(-2px); background: linear-gradient(135deg, #0b4fa4, #052e6a); box-shadow: 0 16px 34px rgba(4, 47, 112, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.25); }
-.header-cta { min-height: 48px; white-space: nowrap; padding-inline: 20px; }
+.header-cta { min-height: 48px; white-space: nowrap; padding-inline: 20px; font-variant-numeric: tabular-nums; }
+.header-cta svg { width: 17px; height: 17px; flex: none; }
 
 .hero {
   display: grid;

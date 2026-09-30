@@ -35,7 +35,8 @@ export function SiteHeader({ locale = 'en' }: { locale?: SiteLocale }) {
         </nav>
         <div className="header-actions">
           <LanguageSwitcher />
-          <a className="primary-button header-cta" href={spanish ? '/es/contacto#revision-del-caso' : '/contact#case-review'}>{spanish ? 'Consulta gratuita' : 'Start a free consultation'}</a>
+          {/* Most people call: the header button dials; the hero keeps "Start a free consultation". */}
+          <a className="primary-button header-cta" href="tel:+17145441460"><Phone aria-hidden="true" />{spanish ? 'Llame al 714-544-1460' : 'Call 714-544-1460'}</a>
           <a className="mobile-header-phone" href="tel:+17145441460" aria-label={spanish ? 'Llame a Kyle Scott Law al 714-544-1460' : 'Call Kyle Scott Law at 714-544-1460'}><Phone aria-hidden="true" /></a>
           <MobileNav locale={locale} />
         </div>
