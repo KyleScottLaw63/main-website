@@ -89,6 +89,15 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Jury verdict',
   },
   {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$1,450,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2024,
+  },
+  {
     // Year: the firm's Apr. 14, 2017 post — "We were able to obtain a $928,493.12 verdict for our
     // client … yesterday when an Orange County jury found the Orange County Transportation Authority" liable.
     amount: '$928,493.12',
@@ -97,6 +106,23 @@ export const historicalResults: CaseResult[] = [
     category: 'Auto & transportation',
     outcome: 'Jury verdict',
     year: 2017,
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$880,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$800,000',
+    title: 'Personal injury settlement',
+    detail: 'Orange County Superior Court',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2023,
   },
   {
     amount: '$750,000',
@@ -113,18 +139,48 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Recovery',
   },
   {
+    // Year: the firm's settlement records.
     amount: '$700,000',
     title: 'Serious back injury in crash with a medical-device salesperson',
     detail: 'Orange County Superior Court',
     category: 'Auto & transportation',
     outcome: 'Recovery',
+    year: 2015,
   },
   {
-    amount: '$697,000',
+    // Amount: the firm's settlement records ($697,500; previously listed as $697,000).
+    amount: '$697,500',
     title: 'Dangerous flooring causes neck injury and cognitive issues',
     detail: 'Orange County Superior Court',
     category: 'Premises liability',
     outcome: 'Recovery',
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$650,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2022,
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$600,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2024,
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$505,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2019,
   },
   {
     amount: '$500,000',
@@ -155,16 +211,46 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Recovery',
   },
   {
+    // Year: the firm's settlement records.
     amount: '$430,000',
     title: 'Rear-end crash causes lumbar radiculopathy',
     detail: 'Orange County Superior Court · UM claim',
     category: 'Auto & transportation',
     outcome: 'Recovery',
+    year: 2019,
   },
   {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$400,000',
+    title: 'Personal injury claim against a city',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2025,
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$375,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2024,
+  },
+  {
+    // Year: the firm's settlement records.
     amount: '$350,000',
     title: 'Motorcycle rider suffers fractures in collision with minivan',
     detail: 'Orange County Superior Court',
+    category: 'Auto & transportation',
+    outcome: 'Recovery',
+    year: 2010,
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$336,932',
+    title: 'Underinsured-motorist claim',
+    detail: 'Settlement and arbitration award',
     category: 'Auto & transportation',
     outcome: 'Recovery',
   },
@@ -197,6 +283,24 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Recovery',
   },
   {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$295,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2022,
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$280,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2021,
+  },
+  {
     amount: '$275,000',
     title: 'Medical-supply employee injured in auto crash',
     detail: 'San Bernardino Superior Court',
@@ -209,6 +313,15 @@ export const historicalResults: CaseResult[] = [
     detail: 'Los Angeles Superior Court',
     category: 'Premises liability',
     outcome: 'Recovery',
+  },
+  {
+    // The firm's settlement records (added 2026-09-30).
+    amount: '$252,000',
+    title: 'Personal injury settlement',
+    detail: 'Details not published',
+    category: 'Other injury claims',
+    outcome: 'Settlement',
+    year: 2022,
   },
   {
     amount: '$250,000',
@@ -225,11 +338,13 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Recovery',
   },
   {
+    // Year: the firm's settlement records.
     amount: '$235,000',
     title: 'Woman suffers hip fracture',
     detail: 'Confidential matter',
     category: 'Other injury claims',
     outcome: 'Recovery',
+    year: 2016,
   },
   {
     amount: '$225,000',
@@ -330,11 +445,13 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Recovery',
   },
   {
+    // Year: the firm's settlement records.
     amount: '$125,900',
     title: 'Woman suffers head injury in auto crash',
     detail: 'Los Angeles Superior Court',
     category: 'Auto & transportation',
     outcome: 'Recovery',
+    year: 2008,
   },
   {
     amount: '$125,000',
@@ -344,18 +461,22 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Jury verdict',
   },
   {
+    // Year: the firm's settlement records.
     amount: '$122,000',
     title: 'Woman suffers wrist fracture in auto incident',
     detail: 'Orange County Superior Court',
     category: 'Auto & transportation',
     outcome: 'Recovery',
+    year: 2007,
   },
   {
+    // Year: the firm's settlement records.
     amount: '$115,000',
     title: 'Rear-end freeway crash causes back injury',
     detail: 'Los Angeles Superior Court',
     category: 'Auto & transportation',
     outcome: 'Jury verdict',
+    year: 2018,
   },
   {
     amount: '$112,500',

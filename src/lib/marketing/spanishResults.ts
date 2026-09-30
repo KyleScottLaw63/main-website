@@ -24,6 +24,9 @@ const titles: Record<string, string> = {
   'Student suffers skull fracture and brain bleed': 'Estudiante sufre fractura de cráneo y hemorragia cerebral',
   'Riverside Superior Court jury verdict': 'Veredicto del jurado en el Tribunal Superior de Riverside',
   'Sexual molestation and sexual battery lawsuit': 'Demanda por abuso sexual y agresión sexual',
+  'Personal injury settlement': 'Acuerdo por lesiones personales',
+  'Personal injury claim against a city': 'Reclamo por lesiones personales contra una ciudad',
+  'Underinsured-motorist claim': 'Reclamo de conductor con seguro insuficiente',
   'Teenage boy molested by church employee': 'Adolescente abusado sexualmente por un empleado de una iglesia',
   'OCTA bus crashes into minivan; man suffers cognitive problems': 'Autobús de OCTA choca contra una minivan; un hombre sufre problemas cognitivos',
   'Slip-and-fall claim involving complex regional pain syndrome': 'Reclamo por resbalón y caída con síndrome de dolor regional complejo',
@@ -97,6 +100,7 @@ function translateDetail(detail: string) {
     .replaceAll('San Joaquin Superior Court', 'Tribunal Superior de San Joaquín')
     .replaceAll('Orange County', 'Condado de Orange')
     .replaceAll('Riverside County', 'Condado de Riverside')
+    .replaceAll('Settlement and arbitration award', 'Acuerdo y laudo arbitral')
     .replaceAll('Details not published', 'Detalles no publicados')
     .replaceAll('Details confidential', 'Detalles confidenciales')
     .replaceAll('Confidential matter', 'Asunto confidencial')

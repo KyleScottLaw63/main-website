@@ -5,7 +5,14 @@ import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
 describe('the year on a published result', () => {
   it('appears only where the firm’s own record states it (source noted in results.ts), never estimated', () => {
     const dated = Object.fromEntries(allResults.filter((result) => result.year).map((result) => [result.amount, result.year]));
-    expect(dated).toEqual({ '$6.8M': 2004, '$5.75M': 2019, '$2.3M': 2024, '$2.2M': 2024, '$928,493.12': 2017 });
+    expect(dated).toEqual({
+      // The firm's published posts.
+      '$6.8M': 2004, '$5.75M': 2019, '$2.3M': 2024, '$2.2M': 2024, '$928,493.12': 2017,
+      // The firm's settlement records (2026-09-30): results already listed, then the settlements added that day.
+      '$700,000': 2015, '$430,000': 2019, '$350,000': 2010, '$235,000': 2016, '$125,900': 2008, '$122,000': 2007, '$115,000': 2018,
+      '$1,450,000': 2024, '$800,000': 2023, '$650,000': 2022, '$600,000': 2024, '$505,000': 2019, '$400,000': 2025,
+      '$375,000': 2024, '$295,000': 2022, '$280,000': 2021, '$252,000': 2022,
+    });
     for (const year of Object.values(dated)) {
       expect(Number.isInteger(year)).toBe(true);
       expect(year).toBeGreaterThanOrEqual(1980);
@@ -19,6 +26,15 @@ describe('the year on a published result', () => {
     expect(resultOutcomeLabel({ year: 2004 }, 'Recovery')).toBe('Recovery · 2004');
     expect(resultOutcomeLabel({})).toBe('');
     expect(resultOutcomeLabel(translateResultToSpanish(flagshipResults[0]))).toBe('Acuerdo · 2004');
+  });
+
+  it('lists the settlements added from the firm’s records in Spanish too, and the corrected $697,500', () => {
+    const recovery = translateResultToSpanish(historicalResults.find((result) => result.amount === '$336,932')!);
+    expect(recovery).toMatchObject({ title: 'Reclamo de conductor con seguro insuficiente', detail: 'Acuerdo y laudo arbitral', outcome: 'Recuperación' });
+    expect(translateResultToSpanish(historicalResults.find((result) => result.amount === '$1,450,000')!).title).toBe('Acuerdo por lesiones personales');
+    expect(historicalResults.map((result) => result.amount)).toContain('$697,500');
+    expect(historicalResults.map((result) => result.amount)).not.toContain('$697,000');
+    expect(allResults).toHaveLength(78);
   });
 
   it('lists the two results the firm reported on Dec. 26, 2024, in Spanish too', () => {
