@@ -11,6 +11,22 @@ function readJson<T>(relative: string): T {
 
 const stripTrailingSlash = (pathname: string) => pathname.replace(/\/+$/, "") || "/";
 
+/**
+ * The firm app's address (Matterfold, deployed on its own subdomain), taken from
+ * the form's bridge setting so the two can never point at different apps: the
+ * origin of MATTERFOLD_INTAKE_ENDPOINT, HTTPS (plain HTTP only on this machine).
+ * Null until the form is connected. See docs/website-lead-intake-bridge.md.
+ */
+export function firmAppOrigin(endpoint = process.env.MATTERFOLD_INTAKE_ENDPOINT): string | null {
+  try {
+    const url = new URL(endpoint?.trim() ?? "");
+    const local = ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname);
+    return url.protocol === "https:" || (url.protocol === "http:" && local) ? url.origin : null;
+  } catch {
+    return null;
+  }
+}
+
 // Security baseline for every response. A strict script-src policy is a
 // separate decision: nonces would force dynamic rendering (and lose the
 // back/forward cache) on the public site, so scripts are not restricted here.
@@ -59,7 +75,14 @@ const nextConfig: NextConfig = {
   async redirects() {
     const { redirects: rules } = readJson<{ redirects: RedirectRule[] }>("src/lib/marketing/data/redirect-rules.json");
     const { redirects: legacy } = readJson<{ redirects: LegacyRedirect[] }>("src/lib/marketing/data/legacyPosts.json");
+    // Staff shortcuts: kjslaw.com/admin (and /login) open the firm app's sign-in page. Temporary
+    // (307), so browsers never pin an address that may change; absent until the form is connected.
+    const app = firmAppOrigin();
+    const staffShortcuts = app
+      ? ["/admin", "/admin/:path*", "/login"].map((source) => ({ source, destination: `${app}/login`, permanent: false }))
+      : [];
     return [
+      ...staffShortcuts,
       ...rules.map((rule) => ({ source: rule.source, destination: rule.destination, statusCode: 301 })),
       ...legacy.map((entry) => ({ source: stripTrailingSlash(entry.legacyPath), destination: entry.canonicalPath, statusCode: 301 })),
     ];

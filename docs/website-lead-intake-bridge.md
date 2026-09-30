@@ -63,6 +63,10 @@ The app never takes consent wording from the request: it rebuilds it from `conse
 3. Locally, with the same two values in `.env.local`: `npm run check:intake` → "Connected: … all 8 texts match".
 4. Send one test inquiry through the live form with obviously fictional details, confirm it appears in the app's lead inbox with its consent wording, then close it there.
 
+## Staff shortcut: kjslaw.com/admin
+
+The app runs on its own subdomain (for example `https://app.kjslaw.com`): it must own a whole origin (its release gate refuses an address with a path), and a separate origin keeps staff sessions away from the public site's pages and scripts. For convenience, once `MATTERFOLD_INTAKE_ENDPOINT` is set, `next.config.ts` redirects `/admin`, anything under it, and `/login` to `<the endpoint's origin>/login` — a 307, so no browser pins it, in one hop, slash or not. Without the setting those paths are ordinary 404s. Test: `src/lib/__tests__/staff-shortcuts.test.ts`.
+
 ## Guardrails that stay in the browser
 
 - **Nothing in a URL.** Both forms send their JSON from `onSubmit` and carry a function `action` (`submitsThroughOnSubmit`), so a press before the page has finished loading is held in the browser instead of going out as a GET with the visitor's details in the address (test: `src/components/shared/__tests__/form-native-submission.test.tsx`).

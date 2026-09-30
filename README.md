@@ -50,6 +50,8 @@ Set two environment variables in this Vercel project, then redeploy:
 
 The app's Settings → Company Profile name must be exactly **Kyle Scott Law** (the consent wording the app stores names the firm from there). `npm run check:intake` (with the same two values in `.env.local`) confirms the connection and that the consent wording matches word for word, without submitting anything. Full steps: [docs/website-lead-intake-bridge.md](docs/website-lead-intake-bridge.md).
 
+Once connected, **kjslaw.com/admin** (and kjslaw.com/login) send staff to the app's sign-in page — a temporary redirect to the origin of `MATTERFOLD_INTAKE_ENDPOINT` + `/login`, so the shortcut and the form always reach the same app. The app itself runs on its own subdomain (for example `app.kjslaw.com`): it needs a whole origin to itself, and keeping it off kjslaw.com keeps staff sign-ins separate from the public site.
+
 ## Where things live
 
 | Path | What |
