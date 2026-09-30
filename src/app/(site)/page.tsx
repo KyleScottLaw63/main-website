@@ -32,7 +32,7 @@ const recoveries = [
     type: 'School district negligence',
     title: 'Elementary school boys molested by a teacher',
     meta: 'Confidential • Largest molestation settlement at the time',
-    date: 'Featured recovery',
+    date: '2004',
     href: '/results',
     cta: 'View in results',
   },

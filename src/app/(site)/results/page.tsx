@@ -5,7 +5,7 @@ import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ResultsExplorer } from '@/components/marketing/ResultsExplorer';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
-import { flagshipResults } from '@/lib/marketing/data/results';
+import { flagshipResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ export default function ResultsPage() {
       <section className="flagship-results" aria-labelledby="flagship-title">
         <div className="flagship-heading"><p className="eyebrow" id="flagship-title">Notable recoveries</p><p>Selected matters from more than three decades of representation.</p></div>
         <div className="flagship-grid">
-          {flagshipResults.map((result) => <article key={result.amount}><span>{result.outcome}</span><strong>{result.amount}</strong><h2>{result.title}</h2><p>{result.detail}</p></article>)}
+          {flagshipResults.map((result) => <article key={result.amount}><span>{resultOutcomeLabel(result)}</span><strong>{result.amount}</strong><h2>{result.title}</h2><p>{result.detail}</p></article>)}
         </div>
         <p className="results-disclaimer">Prior results do not guarantee a similar outcome.</p>
       </section>

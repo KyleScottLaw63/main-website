@@ -17,7 +17,7 @@ import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
-import { flagshipResults, historicalResults } from '@/lib/marketing/data/results';
+import { flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { legalGuidesForPractice } from '@/lib/marketing/data/legalGuides';
 import { practiceAreas, type PracticeAreaData, type PracticeAreaIcon } from '@/lib/marketing/data/practiceAreas';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
@@ -145,7 +145,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           <section className="practice-related-results" id="results" aria-labelledby="practice-results-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Resultados publicados' : 'Published case results'}</p><h2 id="practice-results-title">{spanish ? 'Recuperaciones relacionadas.' : 'Related recoveries.'}</h2></div><a href={resultsPath}>{spanish ? 'Ver todos los resultados' : 'View all results'} <ArrowRight aria-hidden="true" /></a></div>
             <div className={`practice-results-grid results-count-${results.length}`}>
-              {results.map((result) => <article key={result.title}><span>{result.outcome ?? (spanish ? 'Recuperación' : 'Recovery')}</span><strong>{result.amount}</strong><h3>{result.title}</h3><p>{result.detail}</p></article>)}
+              {results.map((result) => <article key={result.title}><span>{resultOutcomeLabel(result, spanish ? 'Recuperación' : 'Recovery')}</span><strong>{result.amount}</strong><h3>{result.title}</h3><p>{result.detail}</p></article>)}
             </div>
             <p className="results-disclaimer">{spanish ? 'Los resultados anteriores no garantizan un resultado similar.' : 'Prior results do not guarantee a similar outcome.'}</p>
           </section>

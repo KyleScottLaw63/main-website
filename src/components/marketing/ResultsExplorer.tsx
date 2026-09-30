@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
-import { allResults, type ResultCategory } from '@/lib/marketing/data/results';
+import { allResults, resultOutcomeLabel, type ResultCategory } from '@/lib/marketing/data/results';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 import { spanishCategoryLabels, translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
@@ -28,7 +28,7 @@ export function ResultsExplorer({ locale = 'en' }: { locale?: SiteLocale }) {
       const displayResult = spanish ? translateResultToSpanish(result) : result;
       const categoryMatches = category === 'All results' || result.category === category;
       const categoryLabel = spanish ? spanishCategoryLabels[result.category] : result.category;
-      const queryMatches = !normalizedQuery || `${displayResult.amount} ${displayResult.title} ${displayResult.detail} ${categoryLabel} ${displayResult.outcome ?? ''}`.toLowerCase().includes(normalizedQuery);
+      const queryMatches = !normalizedQuery || `${displayResult.amount} ${displayResult.title} ${displayResult.detail} ${categoryLabel} ${displayResult.outcome ?? ''} ${result.year ?? ''}`.toLowerCase().includes(normalizedQuery);
       return categoryMatches && queryMatches;
     });
   }, [category, query, spanish]);
@@ -61,7 +61,7 @@ export function ResultsExplorer({ locale = 'en' }: { locale?: SiteLocale }) {
           <article className="result-row" key={`${result.amount}-${result.title}-${index}`}>
             <strong className="result-amount">{displayResult.amount}</strong>
             <div className="result-description"><h3>{displayResult.title}</h3><p>{displayResult.detail}</p></div>
-            <div className="result-tags"><span>{spanish ? spanishCategoryLabels[result.category] : result.category}</span>{displayResult.outcome && <small>{displayResult.outcome}</small>}</div>
+            <div className="result-tags"><span>{spanish ? spanishCategoryLabels[result.category] : result.category}</span>{(displayResult.outcome || result.year) && <small>{resultOutcomeLabel(displayResult)}</small>}</div>
           </article>
         ); })}
       </div>

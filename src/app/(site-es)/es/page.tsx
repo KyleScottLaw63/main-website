@@ -46,7 +46,7 @@ const practiceAreas = [
 ];
 
 const recoveries = [
-  { amount: '$6.8M', type: 'Negligencia del distrito escolar', title: 'Alumnos de primaria abusados sexualmente por un maestro', meta: 'Confidencial • Mayor acuerdo por abuso sexual en ese momento', date: 'Recuperación destacada', href: '/es/resultados', cta: 'Ver en resultados' },
+  { amount: '$6.8M', type: 'Negligencia del distrito escolar', title: 'Alumnos de primaria abusados sexualmente por un maestro', meta: 'Confidencial • Mayor acuerdo por abuso sexual en ese momento', date: '2004', href: '/es/resultados', cta: 'Ver en resultados' },
   { amount: '$2.3M', type: 'Veredicto del jurado', title: 'Veredicto del Tribunal Superior de Riverside', meta: 'Resultado de caso publicado', date: '26 de diciembre de 2024', href: '/es/noticias/veredicto-jurado-riverside-2-3-millones', cta: 'Leer el caso' },
   { amount: '$2.2M', type: 'Acuerdo confidencial', title: 'Demanda por abuso sexual y agresión sexual', meta: 'Detalles confidenciales', date: '26 de diciembre de 2024', href: '/es/noticias/acuerdo-abuso-sexual-2-2-millones', cta: 'Leer el caso' },
 ];

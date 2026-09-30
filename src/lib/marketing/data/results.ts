@@ -13,15 +13,31 @@ export type CaseResult = {
   detail: string;
   category: ResultCategory;
   outcome?: string;
+  /**
+   * The year of the verdict or settlement — only where the firm's own record states it (the source
+   * is noted beside each). Left out when unknown, never estimated: a guessed year on a result is
+   * itself misleading advertising (docs/website-content-compliance.md, "Case results").
+   */
+  year?: number;
 };
+
+/** The outcome line a result card shows: "Jury verdict · 2019", or the outcome alone when no year is on record. */
+export function resultOutcomeLabel(result: Pick<CaseResult, 'outcome' | 'year'>, fallback = '') {
+  const outcome = result.outcome ?? fallback;
+  if (!result.year) return outcome;
+  return outcome ? `${outcome} · ${result.year}` : String(result.year);
+}
 
 export const flagshipResults: CaseResult[] = [
   {
+    // Year: the firm's May 11, 2020 post — "In 2004 my firm along with another firm had what was at
+    // that time the largest sexual assault settlement in the history of California, which was $6,800,000."
     amount: '$6.8M',
     title: 'Elementary school boys molested by a teacher',
     detail: 'School district negligence · Confidential · Largest molestation settlement at the time',
     category: 'Abuse & school liability',
     outcome: 'Settlement',
+    year: 2004,
   },
   {
     amount: '$6M',
@@ -34,15 +50,37 @@ export const flagshipResults: CaseResult[] = [
     // From the firm's own record: its Nov. 2019 news post (jury verdict after a two-week
     // trial) and the old site's case list ("Kody R. v. Long Beach U.S.D., LA Sup. Ct.,
     // $5,750,000"). The old card's "Former teacher · OC Sup. Ct." was pasted from the $6M card.
+    // Year: that Nov. 16, 2019 post, and the Apr. 23, 2020 post ("60th largest verdict in California in 2019").
     amount: '$5.75M',
     title: 'Student suffers skull fracture and brain bleed',
     detail: 'Two-week jury trial · Los Angeles Superior Court · Claim against LBUSD',
     category: 'Abuse & school liability',
     outcome: 'Jury verdict',
+    year: 2019,
   },
 ];
 
 export const historicalResults: CaseResult[] = [
+  {
+    // The firm's post of Dec. 26, 2024 (kjslaw.com/2024/12/26/kyle-scott-wins-jury-verdict-in-riverside-superior-court/,
+    // now /news/riverside-jury-verdict-2-3-million); it published no facts about the parties or the claim.
+    amount: '$2.3M',
+    title: 'Riverside Superior Court jury verdict',
+    detail: 'Riverside Superior Court · Details not published',
+    category: 'Other injury claims',
+    outcome: 'Jury verdict',
+    year: 2024,
+  },
+  {
+    // The firm's post of Dec. 26, 2024 (kjslaw.com/2024/12/26/kyle-scott-settles-a-sexual-molestation-sexual-battery-lawsuit-for-2-2-million-details-confidential/,
+    // now /news/sexual-molestation-battery-settlement-2-2-million).
+    amount: '$2.2M',
+    title: 'Sexual molestation and sexual battery lawsuit',
+    detail: 'Details confidential',
+    category: 'Abuse & school liability',
+    outcome: 'Settlement',
+    year: 2024,
+  },
   {
     amount: '$2M',
     title: 'Teenage boy molested by church employee',
@@ -51,11 +89,14 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Jury verdict',
   },
   {
+    // Year: the firm's Apr. 14, 2017 post — "We were able to obtain a $928,493.12 verdict for our
+    // client … yesterday when an Orange County jury found the Orange County Transportation Authority" liable.
     amount: '$928,493.12',
     title: 'OCTA bus crashes into minivan; man suffers cognitive problems',
     detail: 'Orange County Superior Court',
     category: 'Auto & transportation',
     outcome: 'Jury verdict',
+    year: 2017,
   },
   {
     amount: '$750,000',
