@@ -4,7 +4,7 @@ The public website of Kyle Scott Law (kjslaw.com), a personal-injury firm in Tus
 
 ## Hard rules (violating these is a wrong answer, not a style choice)
 
-1. **Canonical firm facts only.** Kyle Scott Law · 17671 Irvine Blvd., Suite 210, Tustin, CA 92780 · **714-544-1460** (every instance tap-to-call, `tel:+17145441460`) · fax 714-544-1463 · toll-free 866-757-0959 · Mon–Fri 8:30 AM–5:00 PM. The old site published wrong numbers — never use 544-1450, 544-1469, 540-1460, 943-423-3944, or the placeholder (949) 555-0134. `site-phone-numbers.test.ts` enforces this across source and data.
+1. **Canonical firm facts only.** Kyle Scott Law · 17671 Irvine Blvd., Suite 210, Tustin, CA 92780 · **714-544-1460** (every instance tap-to-call, `tel:+17145441460`) · fax 714-544-1463 · toll-free 866-757-0959 · **Team@kjslaw.com** (`firmIdentity.email`; never Info@, `site-email.test.ts`) · Mon–Fri 8:30 AM–5:00 PM. The old site published wrong numbers — never use 544-1450, 544-1469, 540-1460, 943-423-3944, or the placeholder (949) 555-0134. `site-phone-numbers.test.ts` enforces this across source and data.
 2. **Verdict labels are fixed:** $6.8M school negligence · $6M abuse case · $5.75M brain injury. Never relabel.
 3. **Fees statement lives in one place**: `src/lib/marketing/no-recovery-terms.ts` ("No fees or costs unless there is a recovery."). Never write another copy, and never "risk-free" / "no financial risk" (docs/website-content-compliance.md).
 4. **Testimonials are from clients only** — no staff, family, or referral sources (Rule 7.1).
@@ -14,6 +14,9 @@ The public website of Kyle Scott Law (kjslaw.com), a personal-injury firm in Tus
 8. **Consent wording is shared with the app, word for word.** `src/lib/leads/public-lead-rules.ts` (consent sentences, SMS disclosure, `PUBLIC_CONSENT_VERSION`) must match the app's copy; a new wording is a new version on both sides together. `npm run check:intake` compares them (docs/website-lead-intake-bridge.md).
 9. **No form puts fields in a URL.** A `<form>` with `onSubmit` also carries `action={submitsThroughOnSubmit}` (src/components/shared/form-submit.ts); a test scans for it.
 10. **Real alt text on every image; type floor 13px; WCAG 2.1 AA.** Fictional data only in tests (555-01xx numbers, "Rosa Fictional").
+11. **Results and case stories are the attorney's call.**
+    - A case story (`/results/<slug>`) goes up only once Kyle J. Scott approves it (docs/case-stories.md). Never a confidential, unfunded, or court-pending matter, and never the drafts' internal amounts, sources, or review notes.
+    - Results come from the firm's own records, under the rules in docs/website-content-compliance.md ("Case results"). The firm's settlement list is internal: publish only gross amount, year, court, outcome, and case type from it, never names, case numbers, fees, or net amounts.
 
 ## Workflows
 

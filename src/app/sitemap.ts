@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
+import { caseStories } from '@/lib/marketing/data/caseStories';
 import { legacyPostIsIndexable, legacyPosts } from '@/lib/marketing/data/legacyPosts';
+import { caseStoryPath } from '@/lib/marketing/data/results';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
 import { localizedRoutes } from '@/lib/marketing/i18n';
@@ -95,5 +97,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return [...localizedEntries, ...serviceAreaEntries, ...guideEntries, ...legacyPostEntries];
+  const caseStoryEntries = caseStories.map((story) => ({
+    url: `${SITE_URL}${caseStoryPath(story.slug)}`,
+    lastModified: story.published,
+    changeFrequency: 'yearly' as const,
+    priority: 0.7,
+  }));
+
+  return [...localizedEntries, ...serviceAreaEntries, ...guideEntries, ...caseStoryEntries, ...legacyPostEntries];
 }

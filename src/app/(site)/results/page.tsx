@@ -1,11 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from 'next';
 import { ArrowRight, Scale, ShieldCheck } from 'lucide-react';
+import { CaseStoryCard } from '@/components/marketing/CaseStoryPage';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ResultsExplorer } from '@/components/marketing/ResultsExplorer';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
-import { flagshipResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
+import { caseStories } from '@/lib/marketing/data/caseStories';
+import { caseStoryPath, flagshipResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
@@ -49,15 +51,30 @@ export default function ResultsPage() {
       <section className="flagship-results" aria-labelledby="flagship-title">
         <div className="flagship-heading"><p className="eyebrow" id="flagship-title">Notable recoveries</p><p>Selected matters from more than three decades of representation.</p></div>
         <div className="flagship-grid">
-          {flagshipResults.map((result) => <article key={result.amount}><span>{resultOutcomeLabel(result)}</span><strong>{result.amount}</strong><h2>{result.title}</h2><p>{result.detail}</p></article>)}
+          {flagshipResults.map((result) => (
+            <article className={result.story ? 'has-story' : undefined} key={result.amount}>
+              <span>{resultOutcomeLabel(result)}</span>
+              <strong>{result.amount}</strong>
+              <h2>{result.story ? <Link className="flagship-story-link" href={caseStoryPath(result.story)}>{result.title}</Link> : result.title}</h2>
+              <p>{result.detail}</p>
+              {result.story ? <p className="flagship-story-cue">Read the case story <ArrowRight aria-hidden="true" /></p> : null}
+            </article>
+          ))}
         </div>
         <p className="results-disclaimer">Prior results do not guarantee a similar outcome.</p>
       </section>
 
+      <section className="recent-results case-stories-section" aria-labelledby="case-stories-title">
+        <div className="recent-results-heading"><div><p className="eyebrow">Case stories</p><h2 id="case-stories-title">The story behind the result.</h2></div><p>How selected cases unfolded, from what happened to the verdict or settlement.</p></div>
+        <div className="case-story-grid">
+          {caseStories.map((story) => <CaseStoryCard story={story} key={story.slug} />)}
+        </div>
+      </section>
+
       <section className="recent-results" aria-labelledby="recent-results-title">
-        <div className="recent-results-heading"><div><p className="eyebrow">Recently published</p><h2 id="recent-results-title">Read the case stories.</h2></div><p>These published firm updates provide more context about two recent outcomes.</p></div>
+        <div className="recent-results-heading"><div><p className="eyebrow">Recently published</p><h2 id="recent-results-title">Recent firm announcements.</h2></div><p>These published firm updates provide more context about two recent outcomes.</p></div>
         <div className="recent-results-grid">
-          {recentPublications.map((item) => <a href={item.href} key={item.href}><span>{item.label} · {item.date}</span><strong>{item.amount}</strong><h3>{item.title}</h3><p>Read the published case story <ArrowRight aria-hidden="true" /></p></a>)}
+          {recentPublications.map((item) => <a href={item.href} key={item.href}><span>{item.label} · {item.date}</span><strong>{item.amount}</strong><h3>{item.title}</h3><p>Read the announcement <ArrowRight aria-hidden="true" /></p></a>)}
         </div>
       </section>
 

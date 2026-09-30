@@ -110,7 +110,7 @@ export const legalPages: Record<
             'Depending on the law that applies and subject to its exceptions, California residents may have rights to request access to or correction or deletion of personal information, to learn how it is collected and disclosed, to opt out of certain sales or sharing, to limit certain uses of sensitive personal information, and to receive equal service when exercising a privacy right. Kyle Scott Law does not discriminate against a person for making a valid privacy request.',
           ],
           bullets: [
-            'Submit a request by email at Info@kjslaw.com or by telephone at 714-544-1460.',
+            'Submit a request by email at Team@kjslaw.com or by telephone at 714-544-1460.',
             'Describe the right you wish to exercise and provide enough information for the firm to identify the relevant records.',
             'The firm may take reasonable steps to verify identity or an authorized agent before responding.',
             'A request may be denied or limited where an exception applies, including legal, professional, security, or record-retention obligations.',
@@ -262,7 +262,7 @@ export const legalPages: Record<
           id: 'feedback',
           title: 'Request assistance or report a barrier',
           paragraphs: [
-            'If you have difficulty using the site, need information in an alternative format, or encounter an accessibility barrier, call 714-544-1460 or email Info@kjslaw.com. Please identify the page or feature, describe the issue, and tell us the best way to respond. Information about the device, browser, or assistive technology you used is helpful but not required.',
+            'If you have difficulty using the site, need information in an alternative format, or encounter an accessibility barrier, call 714-544-1460 or email Team@kjslaw.com. Please identify the page or feature, describe the issue, and tell us the best way to respond. Information about the device, browser, or assistive technology you used is helpful but not required.',
           ],
         },
         {
@@ -362,7 +362,7 @@ export const legalPages: Record<
             'Según la ley aplicable y sus excepciones, los residentes de California pueden tener derecho a solicitar acceso, corrección o eliminación de información personal; conocer cómo se recopila y divulga; optar por no participar en determinadas ventas o divulgaciones; limitar ciertos usos de información personal sensible; y recibir el mismo servicio al ejercer un derecho de privacidad. Kyle Scott Law no discrimina a una persona por presentar una solicitud de privacidad válida.',
           ],
           bullets: [
-            'Envíe una solicitud a Info@kjslaw.com o llame al 714-544-1460.',
+            'Envíe una solicitud a Team@kjslaw.com o llame al 714-544-1460.',
             'Describa el derecho que desea ejercer y proporcione suficiente información para identificar los registros pertinentes.',
             'El bufete puede tomar medidas razonables para verificar la identidad o a un agente autorizado antes de responder.',
             'Una solicitud puede denegarse o limitarse cuando exista una excepción, incluidas obligaciones legales, profesionales, de seguridad o conservación de registros.',
@@ -514,7 +514,7 @@ export const legalPages: Record<
           id: 'comentarios',
           title: 'Solicite ayuda o informe una barrera',
           paragraphs: [
-            'Si tiene dificultad para usar el sitio, necesita información en otro formato o encuentra una barrera de accesibilidad, llame al 714-544-1460 o escriba a Info@kjslaw.com. Identifique la página o función, describa el problema y díganos la mejor forma de responder. La información sobre el dispositivo, navegador o tecnología de asistencia utilizada es útil, pero no obligatoria.',
+            'Si tiene dificultad para usar el sitio, necesita información en otro formato o encuentra una barrera de accesibilidad, llame al 714-544-1460 o escriba a Team@kjslaw.com. Identifique la página o función, describa el problema y díganos la mejor forma de responder. La información sobre el dispositivo, navegador o tecnología de asistencia utilizada es útil, pero no obligatoria.',
           ],
         },
         {

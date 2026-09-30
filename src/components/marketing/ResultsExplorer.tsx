@@ -1,8 +1,9 @@
 'use client';
 
+import Link from 'next/link';
 import { useMemo, useState } from 'react';
-import { Search } from 'lucide-react';
-import { allResults, resultOutcomeLabel, type ResultCategory } from '@/lib/marketing/data/results';
+import { ArrowRight, Search } from 'lucide-react';
+import { allResults, caseStoryPath, resultOutcomeLabel, type ResultCategory } from '@/lib/marketing/data/results';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 import { spanishCategoryLabels, translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
@@ -57,10 +58,18 @@ export function ResultsExplorer({ locale = 'en' }: { locale?: SiteLocale }) {
 
       <div className="results-count" aria-live="polite"><strong>{visibleResults.length}</strong> {spanish ? 'resultados publicados' : 'published outcomes shown'}</div>
       <div className="results-ledger">
-        {visibleResults.map((result, index) => { const displayResult = spanish ? translateResultToSpanish(result) : result; return (
-          <article className="result-row" key={`${result.amount}-${result.title}-${index}`}>
+        {visibleResults.map((result, index) => {
+          const displayResult = spanish ? translateResultToSpanish(result) : result;
+          // Case stories are English-only pages (docs/case-stories.md).
+          const story = spanish ? undefined : result.story;
+          return (
+          <article className={story ? 'result-row has-story' : 'result-row'} key={`${result.amount}-${result.title}-${index}`}>
             <strong className="result-amount">{displayResult.amount}</strong>
-            <div className="result-description"><h3>{displayResult.title}</h3><p>{displayResult.detail}</p></div>
+            <div className="result-description">
+              <h3>{story ? <Link className="result-story-link" href={caseStoryPath(story)}>{displayResult.title}</Link> : displayResult.title}</h3>
+              <p>{displayResult.detail}</p>
+              {story ? <span className="result-story-cue">Read the case story <ArrowRight aria-hidden="true" /></span> : null}
+            </div>
             <div className="result-tags"><span>{spanish ? spanishCategoryLabels[result.category] : result.category}</span>{(displayResult.outcome || result.year) && <small>{resultOutcomeLabel(displayResult)}</small>}</div>
           </article>
         ); })}

@@ -9,6 +9,11 @@ The public website (kjslaw.com, `src/app/(site)` and `src/app/(site-es)`) is att
 - Canonical numbers (AGENTS.md): **714-544-1460**, tap-to-call everywhere (`tel:+17145441460`); fax 714-544-1463; toll-free 866-757-0959 (`tel:+18667570959`; the owner still has to confirm it is active).
 - `src/lib/marketing/__tests__/site-phone-numbers.test.ts` scans every file of the public site (both route trees, `src/lib/marketing`, `src/components/marketing`, `public/data`) and every field of `legacyPosts.json` for phone numbers in any format, malformed ones included (714-6544-1460, 714-544-460, a number inside a URL slug), and fails on anything that is not canonical. Two exceptions: 555-0100…0199 form placeholders (reserved for fiction) and one third-party office named in a 2012 post (Advanced Chiropractic & Health Care, Victorville). The posts' old WordPress addresses (`legacyPath`, `sourceUrl`) are skipped: they exist only as redirect sources and are never rendered. The test also requires every firm number in an archived article body to be a tap-to-call link to that number.
 
+## Email address
+
+- The firm's public address is **Team@kjslaw.com**: `firmIdentity.email` in `src/lib/marketing/site.ts`, which replaced Info@kjslaw.com on 2026-10-01. The footer and the structured data read the constant. The privacy and accessibility pages (EN/ES) and three archived posts name it. Kyle@kjslaw.com, the attorney's own address, stays where two archived posts name it.
+- `src/lib/marketing/__tests__/site-email.test.ts` fails on any other @kjslaw.com address in the site's source and data.
+
 ## Testimonials
 
 Clients only. Hayley Lawson's endorsement from the old site is not carried over: she was a firm paralegal (the firm's own 2015 and 2016 posts say so), and a staff member's quote presented as a client testimonial is misleading (Rule 7.1). Do not add staff, family, or referral sources.
@@ -18,6 +23,23 @@ Clients only. Hayley Lawson's endorsement from the old site is not carried over:
 Each card states only what the firm's own record supports. The $5.75M card (Kody R. v. Long Beach Unified School District) is a jury verdict after a two-week trial in Los Angeles Superior Court, per the firm's November 2019 news post and the old site's case list; the old card's "Former teacher · OC Sup. Ct." had been pasted from the $6M card. The owner should confirm the detail line. The three verdict labels are fixed (AGENTS.md).
 
 **Years and the settlement records (2026-09-30).** A result shows its year ("Jury verdict · 2019") only where the firm's own record states it: a published firm post, or the firm's internal settlement records, from which the owner approved publishing gross amount, year, court, and outcome — never client names, case numbers, fees, or net amounts. A year is never estimated: where the records hold only a January–February distribution date (the settlement may have been the year before), or an amount appears on several matters, the result stays undated. Twelve settlements were added from those records that day (most titled "Personal injury settlement" until the owner supplies a description), and $697,000 was corrected to $697,500. Not published until resolved: matters not yet funded, partial settlements, minors' compromises awaiting approval, confidential matters, and figures the records flag for confirmation. `src/lib/marketing/__tests__/results.test.ts` pins exactly which results carry a year.
+
+**Settlements over $60,000 (2026-10-01).** The firm's updated settlement list ("with case types & dates") supplied the rest. Every settlement with a gross over $60,000 is published, and none smaller (the owner's cutoff; `results.test.ts` enforces the floor).
+- **66 added.** Each is titled by its case type, such as "Motor vehicle crash settlement", "Slip or trip and fall settlement", or "Uninsured/underinsured-motorist claim". "Personal injury settlement" is used where the list could not determine the type. The detail is "Details not published" and the outcome is Settlement, with a year only under the rule above.
+- **The amount is the list's gross.** It can include med pay: a $250,000 settlement with $500 med pay shows as $250,500.
+- **Matching.** A row matches a card already on the site when the amounts agree (the gross, or the settlement before med pay) in the same category; 41 did.
+- **Not added:**
+  - the 48 rows the list itself flags: follow-up, pending, not yet funded, partial, minor's compromise, confidential, an award or verdict rather than a settlement, or a total that includes post-judgment interest and costs;
+  - one settlement that is part of a result already listed: the counselor's $200,000 inside the $2.2M.
+- **Retitled.** Seven of the cards added on 2026-09-30 took their case type as their title.
+- **Left generic.** Four stay generic: $1,450,000, $880,000, $800,000, and $650,000. The firm's case-story review found their agreements confidential, and two of them ($1,450,000 and $800,000) bar disclosing even that a settlement happened. The attorney decides whether those cards stay.
+- **Confidentiality is unverified for the rest.** The list does not record which agreements have confidentiality clauses; the case-story review of twelve large matters found eight did.
+- **Three published amounts need confirmation**, per the list:
+  - $800,000: only a draft closing statement was found;
+  - $697,500: an email states $45,000;
+  - $430,000: another closing statement shows $255,000.
+
+**Case stories.** The story behind a result, on its own page, attached to that result's card: [case-stories.md](case-stories.md). Only stories the attorney approved, never a matter on hold, and never the drafts' internal amounts or notes.
 
 ## Fees and costs: what a client pays without a recovery
 

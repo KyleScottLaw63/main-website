@@ -60,7 +60,7 @@ Once connected, **kjslaw.com/admin** (and kjslaw.com/login) send staff to the ap
 | `src/app/(site-es)/es` | Spanish pages and root layout |
 | `src/app/api/consultation` | the form and chat endpoint (forwards to the firm app) |
 | `src/components/marketing` | page components, header/footer, forms, chat |
-| `src/lib/marketing/data` | page content: practice areas, results, guides, news, archived posts, redirect rules |
+| `src/lib/marketing/data` | page content: practice areas, results and case stories, guides, news, archived posts, redirect rules |
 | `src/lib/leads` | the lead bridge client and the consent wording shared with the app |
 | `src/lib/site-proxy.ts` | 410s for dead WordPress paths, one-hop trailing-slash redirects, the 404's language |
 | `public/` | photos, icons, share images, `llms.txt` |

@@ -6,11 +6,12 @@ vi.mock('next/font/google', () => ({ Geist: () => ({ variable: 'font-geist' }) }
 import { metadata as englishNotFound } from '@/app/(site)/not-found';
 import { generateMetadata as guideMetadata } from '@/app/(site)/guides/[slug]/page';
 import { generateMetadata as newsMetadata } from '@/app/(site)/news/[slug]/page';
+import { generateMetadata as caseStoryMetadata } from '@/app/(site)/results/[slug]/page';
 import { metadata as spanishNotFound } from '@/app/(site-es)/not-found';
 import { generateMetadata as spanishNewsMetadata } from '@/app/(site-es)/es/noticias/[slug]/page';
 
 /**
- * An unknown /news, /guides, or /es/noticias slug is a 404 with the not-found title and one robots
+ * An unknown /news, /guides, /results, or /es/noticias slug is a 404 with the not-found title and one robots
  * tag, Next's own noindex (docs/public-site-rendering.md). Next builds that page's head from the
  * layouts plus the not-found file, so the not-found files carry the metadata; the pages' own
  * generateMetadata returns the same for an unknown slug.
@@ -29,6 +30,7 @@ describe('a missing article or guide', () => {
   it('the pages return the same metadata for a slug that matches nothing', async () => {
     expect(await newsMetadata(params('no-such-article'))).toEqual(ENGLISH);
     expect(await guideMetadata(params('no-such-guide'))).toEqual(ENGLISH);
+    expect(await caseStoryMetadata(params('no-such-story'))).toEqual(ENGLISH);
     expect(await spanishNewsMetadata(params('no-existe'))).toEqual(SPANISH);
   });
 
@@ -38,5 +40,8 @@ describe('a missing article or guide', () => {
     expect(article.robots).toBeUndefined();
     const guide = await guideMetadata(params('government-injury-claim-orange-county'));
     expect(guide.title).toBe('Orange County Government Claim Deadline: The Six-Month Rule, Explained');
+    const story = await caseStoryMetadata(params('octa-bus-crash-verdict'));
+    expect(story.title).toBe('$928,493.12 jury verdict: OCTA bus crashes into minivan; man suffers cognitive problems | Kyle Scott Law');
+    expect(story.robots).toBeUndefined();
   });
 });

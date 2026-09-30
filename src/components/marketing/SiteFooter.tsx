@@ -1,6 +1,7 @@
 import { ArrowRight, ChevronDown, Mail, MapPin, Phone } from 'lucide-react';
 import Image from 'next/image';
 import type { SiteLocale } from '@/lib/marketing/i18n';
+import { firmIdentity } from '@/lib/marketing/site';
 
 // Profiles the firm publishes. Instagram confirmed by the firm (2026-09);
 // the others carried over from the previous kjslaw.com footer.
@@ -205,11 +206,11 @@ export function SiteFooter({ locale = 'en' }: { locale?: SiteLocale }) {
                 <small>{spanish ? 'Llame' : 'Call'}</small>714-544-1460
               </span>
             </a>
-            <a href="mailto:Info@kjslaw.com">
+            <a href={`mailto:${firmIdentity.email}`}>
               <Mail aria-hidden="true" />
               <span>
                 <small>{spanish ? 'Correo electrónico' : 'Email'}</small>
-                Info@kjslaw.com
+                {firmIdentity.email}
               </span>
             </a>
             <p>{spanish ? 'Fax' : 'Fax'}: 714-544-1463</p>

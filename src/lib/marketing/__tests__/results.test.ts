@@ -4,16 +4,24 @@ import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
 describe('the year on a published result', () => {
   it('appears only where the firm’s own record states it (source noted in results.ts), never estimated', () => {
-    const dated = Object.fromEntries(allResults.filter((result) => result.year).map((result) => [result.amount, result.year]));
-    expect(dated).toEqual({
-      // The firm's published posts.
-      '$6.8M': 2004, '$5.75M': 2019, '$2.3M': 2024, '$2.2M': 2024, '$928,493.12': 2017,
-      // The firm's settlement records (2026-09-30): results already listed, then the settlements added that day.
-      '$700,000': 2015, '$430,000': 2019, '$350,000': 2010, '$235,000': 2016, '$125,900': 2008, '$122,000': 2007, '$115,000': 2018,
-      '$1,450,000': 2024, '$800,000': 2023, '$650,000': 2022, '$600,000': 2024, '$505,000': 2019, '$400,000': 2025,
-      '$375,000': 2024, '$295,000': 2022, '$280,000': 2021, '$252,000': 2022,
-    });
-    for (const year of Object.values(dated)) {
+    // In results.ts order. $6.8M, $5.75M, $2.3M, $2.2M and $928,493.12: the firm's published posts. The rest:
+    // the firm's settlement records (2026-09-30, and the settlements over $60,000 added 2026-10-01), where a
+    // January–February closing-statement date leaves a result undated. Several matters share an amount and a year.
+    const dated = allResults.filter((result) => result.year).map((result) => `${result.amount} · ${result.year}`);
+    expect(dated).toEqual([
+      '$6.8M · 2004', '$5.75M · 2019', '$2.3M · 2024', '$2.2M · 2024', '$1,450,000 · 2024', '$928,493.12 · 2017', '$800,000 · 2023', '$700,000 · 2015',
+      '$650,000 · 2022', '$600,000 · 2024', '$505,000 · 2019', '$500,000 · 2024', '$475,000 · 2024', '$430,000 · 2019', '$400,000 · 2025', '$375,000 · 2024',
+      '$350,000 · 2010', '$295,000 · 2022', '$280,000 · 2021', '$275,000 · 2013', '$252,000 · 2022', '$235,000 · 2016', '$225,000 · 2024', '$215,000 · 2025',
+      '$185,000 · 2015', '$175,000 · 2022', '$155,000 · 2020', '$150,001 · 2014', '$150,000 · 2023', '$150,000 · 2018', '$150,000 · 2021', '$150,000 · 2016',
+      '$145,000 · 2018', '$141,000 · 2014', '$136,718.35 · 2012', '$130,000 · 2016', '$127,165.44 · 2020', '$125,900 · 2008', '$125,000 · 2017', '$125,000 · 2024',
+      '$125,000 · 2021', '$122,000 · 2007', '$121,133 · 2011', '$115,000 · 2018', '$105,000 · 2010', '$101,695 · 2012', '$100,437.41 · 2020', '$100,000 · 2013',
+      '$100,000 · 2005', '$100,000 · 2010', '$100,000 · 2020', '$100,000 · 2005', '$100,000 · 2009', '$100,000 · 2018', '$100,000 · 2006', '$100,000 · 2010',
+      '$100,000 · 2021', '$100,000 · 2008', '$100,000 · 2020', '$100,000 · 2018', '$100,000 · 2021', '$100,000 · 2005', '$95,000 · 2014', '$87,000 · 2016',
+      '$85,000 · 2004', '$85,000 · 2006', '$80,000 · 2009', '$80,000 · 2016', '$80,000 · 2012', '$80,000 · 2018', '$80,000 · 2011', '$78,000 · 2020',
+      '$75,000 · 2010', '$75,000 · 2011', '$75,000 · 2006', '$75,000 · 2007', '$75,000 · 2023', '$73,000 · 2008', '$72,327.60 · 2012', '$70,000 · 2016',
+      '$68,000 · 2013', '$67,707.55 · 2015', '$64,254.18 · 2009', '$62,500 · 2014',
+    ]);
+    for (const { year } of allResults.filter((result) => result.year)) {
       expect(Number.isInteger(year)).toBe(true);
       expect(year).toBeGreaterThanOrEqual(1980);
       expect(year).toBeLessThanOrEqual(new Date().getFullYear());
@@ -34,7 +42,16 @@ describe('the year on a published result', () => {
     expect(translateResultToSpanish(historicalResults.find((result) => result.amount === '$1,450,000')!).title).toBe('Acuerdo por lesiones personales');
     expect(historicalResults.map((result) => result.amount)).toContain('$697,500');
     expect(historicalResults.map((result) => result.amount)).not.toContain('$697,000');
-    expect(allResults).toHaveLength(78);
+    expect(allResults).toHaveLength(144);
+  });
+
+  it('publishes only results over $60,000 (the owner’s cutoff, 2026-10-01)', () => {
+    const value = (amount: string) => Number(amount.replace(/[$,]/g, '').replace(/M$/, 'e6'));
+    expect(allResults.filter((result) => value(result.amount) <= 60_000).map((result) => result.amount)).toEqual([]);
+  });
+
+  it('gives every result title a Spanish translation', () => {
+    expect(allResults.filter((result) => translateResultToSpanish(result).title === result.title).map((result) => result.title)).toEqual([]);
   });
 
   it('lists the two results the firm reported on Dec. 26, 2024, in Spanish too', () => {
