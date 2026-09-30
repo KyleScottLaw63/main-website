@@ -1,0 +1,274 @@
+{
+  "$comment": "Old kjslaw.com URLs (WordPress) mapped to the routes that exist on this site. Consumed by next.config.ts (301s, in order: specific before catch-all) and by scripts/verify-redirects.mjs. Each source matches with or without the old trailing slash; each destination must be a final page (one hop: the QA script fails a chain). Dated blog permalinks come from legacyPosts.json; paths that are gone for good (410) live in src/lib/auth/middleware.ts.",
+  "redirects": [
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "why": "duplicate contact page"
+    },
+    {
+      "source": "/consultation",
+      "destination": "/contact",
+      "why": "form landing merged into contact"
+    },
+    {
+      "source": "/trial-verdicts-settlements",
+      "destination": "/results",
+      "why": "results page renamed"
+    },
+    {
+      "source": "/kjs-law-blog",
+      "destination": "/news",
+      "why": "blog index"
+    },
+    {
+      "source": "/kjs-law-blog/page/:page",
+      "destination": "/news",
+      "why": "blog index pagination"
+    },
+    {
+      "source": "/page/:page",
+      "destination": "/",
+      "why": "homepage pagination"
+    },
+    {
+      "source": "/blog",
+      "destination": "/news",
+      "why": "planned slug never launched"
+    },
+    {
+      "source": "/blog/category/:path*",
+      "destination": "/news",
+      "why": "planned slug never launched"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/news/:slug",
+      "why": "planned slug never launched; posts keep their slugs under /news"
+    },
+    {
+      "source": "/privacy-policy-2",
+      "destination": "/privacy",
+      "why": "clean slug"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "why": "planned slug"
+    },
+    {
+      "source": "/service-areas",
+      "destination": "/personal-injury-lawyer-orange-county",
+      "why": "planned hub not built"
+    },
+    {
+      "source": "/service-areas/tustin",
+      "destination": "/tustin-personal-injury-attorney"
+    },
+    {
+      "source": "/service-areas/:path*",
+      "destination": "/personal-injury-lawyer-orange-county",
+      "why": "planned hub not built"
+    },
+    {
+      "source": "/orange-county-sexual-abuse-attorney",
+      "destination": "/sexual-harassment-lawyer-in-orange-county",
+      "why": "planned slug"
+    },
+    {
+      "source": "/orange-county-motorcycle-accident-attorney",
+      "destination": "/orange-county-auto-accidents-lawyer",
+      "why": "planned slug"
+    },
+    {
+      "source": "/personal-injury-attorney-tustin-ca",
+      "destination": "/tustin-personal-injury-attorney",
+      "why": "Tustin doorway merged into flagship page (the office is in Tustin)"
+    },
+    {
+      "source": "/trial-attorney-tustin-ca",
+      "destination": "/meet-the-team",
+      "why": "doorway merged into attorney profile"
+    },
+    {
+      "source": "/car-accident-attorney-tustin-ca",
+      "destination": "/orange-county-auto-accidents-lawyer",
+      "why": "doorway merged into practice page"
+    },
+    {
+      "source": "/slip-and-fall-attorney-tustin-ca",
+      "destination": "/orange-county-slip-and-fall-attorney",
+      "why": "doorway merged into practice page"
+    },
+    {
+      "source": "/sexual-molestation-attorney-tustin-ca",
+      "destination": "/sexual-harassment-lawyer-in-orange-county",
+      "why": "doorway merged into practice page"
+    },
+    {
+      "source": "/motorcycle-accident-attorney-tustin-ca",
+      "destination": "/orange-county-auto-accidents-lawyer",
+      "why": "motorcycle claims are covered on the vehicle-collision page"
+    },
+    {
+      "source": "/dog-bite-lawyer-tustin-ca",
+      "destination": "/dog-bite-attorney-in-orange-county",
+      "why": "doorway merged into practice page"
+    },
+    {
+      "source": "/choosing-a-lawyer-with-excellent-credentials",
+      "destination": "/why-hire-us",
+      "why": "why-hire-us silo, consolidated into /why-hire-us (redirect-map.csv)"
+    },
+    {
+      "source": "/long-history-of-trial-experience",
+      "destination": "/why-hire-us",
+      "why": "why-hire-us silo, consolidated into /why-hire-us (redirect-map.csv)"
+    },
+    {
+      "source": "/full-and-fair-financial-compensation",
+      "destination": "/why-hire-us",
+      "why": "why-hire-us silo, consolidated into /why-hire-us (redirect-map.csv)"
+    },
+    {
+      "source": "/are-your-injuries-serious",
+      "destination": "/why-hire-us",
+      "why": "why-hire-us silo, consolidated into /why-hire-us (redirect-map.csv)"
+    },
+    {
+      "source": "/compensation-from-insurance-company",
+      "destination": "/why-hire-us",
+      "why": "why-hire-us silo, consolidated into /why-hire-us (redirect-map.csv)"
+    },
+    {
+      "source": "/contact-with-insurance-company",
+      "destination": "/why-hire-us",
+      "why": "why-hire-us silo, consolidated into /why-hire-us (redirect-map.csv)"
+    },
+    {
+      "source": "/orange-county-personal-injury-kyle-scott-law",
+      "destination": "/",
+      "why": "leftover previous homepage"
+    },
+    {
+      "source": "/17671-irvine-blvd-office-information",
+      "destination": "/contact",
+      "why": "office hours and directions live on contact"
+    },
+    {
+      "source": "/about-santa-ana-california",
+      "destination": "/santa-ana-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-irvine-california",
+      "destination": "/irvine-personal-injury-attorneys",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-orange-california",
+      "destination": "/personal-injury-lawyer-orange-county",
+      "why": "no city page; flagship serves Orange County"
+    },
+    {
+      "source": "/about-costa-mesa-california",
+      "destination": "/personal-injury-lawyer-orange-county",
+      "why": "no city page"
+    },
+    {
+      "source": "/about-fountain-valley-california",
+      "destination": "/personal-injury-lawyer-orange-county",
+      "why": "no city page"
+    },
+    {
+      "source": "/about-laguna-beach-california",
+      "destination": "/personal-injury-lawyer-orange-county",
+      "why": "no city page"
+    },
+    {
+      "source": "/category/car-accident-lawyer",
+      "destination": "/orange-county-auto-accidents-lawyer",
+      "why": "category archive → practice page"
+    },
+    {
+      "source": "/category/car-accident-lawyer/:path*",
+      "destination": "/orange-county-auto-accidents-lawyer",
+      "why": "category pagination"
+    },
+    {
+      "source": "/category/dog-bites",
+      "destination": "/dog-bite-attorney-in-orange-county",
+      "why": "category archive → practice page"
+    },
+    {
+      "source": "/category/dog-bites/:path*",
+      "destination": "/dog-bite-attorney-in-orange-county",
+      "why": "category pagination"
+    },
+    {
+      "source": "/category/sexual-abuse-and-molestation",
+      "destination": "/sexual-harassment-lawyer-in-orange-county",
+      "why": "category archive → practice page"
+    },
+    {
+      "source": "/category/sexual-abuse-and-molestation/:path*",
+      "destination": "/sexual-harassment-lawyer-in-orange-county",
+      "why": "category pagination"
+    },
+    {
+      "source": "/category/slip-and-fall",
+      "destination": "/orange-county-slip-and-fall-attorney",
+      "why": "category archive → practice page"
+    },
+    {
+      "source": "/category/slip-and-fall/:path*",
+      "destination": "/orange-county-slip-and-fall-attorney",
+      "why": "category pagination"
+    },
+    {
+      "source": "/category/traumatic-brain-injury",
+      "destination": "/orange-county-traumatic-brain-injury-attorney",
+      "why": "category archive → practice page"
+    },
+    {
+      "source": "/category/traumatic-brain-injury/:path*",
+      "destination": "/orange-county-traumatic-brain-injury-attorney",
+      "why": "category pagination"
+    },
+    {
+      "source": "/category/verdicts-settlements",
+      "destination": "/results",
+      "why": "category archive → results"
+    },
+    {
+      "source": "/category/verdicts-settlements/:path*",
+      "destination": "/results",
+      "why": "category pagination"
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/news",
+      "why": "every other category (personal-injury-law, legal-news, uncategorized, test data) → news index"
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/news",
+      "why": "tag archives dropped"
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/news",
+      "why": "author archives dropped"
+    },
+    {
+      "source": "/feed",
+      "destination": "/news",
+      "why": "WordPress RSS"
+    },
+    {
+      "source": "/:path((?!api/).+)/feed",
+      "destination": "/news",
+      "why": "WordPress per-archive RSS; the lookahead keeps this catch-all off /api routes, which are never redirected"
+    }
+  ]
+}

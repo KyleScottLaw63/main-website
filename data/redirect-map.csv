@@ -1,0 +1,451 @@
+type,old_path,new_path,status,notes
+page,/,/,none (URL kept),"Homepage, rebuilt in place"
+page,/practice-areas/,/practice-areas/,none (URL kept),Hub rebuilt in place
+page,/meet-the-team/,/meet-the-team/,none (URL kept),"Rebuilt + add /attorney/kyle-scott/ bio (new page, no redirect source)"
+page,/trial-verdicts-settlements/,/trial-verdicts-settlements/,none (URL kept),High-equity slug kept; rebuilt as filterable results
+page,/testimonials/,/testimonials/,none (URL kept),Rebuilt in place
+page,/contact/,/contact/,none (URL kept),Rebuilt: NAP + hours + map + form + email
+page,/contact-us/,/contact/,301,Duplicate contact page merged
+page,/consultation/,/consultation/,none (URL kept),Kept as dedicated form landing (client may merge into /contact/)
+page,/kjs-law-blog/,/blog/,301,Broken index replaced by working /blog/
+page,/privacy-policy-2/,/privacy-policy/,301,Clean slug
+page,/sample-page/,/,301,WP default junk
+page,/personal-injury-lawyer-orange-county/,/personal-injury-lawyer-orange-county/,none (URL kept),"Flagship PI page, refreshed"
+page,/orange-county-auto-accidents-lawyer/,/orange-county-auto-accidents-lawyer/,none (URL kept),Refreshed
+page,/orange-county-slip-and-fall-attorney/,/orange-county-slip-and-fall-attorney/,none (URL kept),Rewritten with credible sources
+page,/orange-county-medical-malpractice-attorney/,/orange-county-medical-malpractice-attorney/,none (URL kept),Refreshed + MICRA update
+page,/dog-bite-attorney-in-orange-county/,/dog-bite-attorney-in-orange-county/,none (URL kept),Refreshed; staging link removed
+page,/orange-county-traumatic-brain-injury-attorney/,/orange-county-traumatic-brain-injury-attorney/,none (URL kept),Refreshed
+page,/sexual-harassment-lawyer-in-orange-county/,/sexual-harassment-lawyer-in-orange-county/,none (URL kept),Refreshed
+page,/anaheim-personal-injury-attorney/,/anaheim-personal-injury-attorney/,none (URL kept),Service-area page under new IA
+page,/irvine-personal-injury-attorneys/,/irvine-personal-injury-attorneys/,none (URL kept),Service-area page
+page,/santa-ana-personal-injury-attorney/,/santa-ana-personal-injury-attorney/,none (URL kept),Service-area page
+page,/personal-injury-attorney-tustin-ca/,/service-areas/tustin/,301,Doorway merged into NEW Tustin service-area page
+page,/trial-attorney-tustin-ca/,/service-areas/tustin/,301,Doorway merged
+page,/car-accident-attorney-tustin-ca/,/orange-county-auto-accidents-lawyer/,301,Doorway merged into practice page
+page,/slip-and-fall-attorney-tustin-ca/,/orange-county-slip-and-fall-attorney/,301,Doorway merged into practice page
+page,/sexual-molestation-attorney-tustin-ca/,/orange-county-sexual-abuse-attorney/,301,Promoted to NEW full practice page (biggest verdicts)
+page,/motorcycle-accident-attorney-tustin-ca/,/orange-county-motorcycle-accident-attorney/,301,Promoted to NEW full practice page
+page,/dog-bite-lawyer-tustin-ca/,/dog-bite-attorney-in-orange-county/,301,Doorway merged into practice page
+page,/choosing-a-lawyer-with-excellent-credentials/,/why-hire-us/,301,Silo consolidated into NEW Why Hire Us page
+page,/long-history-of-trial-experience/,/why-hire-us/,301,Silo consolidated; copy feeds the Kyle Scott bio
+page,/full-and-fair-financial-compensation/,/why-hire-us/,301,Silo consolidated
+page,/are-your-injuries-serious/,/why-hire-us/,301,Silo consolidated
+page,/compensation-from-insurance-company/,/why-hire-us/,301,Silo consolidated
+page,/contact-with-insurance-company/,/why-hire-us/,301,Silo consolidated
+page,/orange-county-personal-injury-kyle-scott-law/,/,301,Leftover previous homepage
+page,/17671-irvine-blvd-office-information/,/contact/,301,Hours/directions salvaged into Contact
+page,/about-santa-ana-california/,/santa-ana-personal-injury-attorney/,301,City guide folded into city page
+page,/about-irvine-california/,/irvine-personal-injury-attorneys/,301,City guide folded into city page
+page,/about-orange-california/,/service-areas/,301,No Orange city page; NEW service-areas hub
+page,/about-costa-mesa-california/,/service-areas/,301,NEW service-areas hub
+page,/about-fountain-valley-california/,/service-areas/,301,NEW service-areas hub
+page,/about-laguna-beach-california/,/service-areas/,301,NEW service-areas hub
+page,/top-orange-county-restaurants/,/,301,Pure filler (410 Gone also acceptable)
+page,/tustin-californias-best-restaurants/,/,301,Pure filler (410 acceptable)
+page,/orange-county-sports-teams/,/,301,Pure filler (410 acceptable)
+page,/orange-county-history/,/,301,Pure filler (410 acceptable)
+post,/2024/12/26/kyle-scott-settles-a-sexual-molestation-sexual-battery-lawsuit-for-2-2-million-details-confidential/,/blog/kyle-scott-settles-a-sexual-molestation-sexual-battery-lawsuit-for-2-2-million-details-confidential/,301,keep — case result / settlement content — core E-E-A-T
+post,/2024/12/26/kyle-scott-wins-jury-verdict-in-riverside-superior-court/,/blog/kyle-scott-wins-jury-verdict-in-riverside-superior-court/,301,keep — case result / settlement content — core E-E-A-T
+post,/2022/04/08/6-year-old-suffers-brain-injury-due-to-angels-negligence/,/blog/6-year-old-suffers-brain-injury-due-to-angels-negligence/,301,review — recent but thin (0 words)
+post,/2021/08/12/kyle-scott-law-delivers-justice-475000-slip-fall-settlement/,/blog/kyle-scott-law-delivers-justice-475000-slip-fall-settlement/,301,keep — case result / settlement content — core E-E-A-T
+post,/2021/08/06/when-should-you-contact-a-personal-injury-attorney-2/,/blog/when-should-you-contact-a-personal-injury-attorney-2/,301,keep — recent substantive article
+post,/2021/07/27/fiery-crash-that-took-5-lives-in-irvine/,/blog/fiery-crash-that-took-5-lives-in-irvine/,301,keep — recent substantive article
+post,/2021/07/23/in-person-court-appearances-now-the-norm/,/blog/in-person-court-appearances-now-the-norm/,301,review — recent but thin (217 words)
+post,/2021/07/20/o-c-superior-court-launches-electronic-evidence-submission-pilot-program/,/blog/o-c-superior-court-launches-electronic-evidence-submission-pilot-program/,301,keep — recent substantive article
+post,/2021/07/16/ruling-on-parenting-time-from-orange-county-superior-court/,/blog/ruling-on-parenting-time-from-orange-county-superior-court/,301,keep — recent substantive article
+post,/2021/07/13/when-should-you-hire-an-injury-attorney/,/blog/when-should-you-hire-an-injury-attorney/,301,keep — recent substantive article
+post,/2021/07/09/why-are-dog-bites-so-dangerous/,/blog/why-are-dog-bites-so-dangerous/,301,keep — recent substantive article
+post,/2021/07/06/traumatic-brain-injury-statistics/,/blog/traumatic-brain-injury-statistics/,301,keep — recent substantive article
+post,/2021/07/02/july-4-car-accident-statistics/,/blog/july-4-car-accident-statistics/,301,keep — recent substantive article
+post,/2021/06/28/notable-slip-and-fall-injury-cases/,/blog/notable-slip-and-fall-injury-cases/,301,keep — recent substantive article
+post,/2021/06/24/slip-and-fall-accidents-at-disneyland/,/blog/slip-and-fall-accidents-at-disneyland/,301,keep — recent substantive article
+post,/2021/06/21/best-car-accident-lawyer-in-tustin/,/blog/best-car-accident-lawyer-in-tustin/,301,keep — recent substantive article
+post,/2021/06/17/auto-accident-attorney-on-california-fatal-crashes/,/blog/auto-accident-attorney-on-california-fatal-crashes/,301,keep — recent substantive article
+post,/2021/06/14/dog-bite-lawyer-on-strict-liability/,/blog/dog-bite-lawyer-on-strict-liability/,301,keep — recent substantive article
+post,/2021/06/11/looking-for-a-personal-injury-attorney-in-tustin/,/blog/looking-for-a-personal-injury-attorney-in-tustin/,301,keep — recent substantive article
+post,/2021/06/08/car-accidents-and-knee-injuries/,/blog/car-accidents-and-knee-injuries/,301,keep — recent substantive article
+post,/2021/06/04/recover-damages-from-car-crash-caused-by-drunk-driver/,/blog/recover-damages-from-car-crash-caused-by-drunk-driver/,301,keep — case result / settlement content — core E-E-A-T
+post,/2021/05/31/the-perils-of-distracted-driving/,/blog/the-perils-of-distracted-driving/,301,keep — recent substantive article
+post,/2021/05/26/medical-malpractice-damages-looking-back-at-prop-46/,/blog/medical-malpractice-damages-looking-back-at-prop-46/,301,keep — recent substantive article
+post,/2021/05/21/injury-accidents-revisiting-the-pain-scale/,/blog/injury-accidents-revisiting-the-pain-scale/,301,keep — recent substantive article
+post,/2021/05/18/words-are-nice-photos-are-better/,/blog/words-are-nice-photos-are-better/,301,keep — recent substantive article
+post,/2021/05/14/get-it-on-record-accidents-injuries-and-police-reports/,/blog/get-it-on-record-accidents-injuries-and-police-reports/,301,keep — recent substantive article
+post,/2021/05/11/car-accidents-and-loss-of-use/,/blog/car-accidents-and-loss-of-use/,301,keep — recent substantive article
+post,/2021/05/07/back-injuries-resulting-from-auto-accidents/,/blog/back-injuries-resulting-from-auto-accidents/,301,keep — recent substantive article
+post,/2021/05/03/accident-victims-stacking-the-deck-against-you/,/blog/accident-victims-stacking-the-deck-against-you/,301,keep — recent substantive article
+post,/2021/04/27/car-accident-injuries-are-not-always-visible/,/blog/car-accident-injuries-are-not-always-visible/,301,keep — recent substantive article
+post,/2021/04/22/revisiting-truck-accident-attorney-advice/,/blog/revisiting-truck-accident-attorney-advice/,301,keep — recent substantive article
+post,/2021/04/19/even-mild-tbi-can-cause-problems-for-children/,/blog/even-mild-tbi-can-cause-problems-for-children/,301,keep — recent substantive article
+post,/2021/04/12/defining-personal-injury-cases/,/blog/defining-personal-injury-cases/,301,keep — recent substantive article
+post,/2021/04/07/top-tustin-ca-car-accident-attorney-on-avvo/,/blog/top-tustin-ca-car-accident-attorney-on-avvo/,301,keep — recent substantive article
+post,/2021/04/01/sexual-harassment-attorney-on-california-statistics/,/blog/sexual-harassment-attorney-on-california-statistics/,301,keep — recent substantive article
+post,/2021/03/26/tales-of-an-orange-county-car-accident-lawyer/,/blog/tales-of-an-orange-county-car-accident-lawyer/,301,keep — recent substantive article
+post,/2021/03/22/hiring-a-dog-bite-lawyer/,/blog/hiring-a-dog-bite-lawyer/,301,keep — recent substantive article
+post,/2021/03/16/hiring-a-personal-injury-lawyer-near-me/,/blog/hiring-a-personal-injury-lawyer-near-me/,301,keep — recent substantive article
+post,/2021/03/11/lawyers-for-auto-accidents/,/blog/lawyers-for-auto-accidents/,301,keep — recent substantive article
+post,/2021/03/08/dog-bite-attorney-on-emergency-room-footage/,/blog/dog-bite-attorney-on-emergency-room-footage/,301,keep — recent substantive article
+post,/2021/03/01/injury-lawyer-soft-tissue-damage/,/blog/injury-lawyer-soft-tissue-damage/,301,keep — recent substantive article
+post,/2021/02/23/state-farm-insurance-companys-law-firm-is-michael-maguire-associates-in-the-o-c-part-ii-and-nuclear-verdicts/,/blog/state-farm-insurance-companys-law-firm-is-michael-maguire-associates-in-the-o-c-part-ii-and-nuclear-verdicts/,301,keep — case result / settlement content — core E-E-A-T
+post,/2021/02/18/best-personal-injury-attorney-in-orange-county/,/blog/best-personal-injury-attorney-in-orange-county/,301,keep — recent substantive article
+post,/2021/02/15/tustin-car-accident-statistics/,/blog/tustin-car-accident-statistics/,301,keep — recent substantive article
+post,/2021/02/12/car-accident-lawyers-and-red-light-cameras/,/blog/car-accident-lawyers-and-red-light-cameras/,301,keep — recent substantive article
+post,/2021/02/09/notable-trip-and-fall-cases/,/blog/notable-trip-and-fall-cases/,301,keep — recent substantive article
+post,/2021/02/05/finding-a-southern-california-personal-injury-lawyer/,/blog/finding-a-southern-california-personal-injury-lawyer/,301,keep — recent substantive article
+post,/2021/02/02/the-personal-injury-attorney-tv-vs-reality/,/blog/the-personal-injury-attorney-tv-vs-reality/,301,keep — recent substantive article
+post,/2021/01/28/hiring-a-hit-and-run-attorney-in-tustin/,/blog/hiring-a-hit-and-run-attorney-in-tustin/,301,keep — recent substantive article
+post,/2021/01/25/tustin-car-accident-attorney-kyle-scott-wins-case-with-dash-cam/,/blog/tustin-car-accident-attorney-kyle-scott-wins-case-with-dash-cam/,301,keep — case result / settlement content — core E-E-A-T
+post,/2021/01/21/a-car-accident-attorney-reexamines-uninsured-motorist-insurance-case/,/blog/a-car-accident-attorney-reexamines-uninsured-motorist-insurance-case/,301,keep — recent substantive article
+post,/2021/01/18/tustin-personal-injury-attorney/,/blog/tustin-personal-injury-attorney/,301,keep — recent substantive article
+post,/2021/01/14/personal-injury-lawyer-near-you/,/blog/personal-injury-lawyer-near-you/,301,keep — recent substantive article
+post,/2021/01/11/traumatic-brain-injury-recovery/,/blog/traumatic-brain-injury-recovery/,301,keep — case result / settlement content — core E-E-A-T
+post,/2021/01/07/can-sexual-harassment-turn-into-sexual-assault/,/blog/can-sexual-harassment-turn-into-sexual-assault/,301,keep — recent substantive article
+post,/2021/01/04/car-crash-lawyers-thoughts-on-texting/,/blog/car-crash-lawyers-thoughts-on-texting/,301,keep — recent substantive article
+post,/2021/01/01/happy-2021-from-kyle-scott-law/,/blog/happy-2021-from-kyle-scott-law/,301,review — recent but thin (155 words)
+post,/2020/12/31/orange-county-car-accidents-on-new-years-eve/,/blog/orange-county-car-accidents-on-new-years-eve/,301,keep — recent substantive article
+post,/2020/12/28/car-accident-attorneys-help-increase-recovery-amounts/,/blog/car-accident-attorneys-help-increase-recovery-amounts/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/12/24/happy-holidays-from-kyle-scott-law/,/blog/happy-holidays-from-kyle-scott-law/,301,review — recent but thin (85 words)
+post,/2020/12/21/what-you-need-to-know-about-sexual-harassment-cases/,/blog/what-you-need-to-know-about-sexual-harassment-cases/,301,keep — recent substantive article
+post,/2020/12/17/why-are-there-so-many-dog-bite-cases/,/blog/why-are-there-so-many-dog-bite-cases/,301,keep — recent substantive article
+post,/2020/12/14/when-do-you-need-to-hire-a-car-crash-attorney/,/blog/when-do-you-need-to-hire-a-car-crash-attorney/,301,keep — recent substantive article
+post,/2020/12/10/orange-county-attorney-on-medical-malpractice/,/blog/orange-county-attorney-on-medical-malpractice/,301,keep — recent substantive article
+post,/2020/12/07/sexual-molestation-and-assualt-in-orange-county/,/blog/sexual-molestation-and-assualt-in-orange-county/,301,keep — recent substantive article
+post,/2020/12/04/slip-and-fall-injuries-in-construction-seem-to-be-rising/,/blog/slip-and-fall-injuries-in-construction-seem-to-be-rising/,301,keep — recent substantive article
+post,/2020/12/02/medical-malpractice-verdicts-and-awards/,/blog/medical-malpractice-verdicts-and-awards/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/11/30/dog-bite-injuries-in-orange-county/,/blog/dog-bite-injuries-in-orange-county/,301,keep — recent substantive article
+post,/2020/11/27/compensation-in-traumatic-brain-injury-cases/,/blog/compensation-in-traumatic-brain-injury-cases/,301,keep — recent substantive article
+post,/2020/11/26/happy-thanksgiving-from-kyle-scott-law/,/blog/happy-thanksgiving-from-kyle-scott-law/,301,review — recent but thin (87 words)
+post,/2020/11/23/car-accident-lawyer-orange-county-overview/,/blog/car-accident-lawyer-orange-county-overview/,301,keep — recent substantive article
+post,/2020/11/19/when-to-call-a-personal-injury-attorney/,/blog/when-to-call-a-personal-injury-attorney/,301,keep — recent substantive article
+post,/2020/11/17/car-accident-law-kumar-v-shumer-et-al-59-7-m-injury-verdict/,/blog/car-accident-law-kumar-v-shumer-et-al-59-7-m-injury-verdict/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/11/13/47-5-m-settlement-touched-on-premises-liability/,/blog/47-5-m-settlement-touched-on-premises-liability/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/11/10/california-personal-injury-verdict-largest-ever/,/blog/california-personal-injury-verdict-largest-ever/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/10/12/slips-and-falls-number-one-cause-of-injury-for-those-over-65/,/blog/slips-and-falls-number-one-cause-of-injury-for-those-over-65/,301,keep — recent substantive article
+post,/2020/10/06/client-sitting-in-parked-car-rear-ended-100000-policy-limits-settlement/,/blog/client-sitting-in-parked-car-rear-ended-100000-policy-limits-settlement/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/10/02/car-crash-best-performers/,/blog/car-crash-best-performers/,301,keep — recent substantive article
+post,/2020/09/25/medical-malpractice-law-in-orange-county/,/blog/medical-malpractice-law-in-orange-county/,301,keep — recent substantive article
+post,/2020/09/25/ruth-bader-ginsburg-thank-you-for-fighting-for-justice/,/blog/ruth-bader-ginsburg-thank-you-for-fighting-for-justice/,301,review — recent but thin (0 words)
+post,/2020/09/22/how-do-slip-and-fall-laws-work-in-orange-county/,/blog/how-do-slip-and-fall-laws-work-in-orange-county/,301,keep — recent substantive article
+post,/2020/09/18/recognizing-the-signs-of-severe-head-injuries/,/blog/recognizing-the-signs-of-severe-head-injuries/,301,keep — recent substantive article
+post,/2020/09/15/seat-belt-use-in-california/,/blog/seat-belt-use-in-california/,301,keep — recent substantive article
+post,/2020/09/11/how-much-is-your-life-worth/,/blog/how-much-is-your-life-worth/,301,keep — recent substantive article
+post,/2020/09/08/dog-bites-no-laughing-matter/,/blog/dog-bites-no-laughing-matter/,301,keep — recent substantive article
+post,/2020/09/03/personal-injury-video-premiere/,/blog/personal-injury-video-premiere/,301,keep — recent substantive article
+post,/2020/08/06/car-crash-better-call-kyle-866-757-0959-or-714-544-1460/,/blog/car-crash-better-call-kyle-866-757-0959-or-714-544-1460/,301,review — recent but thin (0 words)
+post,/2020/07/28/car-accidents-and-shoulder-injuries/,/blog/car-accidents-and-shoulder-injuries/,301,keep — recent substantive article
+post,/2020/07/10/orange-county-car-accident-checklist-keep-calm/,/blog/orange-county-car-accident-checklist-keep-calm/,301,keep — recent substantive article
+post,/2020/05/28/questions-you-should-ask-your-personal-injury-attorney/,/blog/questions-you-should-ask-your-personal-injury-attorney/,301,keep — recent substantive article
+post,/2020/05/22/people-in-motorcycle-crashes-need-an-attorney-with-experience-and-skill-representing-motorcycle-riders/,/blog/people-in-motorcycle-crashes-need-an-attorney-with-experience-and-skill-representing-motorcycle-riders/,301,keep — recent substantive article
+post,/2020/05/21/elder-abuse-act-information-protecting-those-at-risk/,/blog/elder-abuse-act-information-protecting-those-at-risk/,301,keep — recent substantive article
+post,/2020/05/20/wrongful-termination-in-orange-county/,/blog/wrongful-termination-in-orange-county/,301,keep — recent substantive article
+post,/2020/05/19/traumatic-brain-injuries-unforeseen-consequences-of-negligence/,/blog/traumatic-brain-injuries-unforeseen-consequences-of-negligence/,301,keep — recent substantive article
+post,/2020/05/18/sexual-assault-and-harassment-in-california/,/blog/sexual-assault-and-harassment-in-california/,301,keep — recent substantive article
+post,/2020/05/15/a-closer-look-at-premises-liability/,/blog/a-closer-look-at-premises-liability/,301,keep — recent substantive article
+post,/2020/05/14/slip-and-falls-at-businesses-retail-stores-and-supermarkets-in-orange-county/,/blog/slip-and-falls-at-businesses-retail-stores-and-supermarkets-in-orange-county/,301,keep — recent substantive article
+post,/2020/05/13/traffic-accident-statistics-during-coronavirus-shutdown/,/blog/traffic-accident-statistics-during-coronavirus-shutdown/,301,keep — recent substantive article
+post,/2020/05/12/abuse-by-clergy-is-a-decades-old-problem/,/blog/abuse-by-clergy-is-a-decades-old-problem/,301,keep — recent substantive article
+post,/2020/05/11/statute-of-limitations-for-childhood-sexual-abuse-victims-expanded/,/blog/statute-of-limitations-for-childhood-sexual-abuse-victims-expanded/,301,keep — recent substantive article
+post,/2020/05/08/orange-county-car-accidents-and-insurance/,/blog/orange-county-car-accidents-and-insurance/,301,keep — recent substantive article
+post,/2020/04/23/kyle-scott-keith-bruno-60th-largest-verdict-in-california-in-2019-minor-v-lbusd-5750000/,/blog/kyle-scott-keith-bruno-60th-largest-verdict-in-california-in-2019-minor-v-lbusd-5750000/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/04/21/kyle-scott-trip-and-fall-settlement-505000/,/blog/kyle-scott-trip-and-fall-settlement-505000/,301,keep — case result / settlement content — core E-E-A-T
+post,/2020/04/15/kyle-scott-keith-bruno-settlement-water-park-slip-and-fall-697500/,/blog/kyle-scott-keith-bruno-settlement-water-park-slip-and-fall-697500/,301,keep — case result / settlement content — core E-E-A-T
+post,/2019/12/08/5-75-million-verdict-by-kyle-scott-keith-bruno/,/blog/5-75-million-verdict-by-kyle-scott-keith-bruno/,301,keep — case result / settlement content — core E-E-A-T
+post,/2019/11/16/kyle-scott-keith-bruno-obtain-5-75-m-verdict-against-long-beach-unified-school-district/,/blog/kyle-scott-keith-bruno-obtain-5-75-m-verdict-against-long-beach-unified-school-district/,301,keep — case result / settlement content — core E-E-A-T
+post,/2019/11/10/need-justice-call-kyle-scott-law-714-544-1460-or-866-757-0959/,/blog/,301,prune — 2019-era thin post (0 words)
+post,/2019/06/09/kyle-scott-law-jeffrey-ehrlich-win-court-of-appeal-victory-for-our-client-and-a-new-trial/,/blog/kyle-scott-law-jeffrey-ehrlich-win-court-of-appeal-victory-for-our-client-and-a-new-trial/,301,review — older but substantial (5297 words)
+post,/2019/04/01/great-wolf-garden-grove-received-100-million-and-kept-a-dangerous-condition-of-guests-slipping-concealed-from-the-public/,/blog/great-wolf-garden-grove-received-100-million-and-kept-a-dangerous-condition-of-guests-slipping-concealed-from-the-public/,301,keep — case result / settlement content — core E-E-A-T
+post,/2018/06/15/kyle-scott-laws-verdict-in-bryan-v-orange-county-transportation-authority-ranked-among-the-top-verdicts-of-2017/,/blog/kyle-scott-laws-verdict-in-bryan-v-orange-county-transportation-authority-ranked-among-the-top-verdicts-of-2017/,301,keep — case result / settlement content — core E-E-A-T
+post,/2018/01/09/hit-drunk-driver-can-recover-punitive-damages-per-ca-law-caci-3945/,/blog/hit-drunk-driver-can-recover-punitive-damages-per-ca-law-caci-3945/,301,keep — case result / settlement content — core E-E-A-T
+post,/2018/01/09/injured-great-wolf-lodge-disneyland-can-help/,/blog/,301,prune — 2018-era thin post (176 words)
+post,/2017/06/21/zubillaga-v-allstate-court-appeal-victory-kyle-scott-law-client-re-bad-faith/,/blog/,301,prune — 2017-era thin post (150 words)
+post,/2017/05/19/california-law-not-allow-attorneys-name-insurance-company-personal-injury-lawsuit-defendant/,/blog/,301,prune — 2017-era thin post (353 words)
+post,/2017/05/13/state-farm-insurance-companys-law-firm-michael-maguire-associates-o-c/,/blog/state-farm-insurance-companys-law-firm-michael-maguire-associates-o-c/,301,review — older but substantial (515 words)
+post,/2017/04/14/oc-jury-provides-justice-man-suffering-cognitive-problems-928493-12-verdict/,/blog/oc-jury-provides-justice-man-suffering-cognitive-problems-928493-12-verdict/,301,keep — case result / settlement content — core E-E-A-T
+post,/2017/02/10/tired-insurance-adjuster-telling-no-case-call-kyle-scott-949-423-3944/,/blog/,301,prune — 2017-era thin post (0 words)
+post,/2016/11/01/kyle-scott-law-25-years-fighting-clients/,/blog/,301,prune — 2016-era thin post (0 words)
+post,/2016/10/27/paralegals-naomi-hayley-kyle-scott-law-spirit-714-544-1460/,/blog/,301,prune — 2016-era thin post (0 words)
+post,/2016/07/31/better-call-kyle-scott-law-714-544-1460/,/blog/,301,prune — 2016-era thin post (0 words)
+post,/2016/07/28/client-leaves-positive-review-google-can/,/blog/,301,prune — 2016-era thin post (0 words)
+post,/2016/06/20/defense-firm-boasts-minors-claims-severe-brain-injury-football-game-barred-claim-untimely/,/blog/,301,prune — 2016-era thin post (311 words)
+post,/2016/06/08/car-crash-not-accident/,/blog/,301,prune — 2016-era thin post (85 words)
+post,/2016/06/03/keep-calm-hire-lawyer/,/blog/,301,prune — 2016-era thin post (139 words)
+post,/2016/05/31/kyle-scott-law-done-good-job-post-yelp-com/,/blog/,301,prune — 2016-era thin post (141 words)
+post,/2016/02/26/state-farm-profit-jumps-48-to-6-2-billion-on-pharma-deals/,/blog/state-farm-profit-jumps-48-to-6-2-billion-on-pharma-deals/,301,keep — case result / settlement content — core E-E-A-T
+post,/2016/01/02/new-earbuds-law-for-california-in-2016/,/blog/,301,prune — 2016-era thin post (150 words)
+post,/2015/12/26/weight-loss-after-the-holidays-try-the-dr-scotti-diet/,/blog/,301,prune — 2015-era thin post (101 words)
+post,/2015/12/25/whats-you-pain-scale/,/blog/whats-you-pain-scale/,301,review — older but substantial (433 words)
+post,/2015/11/17/settled-case-client-san-franciso/,/blog/settled-case-client-san-franciso/,301,keep — case result / settlement content — core E-E-A-T
+post,/2015/11/06/loyola-law-school-class-1991-reunion-coming-21-2016/,/blog/,301,prune — 2015-era thin post (0 words)
+post,/2015/07/15/california-law-permit-lawyer-insurance-company-defendant-personal-injury-case/,/blog/,301,prune — 2015-era thin post (228 words)
+post,/2015/07/03/statute-limitations-california-minors/,/blog/statute-limitations-california-minors/,301,review — older but substantial (503 words)
+post,/2015/04/14/governmental-entity-employee-responsible-injury-file-government-claim/,/blog/,301,prune — 2015-era thin post (396 words)
+post,/2015/03/16/kyle-scott-law-fight-you/,/blog/,301,prune — 2015-era thin post (83 words)
+post,/2015/01/03/jet-set-art-com-michael-milauskas-website/,/blog/,301,prune — 2015-era thin post (37 words)
+post,/2015/01/02/hayley-lawson-kjs-law-spirit/,/blog/,301,prune — 2015-era thin post (63 words)
+post,/2014/11/03/prop-46-increase-malpractice-insurance-rates/,/blog/,301,prune — 2014-era thin post (209 words)
+post,/2014/11/03/increasing-pain-suffering-victims-medical-malpractice-increase-healthcare-costs/,/blog/,301,prune — 2014-era thin post (117 words)
+post,/2014/09/22/tom-girardi-peter-cetera-perform-loyola-50th-grand-reunion/,/blog/,301,prune — 2014-era thin post (0 words)
+post,/2014/09/22/gloria-allred-jacqualine-scott-loyola-50th-grand-reunion/,/blog/,301,prune — 2014-era thin post (0 words)
+post,/2014/09/01/support-kyle-scott-law-write-review-google/,/blog/,301,prune — 2014-era thin post (97 words)
+post,/2014/09/01/kyle-scott-law-714-544-1460-email-kylekjslaw-com/,/blog/,301,prune — 2014-era thin post (102 words)
+post,/2014/08/16/side/,/blog/,301,prune — 2014-era thin post (0 words)
+post,/2014/08/13/case-call-free-evaluation-714-544-1460-kylekjslaw-com/,/blog/,301,prune — 2014-era thin post (0 words)
+post,/2014/08/10/angels-flight-railroad-engine-could/,/blog/,301,prune — 2014-era thin post (39 words)
+post,/2014/06/01/people-justice/,/blog/,301,prune — 2014-era thin post (110 words)
+post,/2014/05/22/california-statute-limitations-car-accident-code-civil-procedure-%c2%a7-335-1/,/blog/,301,prune — 2014-era thin post (284 words)
+post,/2014/05/22/jason-abhyankar-teach-molested-4th-grade-boys-denied-writ-habeas-corpus/,/blog/,301,prune — 2014-era thin post (49 words)
+post,/2014/05/08/217000-jury-verdict-client/,/blog/217000-jury-verdict-client/,301,keep — case result / settlement content — core E-E-A-T
+post,/2014/04/29/kyle-scott-law-bulletin-board/,/blog/,301,prune — 2014-era thin post (0 words)
+post,/2014/03/26/consumer-attorneys-association-l-a-congratulates-a-true-warrior-justice/,/blog/,301,prune — 2014-era thin post (92 words)
+post,/2014/03/23/photos-win-lawsuit-insurance-company-settle/,/blog/,301,prune — 2014-era thin post (269 words)
+post,/2014/03/22/left-turning-driver-fault/,/blog/left-turning-driver-fault/,301,review — older but substantial (593 words)
+post,/2013/12/01/sprains-strains-treat-them/,/blog/sprains-strains-treat-them/,301,review — older but substantial (1362 words)
+post,/2013/11/30/pilates-strengthen/,/blog/,301,prune — 2013-era thin post (18 words)
+post,/2013/10/16/yusuf-cat-stevens-giving-world-gift-music/,/blog/,301,prune — 2013-era thin post (46 words)
+post,/2013/10/16/california-medical-malpractice-statute-limitation-year-plaintiff-discovers-injury/,/blog/california-medical-malpractice-statute-limitation-year-plaintiff-discovers-injury/,301,review — older but substantial (474 words)
+post,/2013/08/26/courtroom-sketch-kyle-scott-trial/,/blog/,301,prune — 2013-era thin post (28 words)
+post,/2013/08/15/civil-lawsuits-filings-years/,/blog/civil-lawsuits-filings-years/,301,review — older but substantial (741 words)
+post,/2013/08/15/ontario-convention-center-employee-suing-city-smg-liset-marquez-staff-writer-dailybulletin-com/,/blog/ontario-convention-center-employee-suing-city-smg-liset-marquez-staff-writer-dailybulletin-com/,301,review — older but substantial (651 words)
+post,/2013/08/15/ontario-convention-center-employee-suing-city-smg/,/blog/ontario-convention-center-employee-suing-city-smg/,301,review — older but substantial (657 words)
+post,/2013/08/03/california-dog-bite-statute/,/blog/,301,prune — 2013-era thin post (299 words)
+post,/2013/07/23/kyle-scott-represented-families-april-2000-crash-v-22-osprey-arizona/,/blog/kyle-scott-represented-families-april-2000-crash-v-22-osprey-arizona/,301,review — older but substantial (414 words)
+post,/2013/07/22/sherrice-iverson-law-crime-witness-sexual-assault-minor-notifying-police/,/blog/,301,prune — 2013-era thin post (221 words)
+post,/2013/07/22/don-peters-84-olympics-female-gymnasts-coach-resigns-sexual-abuse-charges/,/blog/,301,prune — 2013-era thin post (306 words)
+post,/2013/06/10/clients-it-thanks-janet/,/blog/,301,prune — 2013-era thin post (0 words)
+post,/2013/04/02/insurance-company-limit-damages-conduct-suveilance-you-bet-attorney-side/,/blog/,301,prune — 2013-era thin post (250 words)
+post,/2013/03/27/knee-injuries-sprains-ligament-tendon-tears-meniscus-tears-fractures/,/blog/,301,prune — 2013-era thin post (323 words)
+post,/2013/03/25/neal-cassady-heart-beat-movement/,/blog/,301,prune — 2013-era thin post (42 words)
+post,/2013/02/26/matter-insurance-company-attorney-case-trial/,/blog/matter-insurance-company-attorney-case-trial/,301,review — older but substantial (771 words)
+post,/2013/02/24/you/,/blog/you/,301,review — older but substantial (687 words)
+post,/2013/01/27/supraspinatus-tendon-care/,/blog/,301,prune — 2013-era thin post (178 words)
+post,/2013/01/19/attorney-answering-questions/,/blog/,301,prune — 2013-era thin post (357 words)
+post,/2012/11/28/state-farm-agrees-taht/,/blog/state-farm-agrees-taht/,301,review — older but substantial (566 words)
+post,/2012/11/08/algae-pirates-caribbean-boats-jurors-csi/,/blog/algae-pirates-caribbean-boats-jurors-csi/,301,review — older but substantial (635 words)
+post,/2012/09/09/caala-convention-2012/,/blog/,301,prune — 2012-era thin post (321 words)
+post,/2012/09/04/paralegals-handle-personal-injury-claim-personally/,/blog/,301,prune — 2012-era thin post (17 words)
+post,/2012/08/27/wait-medical-care/,/blog/wait-medical-care/,301,review — older but substantial (1015 words)
+post,/2012/08/11/entitled-loss-car-california-civil-jury-instructions-caci-sharing-servicesshare-3903m-loss-personal-property-economic-damage-insert-number-e-g-13-loss-name-plaintiffs-item-personal/,/blog/entitled-loss-car-california-civil-jury-instructions-caci-sharing-servicesshare-3903m-loss-personal-property-economic-damage-insert-number-e-g-13-loss-name-plaintiffs-item-personal/,301,review — older but substantial (518 words)
+post,/2012/08/07/hire-attorney/,/blog/hire-attorney/,301,review — older but substantial (408 words)
+post,/2012/08/03/protect-family-protect-others/,/blog/protect-family-protect-others/,301,review — older but substantial (882 words)
+post,/2012/08/01/cover-adequate-uninsured-motorist-coverage/,/blog/cover-adequate-uninsured-motorist-coverage/,301,review — older but substantial (1009 words)
+post,/2012/07/26/clients-recommend-dr-brad-byington-d-c-victorville/,/blog/,301,prune — 2012-era thin post (72 words)
+post,/2012/07/25/recommendation-client-hg/,/blog/,301,prune — 2012-era thin post (28 words)
+post,/2012/07/24/client-recommendations/,/blog/,301,prune — 2012-era thin post (63 words)
+post,/2012/07/24/california-law-limits-pain-suffering-medical-malpractice-cases/,/blog/california-law-limits-pain-suffering-medical-malpractice-cases/,301,review — older but substantial (1235 words)
+post,/2012/07/19/tom-girardi/,/blog/,301,prune — 2012-era thin post (27 words)
+post,/2012/07/19/recommendation-kyle-scott-law/,/blog/,301,prune — 2012-era thin post (29 words)
+post,/2012/07/18/blood-broken-bone-hurt-bad/,/blog/blood-broken-bone-hurt-bad/,301,review — older but substantial (708 words)
+post,/2012/07/14/jason-abhyankar-convicted-molesting-o-c-boys/,/blog/jason-abhyankar-convicted-molesting-o-c-boys/,301,review — older but substantial (492 words)
+post,/2012/07/14/fell-injured-elses-fault/,/blog/,301,prune — 2012-era thin post (259 words)
+post,/2012/07/14/molestation-allegations-don-peters/,/blog/,301,prune — 2012-era thin post (328 words)
+post,/2012/07/13/paul-j-nestor-obituary/,/blog/,301,prune — 2012-era thin post (109 words)
+post,/2012/07/13/i-kind-person-sues/,/blog/i-kind-person-sues/,301,review — older but substantial (521 words)
+post,/2012/07/12/receive-3-12-times-compensation-average-attorney/,/blog/receive-3-12-times-compensation-average-attorney/,301,review — older but substantial (477 words)
+post,/2012/07/12/benefits-chiropractic-care/,/blog/benefits-chiropractic-care/,301,review — older but substantial (586 words)
+post,/2012/07/12/attorney-insurance-company-fair-me/,/blog/attorney-insurance-company-fair-me/,301,review — older but substantial (548 words)
+post,/2012/07/12/shakespeare-said-lets-kill-lawyers-mean/,/blog/shakespeare-said-lets-kill-lawyers-mean/,301,review — older but substantial (614 words)
+post,/2012/07/12/hurt-big-rig-incident-hire-attorney/,/blog/,301,prune — 2012-era thin post (296 words)
+post,/2012/07/12/notice/,/blog/,301,prune — 2012-era thin post (270 words)
+category,/category/blog/,/blog/,301,"empty category, dissolved; 0 posts"
+category,/category/car-accident-lawyer/,/blog/category/car-accidents/,301,renamed car-accidents; 41 posts
+category,/category/dog-bites/,/blog/category/dog-bites/,301,kept; 8 posts
+category,/category/legal-news/,/blog/category/firm-news/,301,renamed firm-news; 5 posts
+category,/category/personal-injury-law/,/blog/category/personal-injury/,301,renamed personal-injury; 90 posts
+category,/category/recusandae/,/blog/,301,"leftover test data, dissolved; 0 posts"
+category,/category/sexual-abuse-and-molestation/,/blog/category/abuse-cases/,301,renamed abuse-cases; 7 posts
+category,/category/slip-and-fall/,/blog/category/slip-and-fall/,301,kept; 6 posts
+category,/category/traumatic-brain-injury/,/blog/category/brain-injury/,301,renamed brain-injury; 7 posts
+category,/category/uncategorized/,/blog/,301,dissolved — 104 posts recategorized during migration; 104 posts
+category,/category/verdicts-settlements/,/blog/category/results/,301,renamed results; 5 posts
+tag,/tag/tustin/,/blog/,301,tag archive dropped (63 posts)
+tag,/tag/orange-county/,/blog/,301,tag archive dropped (55 posts)
+tag,/tag/ca/,/blog/,301,tag archive dropped (22 posts)
+tag,/tag/orange-county-ca/,/blog/,301,tag archive dropped (19 posts)
+tag,/tag/personal-injury-attorney/,/blog/,301,tag archive dropped (17 posts)
+tag,/tag/attorney/,/blog/,301,tag archive dropped (14 posts)
+tag,/tag/california/,/blog/,301,tag archive dropped (12 posts)
+tag,/tag/car-accident/,/blog/,301,tag archive dropped (12 posts)
+tag,/tag/slip-and-fall/,/blog/,301,tag archive dropped (9 posts)
+tag,/tag/tustin-ca/,/blog/,301,tag archive dropped (9 posts)
+tag,/tag/car-accident-attorney/,/blog/,301,tag archive dropped (8 posts)
+tag,/tag/car-accidents/,/blog/,301,tag archive dropped (8 posts)
+tag,/tag/personal-injury/,/blog/,301,tag archive dropped (8 posts)
+tag,/tag/personal-injury-lawyer/,/blog/,301,tag archive dropped (7 posts)
+tag,/tag/lawyer/,/blog/,301,tag archive dropped (6 posts)
+tag,/tag/tbi/,/blog/,301,tag archive dropped (6 posts)
+tag,/tag/anaheim/,/blog/,301,tag archive dropped (5 posts)
+tag,/tag/car-crash/,/blog/,301,tag archive dropped (5 posts)
+tag,/tag/compensation/,/blog/,301,tag archive dropped (5 posts)
+tag,/tag/injury-lawyer/,/blog/,301,tag archive dropped (5 posts)
+tag,/tag/kyle-scott-law/,/blog/,301,tag archive dropped (5 posts)
+tag,/tag/traumatic-brain-injury/,/blog/,301,tag archive dropped (5 posts)
+tag,/tag/premises-liability/,/blog/,301,tag archive dropped (4 posts)
+tag,/tag/santa-ana/,/blog/,301,tag archive dropped (4 posts)
+tag,/tag/car-crash-lawyer/,/blog/,301,tag archive dropped (3 posts)
+tag,/tag/damages/,/blog/,301,tag archive dropped (3 posts)
+tag,/tag/dog-bite/,/blog/,301,tag archive dropped (3 posts)
+tag,/tag/dog-bite-attorney/,/blog/,301,tag archive dropped (3 posts)
+tag,/tag/dog-bite-lawyer/,/blog/,301,tag archive dropped (3 posts)
+tag,/tag/injuryattorney/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/awards/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/car-accident-lawyer/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/car-crash-attorney/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/drunk-driving/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/fatalities/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/injury/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/insurance-companies/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/kyle-scott/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/medical-malpractice/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/medical-malpractice-lawyer/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/orange-county-car-accident-attorney/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/personal-injury-lawyer-near-me/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/sexual-abuse/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/sexual-assault/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/slip-and-fall-attorney/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/tustin-injury-lawyer/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/tustin-personal-injury-lawyer/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/verdicts/,/blog/,301,tag archive dropped (2 posts)
+tag,/tag/caraccident/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/caraccidentattorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/greatresults/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/justice/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/kjslawfirm/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/kylescottlaw/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/oclawfirm/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/oclawyer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/orangecounty/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/personalinjury/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/slipandfall/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/trialattorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/tustinlawyer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/47-5-million-settlement/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/accident-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/agressive-breeds/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/auto-accident-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/avvo-com/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/back-injury/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/bacteria/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/best-accident-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/best-personal-injury-attorney-in-orange-county/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/best-tusting-car-accident-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/big-rig-acident/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/brain-injury/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/caala-org/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/car-accident-lawyer-near-me/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/car-accident-lawyer-reviews/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/car-crash-safety/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/car-wreck/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/car-wreck-lawyer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/case-law/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/cellphone/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/child-custody/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/children/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/chiropractic/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/choosing-a-personal-injury-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/christmas/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/clergy-sexual-abuse/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/collision-tests/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/construction/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/coronavirus/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/covid/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/dealing-with-insurance-companies/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/disneyland/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/distracted-driving/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/dog-bite-injuries/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/dog-bite-lawyer-near-me/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/elder-abuse/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/elder-abuse-act/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/employment-law/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/experienced/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/expertise-com/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/famous-cases/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/fatality/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/freeways/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/happy-new-year/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/highest-personal-injury-award/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/hiring-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/hit-and-run/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/holiday/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/iihs/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/in-person-appearances/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/injuries/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/injury-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/injury-victim/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/insurance-settlement/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/irvine/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/july-4th-weekend/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/knee-injury/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/kumar-v-shumer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/largest-malpractice-award/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/lawsuit/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/lawyer-questions/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/laywer-reviews/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/loss-of-car/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/medical-malpractice-lawyer-tustin/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/motorcycle-accident/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/new-years-eve/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/newport-beach/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/orange-county-brain-injury-lawyer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/orange-county-personal-injury-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/orange-county-superior-court/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/pain-and-suffering/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/pain-scale/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/person-injury/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/personal-injury-attoney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/personal-injury-lawyer-ads/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/photographs/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/premiere/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/premises-l/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/prop-46/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/red-light-camera/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/san-bernardino/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/seat-belt/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/sexual-abuse-lawyer-tustin/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/sexual-harassment/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/sexual-harassment-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/sexual-harassment-lawyer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/sexual-molestation/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/sexual-molestation-lawyer-orange-county/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/shoulder-injuries/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/slip-and-fall-law/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/slip-and-fall-lawsuit/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/slip-and-fall-lawyer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/soft-tissue/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/soft-tissue-damage/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/southern-california/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/statistics/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/statute-of-limitations/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/superior-court/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/tactics/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/taffic-accident/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/texting-while-driving/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/theme-park/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/traffic/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/traffic-collision-report/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/trauma/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/truck-accident-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/tustin-lawyer/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/uninsured-motorist/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/unwanted-advances/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/verdict/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/when-to-hire-personal-injury-attorney/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/whiplash/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/wrongful-termination/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/youtube-video/,/blog/,301,tag archive dropped (1 posts)
+tag,/tag/bar/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/beach/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/blog/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/business/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/coctail/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/computer/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/designer/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/education/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/technology/,/blog/,301,tag archive dropped (0 posts)
+tag,/tag/web-design-2/,/blog/,301,tag archive dropped (0 posts)
+author,/author/admin/,/blog/,301,author archive dropped
+author,/author/fusedcreative/,/blog/,301,author archive dropped
+pattern,/YYYY/MM/DD/:slug/ (any date prefix),/blog/:slug/,301,catch-all for kept posts; exact prune rows above take precedence
+pattern,/feed/ and /:path*/feed/,/blog/,301,WP RSS endpoints
+pattern,/wp-content/uploads/:path*,(re-host surviving files on the new site),note,58 surviving files archived in kjslaw-content/media/; 186 already 404 today
+pattern,"/wp-admin/, /wp-login.php",(block or 410),note,no WordPress on the new site
+pattern,/kjs-law-blog/page/:n/,/blog/,301,old index pagination
