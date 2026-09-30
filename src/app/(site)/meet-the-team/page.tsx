@@ -56,7 +56,7 @@ export default function MeetTheTeamPage() {
           <p>Trial attorney Kyle J. Scott and the professional staff serving clients from the firm’s Tustin office.</p>
         </div>
         <figure className="team-hero-photo">
-          <Image src="/team-group-original.webp" alt="The Kyle Scott Law team outside the firm’s Tustin office" width={900} height={600} loading="eager" fetchPriority="high" />
+          <Image src="/kjs-team.jpg" alt="The Kyle Scott Law team outside the firm’s Tustin office" width={900} height={600} loading="eager" fetchPriority="high" quality={90} sizes="(max-width: 1430px) 94vw, 1280px" />
           <figcaption><span>Kyle Scott Law</span><strong>Tustin, California</strong></figcaption>
         </figure>
       </section>

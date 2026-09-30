@@ -119,7 +119,7 @@ export default function Home() {
           </div>
 
           <div className="hero-media" aria-label="Kyle Scott and the Kyle Scott Law team">
-            <Image src="/kjs-team.jpg" alt="Kyle Scott with the Kyle Scott Law team in Tustin" width={900} height={600} priority fetchPriority="high" quality={90} sizes="(max-width: 1023px) 94vw, 720px" />
+            <Image src="/kjs-team.jpg" alt="Kyle Scott with the Kyle Scott Law team in Tustin" width={900} height={600} priority fetchPriority="high" quality={90} sizes="(max-width: 1023px) 94vw, 57vw" />
             <div className="photo-caption">Kyle Scott and the KJS Law team</div>
           </div>
 

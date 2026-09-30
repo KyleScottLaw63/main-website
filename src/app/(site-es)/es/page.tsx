@@ -80,7 +80,7 @@ export default function SpanishHomePage() {
             </a>
           </div>
           <div className="hero-media" aria-label="Kyle Scott y el equipo de Kyle Scott Law">
-            <Image src="/kjs-team.jpg" alt="Kyle Scott con el equipo de Kyle Scott Law en Tustin" width={900} height={600} priority fetchPriority="high" quality={90} sizes="(max-width: 1023px) 94vw, 720px" />
+            <Image src="/kjs-team.jpg" alt="Kyle Scott con el equipo de Kyle Scott Law en Tustin" width={900} height={600} priority fetchPriority="high" quality={90} sizes="(max-width: 1023px) 94vw, 57vw" />
             <div className="photo-caption">Kyle Scott y el equipo de KJS Law</div>
           </div>
           <div className="trust-rail" aria-label="Datos del despacho">
