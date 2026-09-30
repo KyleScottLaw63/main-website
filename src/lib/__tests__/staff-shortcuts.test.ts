@@ -13,8 +13,9 @@ afterEach(() => {
   vi.unstubAllEnvs();
 });
 
+/** The rule kjslaw.com applies to a path (the www-host rule applies only on www). */
 async function ruleFor(path: string) {
-  const redirects = await nextConfig.redirects!();
+  const redirects = (await nextConfig.redirects!()).filter((rule) => !rule.has);
   return redirects.find((rule) => new RegExp(buildCustomRoute("redirect", rule, ["/_next"]).regex).test(path));
 }
 

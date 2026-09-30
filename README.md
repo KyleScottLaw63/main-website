@@ -34,7 +34,7 @@ npm run verify:redirects   # (with npm start running) every old kjslaw.com URL: 
 
 ### Going live on kjslaw.com
 
-1. Vercel → Project → **Settings → Domains**: add `kjslaw.com` and `www.kjslaw.com`, with **www redirecting to the apex** (`kjslaw.com` is the canonical domain; every canonical link, the sitemap, and the structured data use it). Point the DNS records Vercel shows at the registrar.
+1. Vercel → Project → **Settings → Domains**: add `kjslaw.com` **and** `www.kjslaw.com` (www needs to be attached for its SSL certificate; the site itself sends every www request to `kjslaw.com` with a 308 — `next.config.ts` — so no redirect setting is needed). `kjslaw.com` is the canonical domain: every canonical link, the sitemap, and the structured data use it. kjslaw.com's DNS is on Vercel's nameservers (since 2026-09-30); Kyle's Google mail, Google aliases, and Bluehost service records were copied there — add any new record in Vercel → Domains → kjslaw.com.
 2. Nothing else to switch: on `kjslaw.com` itself, `robots.txt` admits search engines and names the sitemap automatically (it is decided by the request's host).
 3. Right after cutover: `node scripts/verify-redirects.mjs https://kjslaw.com` (all 445 old URLs), then submit `https://kjslaw.com/sitemap.xml` in Google Search Console.
 4. Connect the form (below) **before** cutover if possible: until it is connected, the form and the chat ask visitors to call 714-544-1460 instead of taking their inquiry.

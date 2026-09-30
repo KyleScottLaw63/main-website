@@ -9,8 +9,8 @@ import { SITE_URL } from '@/lib/marketing/site';
  * kjslaw.com in search results. The host is read per request (robots.txt is
  * the one dynamic metadata route; every page stays static), so pointing the
  * domain at the deployment is the whole cutover — there is no setting to flip
- * and none to forget. www.kjslaw.com must redirect to the apex (Vercel domain
- * settings); served as-is it is treated as a non-production host.
+ * and none to forget. www.kjslaw.com redirects to the apex (next.config.ts);
+ * were it ever served as-is, it would count as a non-production host.
  */
 export default async function robots(): Promise<MetadataRoute.Robots> {
   const host = (await headers()).get('host')?.trim().toLowerCase() ?? '';

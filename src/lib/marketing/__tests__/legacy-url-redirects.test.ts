@@ -12,7 +12,9 @@ import { legacyRedirects } from "../data/legacyPosts";
  * for `next start` and Vercel); and no rule points at a URL that another rule
  * redirects again. The HTTP gate is scripts/verify-redirects.mjs.
  */
-const redirects = await nextConfig.redirects!();
+const allRedirects = await nextConfig.redirects!();
+/** The rules for requests on kjslaw.com itself; a host-conditioned rule (www) is tested on its own below. */
+const redirects = allRedirects.filter((rule) => !rule.has);
 const compiled = redirects.map((rule) => ({
   rule,
   regex: new RegExp(buildCustomRoute("redirect", rule, ["/_next"]).regex),
@@ -67,5 +69,20 @@ describe("legacy URL redirects: one hop", () => {
     ]) {
       expect(firstRule(path)?.source, path).toBeUndefined();
     }
+  });
+});
+
+describe("www.kjslaw.com", () => {
+  it("is sent to kjslaw.com first — every path, query kept by Next, permanently — and only on the www host", () => {
+    const [first] = allRedirects;
+    expect(first).toEqual({
+      source: "/:path*",
+      has: [{ type: "host", value: "www.kjslaw.com" }],
+      destination: "https://kjslaw.com/:path*",
+      permanent: true,
+    });
+    expect(allRedirects.filter((rule) => rule.has)).toHaveLength(1);
+    const regex = new RegExp(buildCustomRoute("redirect", first, ["/_next"]).regex);
+    for (const path of ["/", "/contact", "/contact-us/", "/news/fictional-slug", "/es/contacto"]) expect(regex.test(path), path).toBe(true);
   });
 });

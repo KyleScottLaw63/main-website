@@ -82,6 +82,10 @@ const nextConfig: NextConfig = {
       ? ["/admin", "/admin/:path*", "/login"].map((source) => ({ source, destination: `${app}/login`, permanent: false }))
       : [];
     return [
+      // www.kjslaw.com → kjslaw.com, the canonical host, before anything else: path and query kept, 308.
+      // In code rather than a Vercel domain setting, so it is versioned and tested (www must still be
+      // attached to the project, for its certificate).
+      { source: "/:path*", has: [{ type: "host" as const, value: "www.kjslaw.com" }], destination: "https://kjslaw.com/:path*", permanent: true },
       ...staffShortcuts,
       ...rules.map((rule) => ({ source: rule.source, destination: rule.destination, statusCode: 301 })),
       ...legacy.map((entry) => ({ source: stripTrailingSlash(entry.legacyPath), destination: entry.canonicalPath, statusCode: 301 })),
