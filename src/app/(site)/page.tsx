@@ -125,7 +125,7 @@ export default function Home() {
 
           <div className="trust-rail" aria-label="Firm highlights">
             <div className="trust-item"><span className="trust-icon"><Award aria-hidden="true" /></span><span><strong>30+ years</strong><small>Personal injury trial experience</small></span></div>
-            <div className="trust-item"><span className="trust-icon"><BadgeDollarSign aria-hidden="true" /></span><span><strong>Millions recovered</strong><small>Published verdicts &amp; settlements</small></span></div>
+            <div className="trust-item"><span className="trust-icon"><BadgeDollarSign aria-hidden="true" /></span><span><strong>$50+ million recovered</strong><small>Published verdicts &amp; settlements</small></span></div>
             <div className="trust-item"><span className="trust-icon"><Scale aria-hidden="true" /></span><span><strong>No fee</strong><small>Unless there is a recovery</small></span></div>
           </div>
         </div>

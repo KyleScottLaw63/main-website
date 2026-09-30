@@ -133,7 +133,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .trust-icon { display: grid; width: 36px; height: 36px; flex: 0 0 auto; place-items: center; color: #0750bf; }
 .trust-icon svg { width: 31px; height: 31px; stroke-width: 1.75; }
 .trust-item span, .trust-item strong, .trust-item small { display: block; }
-.trust-item strong { overflow: hidden; color: var(--navy-deep); font-family: var(--font-serif); font-size: clamp(16px, 1.12vw, 19px); font-weight: 500; letter-spacing: -.01em; line-height: 1.08; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.trust-item > span:last-child { min-width: 0; }
+.trust-item strong { color: var(--navy-deep); font-family: var(--font-serif); font-size: clamp(16px, 1.12vw, 19px); font-weight: 500; letter-spacing: -.01em; line-height: 1.08; text-transform: uppercase; text-wrap: balance; }
 .trust-item small { margin-top: 3px; color: var(--blue); font-size: 11px; font-weight: 780; letter-spacing: .02em; line-height: 1.18; text-transform: uppercase; }
 
 .recovery-rail { width: calc(100% - clamp(48px, 6.5vw, 104px)); margin: 0 auto 18px; border: 1px solid rgba(25,67,127,.15); border-radius: 20px; background: rgba(255,255,255,.82); box-shadow: 0 20px 56px rgba(8,41,87,.12), inset 0 1px 0 white; padding: 18px 18px 12px; backdrop-filter: blur(22px); }
@@ -1593,7 +1594,9 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 .case-story-amount { display: block; margin-top: 26px; color: white; font-family: var(--font-serif); font-size: clamp(76px,9.6vw,140px); font-weight: 500; letter-spacing: -.055em; line-height: .86; }
 .case-story-amount.is-long { font-size: clamp(56px,6.4vw,96px); letter-spacing: -.045em; }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .case-story-amount { background: linear-gradient(180deg,#fff 35%,#b9d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+  /* Gradient text paints only inside the box, and Georgia's old-style figures (3, 4, 5, 7, 9) and the $
+     reach past the tight line box: pad the box over them and pull the layout back by the same amount. */
+  .case-story-amount { margin: calc(26px - .14em) 0 -.3em; padding: .14em 0 .3em; background: linear-gradient(180deg,#fff 35%,#b9d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
 }
 .case-story-hero h1 { max-width: 780px; margin: 22px 0 0; color: white; font-family: var(--font-serif); font-size: clamp(36px,3.6vw,56px); font-weight: 500; letter-spacing: -.04em; line-height: 1.02; text-wrap: balance; }
 .case-story-dek { max-width: 700px; margin: 22px 0 0; color: rgba(255,255,255,.86); font-size: 18px; line-height: 1.6; }

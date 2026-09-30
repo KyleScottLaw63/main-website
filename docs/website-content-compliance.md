@@ -39,6 +39,8 @@ Each card states only what the firm's own record supports. The $5.75M card (Kody
   - $697,500: an email states $45,000;
   - $430,000: another closing statement shows $255,000.
 
+**"$50+ million recovered."** The home page's trust strip ("Más de $50 millones recuperados" on /es, both over "Published verdicts & settlements") states the total of the published results: $54,016,288.54 on 2026-10-01. `results.test.ts` fails if removing results takes that total under $50 million; the claim must then change with them. The labels in that strip wrap within their cell rather than running into the next one.
+
 **Case stories.** The story behind a result, on its own page, attached to that result's card: [case-stories.md](case-stories.md). Only stories the attorney approved, never a matter on hold, and never the drafts' internal amounts or notes.
 
 ## Fees and costs: what a client pays without a recovery

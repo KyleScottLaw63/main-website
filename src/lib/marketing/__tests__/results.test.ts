@@ -2,6 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { allResults, flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
+/** A card's amount as a number: "$928,493.12" → 928493.12, "$5.75M" → 5750000. */
+const dollars = (amount: string) => Number(amount.replace(/[$,]/g, '').replace(/M$/, 'e6'));
+
 describe('the year on a published result', () => {
   it('appears only where the firm’s own record states it (source noted in results.ts), never estimated', () => {
     // In results.ts order. $6.8M, $5.75M, $2.3M, $2.2M and $928,493.12: the firm's published posts. The rest:
@@ -46,8 +49,12 @@ describe('the year on a published result', () => {
   });
 
   it('publishes only results over $60,000 (the owner’s cutoff, 2026-10-01)', () => {
-    const value = (amount: string) => Number(amount.replace(/[$,]/g, '').replace(/M$/, 'e6'));
-    expect(allResults.filter((result) => value(result.amount) <= 60_000).map((result) => result.amount)).toEqual([]);
+    expect(allResults.filter((result) => dollars(result.amount) <= 60_000).map((result) => result.amount)).toEqual([]);
+  });
+
+  it('bears out the home page’s "$50+ million recovered": the published results total over $50 million', () => {
+    // $54,016,288.54 on 2026-10-01. Removing results can take it under; then the home page's claim must change.
+    expect(allResults.reduce((sum, result) => sum + dollars(result.amount), 0)).toBeGreaterThan(50_000_000);
   });
 
   it('gives every result title a Spanish translation', () => {

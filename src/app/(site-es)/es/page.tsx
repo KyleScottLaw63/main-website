@@ -85,7 +85,7 @@ export default function SpanishHomePage() {
           </div>
           <div className="trust-rail" aria-label="Datos del despacho">
             <div className="trust-item"><span className="trust-icon"><Award aria-hidden="true" /></span><span><strong>Más de 30 años</strong><small>Experiencia en lesiones personales</small></span></div>
-            <div className="trust-item"><span className="trust-icon"><BadgeDollarSign aria-hidden="true" /></span><span><strong>Millones recuperados</strong><small>Veredictos y acuerdos publicados</small></span></div>
+            <div className="trust-item"><span className="trust-icon"><BadgeDollarSign aria-hidden="true" /></span><span><strong>Más de $50 millones recuperados</strong><small>Veredictos y acuerdos publicados</small></span></div>
             <div className="trust-item"><span className="trust-icon"><Scale aria-hidden="true" /></span><span><strong>Sin honorarios</strong><small>A menos que haya recuperación</small></span></div>
           </div>
         </div>
