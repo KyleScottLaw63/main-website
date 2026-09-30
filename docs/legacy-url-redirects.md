@@ -37,6 +37,8 @@ The CSV check is what keeps the rules honest once a planned page ships. The six 
 
 One post moved: `/news/tired-insurance-adjuster-telling-no-case-call-kyle-scott-949-423-3944` became `/news/tired-insurance-adjuster-telling-no-case-call-kyle-scott`, because the old slug carried a retired phone number. Its 2017 WordPress permalink redirects straight to the new path (`legacyPosts.json` → `redirects[]`); the old `/news` path existed only before launch.
 
+A second moved on 2026-09-30: `/news/california-statute-limitations-car-accident-code-civil-procedure-%c2%a7-335-1` became `…-civil-procedure-335-1`. Its slug held the literal text `%c2%a7` (an encoded §); Vercel decodes a path before it looks for the page, so the page answered 404 there while a local `next start` served it. The 2014 WordPress permalink still redirects in one hop, now to the plain path. Every article address is plain lowercase letters, digits, and hyphens (`legacy-posts.test.ts`), and the archive index is regenerated, never hand-edited: `node scripts/build-legacy-news-index.mjs` (`--check` compares).
+
 ## Adding or changing a redirect
 
 Edit `redirect-rules.json` (a `why` per rule is required by convention), keep specific sources above catch-alls, point each rule at the final page (never at a URL that redirects again), and re-run `npx vitest run src/lib/marketing/__tests__/legacy-url-redirects.test.ts` and the script. The dev server must restart to pick up a `redirect-rules.json` change (`next.config.ts` reads it at startup). `GONE` paths are regexes in `src/lib/site-proxy.ts` (mirrored in `scripts/verify-redirects.mjs`); list a file name there with and without its slash (`/^\/wp-login\.php\/?$/`), because file names are never normalized.

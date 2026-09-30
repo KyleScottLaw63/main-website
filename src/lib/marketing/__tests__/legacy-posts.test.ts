@@ -302,7 +302,7 @@ describe('archived posts state the law in their own text (docs/website-content-c
 
   it('a post that gives two years to sue also states the six-month government claim', () => {
     const stating = legacyPosts.filter((post) => states(TWO_YEAR_DEADLINE, fullText(post)));
-    expect(stating.map((post) => post.slug)).toContain('california-statute-limitations-car-accident-code-civil-procedure-%c2%a7-335-1');
+    expect(stating.map((post) => post.slug)).toContain('california-statute-limitations-car-accident-code-civil-procedure-335-1');
     for (const post of stating) {
       for (const point of SIX_MONTH_CLAIM) expect(fullText(post), `${post.slug}: ${point}`).toMatch(point);
     }
@@ -394,5 +394,23 @@ describe('titles and descriptions are unique (docs/public-site-rendering.md)', (
       [...serviceAreas.map((area) => area.title), ...legalGuides.map((guide) => guide.seoTitle), ...newsArticlesForLocale('en').map((article) => article.title)].map((title) => title.trim().toLowerCase()),
     );
     expect(legacyPosts.filter((post) => pageTitles.has(post.title.trim().toLowerCase())).map((post) => post.slug)).toEqual([]);
+  });
+});
+
+describe('archived article addresses (docs/legacy-url-redirects.md)', () => {
+  // A slug holding "%c2%a7" (an encoded §) reached Vercel decoded, matched no page, and answered 404,
+  // while a local `next start` served it: every new address is plain, and only the old WordPress URLs
+  // (the redirect sources) keep their original encoding.
+  it('every archived article lives at a plain address: lowercase letters, digits, and hyphens', () => {
+    expect(legacyPosts.filter((post) => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(post.slug)).map((post) => post.slug)).toEqual([]);
+    expect(legacyPosts.filter((post) => post.path !== `/news/${post.slug}`).map((post) => post.slug)).toEqual([]);
+    expect(legacyRedirects.filter(({ canonicalPath }) => !/^\/news\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(canonicalPath))).toEqual([]);
+  });
+
+  it('the § article keeps its 2014 WordPress address as the redirect source, sent to its plain address', () => {
+    expect(legacyRedirects).toContainEqual({
+      legacyPath: '/2014/05/22/california-statute-limitations-car-accident-code-civil-procedure-%c2%a7-335-1/',
+      canonicalPath: '/news/california-statute-limitations-car-accident-code-civil-procedure-335-1',
+    });
   });
 });
