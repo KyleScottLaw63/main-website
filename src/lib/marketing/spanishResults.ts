@@ -23,7 +23,6 @@ const titles: Record<string, string> = {
   'Huntington Beach student molested by her teacher and coach': 'Estudiante de Huntington Beach abusada por su maestro y entrenador',
   'Student suffers skull fracture and brain bleed': 'Estudiante sufre fractura de cráneo y hemorragia cerebral',
   'Mother and her children hurt in a Fontana intersection crash': 'Madre e hijos lesionados en un choque en una intersección de Fontana',
-  'Riverside Superior Court jury verdict': 'Veredicto del jurado en el Tribunal Superior de Riverside',
   'Adult survivor of childhood sexual abuse by a school counselor': 'Sobreviviente adulta de abuso sexual infantil cometido por un consejero escolar',
   'Personal injury settlement': 'Acuerdo por lesiones personales',
   'Pedestrian struck in a marked crosswalk': 'Mujer atropellada en un cruce peatonal marcado',

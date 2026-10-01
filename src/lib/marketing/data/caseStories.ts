@@ -424,9 +424,15 @@ export function caseStoryTitle(story: CaseStory) {
 export type CaseStoryLink = { href: string; kicker: string; figure: string; title: string; summary: string; date: string };
 
 /**
+ * Left out of the list on the firm's instruction (2026-10-01); both pages stay up. The $2.3M verdict is
+ * not on /results, and the $2.2M school-counselor story repeats the firm's own $2.2M announcement.
+ */
+const unlisted = new Set(['/news/riverside-jury-verdict-2-3-million', caseStoryPath('school-counselor-abuse-settlement')]);
+
+/**
  * Every story behind a result, newest first: the case stories and the firm's published case
- * announcements (news articles of kind "case"). The case stories section of /results shows the six
- * most recent and the rest on request; a story page offers the next few.
+ * announcements (news articles of kind "case"), less the unlisted ones. The case stories section of
+ * /results shows the six most recent and the rest on request; a story page offers the next few.
  */
 export function caseStoryLinks(): CaseStoryLink[] {
   const stories = caseStories.map((story) => {
@@ -436,5 +442,5 @@ export function caseStoryLinks(): CaseStoryLink[] {
   const announcements = newsArticlesForLocale('en')
     .filter((article) => article.kind === 'case')
     .map((article) => ({ href: article.path, kicker: `${article.label} · ${article.date}`, figure: article.result ?? article.label, title: article.title, summary: article.excerpt, date: article.dateTime }));
-  return [...stories, ...announcements].sort((a, b) => b.date.localeCompare(a.date));
+  return [...stories, ...announcements].filter((link) => !unlisted.has(link.href)).sort((a, b) => b.date.localeCompare(a.date));
 }

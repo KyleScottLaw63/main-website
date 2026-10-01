@@ -10,13 +10,13 @@ const dollars = (amount: string) => Number(amount.replace(/[$,]/g, '').replace(/
 
 describe('the year on a published result', () => {
   it('appears only where the firm’s own record states it (source noted in results.ts), never estimated', () => {
-    // In results.ts order. $6.8M, $5.75M, $2.3M, $2.2M and $928,493.12: the firm's published posts. The rest:
+    // In results.ts order. $6.8M, $5.75M, $2.2M and $928,493.12: the firm's published posts. The rest:
     // the firm's settlement records (2026-09-30, the settlements over $60,000 added 2026-10-01, and six older cards
     // dated 2026-10-01), where a January–February closing-statement date leaves a result undated. Several matters
     // share an amount and a year.
     const dated = allResults.filter((result) => result.year).map((result) => `${result.amount} · ${result.year}`);
     expect(dated).toEqual([
-      '$6.8M · 2004', '$5.75M · 2019', '$2.7M · 2026', '$2.3M · 2024', '$2.2M · 2024', '$1,450,000 · 2024', '$928,493.12 · 2017', '$800,000 · 2023', '$700,000 · 2015',
+      '$6.8M · 2004', '$5.75M · 2019', '$2.7M · 2026', '$2.2M · 2024', '$1,450,000 · 2024', '$928,493.12 · 2017', '$800,000 · 2023', '$700,000 · 2015',
       '$650,000 · 2022', '$600,000 · 2024', '$505,000 · 2019', '$500,000 · 2024', '$475,000 · 2021', '$475,000 · 2024', '$430,000 · 2019', '$400,000 · 2025', '$375,000 · 2024',
       '$350,000 · 2010', '$325,000 · 2015', '$295,000 · 2022', '$280,000 · 2021', '$275,000 · 2013', '$252,000 · 2022', '$235,000 · 2016', '$225,000 · 2024', '$215,000 · 2025',
       '$185,000 · 2015', '$175,000 · 2022', '$155,000 · 2020', '$150,001 · 2014', '$150,000 · 2023', '$150,000 · 2018', '$150,000 · 2021', '$150,000 · 2016',
@@ -49,7 +49,7 @@ describe('the year on a published result', () => {
     expect(translateResultToSpanish(historicalResults.find((result) => result.amount === '$1,450,000')!).title).toBe('Mujer atropellada en un cruce peatonal marcado');
     expect(historicalResults.map((result) => result.amount)).toContain('$697,500');
     expect(historicalResults.map((result) => result.amount)).not.toContain('$697,000');
-    expect(allResults).toHaveLength(146);
+    expect(allResults).toHaveLength(145);
   });
 
   it('publishes only results over $60,000 (the owner’s cutoff, 2026-10-01)', () => {
@@ -57,7 +57,7 @@ describe('the year on a published result', () => {
   });
 
   it('bears out the home page’s "$50+ million recovered": the published results total over $50 million', () => {
-    // $57,676,288.54 on 2026-10-01. Removing results can take it under; then the home page's claim must change.
+    // $55,376,288.54 on 2026-10-01, after the $2.3M verdict left. Removing results can take it under; then the home page's claim must change.
     expect(allResults.reduce((sum, result) => sum + dollars(result.amount), 0)).toBeGreaterThan(50_000_000);
   });
 
@@ -76,9 +76,8 @@ describe('the year on a published result', () => {
     expect(featured.filter((title) => !titles.has(title))).toEqual([]);
   });
 
-  it('lists the two results the firm reported on Dec. 26, 2024, in Spanish too', () => {
-    const verdict = translateResultToSpanish(historicalResults.find((result) => result.amount === '$2.3M')!);
-    expect(verdict).toMatchObject({ title: 'Veredicto del jurado en el Tribunal Superior de Riverside', detail: 'Tribunal Superior de Riverside · Detalles no publicados', outcome: 'Veredicto del jurado', year: 2024 });
+  it('lists the $2.2M the firm reported on Dec. 26, 2024, in Spanish too, and not the $2.3M verdict (the firm, 2026-10-01)', () => {
+    expect(allResults.map((result) => result.amount)).not.toContain('$2.3M');
     const settlement = translateResultToSpanish(historicalResults.find((result) => result.amount === '$2.2M')!);
     expect(settlement).toMatchObject({ title: 'Sobreviviente adulta de abuso sexual infantil cometido por un consejero escolar', detail: 'Tribunal Superior del Condado de Riverside', outcome: 'Acuerdo', year: 2024 });
   });

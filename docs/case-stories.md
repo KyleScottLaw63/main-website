@@ -39,8 +39,9 @@ A case story tells how a result came about, from what happened to the verdict or
 
 ## On /results
 
-- **One section, "The story behind the result."** `caseStoryLinks()` merges every case story with the firm's published case announcements (news articles of kind `case`: the $2.3M Riverside verdict, the $2.2M settlement, the Court of Appeal new trial), newest first.
-- **What shows.** The six most recent appear as compact cards. The rest sit behind a native `<details>` ("Show all 15 case stories"), which needs no script and keeps every link in the HTML.
+- **One section, "The story behind the result."** `caseStoryLinks()` merges every case story with the firm's published case announcements (news articles of kind `case`: the $2.2M settlement and the Court of Appeal new trial), newest first.
+- **Left out (2026-10-01).** On the firm's instruction, the list (and "More case stories") leaves out two whose pages stay up: the $2.3M Riverside verdict announcement, since that verdict is no longer on /results, and the `school-counselor-abuse-settlement` story, which repeats the firm's own $2.2M announcement. The $2.2M card in the full list still links to that story.
+- **What shows.** The six most recent appear as compact cards. The rest sit behind a native `<details>` ("Show all 13 case stories"), which needs no script and keeps every link in the HTML.
 - **Card links.** A flagship or ledger card whose result has a story is clickable as a whole ("Read the case story").
 - **Spanish.** The Spanish results page links no stories.
 
@@ -54,7 +55,7 @@ From "Case Stories — Draft for Review (updated 2026-09-30 v2)":
 | `nursing-facility-pressure-wound-settlement` | Confidential | 2026-03 |
 | `batting-practice-head-injury-settlement` | $880,000 settlement, card retitled from the story (consent, 2026-10-01) | 2026-01 |
 | `crosswalk-pedestrian-settlement` | $1,450,000 settlement · 2024, card retitled from the story (consent, 2026-10-01) | 2024-09 |
-| `school-counselor-abuse-settlement` | $2.2M settlement · 2024, the firm's 2024 card retitled from the story (consent, 2026-10-01) | 2024-02 |
+| `school-counselor-abuse-settlement` | $2.2M settlement · 2024, the firm's 2024 card retitled from the story (consent, 2026-10-01); not in the list on /results | 2024-02 |
 | `ballpark-warm-up-throw-settlement` | $960,000 settlement, a new card: Orange County Superior Court (consent, 2026-10-01; the order is not sealed) | 2023-04 |
 | `store-floor-fall-settlement` | $800,000 settlement · 2023, card retitled from the story (consent, 2026-10-01) | 2023-02 |
 | `chain-reaction-freeway-crash-settlement` | $650,000 settlement · 2022, card retitled from the story (consent, 2026-10-01) | 2022-05 |

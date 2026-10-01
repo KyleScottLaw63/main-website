@@ -85,16 +85,8 @@ export const historicalResults: CaseResult[] = [
     year: 2026,
     story: 'fontana-intersection-crash-settlement',
   },
-  {
-    // The firm's post of Dec. 26, 2024 (kjslaw.com/2024/12/26/kyle-scott-wins-jury-verdict-in-riverside-superior-court/,
-    // now /news/riverside-jury-verdict-2-3-million); it published no facts about the parties or the claim.
-    amount: '$2.3M',
-    title: 'Riverside Superior Court jury verdict',
-    detail: 'Riverside Superior Court · Details not published',
-    category: 'Other injury claims',
-    outcome: 'Jury verdict',
-    year: 2024,
-  },
+  // Not listed: the $2.3M Riverside jury verdict of the firm's post of Dec. 26, 2024 (/news/riverside-jury-verdict-2-3-million).
+  // The firm took it off /results on 2026-10-01; the post stays.
   {
     // The firm's post of Dec. 26, 2024 (kjslaw.com/2024/12/26/kyle-scott-settles-a-sexual-molestation-sexual-battery-lawsuit-for-2-2-million-details-confidential/,
     // now /news/sexual-molestation-battery-settlement-2-2-million). Title and court from its case story, shown with written consent, on the attorney's instruction (2026-10-01).

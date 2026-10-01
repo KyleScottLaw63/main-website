@@ -52,9 +52,13 @@ describe('results page', () => {
     expect(section.querySelector('details summary')).toHaveTextContent(`Show all ${all.length} case stories`);
     const hrefs = screen.getAllByRole('link').map((link) => link.getAttribute('href'));
     for (const story of caseStories.filter((item) => !item.confidential)) {
-      // The story card, plus the ledger row (and, for the $5.75M verdict, the flagship card).
-      expect(hrefs.filter((href) => href === `/results/${story.slug}`).length, story.slug).toBeGreaterThanOrEqual(2);
+      // The ledger row, plus the story card when the story is listed (and, for the $5.75M verdict, the flagship card).
+      const path = `/results/${story.slug}`;
+      expect(hrefs.filter((href) => href === path).length, story.slug).toBeGreaterThanOrEqual(all.includes(path) ? 2 : 1);
     }
+    // Off /results on the firm's instruction (2026-10-01).
+    expect(container).not.toHaveTextContent('$2.3M');
+    expect(hrefs).not.toContain('/news/riverside-jury-verdict-2-3-million');
     expect(screen.getByRole('heading', { level: 2, name: 'The story behind the result.' })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: 'Recent firm announcements.' })).toBeNull();
   });
