@@ -78,8 +78,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .phone-link { display: flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 15px; font-weight: 750; color: var(--navy); }
 .mobile-header-phone { display: none; width: 46px; height: 46px; align-items: center; justify-content: center; border: 1px solid rgba(12,57,119,.15); border-radius: 12px; color: var(--navy); }
 .mobile-header-phone svg { width: 21px; height: 21px; }
-.mobile-header-language { display: none; width: 46px; height: 46px; align-items: center; justify-content: center; border: 1px solid rgba(12,57,119,.15); border-radius: 12px; color: var(--navy); font-size: 14px; font-weight: 820; letter-spacing: .06em; line-height: 1; text-decoration: none; }
-.mobile-header-language:hover, .mobile-header-language:focus-visible { border-color: rgba(0,91,211,.4); background: rgba(0,91,211,.06); color: var(--blue); }
+.header-language-switcher { display: none; }
+.header-language-switcher .language-switcher { min-height: 46px; gap: 5px; border-color: rgba(12,57,119,.15); border-radius: 12px; padding: 0 10px; font-size: 14px; letter-spacing: .04em; }
+.header-language-switcher .language-switcher svg { width: 16px; height: 16px; }
+.header-language-switcher .language-switcher .language-switcher-chevron { width: 13px; height: 13px; }
 
 .primary-button {
   display: inline-flex;
@@ -828,21 +830,21 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 @media (max-width: 1180px) {
   .site-header { padding-inline: 22px; }
   .site-header-inner { min-height: 58px; grid-template-columns: 1fr auto; }
-  .site-header nav, .phone-link, .header-cta, .site-header .language-switcher-root { display: none; }
+  .site-header nav, .phone-link, .header-cta, .site-header .language-switcher-root:not(.header-language-switcher) { display: none; }
   .brand { width: 132px; }
   .header-actions { gap: 9px; }
-  .mobile-header-phone, .mobile-menu-button, .mobile-header-language { display: inline-flex; }
+  .mobile-header-phone, .mobile-menu-button, .header-language-switcher { display: inline-flex; }
 }
 
 @media (max-width: 900px) {
   .site-header { padding-inline: 22px; }
   .site-header-inner { min-height: 58px; grid-template-columns: 1fr auto; }
   .site-header nav, .phone-link, .header-cta { display: none; }
-  .site-header .language-switcher-root { display: none; }
+  .site-header .language-switcher-root:not(.header-language-switcher) { display: none; }
   .brand { width: 132px; }
   .header-actions { gap: 9px; }
   .mobile-header-phone { display: inline-flex; }
-  .mobile-header-language { display: inline-flex; }
+  .header-language-switcher { display: inline-flex; }
   .mobile-menu-button { display: inline-flex; }
   .hero { grid-template-columns: 1fr; grid-template-rows: auto minmax(390px,58vh) auto; gap: 20px; padding: 30px 22px 12px; }
   .hero-copy { padding: 0; }
@@ -1728,9 +1730,12 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
   .case-story-card:hover .case-story-card-cta svg { transform: none; }
 }
 
-/* The mobile header holds the logo and three 46px buttons (language, call, menu); under 360px they shrink so the row still fits. */
+/* The mobile header holds the logo, the language switcher ("EN ⌄"), and the call and menu buttons; under 360px they shrink and the switcher drops its globe so the row still fits. */
 @media (max-width: 359px) {
   .brand { width: 110px; }
   .header-actions { gap: 7px; }
-  .mobile-header-language, .mobile-header-phone, .mobile-menu-button { width: 42px; height: 42px; }
+  .site-header-inner { column-gap: 10px; }
+  .mobile-header-phone, .mobile-menu-button { width: 42px; height: 42px; }
+  .header-language-switcher .language-switcher { min-height: 42px; padding: 0 8px; }
+  .header-language-switcher .language-switcher > svg:first-child { display: none; }
 }

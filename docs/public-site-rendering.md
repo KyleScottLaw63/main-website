@@ -18,9 +18,13 @@ Switching language is a full page load (different root layouts). That is intende
 
 Where to switch:
 - **Desktop header:** the switcher dropdown.
-- **Mobile header (≤1180px):** a one-tap toggle beside the call button (`LanguageToggle`): "ES" on the English site, "EN" on the Spanish one. It opens this page's counterpart, or the other home page when the page has none. Its spoken name, "ES: ver esta página en español" or "EN: view this page in English", is in the target language.
+- **Mobile header (≤1180px):** a compact switcher beside the call button (`LanguageSwitcher compact`).
+  - It shows the current language: "EN ⌄" on the English site, "ES ⌄" on the Spanish one.
+  - Tapping it opens the same English/Español menu as desktop. Each entry leads to this page's counterpart, or to the other home page when the page has none.
+  - Its spoken name starts with the code it shows: "EN, English: change language" or "ES, Español: cambiar idioma".
+  - It replaced a one-tap "ES" link the same day, which read as the current language rather than the one to switch to.
 - **Mobile menu:** keeps the full switcher.
-- **Under 360px:** the header's three buttons shrink from 46 to 42px so the row fits beside the logo.
+- **Under 360px:** the header's buttons shrink from 46 to 42px, and the switcher drops its globe, so the row fits beside the logo.
 
 ## Security headers
 
