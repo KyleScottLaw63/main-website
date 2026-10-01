@@ -124,7 +124,6 @@ export const caseStories: CaseStory[] = [
     ],
     resolved: '2024-02',
     published: approved,
-    confidential: { title: 'Adult survivor of childhood sexual abuse by a school counselor' },
   },
   {
     slug: 'crosswalk-pedestrian-settlement',
@@ -149,7 +148,6 @@ export const caseStories: CaseStory[] = [
     ],
     resolved: '2024-09',
     published: approved,
-    confidential: { title: 'Pedestrian struck in a marked crosswalk', year: 2024 },
   },
   {
     slug: 'ballpark-warm-up-throw-settlement',
@@ -178,7 +176,6 @@ export const caseStories: CaseStory[] = [
     ],
     resolved: '2023-04',
     published: approved,
-    confidential: { title: 'Six-year-old struck in the head by a warm-up throw at a ballpark' },
   },
   {
     slug: 'octa-bus-crash-verdict',
@@ -248,7 +245,6 @@ export const caseStories: CaseStory[] = [
     ],
     resolved: '2026-01',
     published: approved,
-    confidential: { title: 'Teen hit in the head by a pitch at batting practice without a helmet' },
   },
   {
     slug: 'nursing-facility-pressure-wound-settlement',
@@ -309,7 +305,6 @@ export const caseStories: CaseStory[] = [
     ],
     resolved: '2023-02',
     published: approved,
-    confidential: { title: 'Shopper twists her ankle on an object left on a store floor' },
   },
   {
     slug: 'freeway-rear-end-settlement',
@@ -368,7 +363,6 @@ export const caseStories: CaseStory[] = [
     ],
     resolved: '2020-02',
     published: approved,
-    confidential: { title: 'Woman slips on a sunscreen-slicked pool deck at a waterpark resort' },
   },
   {
     slug: 'chain-reaction-freeway-crash-settlement',
@@ -397,7 +391,6 @@ export const caseStories: CaseStory[] = [
     ],
     resolved: '2022-05',
     published: approved,
-    confidential: { title: 'Driver hurt in a chain-reaction freeway crash caused by a distracted truck driver', year: 2022 },
   },
 ];
 

@@ -46,10 +46,10 @@ describe('the year on a published result', () => {
   it('lists the settlements added from the firm’s records in Spanish too, and the corrected $697,500', () => {
     const recovery = translateResultToSpanish(historicalResults.find((result) => result.amount === '$336,932')!);
     expect(recovery).toMatchObject({ title: 'Reclamo de conductor con seguro insuficiente', detail: 'Acuerdo y laudo arbitral', outcome: 'Recuperación' });
-    expect(translateResultToSpanish(historicalResults.find((result) => result.amount === '$1,450,000')!).title).toBe('Acuerdo por lesiones personales');
+    expect(translateResultToSpanish(historicalResults.find((result) => result.amount === '$1,450,000')!).title).toBe('Mujer atropellada en un cruce peatonal marcado');
     expect(historicalResults.map((result) => result.amount)).toContain('$697,500');
     expect(historicalResults.map((result) => result.amount)).not.toContain('$697,000');
-    expect(allResults).toHaveLength(145);
+    expect(allResults).toHaveLength(146);
   });
 
   it('publishes only results over $60,000 (the owner’s cutoff, 2026-10-01)', () => {
@@ -57,7 +57,7 @@ describe('the year on a published result', () => {
   });
 
   it('bears out the home page’s "$50+ million recovered": the published results total over $50 million', () => {
-    // $56,716,288.54 on 2026-10-01. Removing results can take it under; then the home page's claim must change.
+    // $57,676,288.54 on 2026-10-01. Removing results can take it under; then the home page's claim must change.
     expect(allResults.reduce((sum, result) => sum + dollars(result.amount), 0)).toBeGreaterThan(50_000_000);
   });
 
@@ -80,7 +80,7 @@ describe('the year on a published result', () => {
     const verdict = translateResultToSpanish(historicalResults.find((result) => result.amount === '$2.3M')!);
     expect(verdict).toMatchObject({ title: 'Veredicto del jurado en el Tribunal Superior de Riverside', detail: 'Tribunal Superior de Riverside · Detalles no publicados', outcome: 'Veredicto del jurado', year: 2024 });
     const settlement = translateResultToSpanish(historicalResults.find((result) => result.amount === '$2.2M')!);
-    expect(settlement).toMatchObject({ title: 'Demanda por abuso sexual y agresión sexual', detail: 'Detalles confidenciales', outcome: 'Acuerdo', year: 2024 });
+    expect(settlement).toMatchObject({ title: 'Sobreviviente adulta de abuso sexual infantil cometido por un consejero escolar', detail: 'Tribunal Superior del Condado de Riverside', outcome: 'Acuerdo', year: 2024 });
   });
 });
 

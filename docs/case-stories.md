@@ -19,6 +19,7 @@ A case story tells how a result came about, from what happened to the verdict or
   - The figure reads "Confidential", and the outcome reads "Confidential settlement".
   - A year shows only where the story's own text states one.
   - It never links to a result card, so the page never pairs the story with an amount.
+- **Confidential, then published with consent (2026-10-01).** On the attorney's instruction, with written consent to publish the amount, seven settlements the draft treated as confidential show their amounts. Each story attaches to its card like any other, and the card takes the story's title, court, and practice category; the $960,000 ballpark settlement has a new card. The approved story text is unchanged, including where it says the terms are confidential.
 - **Fixed labels.** The three flagship labels stay fixed (AGENTS.md). The $5.75M story sits behind the unchanged flagship card.
 - **Order.** `resolved` (YYYY-MM, from the firm's records) orders the stories newest first. It is never shown.
 
@@ -51,21 +52,21 @@ From "Case Stories — Draft for Review (updated 2026-09-30 v2)":
 |---|---|---|
 | `fontana-intersection-crash-settlement` | $2.7M settlement · 2026, a new card: San Bernardino Superior Court, combined for five injured people | 2026-09 |
 | `nursing-facility-pressure-wound-settlement` | Confidential | 2026-03 |
-| `batting-practice-head-injury-settlement` | Confidential | 2026-01 |
-| `crosswalk-pedestrian-settlement` | Confidential · 2024 | 2024-09 |
-| `school-counselor-abuse-settlement` | Confidential | 2024-02 |
-| `ballpark-warm-up-throw-settlement` | Confidential | 2023-04 |
-| `store-floor-fall-settlement` | Confidential | 2023-02 |
-| `chain-reaction-freeway-crash-settlement` | Confidential · 2022 | 2022-05 |
-| `waterpark-pool-deck-fall-settlement` | Confidential | 2020-02 |
+| `batting-practice-head-injury-settlement` | $880,000 settlement, card retitled from the story (consent, 2026-10-01) | 2026-01 |
+| `crosswalk-pedestrian-settlement` | $1,450,000 settlement · 2024, card retitled from the story (consent, 2026-10-01) | 2024-09 |
+| `school-counselor-abuse-settlement` | $2.2M settlement · 2024, the firm's 2024 card retitled from the story (consent, 2026-10-01) | 2024-02 |
+| `ballpark-warm-up-throw-settlement` | $960,000 settlement, a new card: Orange County Superior Court (consent, 2026-10-01; the order is not sealed) | 2023-04 |
+| `store-floor-fall-settlement` | $800,000 settlement · 2023, card retitled from the story (consent, 2026-10-01) | 2023-02 |
+| `chain-reaction-freeway-crash-settlement` | $650,000 settlement · 2022, card retitled from the story (consent, 2026-10-01) | 2022-05 |
+| `waterpark-pool-deck-fall-settlement` | $697,500 settlement, card retitled from the story (consent, 2026-10-01) | 2020-02 |
 | `student-skull-fracture-verdict` | $5.75M jury verdict · 2019 (flagship card) | 2019-09 |
 | `octa-bus-crash-verdict` | $928,493.12 jury verdict · 2017, drawn against OCTA's $157,000 | 2017-04 |
 | `freeway-rear-end-settlement` | $700,000 settlement · 2015, card retitled from the story | 2015-08 |
 
 The draft's review notes flagged risks for the attorney; the site records none of them. Notes:
-- **Confidentiality clauses.** Several settlement agreements are confidential. Two ($1,450,000 and $800,000, whose amounts are on the site as generic cards) bar disclosing even that a settlement happened.
+- **Confidentiality clauses.** Several settlement agreements are confidential, two of them ($1,450,000 and $800,000) even as to the fact of settlement. On 2026-10-01 the attorney reported written consent to publish seven of the amounts, and that the ballpark minor's compromise is not sealed.
 - **$2.7M timing.** The settlement's funding and the court's approval of the minors' shares were pending on 2026-09-30.
-- **Pending claims.** Claims against another defendant in the nursing-facility matter were still being litigated.
+- **Pending claims.** Claims against another defendant in the nursing-facility matter were still being litigated, and its settlement was partial. Its story stays confidential.
 - **$700,000 release.** It was read by OCR.
 
 ## Adding a story

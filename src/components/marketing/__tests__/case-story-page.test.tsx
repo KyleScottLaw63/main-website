@@ -29,7 +29,7 @@ describe('case story page', () => {
   });
 
   it('tells a confidential settlement without any amount', () => {
-    const story = caseStories.find((item) => item.slug === 'store-floor-fall-settlement')!;
+    const story = caseStories.find((item) => item.slug === 'nursing-facility-pressure-wound-settlement')!;
     const { container } = render(<CaseStoryPage story={story} />);
     const article = container.querySelector('article')!;
     expect(article).toHaveTextContent('Confidential settlement');

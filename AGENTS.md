@@ -15,7 +15,7 @@ The public website of Kyle Scott Law (kjslaw.com), a personal-injury firm in Tus
 9. **No form puts fields in a URL.** A `<form>` with `onSubmit` also carries `action={submitsThroughOnSubmit}` (src/components/shared/form-submit.ts); a test scans for it.
 10. **Real alt text on every image; type floor 13px; WCAG 2.1 AA.** Fictional data only in tests (555-01xx numbers, "Rosa Fictional").
 11. **Results and case stories are the attorney's call.**
-    - A case story (`/results/<slug>`) goes up only once Kyle J. Scott approves it (docs/case-stories.md). Never a confidential, unfunded, or court-pending matter, and never the drafts' internal amounts, sources, or review notes.
+    - A case story (`/results/<slug>`) goes up only once Kyle J. Scott approves it (docs/case-stories.md). Never a confidential, unfunded, or court-pending matter, and never the drafts' internal amounts, sources, or review notes. A confidential settlement's amount appears only with written consent to publish it, on the attorney's instruction (seven on 2026-10-01; docs/case-stories.md).
     - Results come from the firm's own records, under the rules in docs/website-content-compliance.md ("Case results"). The firm's settlement list is internal: publish only gross amount, year, court, outcome, and case type from it, never names, case numbers, fees, or net amounts.
     - What /results shows names the kind of party a claim was against, never which one: "Claim against school district", not "LBUSD" (docs/website-content-compliance.md).
 

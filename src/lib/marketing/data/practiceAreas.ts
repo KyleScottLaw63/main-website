@@ -127,7 +127,7 @@ export const practiceAreas: PracticeAreaData[] = [
       { question: 'What if the property owner says I should have seen the hazard?', answer: 'The visibility of the condition and the actions of everyone involved may be considered. That does not necessarily end the claim; lighting, warnings, distractions created by the property, maintenance practices, and comparative fault may all matter.' },
       { question: 'Can a slip-and-fall case involve future losses?', answer: 'Yes. Serious injuries can require surgery, rehabilitation, future care, work restrictions, or accommodations that should be considered before resolution.' },
     ],
-    featuredResults: ['Slip-and-fall claim involving complex regional pain syndrome', 'Dangerous flooring causes neck injury and cognitive issues', 'Trip-and-fall claim involving a knee injury'],
+    featuredResults: ['Slip-and-fall claim involving complex regional pain syndrome', 'Woman slips on a sunscreen-slicked pool deck at a waterpark resort', 'Trip-and-fall claim involving a knee injury'],
     sourceUrl: 'https://kjslaw.com/orange-county-slip-and-fall-attorney/',
   },
   {
@@ -229,7 +229,7 @@ export const practiceAreas: PracticeAreaData[] = [
       { question: 'Can a brain-injury claim include future support?', answer: 'When supported by the evidence, the evaluation may include future treatment, therapy, supervision, transportation, vocational loss, home assistance, and other long-term needs.' },
       { question: 'What should happen first after a possible brain injury?', answer: 'Medical safety comes first. Urgent or worsening neurological symptoms require immediate medical attention; legal review comes after immediate care is addressed.' },
     ],
-    featuredResults: ['Student suffers skull fracture and brain bleed', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Dangerous flooring causes neck injury and cognitive issues'],
+    featuredResults: ['Student suffers skull fracture and brain bleed', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Woman slips on a sunscreen-slicked pool deck at a waterpark resort'],
     sourceUrl: 'https://kjslaw.com/orange-county-traumatic-brain-injury-attorney/',
   },
   {

@@ -97,13 +97,14 @@ export const historicalResults: CaseResult[] = [
   },
   {
     // The firm's post of Dec. 26, 2024 (kjslaw.com/2024/12/26/kyle-scott-settles-a-sexual-molestation-sexual-battery-lawsuit-for-2-2-million-details-confidential/,
-    // now /news/sexual-molestation-battery-settlement-2-2-million).
+    // now /news/sexual-molestation-battery-settlement-2-2-million). Title and court from its case story, shown with written consent, on the attorney's instruction (2026-10-01).
     amount: '$2.2M',
-    title: 'Sexual molestation and sexual battery lawsuit',
-    detail: 'Details confidential',
+    title: 'Adult survivor of childhood sexual abuse by a school counselor',
+    detail: 'Riverside County Superior Court',
     category: 'Abuse & school liability',
     outcome: 'Settlement',
     year: 2024,
+    story: 'school-counselor-abuse-settlement',
   },
   {
     amount: '$2M',
@@ -113,13 +114,25 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Jury verdict',
   },
   {
-    // The firm's settlement records (added 2026-09-30).
+    // The firm's settlement records (added 2026-09-30). Title, court, and category from its case story, shown
+    // with written consent, on the attorney's instruction (2026-10-01).
     amount: '$1,450,000',
-    title: 'Personal injury settlement',
-    detail: 'Details not published',
-    category: 'Other injury claims',
+    title: 'Pedestrian struck in a marked crosswalk',
+    detail: 'Riverside County Superior Court',
+    category: 'Auto & transportation',
     outcome: 'Settlement',
     year: 2024,
+    story: 'crosswalk-pedestrian-settlement',
+  },
+  {
+    // Its case story: a court-approved settlement for a six-year-old, shown with written consent, on the attorney's instruction (2026-10-01).
+    // No year: the story states none.
+    amount: '$960,000',
+    title: 'Six-year-old struck in the head by a warm-up throw at a ballpark',
+    detail: 'Orange County Superior Court',
+    category: 'Premises liability',
+    outcome: 'Settlement',
+    story: 'ballpark-warm-up-throw-settlement',
   },
   {
     // Year: the firm's Apr. 14, 2017 post — "We were able to obtain a $928,493.12 verdict for our
@@ -133,21 +146,25 @@ export const historicalResults: CaseResult[] = [
     story: 'octa-bus-crash-verdict',
   },
   {
-    // The firm's settlement records (added 2026-09-30).
+    // The firm's settlement records (added 2026-09-30). Title and court from its case story, shown
+    // with written consent, on the attorney's instruction (2026-10-01).
     amount: '$880,000',
-    title: 'Personal injury settlement',
-    detail: 'Details not published',
-    category: 'Other injury claims',
-    outcome: 'Settlement',
-  },
-  {
-    // The firm's settlement records (added 2026-09-30).
-    amount: '$800,000',
-    title: 'Personal injury settlement',
+    title: 'Teen hit in the head by a pitch at batting practice without a helmet',
     detail: 'Orange County Superior Court',
     category: 'Other injury claims',
     outcome: 'Settlement',
+    story: 'batting-practice-head-injury-settlement',
+  },
+  {
+    // The firm's settlement records (added 2026-09-30). Title and category from its case story, shown
+    // with written consent, on the attorney's instruction (2026-10-01).
+    amount: '$800,000',
+    title: 'Shopper twists her ankle on an object left on a store floor',
+    detail: 'Orange County Superior Court',
+    category: 'Premises liability',
+    outcome: 'Settlement',
     year: 2023,
+    story: 'store-floor-fall-settlement',
   },
   {
     amount: '$750,000',
@@ -176,21 +193,25 @@ export const historicalResults: CaseResult[] = [
     story: 'freeway-rear-end-settlement',
   },
   {
-    // Amount: the firm's settlement records ($697,500; previously listed as $697,000).
+    // Amount: the firm's settlement records ($697,500; previously listed as $697,000). Title and outcome from its
+    // case story, shown with written consent, on the attorney's instruction (2026-10-01).
     amount: '$697,500',
-    title: 'Dangerous flooring causes neck injury and cognitive issues',
+    title: 'Woman slips on a sunscreen-slicked pool deck at a waterpark resort',
     detail: 'Orange County Superior Court',
     category: 'Premises liability',
-    outcome: 'Recovery',
+    outcome: 'Settlement',
+    story: 'waterpark-pool-deck-fall-settlement',
   },
   {
-    // The firm's settlement records (added 2026-09-30).
+    // The firm's settlement records (added 2026-09-30). Title, court, and category from its case story, shown
+    // with written consent, on the attorney's instruction (2026-10-01).
     amount: '$650,000',
-    title: 'Personal injury settlement',
-    detail: 'Details not published',
-    category: 'Other injury claims',
+    title: 'Driver hurt in a chain-reaction freeway crash caused by a distracted truck driver',
+    detail: 'Orange County Superior Court',
+    category: 'Auto & transportation',
     outcome: 'Settlement',
     year: 2022,
+    story: 'chain-reaction-freeway-crash-settlement',
   },
   {
     // The firm's settlement records (added 2026-09-30; case type from the records, 2026-10-01).

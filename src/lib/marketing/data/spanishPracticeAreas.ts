@@ -98,7 +98,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
       { question: '¿Cuánto tiempo tengo?', answer: 'Los plazos varían y pueden ser más breves cuando interviene una entidad pública. Una evaluación rápida ayuda a proteger evidencia y fechas límite.' },
       { question: '¿Puede un caso de resbalón y caída incluir pérdidas futuras?', answer: 'Sí. Las lesiones graves pueden requerir cirugía, rehabilitación, atención futura, restricciones laborales o adaptaciones que deben evaluarse antes de resolver el reclamo.' },
     ],
-    featuredResults: ['Slip-and-fall claim involving complex regional pain syndrome', 'Dangerous flooring causes neck injury and cognitive issues', 'Trip-and-fall claim involving a knee injury'],
+    featuredResults: ['Slip-and-fall claim involving complex regional pain syndrome', 'Woman slips on a sunscreen-slicked pool deck at a waterpark resort', 'Trip-and-fall claim involving a knee injury'],
     sourceUrl: 'https://kjslaw.com/orange-county-slip-and-fall-attorney/',
   },
   {
@@ -200,7 +200,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
       { question: '¿Puede haber una lesión cerebral sin pérdida del conocimiento?', answer: 'Sí. La pérdida del conocimiento no es necesaria para que exista una conmoción u otra lesión cerebral. Los síntomas, el examen clínico y las evaluaciones apropiadas deben considerarse en conjunto.' },
       { question: '¿Un reclamo por lesión cerebral puede incluir apoyo futuro?', answer: 'Según la gravedad y la evidencia, puede incluir rehabilitación, supervisión, adaptaciones, tratamiento, pérdida de capacidad de ingresos y otras necesidades futuras relacionadas con la lesión.' },
     ],
-    featuredResults: ['Student suffers skull fracture and brain bleed', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Dangerous flooring causes neck injury and cognitive issues'],
+    featuredResults: ['Student suffers skull fracture and brain bleed', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Woman slips on a sunscreen-slicked pool deck at a waterpark resort'],
     sourceUrl: 'https://kjslaw.com/orange-county-traumatic-brain-injury-attorney/',
   },
   {
