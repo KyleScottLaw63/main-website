@@ -19,7 +19,7 @@ A case story tells how a result came about, from what happened to the verdict or
   - The figure reads "Confidential", and the outcome reads "Confidential settlement".
   - A year shows only where the story's own text states one.
   - It never links to a result card, so the page never pairs the story with an amount.
-- **Confidential, then published with consent (2026-10-01).** On the attorney's instruction, with written consent to publish the amount, seven settlements the draft treated as confidential show their amounts. Each story attaches to its card like any other, and the card takes the story's title, court, and practice category; the $960,000 ballpark settlement has a new card. The approved story text is unchanged, including where it says the terms are confidential.
+- **Confidential, then published with consent (2026-10-01).** On the attorney's instruction, with written consent to publish the amount, seven settlements the draft treated as confidential show their amounts. Each story attaches to its card like any other, and the card takes the story's title, court, and practice category; the $960,000 ballpark settlement has a new card. On the firm's instruction (2026-10-01), these stories no longer say their terms are confidential ("settled in 2024", not "settled in 2024 on confidential terms"); the rest of the approved text is unchanged.
 - **Fixed labels.** The three flagship labels stay fixed (AGENTS.md). The $5.75M story sits behind the unchanged flagship card.
 - **Order.** `resolved` (YYYY-MM, from the firm's records) orders the stories newest first. It is never shown.
 

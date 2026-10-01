@@ -118,7 +118,7 @@ export const caseStories: CaseStory[] = [
       {
         heading: 'The result',
         paragraphs: [
-          'The firm litigated the case for about a year and a half, and the district settled shortly before trial. The terms of the settlement are confidential.',
+          'The firm litigated the case for about a year and a half, and the district settled shortly before trial.',
         ],
       },
     ],
@@ -128,7 +128,7 @@ export const caseStories: CaseStory[] = [
   {
     slug: 'crosswalk-pedestrian-settlement',
     summary:
-      'A driver failed to yield and struck our client in a marked Hemet crosswalk. After more than two years of litigation, the case settled in 2024 on confidential terms.',
+      'A driver failed to yield and struck our client in a marked Hemet crosswalk. After more than two years of litigation, the case settled in 2024.',
     court: 'Riverside County Superior Court',
     practiceArea: { label: 'Car Accidents', href: '/orange-county-auto-accidents-lawyer' },
     chapters: [
@@ -142,7 +142,7 @@ export const caseStories: CaseStory[] = [
         heading: 'The case',
         paragraphs: [
           'The complaint alleged that the driver violated the Vehicle Code rule requiring drivers to yield to pedestrians in a marked crosswalk. It also alleged that the vehicle belonged to a rental car company that had entrusted it to him.',
-          'The firm filed suit in Riverside County Superior Court against the driver and the vehicle’s owner, later adding the rental company’s operating entity to the case. After more than two years of litigation, the case settled in 2024 on confidential terms.',
+          'The firm filed suit in Riverside County Superior Court against the driver and the vehicle’s owner, later adding the rental company’s operating entity to the case. After more than two years of litigation, the case settled in 2024.',
         ],
       },
     ],
@@ -152,7 +152,7 @@ export const caseStories: CaseStory[] = [
   {
     slug: 'ballpark-warm-up-throw-settlement',
     summary:
-      'A pitcher’s warm-up throw struck a six-year-old in the head near the dugout, fracturing his skull. The case resolved through a confidential settlement the court approved.',
+      'A pitcher’s warm-up throw struck a six-year-old in the head near the dugout, fracturing his skull. The case resolved through a settlement the court approved.',
     court: 'Orange County Superior Court',
     practiceArea: { label: 'Traumatic Brain Injury', href: '/orange-county-traumatic-brain-injury-attorney' },
     chapters: [
@@ -170,7 +170,7 @@ export const caseStories: CaseStory[] = [
       {
         heading: 'The case',
         paragraphs: [
-          'The complaint alleged that this section of seating had no protective netting and that fans got no warning about players throwing there. The firm sued in Orange County Superior Court for negligence and premises liability, and the case resolved through a confidential settlement that the court approved for the child.',
+          'The complaint alleged that this section of seating had no protective netting and that fans got no warning about players throwing there. The firm sued in Orange County Superior Court for negligence and premises liability, and the case resolved through a settlement that the court approved for the child.',
         ],
       },
     ],
@@ -299,7 +299,7 @@ export const caseStories: CaseStory[] = [
       {
         heading: 'The case',
         paragraphs: [
-          'Her husband brought a claim for loss of consortium. The firm sued the store’s operators in Orange County Superior Court, and the case settled shortly before trial on confidential terms.',
+          'Her husband brought a claim for loss of consortium. The firm sued the store’s operators in Orange County Superior Court, and the case settled shortly before trial.',
         ],
       },
     ],
@@ -357,7 +357,7 @@ export const caseStories: CaseStory[] = [
       {
         heading: 'The case',
         paragraphs: [
-          'The firm sued the resort and the companies that built and surfaced the pool deck in Orange County Superior Court; her husband also brought a claim. The defendants settled in stages on confidential terms.',
+          'The firm sued the resort and the companies that built and surfaced the pool deck in Orange County Superior Court; her husband also brought a claim. The defendants settled in stages.',
         ],
       },
     ],
@@ -367,7 +367,7 @@ export const caseStories: CaseStory[] = [
   {
     slug: 'chain-reaction-freeway-crash-settlement',
     summary:
-      'A distracted truck driver set off a chain-reaction crash on Interstate 5 that injured our client. The case settled in 2022 on confidential terms.',
+      'A distracted truck driver set off a chain-reaction crash on Interstate 5 that injured our client. The case settled in 2022.',
     court: 'Orange County Superior Court',
     practiceArea: { label: 'Car Accidents', href: '/orange-county-auto-accidents-lawyer' },
     chapters: [
@@ -386,7 +386,7 @@ export const caseStories: CaseStory[] = [
       },
       {
         heading: 'The case',
-        paragraphs: ['The firm sued the company and its driver in Orange County Superior Court, and the case settled in 2022 on confidential terms.'],
+        paragraphs: ['The firm sued the company and its driver in Orange County Superior Court, and the case settled in 2022.'],
       },
     ],
     resolved: '2022-05',
