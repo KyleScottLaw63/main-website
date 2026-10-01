@@ -6,9 +6,11 @@ import { LegacyNewsArchive } from '@/components/marketing/LegacyNewsArchive';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
+import { caseStoryBySlug, caseStoryHeadline } from '@/lib/marketing/data/caseStories';
 import { newsArticlesForLocale } from '@/lib/marketing/data/newsArticles';
 import { legacyPostSummary, legacyPosts } from '@/lib/marketing/data/legacyPosts';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
+import { caseStoryPath } from '@/lib/marketing/data/results';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { newsCollectionStructuredData } from '@/lib/marketing/structured-data';
 
@@ -20,16 +22,26 @@ export const metadata: Metadata = {
 };
 
 const localizedNews = newsArticlesForLocale('en');
-const caseNews = localizedNews
+const caseAnnouncements = localizedNews
   .filter((item) => item.kind === 'case')
   .map((item) => ({ ...item, type: item.label, href: item.path }));
+/**
+ * The $5.75M verdict's case story joins the firm's case announcements, in the place of the Riverside
+ * verdict post the firm deleted (the owner's choice, 2026-10-01). Newest first.
+ */
+const verdictStory = caseStoryBySlug('student-skull-fracture-verdict')!;
+const verdictHeadline = caseStoryHeadline(verdictStory);
+const caseNews = [
+  ...caseAnnouncements.map(({ type, dateTime, date, result, title, excerpt, href }) => ({ type, dateTime, date, result, title, excerpt, href, cta: 'Read case update' })),
+  { type: verdictHeadline.outcome, dateTime: verdictStory.resolved, date: String(verdictHeadline.year), result: verdictHeadline.figure, title: verdictHeadline.title, excerpt: verdictStory.summary, href: caseStoryPath(verdictStory.slug), cta: 'Read the case story' },
+].sort((a, b) => b.dateTime.localeCompare(a.dateTime));
 const legalArticles = localizedNews
   .filter((item) => item.kind === 'article')
   .map((item) => ({ ...item, category: item.label, href: item.path }));
 const legacyArticleSummaries = legacyPosts.slice(0, 24).map(legacyPostSummary);
 
 const newsCollectionSchema = newsCollectionStructuredData('en', [
-  ...caseNews.map((item) => ({
+  ...caseAnnouncements.map((item) => ({
     type: 'NewsArticle' as const,
     title: item.title,
     description: item.excerpt,
@@ -107,7 +119,7 @@ export default function NewsPage() {
               <h3>{item.title}</h3>
               <p>{item.excerpt}</p>
               <Link href={item.href}>
-                Read case update <ArrowRight aria-hidden="true" />
+                {item.cta} <ArrowRight aria-hidden="true" />
               </Link>
             </article>
           ))}
