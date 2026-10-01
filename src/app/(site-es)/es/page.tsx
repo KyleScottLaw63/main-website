@@ -48,11 +48,11 @@ const practiceAreas = [
 const recoveries = [
   { amount: '$6.8M', type: 'Negligencia del distrito escolar', title: 'Alumnos de primaria abusados sexualmente por un maestro', meta: 'Confidencial • Mayor acuerdo por abuso sexual en ese momento', date: '2004', href: '/es/resultados', cta: 'Ver en resultados' },
   { amount: '$5.75M', type: 'Veredicto del jurado', title: 'Estudiante sufre fractura de cráneo y hemorragia cerebral', meta: 'Juicio con jurado de dos semanas • Tribunal Superior de Los Ángeles', date: '2019', href: '/es/resultados#flagship-title', cta: 'Ver en resultados' },
-  { amount: '$2.2M', type: 'Acuerdo confidencial', title: 'Demanda por abuso sexual y agresión sexual', meta: 'Detalles confidenciales', date: '26 de diciembre de 2024', href: '/es/noticias/acuerdo-abuso-sexual-2-2-millones', cta: 'Leer el caso' },
+  { amount: '$2.7M', type: 'Acuerdo', title: 'Madre e hijos lesionados en un choque en una intersección de Fontana', meta: 'Tribunal Superior de San Bernardino • Acuerdo combinado para cinco personas lesionadas', date: '2026', href: '/es/resultados#results-explorer-title', cta: 'Ver en resultados' },
 ];
 
 const newsItems = [
-  { category: 'Acuerdo confidencial', accent: '$2.2M', title: 'Demanda por abuso sexual resuelta por $2.2 millones', excerpt: 'Kyle Scott Law explica su trabajo de apoyo a sobrevivientes en reclamos confidenciales y el camino hacia la recuperación.', date: '26 de diciembre de 2024', href: '/es/noticias/acuerdo-abuso-sexual-2-2-millones' },
+  { category: 'Acuerdo', accent: '$2.2M', title: 'Demanda por abuso sexual resuelta por $2.2 millones', excerpt: 'Kyle Scott Law explica su trabajo de apoyo a sobrevivientes en reclamos confidenciales y el camino hacia la recuperación.', date: '26 de diciembre de 2024', href: '/es/noticias/acuerdo-abuso-sexual-2-2-millones' },
   { category: 'Veredicto del jurado', accent: '$5.75M', title: 'Estudiante sufre fractura de cráneo y hemorragia cerebral', excerpt: 'Un jurado del Tribunal Superior de Los Ángeles emitió este veredicto tras un juicio de dos semanas.', date: '2019', href: '/es/resultados#flagship-title', cta: 'Ver en resultados' },
   { category: 'Victoria en apelación', accent: 'Nuevo juicio', title: 'Una victoria en apelación protege el derecho del cliente a presentar pruebas de daños', excerpt: 'Kyle Scott Law y el abogado de apelaciones obtuvieron una revocación y un nuevo juicio después de que se excluyeran pruebas importantes.', date: '9 de junio de 2019', href: '/es/noticias/victoria-apelacion-nuevo-juicio' },
 ];

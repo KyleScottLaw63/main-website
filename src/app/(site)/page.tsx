@@ -46,13 +46,13 @@ const recoveries = [
     cta: 'Read the case story',
   },
   {
-    amount: '$2.2M',
-    type: 'Confidential settlement',
-    title: 'Sexual molestation and sexual battery lawsuit',
-    meta: 'Details confidential',
-    date: 'December 26, 2024',
-    href: '/news/sexual-molestation-battery-settlement-2-2-million',
-    cta: 'Read case',
+    amount: '$2.7M',
+    type: 'Settlement',
+    title: 'Mother and her children hurt in a Fontana intersection crash',
+    meta: 'San Bernardino Superior Court • Combined settlement for five injured people',
+    date: '2026',
+    href: '/results/fontana-intersection-crash-settlement',
+    cta: 'Read the case story',
   },
 ];
 
@@ -69,7 +69,7 @@ const practiceAreas = [
 
 const newsItems = [
   {
-    category: 'Confidential settlement',
+    category: 'Settlement',
     accent: '$2.2M',
     title: 'Sexual molestation and sexual battery lawsuit resolved for $2.2 million',
     excerpt: 'Kyle Scott Law discusses its work supporting survivors through confidential claims and the path toward recovery.',
