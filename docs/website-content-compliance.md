@@ -39,6 +39,10 @@ Each card states only what the firm's own record supports. The $5.75M card (Kody
   - $697,500: an email states $45,000;
   - $430,000: another closing statement shows $255,000.
 
+**Years for older cards (2026-10-01).** Six older cards that showed no year now carry one from the firm's settlement records, each tied to exactly one matter on the settlement list by amount, category and a matching detail (defendant, court or facts): $475,000 (2021), $325,000 (2015), $125,000 dog bite to face (2011), $112,500 Office Depot (2006), $90,000 supermarket slip (2016) and $90,000 pedestrian (2008). The source is noted beside each, to the year only. The rest stay undated under the rule above.
+
+**Courts (2026-10-01).** The settlement list records a court only through a matter's case number. None of the 76 cards that read "Details not published" has one in a court's format: 64 have no case number (most settled before a lawsuit was filed, so no court was involved), and the rest are confidential, flagged in the list, or match no single matter. Those cards therefore name no court or county. A court comes onto one of them only from that matter's own case documents, with the attorney's approval.
+
 **"$50+ million recovered."** The home page's trust strip ("Más de $50 millones recuperados" on /es, both over "Published verdicts & settlements") states the total of the published results: $56,716,288.54 on 2026-10-01, with the $2.7M settlement from its case story. `results.test.ts` fails if removing results takes that total under $50 million; the claim must then change with them. The labels in that strip wrap within their cell rather than running into the next one.
 
 **Case stories.** The story behind a result, on its own page: [case-stories.md](case-stories.md). Only stories the attorney approved (all twelve of the 2026-09-30 draft, per the owner on 2026-10-01), and never the drafts' internal amounts or notes. A confidential settlement's story shows no amount and is never paired with a result card. The $2.7M Fontana settlement came onto the results list with its story, as a combined figure for five injured people, and says so on its card.

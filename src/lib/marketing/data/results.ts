@@ -234,11 +234,13 @@ export const historicalResults: CaseResult[] = [
     year: 2024,
   },
   {
+    // Year: the firm's settlement records (Settlement List 2026-09-30: settled in 2021; the only $475,000 premises matter, a fall at a Riverside County business).
     amount: '$475,000',
     title: 'Trip and fall causes head injury and aggravated seizures',
     detail: 'Riverside Superior Court',
     category: 'Premises liability',
     outcome: 'Recovery',
+    year: 2021,
   },
   {
     // The firm's settlement records, over $60,000 (added 2026-10-01).
@@ -301,11 +303,13 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Recovery',
   },
   {
+    // Year: the firm's settlement records (Settlement List 2026-09-30: settled in 2015; the only $325,000 matter of this kind, in San Joaquin Superior Court).
     amount: '$325,000',
     title: 'Man injured while working for homeowner',
     detail: 'San Joaquin Superior Court',
     category: 'Other injury claims',
     outcome: 'Recovery',
+    year: 2015,
   },
   {
     amount: '$305,000',
@@ -653,11 +657,13 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Recovery',
   },
   {
+    // Year: the firm's settlement records (Settlement List 2026-09-30: settled in 2011; the only $125,000 dog-bite matter, a bite to the face).
     amount: '$125,000',
     title: 'Woman suffers dog bite to face',
     detail: 'Orange County Superior Court',
     category: 'Dog bites',
     outcome: 'Recovery',
+    year: 2011,
   },
   {
     amount: '$125,000',
@@ -721,11 +727,13 @@ export const historicalResults: CaseResult[] = [
     year: 2018,
   },
   {
+    // Year: the firm's settlement records (Settlement List 2026-09-30: closing statement dated in 2006, after February; the only $112,500 auto matter, against Office Depot).
     amount: '$112,500',
     title: 'Office Depot truck crash causes back injury',
     detail: 'Orange County Superior Court',
     category: 'Auto & transportation',
     outcome: 'Recovery',
+    year: 2006,
   },
   {
     // The firm's settlement records, over $60,000 (added 2026-10-01).
@@ -1013,11 +1021,13 @@ export const historicalResults: CaseResult[] = [
     year: 2014,
   },
   {
+    // Year: the firm's settlement records (Settlement List 2026-09-30: notice of settlement in 2016; the only $90,000 premises matter, against a supermarket).
     amount: '$90,000',
     title: 'Knee injury after slipping on water in supermarket',
     detail: 'Orange County Superior Court',
     category: 'Premises liability',
     outcome: 'Recovery',
+    year: 2016,
   },
   {
     amount: '$90,000',
@@ -1027,11 +1037,13 @@ export const historicalResults: CaseResult[] = [
     outcome: 'Arbitration award',
   },
   {
+    // Year: the firm's settlement records (Settlement List 2026-09-30: settled in 2008; the only $90,000 auto matter, a truck-versus-pedestrian crash).
     amount: '$90,000',
     title: 'Pedestrian struck by pickup suffers back injury',
     detail: 'Orange County Superior Court',
     category: 'Auto & transportation',
     outcome: 'Recovery',
+    year: 2008,
   },
   {
     // The firm's settlement records, over $60,000 (added 2026-10-01).
