@@ -424,10 +424,10 @@ export function caseStoryTitle(story: CaseStory) {
 export type CaseStoryLink = { href: string; kicker: string; figure: string; title: string; summary: string; date: string };
 
 /**
- * Left out of the list on the firm's instruction (2026-10-01); both pages stay up. The $2.3M verdict is
- * not on /results, and the $2.2M school-counselor story repeats the firm's own $2.2M announcement.
+ * Left out of the list on the firm's instruction (2026-10-01): the $2.2M school-counselor story repeats
+ * the firm's own $2.2M announcement. Its page stays up, linked from the $2.2M card.
  */
-const unlisted = new Set(['/news/riverside-jury-verdict-2-3-million', caseStoryPath('school-counselor-abuse-settlement')]);
+const unlisted = new Set([caseStoryPath('school-counselor-abuse-settlement')]);
 
 /**
  * Every story behind a result, newest first: the case stories and the firm's published case

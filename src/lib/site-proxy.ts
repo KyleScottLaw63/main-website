@@ -19,6 +19,12 @@ const GONE = [
   /^\/wp-content(\/|$)/,
   /^\/wp-includes(\/|$)/,
   /^\/wp-json(\/|$)/,
+  // The Riverside jury verdict's posts, withdrawn by the firm (2026-10-01): their old and new addresses.
+  /^\/2024\/12\/26\/kyle-scott-wins-jury-verdict-in-riverside-superior-court\/?$/,
+  /^\/2021\/08\/12\/kyle-scott-law-delivers-justice-475000-slip-fall-settlement\/?$/,
+  /^\/news\/riverside-jury-verdict-2-3-million\/?$/,
+  /^\/es\/noticias\/veredicto-jurado-riverside-2-3-millones\/?$/,
+  /^\/news\/kyle-scott-law-delivers-justice-475000-slip-fall-settlement\/?$/,
 ];
 
 /**

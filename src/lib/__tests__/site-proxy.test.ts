@@ -53,8 +53,22 @@ describe("gone WordPress paths", () => {
     expect(html).toContain("714-544-1460");
   });
 
+  it("answer 410 for the Riverside verdict's posts the firm withdrew (2026-10-01), at their old and new addresses", () => {
+    for (const path of [
+      "/2024/12/26/kyle-scott-wins-jury-verdict-in-riverside-superior-court/",
+      "/2021/08/12/kyle-scott-law-delivers-justice-475000-slip-fall-settlement/",
+      "/news/riverside-jury-verdict-2-3-million",
+      "/es/noticias/veredicto-jurado-riverside-2-3-millones/",
+      "/news/kyle-scott-law-delivers-justice-475000-slip-fall-settlement",
+    ]) {
+      const { response } = visit(path);
+      expect(response.status, path).toBe(410);
+      expect(response.headers.get("location"), path).toBeNull();
+    }
+  });
+
   it("does not catch live pages that merely start the same way", () => {
-    for (const path of ["/sample-pages-fictional", "/wp-adminfictional", "/news/orange-county-history-fictional"]) {
+    for (const path of ["/sample-pages-fictional", "/wp-adminfictional", "/news/orange-county-history-fictional", "/news/riverside-jury-verdict-2-3-million-fictional"]) {
       expect(visit(path).response.status, path).toBe(200);
     }
   });

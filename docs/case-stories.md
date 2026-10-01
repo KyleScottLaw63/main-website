@@ -40,7 +40,7 @@ A case story tells how a result came about, from what happened to the verdict or
 ## On /results
 
 - **One section, "The story behind the result."** `caseStoryLinks()` merges every case story with the firm's published case announcements (news articles of kind `case`: the $2.2M settlement and the Court of Appeal new trial), newest first.
-- **Left out (2026-10-01).** On the firm's instruction, the list (and "More case stories") leaves out two whose pages stay up: the $2.3M Riverside verdict announcement, since that verdict is no longer on /results, and the `school-counselor-abuse-settlement` story, which repeats the firm's own $2.2M announcement. The $2.2M card in the full list still links to that story.
+- **Left out (2026-10-01).** On the firm's instruction, the list (and "More case stories") leaves out the `school-counselor-abuse-settlement` story, which repeats the firm's own $2.2M announcement. Its page stays up, and the $2.2M card in the full list links to it. (The $2.3M Riverside verdict's announcement, once listed here, was deleted with the verdict: [website-content-compliance.md](website-content-compliance.md).)
 - **What shows.** The six most recent appear as compact cards. The rest sit behind a native `<details>` ("Show all 13 case stories"), which needs no script and keeps every link in the HTML.
 - **Card links.** A flagship or ledger card whose result has a story is clickable as a whole ("Read the case story").
 - **Spanish.** The Spanish results page links no stories.

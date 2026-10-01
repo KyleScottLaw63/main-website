@@ -92,61 +92,6 @@ const newsArticleRecords: NewsArticleRecord[] = [
     },
   },
   {
-    id: 'riverside-jury-verdict-2-3-million',
-    kind: 'case',
-    schemaType: 'NewsArticle',
-    dateTime: '2024-12-26',
-    sourceUrl: 'https://kjslaw.com/2024/12/26/kyle-scott-wins-jury-verdict-in-riverside-superior-court/',
-    en: {
-      slug: 'riverside-jury-verdict-2-3-million',
-      path: '/news/riverside-jury-verdict-2-3-million',
-      label: 'Jury verdict',
-      date: 'December 26, 2024',
-      result: '$2.3M',
-      title: 'Kyle Scott wins Riverside Superior Court jury verdict',
-      excerpt: 'A published firm result concerning a $2.3 million jury verdict in Riverside Superior Court.',
-      lead: 'Kyle Scott Law reported a $2.3 million jury verdict obtained in Riverside Superior Court. The published firm notice did not provide additional facts about the parties or the underlying claim.',
-      sections: [
-        {
-          heading: 'A jury result',
-          paragraphs: [
-            'A verdict reflects the evidence, testimony, damages, instructions, and law presented in that particular trial. The result is included here as part of the firm’s published record and should not be read as a promise about another case.',
-          ],
-        },
-        {
-          heading: 'Every claim is different',
-          paragraphs: [
-            'Case value and outcome can depend on liability, medical evidence, the nature and duration of the injuries, available insurance, the parties involved, and procedural issues. A lawyer must review the specific facts before offering meaningful guidance.',
-          ],
-        },
-      ],
-    },
-    es: {
-      slug: 'veredicto-jurado-riverside-2-3-millones',
-      path: '/es/noticias/veredicto-jurado-riverside-2-3-millones',
-      label: 'Veredicto del jurado',
-      date: '26 de diciembre de 2024',
-      result: '$2.3M',
-      title: 'Kyle Scott obtiene un veredicto en el Tribunal Superior de Riverside',
-      excerpt: 'Un resultado publicado por el despacho sobre un veredicto de $2.3 millones en el Tribunal Superior de Riverside.',
-      lead: 'Kyle Scott Law informó un veredicto de jurado de $2.3 millones obtenido en el Tribunal Superior de Riverside. El aviso publicado por el despacho no incluyó datos adicionales sobre las partes ni el reclamo subyacente.',
-      sections: [
-        {
-          heading: 'Un resultado ante jurado',
-          paragraphs: [
-            'Un veredicto refleja las pruebas, testimonios, daños, instrucciones y leyes presentadas en ese juicio en particular. El resultado se incluye como parte del historial publicado del despacho y no debe interpretarse como una promesa sobre otro caso.',
-          ],
-        },
-        {
-          heading: 'Cada reclamo es distinto',
-          paragraphs: [
-            'El valor y el resultado de un caso pueden depender de la responsabilidad, las pruebas médicas, la naturaleza y duración de las lesiones, el seguro disponible, las partes y las cuestiones procesales. Un abogado debe revisar los hechos específicos antes de ofrecer orientación.',
-          ],
-        },
-      ],
-    },
-  },
-  {
     id: 'court-of-appeal-new-trial',
     kind: 'case',
     schemaType: 'NewsArticle',

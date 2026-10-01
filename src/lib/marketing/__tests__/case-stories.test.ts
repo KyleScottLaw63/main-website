@@ -77,8 +77,8 @@ describe('case stories', () => {
 
   it('lists every story and the firm’s published case announcements together, newest first', () => {
     const links = caseStoryLinks();
-    // Less two, on the firm's instruction (2026-10-01): the $2.3M verdict, and the $2.2M story that repeats the firm's announcement.
-    expect(links).toHaveLength(caseStories.length + 3 - 2);
+    // Two announcements ($2.2M, the new trial), less the $2.2M story that repeats the firm's announcement (the firm, 2026-10-01).
+    expect(links).toHaveLength(caseStories.length + 2 - 1);
     expect(links.map((link) => link.href)).not.toContain('/news/riverside-jury-verdict-2-3-million');
     expect(links.map((link) => link.href)).not.toContain('/results/school-counselor-abuse-settlement');
     expect(links.filter((link) => link.figure === '$2.2M')).toHaveLength(1);

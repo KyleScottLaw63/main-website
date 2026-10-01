@@ -9,8 +9,8 @@ The previous kjslaw.com (WordPress) published 450 URLs that Google, directories,
 | Old URL kind | Mechanism | Where |
 |---|---|---|
 | Pages with a successor (`/contact-us`, Tustin doorway pages, "why hire us" silo → `/why-hire-us`, city guides, categories, tags, feeds) | 301 in `next.config.ts` `redirects()` | `src/lib/marketing/data/redirect-rules.json` — ordered, specific rules before catch-alls |
-| The 201 dated blog permalinks (`/2019/03/12/slug/`) | 301 in `next.config.ts`, generated from the migration data | `src/lib/marketing/data/legacyPosts.json` → `redirects[]` (`legacyPath` → `/news/<slug>`). The `[year]/[month]/[day]/[slug]` route remains as a fallback |
-| Gone for good (WordPress internals, filler pages) | 410 from the proxy, directly, with or without the trailing slash | `GONE` list in `src/lib/site-proxy.ts` |
+| The dated blog permalinks (`/2019/03/12/slug/`): 201, less the two withdrawn below | 301 in `next.config.ts`, generated from the migration data | `src/lib/marketing/data/legacyPosts.json` → `redirects[]` (`legacyPath` → `/news/<slug>`). The `[year]/[month]/[day]/[slug]` route remains as a fallback |
+| Gone for good (WordPress internals, filler pages, withdrawn posts) | 410 from the proxy, directly, with or without the trailing slash | `GONE` list in `src/lib/site-proxy.ts` |
 
 URLs that kept their exact path need nothing: the homepage, `/practice-areas`, `/meet-the-team`, `/testimonials`, `/contact`, the seven practice-area pages, and the three city pages (`/anaheim-personal-injury-attorney`, `/irvine-personal-injury-attorneys`, `/santa-ana-personal-injury-attorney`, rebuilt at their old URLs as service-area pages in `src/lib/marketing/data/serviceAreas.ts`).
 
@@ -38,6 +38,8 @@ The CSV check is what keeps the rules honest once a planned page ships. The six 
 One post moved: `/news/tired-insurance-adjuster-telling-no-case-call-kyle-scott-949-423-3944` became `/news/tired-insurance-adjuster-telling-no-case-call-kyle-scott`, because the old slug carried a retired phone number. Its 2017 WordPress permalink redirects straight to the new path (`legacyPosts.json` → `redirects[]`); the old `/news` path existed only before launch.
 
 A second moved on 2026-09-30: `/news/california-statute-limitations-car-accident-code-civil-procedure-%c2%a7-335-1` became `…-civil-procedure-335-1`. Its slug held the literal text `%c2%a7` (an encoded §); Vercel decodes a path before it looks for the page, so the page answered 404 there while a local `next start` served it. The 2014 WordPress permalink still redirects in one hop, now to the plain path. Every article address is plain lowercase letters, digits, and hyphens (`legacy-posts.test.ts`), and the archive index is regenerated, never hand-edited: `node scripts/build-legacy-news-index.mjs` (`--check` compares).
+
+Two posts withdrawn on 2026-10-01, on the firm's instruction: the $2.3M Riverside jury verdict's announcement of Dec. 26, 2024 (`/news/riverside-jury-verdict-2-3-million`, `/es/noticias/veredicto-jurado-riverside-2-3-millones`) and the archived post of Aug. 12, 2021 titled with it (`/news/kyle-scott-law-delivers-justice-475000-slip-fall-settlement`). Their WordPress permalinks left `legacyPosts.json` → `redirects[]`, and those permalinks and the pages answer 410 from the `GONE` list, so search engines drop them rather than follow a redirect (`site-proxy.test.ts`). `redirect-map.csv` keeps its audit rows; the `GONE` check takes precedence over them.
 
 ## Adding or changing a redirect
 
