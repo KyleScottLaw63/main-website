@@ -5,6 +5,26 @@ import { Check, ChevronDown, Languages } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { localeFromPath, routeForLocale } from '@/lib/marketing/i18n';
 
+/**
+ * The mobile header's one-tap switch to the other language, beside the call button: "ES" on the
+ * English site, "EN" on the Spanish one, straight to this page's counterpart. The menu keeps the
+ * full switcher. The spoken name starts with the letters it shows (WCAG 2.5.3) and is in the
+ * language it switches to.
+ */
+export function LanguageToggle() {
+  const pathname = usePathname();
+  const spanish = localeFromPath(pathname) === 'es';
+  return spanish ? (
+    <a className="mobile-header-language" href={routeForLocale(pathname, 'en')} hrefLang="en-US" lang="en">
+      EN<span className="sr-only">: view this page in English</span>
+    </a>
+  ) : (
+    <a className="mobile-header-language" href={routeForLocale(pathname, 'es')} hrefLang="es-US" lang="es">
+      ES<span className="sr-only">: ver esta página en español</span>
+    </a>
+  );
+}
+
 export function LanguageSwitcher({ mobile = false }: { mobile?: boolean }) {
   const pathname = usePathname();
   const locale = localeFromPath(pathname);

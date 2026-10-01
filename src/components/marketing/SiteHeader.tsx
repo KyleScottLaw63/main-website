@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Phone } from 'lucide-react';
-import { LanguageSwitcher } from '@/components/marketing/LanguageSwitcher';
+import { LanguageSwitcher, LanguageToggle } from '@/components/marketing/LanguageSwitcher';
 import { MobileNav } from '@/components/marketing/MobileNav';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 
@@ -37,6 +37,7 @@ export function SiteHeader({ locale = 'en' }: { locale?: SiteLocale }) {
           <LanguageSwitcher />
           {/* Most people call: the header button dials; the hero keeps "Start a free consultation". */}
           <a className="primary-button header-cta" href="tel:+17145441460"><Phone aria-hidden="true" />{spanish ? 'Llame al 714-544-1460' : 'Call 714-544-1460'}</a>
+          <LanguageToggle />
           <a className="mobile-header-phone" href="tel:+17145441460" aria-label={spanish ? 'Llame a Kyle Scott Law al 714-544-1460' : 'Call Kyle Scott Law at 714-544-1460'}><Phone aria-hidden="true" /></a>
           <MobileNav locale={locale} />
         </div>

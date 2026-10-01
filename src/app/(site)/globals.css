@@ -78,6 +78,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .phone-link { display: flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 15px; font-weight: 750; color: var(--navy); }
 .mobile-header-phone { display: none; width: 46px; height: 46px; align-items: center; justify-content: center; border: 1px solid rgba(12,57,119,.15); border-radius: 12px; color: var(--navy); }
 .mobile-header-phone svg { width: 21px; height: 21px; }
+.mobile-header-language { display: none; width: 46px; height: 46px; align-items: center; justify-content: center; border: 1px solid rgba(12,57,119,.15); border-radius: 12px; color: var(--navy); font-size: 14px; font-weight: 820; letter-spacing: .06em; line-height: 1; text-decoration: none; }
+.mobile-header-language:hover, .mobile-header-language:focus-visible { border-color: rgba(0,91,211,.4); background: rgba(0,91,211,.06); color: var(--blue); }
 
 .primary-button {
   display: inline-flex;
@@ -829,7 +831,7 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
   .site-header nav, .phone-link, .header-cta, .site-header .language-switcher-root { display: none; }
   .brand { width: 132px; }
   .header-actions { gap: 9px; }
-  .mobile-header-phone, .mobile-menu-button { display: inline-flex; }
+  .mobile-header-phone, .mobile-menu-button, .mobile-header-language { display: inline-flex; }
 }
 
 @media (max-width: 900px) {
@@ -840,6 +842,7 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
   .brand { width: 132px; }
   .header-actions { gap: 9px; }
   .mobile-header-phone { display: inline-flex; }
+  .mobile-header-language { display: inline-flex; }
   .mobile-menu-button { display: inline-flex; }
   .hero { grid-template-columns: 1fr; grid-template-rows: auto minmax(390px,58vh) auto; gap: 20px; padding: 30px 22px 12px; }
   .hero-copy { padding: 0; }
@@ -1723,4 +1726,11 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
   .case-story-card, .case-story-card-cta svg, .case-story-call, .flagship-grid article.has-story, .case-story-all > summary svg { transition: none; }
   .case-story-card:hover, .case-story-card:focus-visible, .flagship-grid article.has-story:hover, .flagship-grid article.has-story:focus-within { transform: none; }
   .case-story-card:hover .case-story-card-cta svg { transform: none; }
+}
+
+/* The mobile header holds the logo and three 46px buttons (language, call, menu); under 360px they shrink so the row still fits. */
+@media (max-width: 359px) {
+  .brand { width: 110px; }
+  .header-actions { gap: 7px; }
+  .mobile-header-language, .mobile-header-phone, .mobile-menu-button { width: 42px; height: 42px; }
 }

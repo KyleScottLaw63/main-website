@@ -16,6 +16,12 @@ Every page of the public website (kjslaw.com: English and Spanish) is statically
 
 Switching language is a full page load (different root layouts). That is intended; it happens once per visit.
 
+Where to switch:
+- **Desktop header:** the switcher dropdown.
+- **Mobile header (≤1180px):** a one-tap toggle beside the call button (`LanguageToggle`): "ES" on the English site, "EN" on the Spanish one. It opens this page's counterpart, or the other home page when the page has none. Its spoken name, "ES: ver esta página en español" or "EN: view this page in English", is in the target language.
+- **Mobile menu:** keeps the full switcher.
+- **Under 360px:** the header's three buttons shrink from 46 to 42px so the row fits beside the logo.
+
 ## Security headers
 
 `next.config.ts` sends on every response: `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `X-Frame-Options: DENY` with `Content-Security-Policy: frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'`, `Cross-Origin-Opener-Policy: same-origin`, a `Permissions-Policy` that turns off the camera, geolocation, microphone, payment, and USB, and `Strict-Transport-Security` (two years, apex only — see the comment in `next.config.ts` before adding `includeSubDomains` or `preload`). `X-Powered-By` is off.
