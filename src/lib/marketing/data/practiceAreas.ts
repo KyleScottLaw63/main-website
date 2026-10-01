@@ -60,7 +60,7 @@ export const practiceAreas: PracticeAreaData[] = [
       { question: 'Will every case go to trial?', answer: 'No. Many matters resolve through negotiation or mediation. Trial preparation remains important because it gives the firm a clear way to present the claim if a fair settlement is not offered.' },
       { question: 'What does the first consultation cost?', answer: `Kyle Scott Law offers a free initial case review. ${noRecoveryTerms.en.statement}.` },
     ],
-    featuredResults: ['OCTA bus crashes into minivan; man suffers cognitive problems', 'Slip-and-fall claim involving complex regional pain syndrome', 'Child suffers dog bites to abdomen'],
+    featuredResults: ['Transit bus crashes into minivan; man suffers cognitive problems', 'Slip-and-fall claim involving complex regional pain syndrome', 'Child suffers dog bites to abdomen'],
     sourceUrl: 'https://kjslaw.com/personal-injury-lawyer-orange-county/',
   },
   {
@@ -94,7 +94,7 @@ export const practiceAreas: PracticeAreaData[] = [
       { question: 'What if the insurer accepts fault but disputes the value of the claim?', answer: 'Liability and damages are separate issues. Even when fault is accepted, the parties may disagree about the diagnosis, whether treatment was related, future care, wage loss, policy limits, or the effect of the injury on daily life.' },
       { question: 'How long will a car accident claim take?', answer: 'Timing depends on medical recovery, disputed liability, available coverage, and whether a lawsuit is needed. A fast resolution is not always the same as a complete one.' },
     ],
-    featuredResults: ['OCTA bus crashes into minivan; man suffers cognitive problems', 'Serious back injury in crash with a medical-device salesperson', 'Car crash causes neck injuries and headaches'],
+    featuredResults: ['Transit bus crashes into minivan; man suffers cognitive problems', 'Driver needs a lower-back disc replacement after a freeway rear-end crash', 'Car crash causes neck injuries and headaches'],
     sourceUrl: 'https://kjslaw.com/orange-county-auto-accidents-lawyer/',
   },
   {
@@ -229,7 +229,7 @@ export const practiceAreas: PracticeAreaData[] = [
       { question: 'Can a brain-injury claim include future support?', answer: 'When supported by the evidence, the evaluation may include future treatment, therapy, supervision, transportation, vocational loss, home assistance, and other long-term needs.' },
       { question: 'What should happen first after a possible brain injury?', answer: 'Medical safety comes first. Urgent or worsening neurological symptoms require immediate medical attention; legal review comes after immediate care is addressed.' },
     ],
-    featuredResults: ['Student suffers skull fracture and brain bleed', 'OCTA bus crashes into minivan; man suffers cognitive problems', 'Dangerous flooring causes neck injury and cognitive issues'],
+    featuredResults: ['Student suffers skull fracture and brain bleed', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Dangerous flooring causes neck injury and cognitive issues'],
     sourceUrl: 'https://kjslaw.com/orange-county-traumatic-brain-injury-attorney/',
   },
   {
@@ -295,7 +295,7 @@ export const practiceAreas: PracticeAreaData[] = [
       { question: 'Who may be responsible for a preventable death?', answer: 'Potential defendants can include drivers, employers, property owners, professionals, manufacturers, institutions, public entities, or others whose conduct contributed to the death. Each theory requires supporting evidence.' },
       { question: 'How soon should the family obtain legal advice?', answer: 'There is no need to make every decision immediately, but evidence and deadlines can be time-sensitive. An early consultation can protect the claim while the family considers next steps.' },
     ],
-    featuredResults: ['Wrongful death of a Marine in an Osprey crash near Tucson'],
+    featuredResults: ['Wrongful death of a Marine in a military aircraft crash near Tucson'],
   },
   {
     key: 'school-liability',

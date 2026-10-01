@@ -63,9 +63,11 @@ describe('case stories', () => {
     const titles = caseStories.map(caseStoryTitle);
     expect(new Set(titles).size).toBe(titles.length);
     const title = (slug: string) => caseStoryTitle(caseStories.find((story) => story.slug === slug)!);
-    expect(title('octa-bus-crash-verdict')).toBe('$928,493.12 jury verdict: OCTA bus crashes into minivan; man suffers cognitive problems | Kyle Scott Law');
+    expect(title('octa-bus-crash-verdict')).toBe('$928,493.12 jury verdict: Transit bus crashes into minivan; man suffers cognitive problems | Kyle Scott Law');
     expect(title('crosswalk-pedestrian-settlement')).toBe('Confidential settlement: Pedestrian struck in a marked crosswalk | Kyle Scott Law');
     for (const story of caseStories) expect(story.summary.length, story.slug).toBeLessThanOrEqual(170);
+    // /results shows the summary: the kind of party a claim was against, never which one (the firm, 2026-10-01).
+    for (const story of caseStories) expect(story.summary, story.slug).not.toMatch(/\b(?:LBUSD|Long Beach Unified|OCTA|Orange County Transportation Authority|Office Depot|Disneyland|Osprey)\b/);
   });
 
   it('retitles the $700,000 card from its story: nothing supports "medical-device salesperson"', () => {

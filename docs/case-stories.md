@@ -8,6 +8,7 @@ A case story tells how a result came about, from what happened to the verdict or
 
 - **Approval.** A story goes on the site only after Kyle J. Scott approves it. The firm drafts stories for review ("Case Stories — Draft for Review"). On 2026-10-01 the owner reported all twelve stories in the draft of 2026-09-30 approved, including those the draft had held.
 - **Wording.** The story text is the approved text, word for word. The site splits it into short chapters with plain headings ("What happened", "The injuries", "The case") and adds nothing else. The one-sentence summary uses only facts from that text.
+- **No defendant named on /results (2026-10-01).** The summary, which /results shows, names the kind of party only ("A transit bus", "The defense"), never which one. The story page's approved text is unchanged.
 - **Never the drafts' internal material:** internal amounts, review notes, sources, "before publishing" notes, co-counsel, client names, case numbers, or any name the draft leaves out.
 
 ## How a story attaches to a result

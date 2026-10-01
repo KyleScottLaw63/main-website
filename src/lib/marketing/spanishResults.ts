@@ -41,9 +41,9 @@ const titles: Record<string, string> = {
   'Medical malpractice settlement': 'Acuerdo por negligencia médica',
   'Underinsured-motorist claim': 'Reclamo de conductor con seguro insuficiente',
   'Teenage boy molested by church employee': 'Adolescente abusado sexualmente por un empleado de una iglesia',
-  'OCTA bus crashes into minivan; man suffers cognitive problems': 'Autobús de OCTA choca contra una minivan; un hombre sufre problemas cognitivos',
+  'Transit bus crashes into minivan; man suffers cognitive problems': 'Autobús de transporte público choca contra una minivan; un hombre sufre problemas cognitivos',
   'Slip-and-fall claim involving complex regional pain syndrome': 'Reclamo por resbalón y caída con síndrome de dolor regional complejo',
-  'Wrongful death of a Marine in an Osprey crash near Tucson': 'Muerte injusta de un infante de Marina en un accidente de Osprey cerca de Tucson',
+  'Wrongful death of a Marine in a military aircraft crash near Tucson': 'Muerte injusta de un infante de Marina en un accidente de una aeronave militar cerca de Tucson',
   'Driver needs a lower-back disc replacement after a freeway rear-end crash': 'Conductor necesita un reemplazo de disco lumbar tras un choque por alcance en la autopista',
   'Dangerous flooring causes neck injury and cognitive issues': 'Piso peligroso causa lesión de cuello y problemas cognitivos',
   'Client suffers shooting and battery injuries': 'Cliente sufre lesiones por disparo y agresión',
@@ -79,7 +79,7 @@ const titles: Record<string, string> = {
   'Man beaten by police suffers excessive force': 'Hombre golpeado por la policía sufre uso excesivo de fuerza',
   'Woman suffers wrist fracture in auto incident': 'Mujer sufre fractura de muñeca en un accidente vehicular',
   'Rear-end freeway crash causes back injury': 'Choque por alcance en la autopista causa lesión de espalda',
-  'Office Depot truck crash causes back injury': 'Choque con camión de Office Depot causa lesión de espalda',
+  'Commercial truck crash causes back injury': 'Choque con un camión comercial causa lesión de espalda',
   'Child suffers dog bite to face': 'Menor sufre mordedura de perro en el rostro',
   'Bicyclist struck by car suffers back injury': 'Ciclista atropellado por un auto sufre lesión de espalda',
   'Young man suffers dog bite injuries': 'Joven sufre lesiones por mordedura de perro',
@@ -100,7 +100,7 @@ const titles: Record<string, string> = {
   'Woman molested by hospital employee': 'Mujer abusada sexualmente por un empleado de hospital',
   'Medical malpractice involving failure to diagnose': 'Negligencia médica por falta de diagnóstico',
   'Neck injury after auto crash in San Bernardino': 'Lesión de cuello después de un choque en San Bernardino',
-  'Woman suffers wrist fracture on Disneyland escalator': 'Mujer sufre fractura de muñeca en una escalera eléctrica de Disneyland',
+  'Woman suffers wrist fracture on theme park escalator': 'Mujer sufre fractura de muñeca en una escalera eléctrica de un parque temático',
 };
 
 function translateDetail(detail: string) {
@@ -126,7 +126,6 @@ function translateDetail(detail: string) {
     .replaceAll('Binding arbitration', 'Arbitraje vinculante')
     .replaceAll('Former teacher', 'Exmaestro')
     .replaceAll('Two-week jury trial', 'Juicio con jurado de dos semanas')
-    .replaceAll('Claim against LBUSD', 'Reclamo contra el Distrito Escolar Unificado de Long Beach')
     .replaceAll('Claim against school district', 'Reclamo contra el distrito escolar')
     .replaceAll('School district negligence', 'Negligencia del distrito escolar')
     .replaceAll('Largest molestation settlement at the time', 'Mayor acuerdo por abuso sexual en ese momento')

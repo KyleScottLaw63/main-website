@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { allResults, flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
+import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
+import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
+import { whyHireUs } from '@/lib/marketing/data/whyHireUs';
 
 /** A card's amount as a number: "$928,493.12" → 928493.12, "$5.75M" → 5750000. */
 const dollars = (amount: string) => Number(amount.replace(/[$,]/g, '').replace(/M$/, 'e6'));
@@ -62,6 +65,17 @@ describe('the year on a published result', () => {
     expect(allResults.filter((result) => translateResultToSpanish(result).title === result.title).map((result) => result.title)).toEqual([]);
   });
 
+  it('names no one a claim was against, only the kind of party (the firm, 2026-10-01)', () => {
+    const named = /\b(?:LBUSD|Long Beach Unified|OCTA|Orange County Transportation Authority|Office Depot|Disneyland|Osprey)\b/;
+    expect(allResults.filter((result) => named.test(`${result.title} ${result.detail}`)).map((result) => result.title)).toEqual([]);
+  });
+
+  it('features only results that exist: the practice and why-hire-us pages find a card by its exact title', () => {
+    const titles = new Set(allResults.map((result) => result.title));
+    const featured = [...practiceAreas, ...spanishPracticeAreas, ...Object.values(whyHireUs)].flatMap((page) => page.featuredResults);
+    expect(featured.filter((title) => !titles.has(title))).toEqual([]);
+  });
+
   it('lists the two results the firm reported on Dec. 26, 2024, in Spanish too', () => {
     const verdict = translateResultToSpanish(historicalResults.find((result) => result.amount === '$2.3M')!);
     expect(verdict).toMatchObject({ title: 'Veredicto del jurado en el Tribunal Superior de Riverside', detail: 'Tribunal Superior de Riverside · Detalles no publicados', outcome: 'Veredicto del jurado', year: 2024 });
@@ -82,7 +96,7 @@ describe('published case results', () => {
     expect(result.title).toBe('Student suffers skull fracture and brain bleed');
     expect(result.outcome).toBe('Jury verdict');
     expect(result.detail).toContain('Los Angeles Superior Court');
-    expect(result.detail).toContain('LBUSD');
+    expect(result.detail).toContain('Claim against school district');
     expect(result.detail).not.toMatch(/Former teacher|Orange County Superior Court/);
   });
 
@@ -95,6 +109,6 @@ describe('published case results', () => {
     expect(leftovers).toEqual([]);
     const lbusd = translateResultToSpanish(flagshipResults.find((item) => item.amount === '$5.75M')!);
     expect(lbusd.outcome).toBe('Veredicto del jurado');
-    expect(lbusd.detail).toBe('Juicio con jurado de dos semanas · Tribunal Superior de Los Ángeles · Reclamo contra el Distrito Escolar Unificado de Long Beach');
+    expect(lbusd.detail).toBe('Juicio con jurado de dos semanas · Tribunal Superior de Los Ángeles · Reclamo contra el distrito escolar');
   });
 });

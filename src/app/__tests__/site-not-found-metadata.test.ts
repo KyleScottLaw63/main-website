@@ -41,7 +41,7 @@ describe('a missing article or guide', () => {
     const guide = await guideMetadata(params('government-injury-claim-orange-county'));
     expect(guide.title).toBe('Orange County Government Claim Deadline: The Six-Month Rule, Explained');
     const story = await caseStoryMetadata(params('octa-bus-crash-verdict'));
-    expect(story.title).toBe('$928,493.12 jury verdict: OCTA bus crashes into minivan; man suffers cognitive problems | Kyle Scott Law');
+    expect(story.title).toBe('$928,493.12 jury verdict: Transit bus crashes into minivan; man suffers cognitive problems | Kyle Scott Law');
     expect(story.robots).toBeUndefined();
   });
 });

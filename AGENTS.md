@@ -17,6 +17,7 @@ The public website of Kyle Scott Law (kjslaw.com), a personal-injury firm in Tus
 11. **Results and case stories are the attorney's call.**
     - A case story (`/results/<slug>`) goes up only once Kyle J. Scott approves it (docs/case-stories.md). Never a confidential, unfunded, or court-pending matter, and never the drafts' internal amounts, sources, or review notes.
     - Results come from the firm's own records, under the rules in docs/website-content-compliance.md ("Case results"). The firm's settlement list is internal: publish only gross amount, year, court, outcome, and case type from it, never names, case numbers, fees, or net amounts.
+    - What /results shows names the kind of party a claim was against, never which one: "Claim against school district", not "LBUSD" (docs/website-content-compliance.md).
 
 ## Workflows
 

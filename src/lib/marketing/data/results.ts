@@ -64,7 +64,7 @@ export const flagshipResults: CaseResult[] = [
     // Year: that Nov. 16, 2019 post, and the Apr. 23, 2020 post ("60th largest verdict in California in 2019").
     amount: '$5.75M',
     title: 'Student suffers skull fracture and brain bleed',
-    detail: 'Two-week jury trial · Los Angeles Superior Court · Claim against LBUSD',
+    detail: 'Two-week jury trial · Los Angeles Superior Court · Claim against school district',
     category: 'Abuse & school liability',
     outcome: 'Jury verdict',
     year: 2019,
@@ -125,7 +125,7 @@ export const historicalResults: CaseResult[] = [
     // Year: the firm's Apr. 14, 2017 post — "We were able to obtain a $928,493.12 verdict for our
     // client … yesterday when an Orange County jury found the Orange County Transportation Authority" liable.
     amount: '$928,493.12',
-    title: 'OCTA bus crashes into minivan; man suffers cognitive problems',
+    title: 'Transit bus crashes into minivan; man suffers cognitive problems',
     detail: 'Orange County Superior Court',
     category: 'Auto & transportation',
     outcome: 'Jury verdict',
@@ -158,7 +158,7 @@ export const historicalResults: CaseResult[] = [
   },
   {
     amount: '$750,000',
-    title: 'Wrongful death of a Marine in an Osprey crash near Tucson',
+    title: 'Wrongful death of a Marine in a military aircraft crash near Tucson',
     detail: 'Los Angeles Superior Court',
     category: 'Auto & transportation',
     outcome: 'Recovery',
@@ -727,9 +727,9 @@ export const historicalResults: CaseResult[] = [
     year: 2018,
   },
   {
-    // Year: the firm's settlement records (Settlement List 2026-09-30: closing statement dated in 2006, after February; the only $112,500 auto matter, against Office Depot).
+    // Year: the firm's settlement records (Settlement List 2026-09-30: closing statement dated in 2006, after February; the only $112,500 auto matter, a commercial truck crash).
     amount: '$112,500',
-    title: 'Office Depot truck crash causes back injury',
+    title: 'Commercial truck crash causes back injury',
     detail: 'Orange County Superior Court',
     category: 'Auto & transportation',
     outcome: 'Recovery',
@@ -1239,7 +1239,7 @@ export const historicalResults: CaseResult[] = [
   },
   {
     amount: '$65,000',
-    title: 'Woman suffers wrist fracture on Disneyland escalator',
+    title: 'Woman suffers wrist fracture on theme park escalator',
     detail: 'Orange County',
     category: 'Premises liability',
     outcome: 'Recovery',

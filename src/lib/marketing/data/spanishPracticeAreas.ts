@@ -32,7 +32,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
       { question: '¿Cuánto cuesta la consulta?', answer: 'La consulta inicial es gratuita. El acuerdo de honorarios aplicable se explica por escrito si el bufete acepta la representación.' },
       { question: '¿Por qué trabajar con un abogado de lesiones personales del Condado de Orange?', answer: 'Un abogado local puede aportar conocimiento de las carreteras, negocios, proveedores médicos, tribunales y procedimientos de reclamos del Condado de Orange. Ese conocimiento no determina el resultado, pero puede ayudar a enfocar la investigación y la preparación del caso en el lugar donde ocurrió la lesión.' },
     ],
-    featuredResults: ['OCTA bus crashes into minivan; man suffers cognitive problems', 'Slip-and-fall claim involving complex regional pain syndrome', 'Child suffers dog bites to abdomen'],
+    featuredResults: ['Transit bus crashes into minivan; man suffers cognitive problems', 'Slip-and-fall claim involving complex regional pain syndrome', 'Child suffers dog bites to abdomen'],
   },
   {
     key: 'car-accidents',
@@ -65,7 +65,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
       { question: '¿Por qué contratar a un abogado de accidentes de auto del Condado de Orange?', answer: 'Un abogado que trabaja habitualmente en el Condado de Orange puede investigar las carreteras, agencias, tribunales, proveedores médicos y aseguradoras relacionados con el choque. La experiencia local no garantiza un resultado, pero puede hacer más eficiente la revisión de los hechos y del procedimiento.' },
       { question: '¿Qué pasa si la aseguradora acepta la culpa pero disputa el valor del reclamo?', answer: 'La responsabilidad y los daños son cuestiones separadas. Aunque se acepte la culpa, puede haber desacuerdo sobre el diagnóstico, el tratamiento, la atención futura, la pérdida salarial, los límites de la póliza o el efecto de la lesión en la vida diaria.' },
     ],
-    featuredResults: ['OCTA bus crashes into minivan; man suffers cognitive problems', 'Serious back injury in crash with a medical-device salesperson', 'Car crash causes neck injuries and headaches'],
+    featuredResults: ['Transit bus crashes into minivan; man suffers cognitive problems', 'Driver needs a lower-back disc replacement after a freeway rear-end crash', 'Car crash causes neck injuries and headaches'],
     sourceUrl: 'https://kjslaw.com/orange-county-auto-accidents-lawyer/',
   },
   {
@@ -200,7 +200,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
       { question: '¿Puede haber una lesión cerebral sin pérdida del conocimiento?', answer: 'Sí. La pérdida del conocimiento no es necesaria para que exista una conmoción u otra lesión cerebral. Los síntomas, el examen clínico y las evaluaciones apropiadas deben considerarse en conjunto.' },
       { question: '¿Un reclamo por lesión cerebral puede incluir apoyo futuro?', answer: 'Según la gravedad y la evidencia, puede incluir rehabilitación, supervisión, adaptaciones, tratamiento, pérdida de capacidad de ingresos y otras necesidades futuras relacionadas con la lesión.' },
     ],
-    featuredResults: ['Student suffers skull fracture and brain bleed', 'OCTA bus crashes into minivan; man suffers cognitive problems', 'Dangerous flooring causes neck injury and cognitive issues'],
+    featuredResults: ['Student suffers skull fracture and brain bleed', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Dangerous flooring causes neck injury and cognitive issues'],
     sourceUrl: 'https://kjslaw.com/orange-county-traumatic-brain-injury-attorney/',
   },
   {
@@ -266,7 +266,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
       { question: '¿Qué pasa si una agencia ya investiga?', answer: 'La investigación oficial puede ser importante, pero el caso civil aún puede requerir evidencia, expertos, solicitudes de preservación y análisis separado de seguros y responsables.' },
       { question: '¿Cuándo debe la familia obtener asesoría?', answer: 'No es necesario tomar todas las decisiones de inmediato, pero la evidencia y los plazos pueden ser sensibles. Una consulta temprana puede proteger opciones mientras la familia considera los próximos pasos.' },
     ],
-    featuredResults: ['Wrongful death of a Marine in an Osprey crash near Tucson'],
+    featuredResults: ['Wrongful death of a Marine in a military aircraft crash near Tucson'],
   },
   {
     key: 'school-liability',

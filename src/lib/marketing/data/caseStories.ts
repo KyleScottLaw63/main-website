@@ -183,7 +183,7 @@ export const caseStories: CaseStory[] = [
   {
     slug: 'octa-bus-crash-verdict',
     summary:
-      'An OCTA bus rear-ended our client’s stopped minivan. OCTA’s lawyer argued the case was worth $157,000; an Orange County jury returned a $928,493.12 verdict.',
+      'A transit bus rear-ended our client’s stopped minivan. The defense argued the case was worth $157,000; an Orange County jury returned a $928,493.12 verdict.',
     court: 'Orange County Superior Court',
     practiceArea: { label: 'Car Accidents', href: '/orange-county-auto-accidents-lawyer' },
     chapters: [
