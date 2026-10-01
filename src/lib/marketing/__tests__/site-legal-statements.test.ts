@@ -124,3 +124,13 @@ describe('punitive damages against a drunk driver', () => {
     }
   });
 });
+
+describe('the Court of Appeal new trial', () => {
+  it('says nothing about whether the decision was certified for publication or can be cited (the firm, 2026-10-01)', () => {
+    for (const [locale, slug] of [['en', 'court-of-appeal-new-trial'], ['es', 'victoria-apelacion-nuevo-juicio']] as const) {
+      const text = strings(newsArticleBySlug(locale, slug)!).join(' ');
+      expect(text, locale).not.toMatch(/certified for publication|citable|precedent|certificada para publicación|citarse|precedente/i);
+      expect(text, locale).toMatch(/Appellate decisions turn on the record|Las decisiones de apelación dependen del expediente/);
+    }
+  });
+});

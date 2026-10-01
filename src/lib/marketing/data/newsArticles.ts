@@ -111,7 +111,7 @@ const newsArticleRecords: NewsArticleRecord[] = [
           heading: 'Why the appeal mattered',
           paragraphs: [
             'The appeal concerned the exclusion of evidence offered to prove medical damages. The appellate court concluded that the exclusion was prejudicial and that the client was entitled to present the claim again in a new trial.',
-            'Appellate decisions turn on the record, procedural history, and legal issues presented in that case. The decision discussed in the firm’s publication was not certified for publication and is generally not citable as precedent under California rules.',
+            'Appellate decisions turn on the record, procedural history, and legal issues presented in that case.',
           ],
         },
         {
@@ -136,7 +136,7 @@ const newsArticleRecords: NewsArticleRecord[] = [
           heading: 'Por qué importó la apelación',
           paragraphs: [
             'La apelación se relacionó con la exclusión de pruebas ofrecidas para demostrar daños médicos. El tribunal concluyó que la exclusión fue perjudicial y que el cliente tenía derecho a presentar nuevamente el reclamo en un nuevo juicio.',
-            'Las decisiones de apelación dependen del expediente, el historial procesal y los asuntos legales de cada caso. La decisión descrita en la publicación del despacho no fue certificada para publicación y, en general, no puede citarse como precedente conforme a las reglas de California.',
+            'Las decisiones de apelación dependen del expediente, el historial procesal y los asuntos legales de cada caso.',
           ],
         },
         {
