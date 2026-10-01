@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { caseStories, caseStoryHeadline, caseStoryLinks, caseStoryResult, caseStoryTitle } from '@/lib/marketing/data/caseStories';
 import { legacyPostBySlug } from '@/lib/marketing/data/legacyPosts';
+import { newsArticleBySlug } from '@/lib/marketing/data/newsArticles';
 import { allResults, flagshipResults } from '@/lib/marketing/data/results';
 import { localizedRoutes } from '@/lib/marketing/i18n';
 
@@ -85,5 +86,15 @@ describe('case stories', () => {
     expect(links.map((link) => link.date)).toEqual([...links.map((link) => link.date)].sort().reverse());
     expect(links[0]).toMatchObject({ href: '/results/fontana-intersection-crash-settlement', figure: '$2.7M', kicker: 'Settlement · 2026' });
     expect(links.map((link) => link.href)).toEqual(expect.arrayContaining(['/news/sexual-molestation-battery-settlement-2-2-million', '/news/court-of-appeal-new-trial']));
+  });
+
+  it('calls the $2.2M settlement confidential nowhere: the firm has written consent to publish it (2026-10-01)', () => {
+    for (const [locale, slug] of [['en', 'sexual-molestation-battery-settlement-2-2-million'], ['es', 'acuerdo-abuso-sexual-2-2-millones']] as const) {
+      const { label, title, excerpt, lead, sections } = newsArticleBySlug(locale, slug)!;
+      const shown = [label, title, excerpt, lead, ...sections.flatMap((section) => [section.heading, ...section.paragraphs])].join(' ');
+      expect(shown, locale).not.toMatch(/confiden/i);
+    }
+    const card = caseStoryLinks().find((link) => link.href === '/news/sexual-molestation-battery-settlement-2-2-million')!;
+    expect(card.kicker).toBe('Settlement · December 26, 2024');
   });
 });

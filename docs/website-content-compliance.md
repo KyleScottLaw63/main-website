@@ -55,7 +55,13 @@ Each card states only what the firm's own record supports. The $5.75M card (Kody
 
 **Case stories.** The story behind a result, on its own page: [case-stories.md](case-stories.md). Only stories the attorney approved (all twelve of the 2026-09-30 draft, per the owner on 2026-10-01), and never the drafts' internal amounts or notes. A confidential settlement's story shows no amount and is never paired with a result card, unless there is written consent to publish the amount: on 2026-10-01 there was for seven, which now attach to their cards (the $960,000 one to a new card). The $2.7M Fontana settlement came onto the results list with its story, as a combined figure for five injured people, and says so on its card.
 
-**Home page recoveries (2026-10-01).** On the owner's instruction, "Selected published recoveries" on the home page (`/`, `/es`) shows the $6.8M settlement, the $5.75M verdict, and the $2.7M Fontana settlement. The $2.7M card says it is a combined figure for five injured people, as on /results. The $2.2M stays in the home page's news row, labeled "Settlement" ("Acuerdo" on /es) rather than "Confidential settlement", since the firm has written consent to publish its amount. `home-page.test.tsx` checks both.
+**Home page recoveries (2026-10-01).** On the owner's instruction, "Selected published recoveries" on the home page (`/`, `/es`) shows the $6.8M settlement, the $5.75M verdict, and the $2.7M Fontana settlement. The $2.7M card says it is a combined figure for five injured people, as on /results. The $2.2M stays in the home page's news row. `home-page.test.tsx` checks both.
+
+**The $2.2M, no longer called confidential (2026-10-01).** On the firm's instruction, nothing on the site calls the $2.2M settlement confidential, since the firm has written consent to publish it (one of the seven above).
+- **Its announcement** (`/news/sexual-molestation-battery-settlement-2-2-million`, `/es/noticias/acuerdo-abuso-sexual-2-2-millones`) is labeled "Settlement" ("Acuerdo"). Its text no longer calls the matter confidential, but it still says the firm does not publish facts that could identify the client.
+- **Its cards** on the home pages, /results, /es/resultados, /news, and /es/noticias read the same.
+- **Its old WordPress address**, which still forwards to the post, keeps the words "details-confidential". Visitors never see it; it appears only in the post's structured data.
+- **Tests.** `case-stories.test.ts`, `home-page.test.tsx`, and `news-page.test.tsx` fail if "confidential" comes back on it.
 
 **The Court of Appeal new trial (2026-10-01).** On the firm's instruction, the announcement (`/news/court-of-appeal-new-trial`, `/es/noticias/victoria-apelacion-nuevo-juicio`) no longer says whether the decision was certified for publication or can be cited as precedent. It still says that appellate decisions turn on their own record and history. `site-legal-statements.test.ts` fails if such a statement comes back.
 

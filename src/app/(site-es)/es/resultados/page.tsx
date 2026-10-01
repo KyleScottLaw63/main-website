@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const translatedFlagship = flagshipResults.map(translateResultToSpanish);
 const recentPublications = [
-  { amount: '$2.2M', label: 'Acuerdo confidencial', title: 'Demanda por abuso sexual', date: '26 de diciembre de 2024', href: '/es/noticias/acuerdo-abuso-sexual-2-2-millones' },
+  { amount: '$2.2M', label: 'Acuerdo', title: 'Demanda por abuso sexual', date: '26 de diciembre de 2024', href: '/es/noticias/acuerdo-abuso-sexual-2-2-millones' },
 ];
 
 export default function SpanishResultsPage() {

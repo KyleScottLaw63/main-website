@@ -43,24 +43,24 @@ const newsArticleRecords: NewsArticleRecord[] = [
     en: {
       slug: 'sexual-molestation-battery-settlement-2-2-million',
       path: '/news/sexual-molestation-battery-settlement-2-2-million',
-      label: 'Confidential settlement',
+      label: 'Settlement',
       date: 'December 26, 2024',
       result: '$2.2M',
       title: 'Sexual molestation and sexual battery lawsuit resolved for $2.2 million',
-      excerpt: 'Kyle Scott Law reports a confidential resolution for a survivor of sexual molestation and sexual battery.',
-      lead: 'Kyle Scott Law reported a $2.2 million confidential resolution in a sexual molestation and sexual battery matter. Because the matter is confidential, the firm does not publish facts that could identify the client or other protected details.',
+      excerpt: 'Kyle Scott Law reports a settlement for a survivor of sexual molestation and sexual battery.',
+      lead: 'Kyle Scott Law reported a $2.2 million settlement in a sexual molestation and sexual battery matter. The firm does not publish facts that could identify the client.',
       sections: [
         {
           heading: 'Representation for survivors',
           paragraphs: [
             'Kyle J. Scott has represented survivors in claims involving schools, churches, medical facilities, workplaces, institutions, and personal relationships. These matters often require a careful review of the people and organizations that may have failed to protect someone from harm.',
-            'The firm approaches survivor matters with discretion and explains the legal process, confidentiality concerns, and available options before a client decides how to proceed.',
+            'The firm approaches survivor matters with discretion and explains the legal process, privacy concerns, and available options before a client decides how to proceed.',
           ],
         },
         {
           heading: 'What this result means',
           paragraphs: [
-            'A confidential settlement resolves the specific claim without publishing every term or factual detail. It does not predict the value or outcome of another matter. Every claim depends on its own evidence, parties, insurance, damages, and applicable law.',
+            'A settlement resolves the specific claim. It does not predict the value or outcome of another matter. Every claim depends on its own evidence, parties, insurance, damages, and applicable law.',
           ],
         },
       ],
@@ -68,24 +68,24 @@ const newsArticleRecords: NewsArticleRecord[] = [
     es: {
       slug: 'acuerdo-abuso-sexual-2-2-millones',
       path: '/es/noticias/acuerdo-abuso-sexual-2-2-millones',
-      label: 'Acuerdo confidencial',
+      label: 'Acuerdo',
       date: '26 de diciembre de 2024',
       result: '$2.2M',
       title: 'Demanda por abuso sexual y agresión sexual resuelta por $2.2 millones',
-      excerpt: 'Kyle Scott Law informa una resolución confidencial para una persona sobreviviente de abuso y agresión sexual.',
-      lead: 'Kyle Scott Law informó una resolución confidencial de $2.2 millones en un asunto de abuso sexual y agresión sexual. Debido a la confidencialidad, el despacho no publica hechos que pudieran identificar al cliente ni otros detalles protegidos.',
+      excerpt: 'Kyle Scott Law informa un acuerdo para una persona sobreviviente de abuso y agresión sexual.',
+      lead: 'Kyle Scott Law informó un acuerdo de $2.2 millones en un asunto de abuso sexual y agresión sexual. El despacho no publica hechos que pudieran identificar al cliente.',
       sections: [
         {
           heading: 'Representación para sobrevivientes',
           paragraphs: [
             'Kyle J. Scott ha representado a sobrevivientes en reclamos relacionados con escuelas, iglesias, centros médicos, lugares de trabajo, instituciones y relaciones personales. Estos asuntos suelen requerir una revisión cuidadosa de las personas y organizaciones que pudieron haber incumplido su deber de protección.',
-            'El despacho maneja estos asuntos con discreción y explica el proceso legal, las cuestiones de confidencialidad y las opciones disponibles antes de que el cliente decida cómo proceder.',
+            'El despacho maneja estos asuntos con discreción y explica el proceso legal, las cuestiones de privacidad y las opciones disponibles antes de que el cliente decida cómo proceder.',
           ],
         },
         {
           heading: 'Qué significa este resultado',
           paragraphs: [
-            'Un acuerdo confidencial resuelve el reclamo específico sin publicar todos sus términos ni detalles. No predice el valor ni el resultado de otro asunto. Cada reclamo depende de sus propias pruebas, partes, seguros, daños y leyes aplicables.',
+            'Un acuerdo resuelve el reclamo específico. No predice el valor ni el resultado de otro asunto. Cada reclamo depende de sus propias pruebas, partes, seguros, daños y leyes aplicables.',
           ],
         },
       ],

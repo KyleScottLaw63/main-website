@@ -72,7 +72,7 @@ const newsItems = [
     category: 'Settlement',
     accent: '$2.2M',
     title: 'Sexual molestation and sexual battery lawsuit resolved for $2.2 million',
-    excerpt: 'Kyle Scott Law discusses its work supporting survivors through confidential claims and the path toward recovery.',
+    excerpt: 'Kyle Scott Law discusses its work supporting survivors and the path toward recovery.',
     date: 'December 26, 2024',
     href: '/news/sexual-molestation-battery-settlement-2-2-million',
   },

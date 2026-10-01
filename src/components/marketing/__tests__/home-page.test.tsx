@@ -33,6 +33,7 @@ describe('home page recoveries (the owner, 2026-10-01)', () => {
     const { container } = render(<Home />);
     const settlement = cards(container, '.news-card').find((card) => card.text.includes('$2.2M'))!;
     expect(settlement.label).toBe('Settlement');
+    expect(settlement.text).not.toMatch(/confiden/i);
   });
 
   it('read the same on /es, linking only Spanish pages', () => {
@@ -42,6 +43,7 @@ describe('home page recoveries (the owner, 2026-10-01)', () => {
     expect(recoveries[2].text).toContain('Acuerdo combinado para cinco personas lesionadas');
     const news = cards(container, '.news-card');
     expect(news.find((card) => card.text.includes('$2.2M'))!.label).toBe('Acuerdo');
+    expect(news.find((card) => card.text.includes('$2.2M'))!.text).not.toMatch(/confiden/i);
     expect([...recoveries, ...news].filter((card) => !card.href!.startsWith('/es')).map((card) => card.href)).toEqual([]);
   });
 });
