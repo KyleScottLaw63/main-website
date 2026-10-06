@@ -251,7 +251,7 @@ export const caseStories: CaseStory[] = [
     summary:
       'A dependent adult’s pressure wound worsened into an infected ulcer in a nursing facility. The firm sued under California’s Elder Abuse Act, and the facility settled.',
     court: 'Riverside Superior Court',
-    practiceArea: { label: 'Medical Malpractice', href: '/orange-county-medical-malpractice-attorney' },
+    practiceArea: { label: 'Elder Abuse & Neglect', href: '/orange-county-elder-abuse-attorney' },
     chapters: [
       {
         heading: 'What happened',

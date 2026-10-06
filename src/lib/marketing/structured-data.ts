@@ -87,6 +87,7 @@ export function attorneyProfileStructuredData(locale: SiteLocale) {
               'Mordeduras de perro',
               'Lesiones cerebrales traumáticas',
               'Negligencia médica',
+              'Abuso y negligencia de personas mayores',
               'Abuso y acoso sexual',
               'Responsabilidad institucional',
             ]
@@ -97,6 +98,7 @@ export function attorneyProfileStructuredData(locale: SiteLocale) {
               'Dog bites',
               'Traumatic brain injuries',
               'Medical malpractice',
+              'Elder abuse and neglect',
               'Sexual abuse and harassment',
               'Institutional liability',
             ],

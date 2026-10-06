@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from 'next';
-import { ArrowRight, Brain, BriefcaseMedical, CarFront, Dog, HeartHandshake, Scale, ShieldCheck, UserRoundCheck } from 'lucide-react';
+import { ArrowRight, Brain, BriefcaseMedical, CarFront, Dog, HandHeart, HeartHandshake, Scale, ShieldCheck, UserRoundCheck } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
@@ -9,11 +9,11 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Personal Injury Practice Areas | Kyle Scott Law',
-  description: 'Review Kyle Scott Law practice areas, including personal injury, car accidents, unsafe property, malpractice, dog bites, brain injury, abuse, and wrongful death.',
+  description: 'Review Kyle Scott Law practice areas, including personal injury, car accidents, unsafe property, malpractice, elder abuse, dog bites, brain injury, abuse, and wrongful death.',
   alternates: localizedAlternates('/practice-areas'),
 };
 
-const iconMap = { shield: ShieldCheck, car: CarFront, fall: UserRoundCheck, medical: BriefcaseMedical, dog: Dog, brain: Brain, support: HeartHandshake, scale: Scale } satisfies Record<PracticeAreaIcon, typeof ShieldCheck>;
+const iconMap = { shield: ShieldCheck, car: CarFront, fall: UserRoundCheck, medical: BriefcaseMedical, dog: Dog, brain: Brain, support: HeartHandshake, scale: Scale, care: HandHeart } satisfies Record<PracticeAreaIcon, typeof ShieldCheck>;
 
 export default function PracticeAreasPage() {
   return (

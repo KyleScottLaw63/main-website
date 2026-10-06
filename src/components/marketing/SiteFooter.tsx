@@ -101,6 +101,7 @@ export const practiceLinks = {
     ['Car Accidents', '/orange-county-auto-accidents-lawyer'],
     ['Slip & Fall', '/orange-county-slip-and-fall-attorney'],
     ['Medical Malpractice', '/orange-county-medical-malpractice-attorney'],
+    ['Elder Abuse & Neglect', '/orange-county-elder-abuse-attorney'],
     ['Dog Bites', '/dog-bite-attorney-in-orange-county'],
     [
       'Traumatic Brain Injury',
@@ -126,6 +127,10 @@ export const practiceLinks = {
     [
       'Negligencia médica',
       '/es/abogado-de-negligencia-medica-condado-de-orange',
+    ],
+    [
+      'Abuso de personas mayores',
+      '/es/abogado-de-abuso-de-personas-mayores-condado-de-orange',
     ],
     [
       'Mordeduras de perro',

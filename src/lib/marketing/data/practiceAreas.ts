@@ -8,7 +8,8 @@ export type PracticeAreaIcon =
   | 'dog'
   | 'brain'
   | 'support'
-  | 'scale';
+  | 'scale'
+  | 'care';
 
 export type PracticeAreaData = {
   key: string;
@@ -163,6 +164,54 @@ export const practiceAreas: PracticeAreaData[] = [
     ],
     featuredResults: ['Medical malpractice involving failure to diagnose'],
     sourceUrl: 'https://kjslaw.com/orange-county-medical-malpractice-attorney/',
+  },
+  {
+    key: 'elder-abuse',
+    path: '/orange-county-elder-abuse-attorney',
+    shortTitle: 'Elder Abuse & Neglect',
+    title: 'Orange County Elder Abuse and Neglect Attorney',
+    eyebrow: 'Abuse and neglect of elders and dependent adults',
+    description: 'Representation for older adults, dependent adults, and their families when a nursing home, assisted-living facility, hospital, or caregiver neglected their care or abused them, including pressure injuries, falls, dehydration, and malnutrition.',
+    metaDescription: 'Orange County elder abuse and neglect attorney Kyle Scott represents older and dependent adults hurt by neglect or abuse in nursing homes, care facilities, and home care. Free consultation.',
+    icon: 'care',
+    introTitle: 'California gives elders and dependent adults extra protection when the people caring for them fail them.',
+    intro: [
+      'California’s Elder Abuse and Dependent Adult Civil Protection Act (Welfare and Institutions Code § 15600 and following) protects people 65 and older, and adults 18 to 64 whose physical or mental limitations restrict their ability to carry out normal activities or protect their rights, against physical abuse, neglect, abandonment, isolation, and financial abuse. Neglect includes a caregiver’s failure to help with personal hygiene, provide food, water, and medical care, prevent malnutrition and dehydration, or protect the person from health and safety hazards.',
+      'When neglect or abuse is proven by clear and convincing evidence and the responsible party acted with recklessness, oppression, fraud, or malice, the Act allows remedies beyond those of an ordinary injury case, including attorney’s fees and costs (§ 15657). Holding a facility’s operator to those remedies also requires proof of what its managers knew, authorized, or ratified (Civil Code § 3294(b)). Kyle Scott Law reviews the records, the care plan, and the facility’s history to determine whether the evidence supports a claim.',
+    ],
+    keyPoints: [
+      { title: 'Neglect is a failure of care', body: 'A bad outcome is not neglect by itself. Neglect is a caregiver’s failure to provide the care a reasonable person in that position would provide, such as repositioning a resident who cannot move, preventing dehydration, supervising someone at risk of falling, or getting medical help when a condition worsens.' },
+      { title: 'Elder abuse or medical malpractice', body: 'Claims about a facility’s basic custodial care, such as turning, feeding, hydration, hygiene, and supervision, can fall under the Elder Abuse Act. Claims about a health-care provider’s professional judgment, such as a diagnosis or a surgery, are usually medical malpractice, with different rules and deadlines. Many cases involve both.' },
+      { title: 'The facility’s own records', body: 'Care plans, turning and repositioning logs, medication records, staffing levels, incident reports, and state inspection findings often show what was supposed to happen and what did not. The firm requests them early, before they are lost.' },
+      { title: 'Deadlines', body: 'Most injury claims must be filed within two years, but claims involving a health-care provider’s professional negligence can have shorter deadlines, and a claim against a public facility generally requires a government claim within six months. Which rules apply depends on the facts, so prompt review matters.' },
+    ],
+    matters: [
+      'Pressure injuries (bedsores) that develop or worsen in a facility',
+      'Falls from unsafe transfers, missing supervision, or ignored fall-risk plans',
+      'Dehydration, malnutrition, and unexplained weight loss',
+      'Infections and sepsis from untreated wounds or poor hygiene',
+      'Medication errors and failures to get timely medical care',
+      'Physical abuse, rough handling, or unexplained injuries by caregivers',
+      'Wrongful death caused by abuse or neglect',
+    ],
+    evidence: [
+      'The resident’s care plan, assessments, and turning and repositioning records',
+      'Medication administration records, nursing notes, and physician orders',
+      'Dated photographs of wounds and injuries',
+      'Hospital records showing the person’s condition on arrival from the facility',
+      'Incident reports, staffing records, and complaints made to the facility',
+      'State inspection reports and any Adult Protective Services or ombudsman report',
+    ],
+    faqs: [
+      { question: 'What counts as elder abuse or neglect in California?', answer: 'Under the Elder Abuse and Dependent Adult Civil Protection Act, abuse includes physical abuse, neglect, abandonment, isolation, and financial abuse of a person 65 or older or of a dependent adult. Neglect is the failure of someone responsible for the person’s care to provide the care a reasonable person in that position would, such as help with hygiene, food and water, medical care, and protection from health and safety hazards.' },
+      { question: 'Who can be responsible?', answer: 'Depending on the facts, a nursing home, skilled nursing facility, assisted-living or residential care facility, home-care agency, individual caregiver, or the company that operates the facility. Large facilities are often owned by one company and managed by another, and the firm identifies each one.' },
+      { question: 'What should we do if we suspect abuse or neglect?', answer: 'First make sure your loved one is safe and getting medical care; in an emergency, call 911. Report suspected abuse in a long-term care facility to the Long-Term Care Ombudsman or local law enforcement, and abuse elsewhere to Adult Protective Services. Photograph injuries, keep a written timeline, and save your messages with the facility.' },
+      { question: 'Can we bring a claim if our loved one has passed away?', answer: 'Often, yes. Depending on the facts, the family may have a wrongful-death claim, and the estate or successor in interest may bring the person’s own claim. When the Act’s heightened standard is met, that claim can include damages for the pain and suffering the person endured before death, up to a limit set by statute.' },
+      { question: 'Is a bedsore always neglect?', answer: 'No. Some pressure injuries develop despite good care. A claim depends on whether the facility assessed the risk, followed a care plan to prevent the injury, and treated it properly once it appeared. The care records usually answer those questions.' },
+      { question: 'Should we move our loved one before contacting a lawyer?', answer: 'Safety comes first, and moving a resident to better care does not end a claim. Before or soon after a move, request a copy of the facility’s chart and keep photographs and notes of the conditions you saw.' },
+      { question: 'What does it cost?', answer: `Nothing up front. The firm works on a contingency fee and advances the case costs. ${noRecoveryTerms.en.statement}.` },
+    ],
+    featuredResults: ['Nursing-home neglect settlement'],
   },
   {
     key: 'dog-bites',

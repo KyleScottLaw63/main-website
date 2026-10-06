@@ -60,8 +60,8 @@ describe('what a client pays without a recovery (the firm’s decision, 2026-09-
       .flatMap((file) => COPIES.filter((copy) => copy.test(readFileSync(file, 'utf8'))).map((copy) => `${path.relative(ROOT, file)}: ${copy}`));
     expect(offenders).toEqual([]);
     // The FAQ answers and the "why hire us" page carry it word for word.
-    expect(practiceAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.en.statement))).toHaveLength(2);
-    expect(spanishPracticeAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.es.statement))).toHaveLength(1);
+    expect(practiceAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.en.statement))).toHaveLength(3);
+    expect(spanishPracticeAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.es.statement))).toHaveLength(2);
     expect(strings(whyHireUs.en).filter((text) => text.includes(noRecoveryTerms.en.statement))).toHaveLength(3);
     expect(strings(whyHireUs.es).filter((text) => text.includes(noRecoveryTerms.es.statement))).toHaveLength(3);
   });

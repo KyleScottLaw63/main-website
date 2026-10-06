@@ -37,6 +37,10 @@ export const localizedRoutes = [
     es: '/es/abogado-de-negligencia-medica-condado-de-orange',
   },
   {
+    en: '/orange-county-elder-abuse-attorney',
+    es: '/es/abogado-de-abuso-de-personas-mayores-condado-de-orange',
+  },
+  {
     en: '/dog-bite-attorney-in-orange-county',
     es: '/es/abogado-de-mordeduras-de-perro-condado-de-orange',
   },

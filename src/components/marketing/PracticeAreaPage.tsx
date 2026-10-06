@@ -6,6 +6,7 @@ import {
   Check,
   ChevronDown,
   Dog,
+  HandHeart,
   HeartHandshake,
   MapPin,
   Scale,
@@ -35,6 +36,7 @@ const iconMap = {
   brain: Brain,
   support: HeartHandshake,
   scale: Scale,
+  care: HandHeart,
 } satisfies Record<PracticeAreaIcon, typeof ShieldCheck>;
 
 export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaData; locale?: SiteLocale }) {
