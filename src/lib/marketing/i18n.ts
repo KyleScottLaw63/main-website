@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { newsArticleLocalizedRoutes } from '@/lib/marketing/data/newsArticles';
+import { legalGuideLocalizedRoutes } from '@/lib/marketing/data/spanishLegalGuides';
 import { SITE_URL } from '@/lib/marketing/site';
 
 export type SiteLocale = 'en' | 'es';
@@ -62,6 +63,7 @@ export const localizedRoutes = [
   },
   { en: '/why-hire-us', es: '/es/por-que-elegirnos' },
   ...newsArticleLocalizedRoutes,
+  ...legalGuideLocalizedRoutes,
 ] as const;
 
 function normalizePath(pathname: string) {
@@ -86,6 +88,9 @@ export function routeForLocale(pathname: string, locale: SiteLocale) {
   )
     return '/es/noticias';
   if (locale === 'en' && normalized.startsWith('/es/noticias/')) return '/news';
+  // A guide with no translation leads to the other language's guide library.
+  if (locale === 'es' && normalized.startsWith('/guides/')) return '/es/guias';
+  if (locale === 'en' && normalized.startsWith('/es/guias/')) return '/guides';
   return locale === 'es' ? '/es' : '/';
 }
 
@@ -95,8 +100,8 @@ export function localizedAlternates(pathname: string): Metadata['alternates'] {
     (route) => route.en === normalized || route.es === normalized,
   );
   const canonical = `${SITE_URL}${normalized === '/' ? '' : normalized}`;
-  // English-only pages (service areas, guides) must not claim a Spanish
-  // alternate they do not have; they point hreflang at themselves.
+  // English-only pages (service areas, guides not yet translated) must not
+  // claim a Spanish alternate they do not have; they point hreflang at themselves.
   if (!match) {
     return { canonical, languages: { 'en-US': canonical, 'x-default': canonical } };
   }

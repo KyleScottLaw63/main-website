@@ -10,7 +10,7 @@ import type { SiteLocale } from '@/lib/marketing/i18n';
 
 const links = {
   en: [['Home', '/'], ['Results', '/results'], ['Meet The Team', '/meet-the-team'], ['Testimonials', '/testimonials'], ['Legal Guides', '/guides'], ['Latest News', '/news'], ['Contact', '/contact']],
-  es: [['Inicio', '/es'], ['Resultados', '/es/resultados'], ['El equipo', '/es/equipo'], ['Testimonios', '/es/testimonios'], ['Noticias', '/es/noticias'], ['Contacto', '/es/contacto']],
+  es: [['Inicio', '/es'], ['Resultados', '/es/resultados'], ['El equipo', '/es/equipo'], ['Testimonios', '/es/testimonios'], ['Guías legales', '/es/guias'], ['Noticias', '/es/noticias'], ['Contacto', '/es/contacto']],
 };
 
 const mobilePracticeLinks = {

@@ -4,6 +4,7 @@ import { legacyPostIsIndexable, legacyPosts } from '@/lib/marketing/data/legacyP
 import { caseStoryPath } from '@/lib/marketing/data/results';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
+import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
 import { localizedRoutes } from '@/lib/marketing/i18n';
 import { SITE_URL } from '@/lib/marketing/site';
 
@@ -14,7 +15,8 @@ import { SITE_URL } from '@/lib/marketing/site';
  * sitemap. robots.txt decides whether crawlers may use it (app/robots.ts).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const localizedEntries = localizedRoutes.flatMap((route) =>
+  // The guides are paired for the language switcher too, but take their entries, with dates, below.
+  const localizedEntries = localizedRoutes.filter((route) => !route.en.startsWith('/guides')).flatMap((route) =>
     ([route.en, route.es] as const).map((path, index) => {
       const englishPath = route.en;
       const isHome = englishPath === '/';
@@ -89,7 +91,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
+    {
+      url: `${SITE_URL}/es/guias`,
+      // The Spanish library changes when a translation does.
+      lastModified: spanishLegalGuides.map((guide) => guide.updated).sort().at(-1),
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
     ...legalGuides.map((guide) => ({
+      url: `${SITE_URL}${guide.path}`,
+      lastModified: guide.updated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    })),
+    ...spanishLegalGuides.map((guide) => ({
       url: `${SITE_URL}${guide.path}`,
       lastModified: guide.updated,
       changeFrequency: 'monthly' as const,

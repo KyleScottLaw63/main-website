@@ -90,6 +90,7 @@ const firmLinks = {
     ['Por qué elegirnos', '/es/por-que-elegirnos'],
     ['Testimonios', '/es/testimonios'],
     ['Resultados', '/es/resultados'],
+    ['Guías legales', '/es/guias'],
     ['Noticias', '/es/noticias'],
     ['Contacto', '/es/contacto'],
   ],

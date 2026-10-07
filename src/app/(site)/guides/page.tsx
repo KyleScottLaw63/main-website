@@ -7,12 +7,13 @@ import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
+import { localizedAlternates } from '@/lib/marketing/i18n';
 import { SITE_URL } from '@/lib/marketing/site';
 
 export const metadata: Metadata = {
   title: 'California Personal Injury Legal Guides | Kyle Scott Law',
   description: 'Practical legal guides answering common California personal injury questions for Orange County and Tustin residents, with primary-law and agency sources.',
-  alternates: { canonical: `${SITE_URL}/guides`, languages: { 'en-US': `${SITE_URL}/guides`, 'x-default': `${SITE_URL}/guides` } },
+  alternates: localizedAlternates('/guides'),
   openGraph: { title: 'California Personal Injury Legal Guides | Kyle Scott Law', description: 'Clear answers to common California injury, insurance, evidence, and deadline questions.', images: [`${SITE_URL}/legal-guides-hero.webp`] },
 };
 
@@ -87,7 +88,7 @@ export default function GuidesPage() {
         <div><article><strong>01</strong><h3>Answer first</h3><p>Every guide opens with a direct response instead of making readers search through a sales page.</p></article><article><strong>02</strong><h3>Primary sources</h3><p>California statutes, courts, state agencies, and Orange County resources are linked for verification.</p></article><article><strong>03</strong><h3>Clear limits</h3><p>No settlement calculators, guaranteed outcomes, or generic deadline promises. Every matter still needs individual review.</p></article></div>
       </section>
 
-      <section className="legal-guides-cta" aria-labelledby="guides-cta-title"><div><p className="eyebrow">Need a case-specific answer?</p><h2 id="guides-cta-title">Talk with the Tustin office.</h2><p>Send the basic facts securely or call Kyle Scott Law at 714-544-1460.</p></div><Link className="primary-button" href="/contact#case-review">Request a case review <ArrowRight aria-hidden="true" /></Link></section>
+      <section className="legal-guides-cta" aria-labelledby="guides-cta-title"><div><p className="eyebrow">Need a case-specific answer?</p><h2 id="guides-cta-title">Talk with the Tustin office.</h2><p>Send the basic facts securely or call Kyle Scott Law at <a href="tel:+17145441460">714-544-1460</a>.</p></div><Link className="primary-button" href="/contact#case-review">Request a case review <ArrowRight aria-hidden="true" /></Link></section>
 
       <SiteFooter />
       <ChatWidget />

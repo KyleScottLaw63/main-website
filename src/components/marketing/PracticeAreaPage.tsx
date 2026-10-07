@@ -20,6 +20,7 @@ import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { legalGuidesForPractice } from '@/lib/marketing/data/legalGuides';
+import { spanishLegalGuidesForPractice } from '@/lib/marketing/data/spanishLegalGuides';
 import { practiceAreas, type PracticeAreaData, type PracticeAreaIcon } from '@/lib/marketing/data/practiceAreas';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import type { SiteLocale } from '@/lib/marketing/i18n';
@@ -51,7 +52,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
   const results = area.featuredResults.map((title) => allResults.find((result) => result.title === title)).filter((result) => result !== undefined).map((result) => spanish ? translateResultToSpanish(result) : result);
   const currentIndex = localizedPractices.findIndex((item) => item.key === area.key);
   const related = [1, 2, 3].map((offset) => localizedPractices[(currentIndex + offset) % localizedPractices.length]);
-  const guideLinks = spanish ? [] : legalGuidesForPractice(area.key);
+  const guideLinks = spanish ? spanishLegalGuidesForPractice(area.key) : legalGuidesForPractice(area.key);
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -119,7 +120,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           <a href="#matters">{spanish ? 'Casos que revisa el bufete' : 'Cases the firm reviews'}</a>
           <a href="#evidence">{spanish ? 'Información importante' : 'Information that can matter'}</a>
           <a href="#results">{spanish ? 'Resultados publicados' : 'Published results'}</a>
-          {guideLinks.length ? <a href="#guides">Legal guides</a> : null}
+          {guideLinks.length ? <a href="#guides">{spanish ? 'Guías legales' : 'Legal guides'}</a> : null}
           <a href="#questions">{spanish ? 'Preguntas frecuentes' : 'Common questions'}</a>
           <div className="practice-sidebar-contact"><MapPin aria-hidden="true" /><strong>Kyle Scott Law</strong><span>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</span><a href={contactPath}>{spanish ? 'Contacte al bufete' : 'Contact the firm'} <ArrowRight aria-hidden="true" /></a></div>
         </aside>
@@ -153,7 +154,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           </section>
 
           {guideLinks.length ? <section className="practice-guide-links" id="guides" aria-labelledby="practice-guide-title">
-            <div className="practice-results-heading"><div><p className="eyebrow">Legal guides</p><h2 id="practice-guide-title">Answers to common {area.shortTitle.toLowerCase()} questions.</h2></div><Link href="/guides">View all guides <ArrowRight aria-hidden="true" /></Link></div>
+            <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Guías legales' : 'Legal guides'}</p><h2 id="practice-guide-title">{spanish ? `Respuestas a preguntas comunes sobre ${area.shortTitle.toLowerCase()}.` : `Answers to common ${area.shortTitle.toLowerCase()} questions.`}</h2></div><Link href={spanish ? '/es/guias' : '/guides'}>{spanish ? 'Ver todas las guías' : 'View all guides'} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-guide-grid">{guideLinks.map((guide) => <Link href={guide.path} key={guide.slug}><span>{guide.category}</span><strong>{guide.title}</strong><small>{guide.readingTime}</small><ArrowRight aria-hidden="true" /></Link>)}</div>
           </section> : null}
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 
 /**
- * Head tags for a /news, /guides, or /es/noticias address whose slug matches nothing. The page
+ * Head tags for a /news, /guides, /es/noticias, or /es/guias address whose slug matches nothing. The page
  * then calls notFound(), and Next adds its own `<meta name="robots" content="noindex">`. Without
  * this, the page inherited the site layout's metadata: the home page's title, description and
  * canonical link, and a second robots tag saying "index, follow". The title matches the global 404

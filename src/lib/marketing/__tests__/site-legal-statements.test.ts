@@ -6,6 +6,7 @@ import { legacyPostPlainText, legacyPosts } from '@/lib/marketing/data/legacyPos
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { newsArticleBySlug } from '@/lib/marketing/data/newsArticles';
 import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
+import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import { whyHireUs } from '@/lib/marketing/data/whyHireUs';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
@@ -80,8 +81,9 @@ describe('childhood sexual abuse deadlines on the pages (CCP §§ 340.1, 340.11)
   const AGE_40 = /\b(?:turns|cumpla) 40\b|\b40th birthday\b/i;
 
   it('every page text that gives the age-40 rule also gives the law since 2024, with both sections', () => {
-    const texts = strings([practiceAreas, spanishPracticeAreas, legalGuides]).filter((text) => AGE_40.test(text));
-    expect(texts.length).toBe(3);
+    // The school-liability page and the government-claim guide, each in English and Spanish.
+    const texts = strings([practiceAreas, spanishPracticeAreas, legalGuides, spanishLegalGuides]).filter((text) => AGE_40.test(text));
+    expect(texts.length).toBe(4);
     for (const text of texts) {
       expect(text, text).toMatch(/§ 340\.11/);
       expect(text, text).toMatch(/§ 340\.1\)/);
@@ -91,12 +93,17 @@ describe('childhood sexual abuse deadlines on the pages (CCP §§ 340.1, 340.11)
     }
   });
 
-  it('the government-claim guide links both sections', () => {
-    const guide = legalGuides.find((item) => item.slug === 'government-injury-claim-orange-county')!;
-    expect(guide.sources.map((source) => source.url)).toEqual(expect.arrayContaining([
-      'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=340.1',
-      'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=340.11',
-    ]));
+  it('the government-claim guide links both sections, in English and Spanish', () => {
+    const guides = [
+      legalGuides.find((item) => item.slug === 'government-injury-claim-orange-county')!,
+      spanishLegalGuides.find((item) => item.englishSlug === 'government-injury-claim-orange-county')!,
+    ];
+    for (const guide of guides) {
+      expect(guide.sources.map((source) => source.url), guide.slug).toEqual(expect.arrayContaining([
+        'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=340.1',
+        'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=340.11',
+      ]));
+    }
   });
 });
 

@@ -1450,6 +1450,7 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 .legal-guide-faq details { border-bottom: 1px solid rgba(20,65,129,.15); }
 .legal-guide-faq summary { padding: 20px 2px; color: var(--ink); font-size: 16px; font-weight: 740; cursor: pointer; }
 .legal-guide-faq details p { margin: 0; padding: 0 2px 20px; color: var(--ink-soft); font-size: 15px; line-height: 1.68; }
+.legal-guide-sources-note { margin: 12px 0 0; color: var(--ink-soft); font-size: 15px; }
 .legal-guide-sources ul { display: grid; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
 .legal-guide-sources a { display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid rgba(20,65,129,.13); border-radius: 12px; background: white; padding: 14px 16px; color: var(--navy-deep); font-size: 14px; font-weight: 700; }
 .legal-guide-sources a:hover,.legal-guide-sources a:focus-visible { border-color: rgba(11,87,199,.36); color: var(--blue); }

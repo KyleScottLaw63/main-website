@@ -9,9 +9,10 @@ import { generateMetadata as newsMetadata } from '@/app/(site)/news/[slug]/page'
 import { generateMetadata as caseStoryMetadata } from '@/app/(site)/results/[slug]/page';
 import { metadata as spanishNotFound } from '@/app/(site-es)/not-found';
 import { generateMetadata as spanishNewsMetadata } from '@/app/(site-es)/es/noticias/[slug]/page';
+import { generateMetadata as spanishGuideMetadata } from '@/app/(site-es)/es/guias/[slug]/page';
 
 /**
- * An unknown /news, /guides, /results, or /es/noticias slug is a 404 with the not-found title and one robots
+ * An unknown /news, /guides, /results, /es/noticias, or /es/guias slug is a 404 with the not-found title and one robots
  * tag, Next's own noindex (docs/public-site-rendering.md). Next builds that page's head from the
  * layouts plus the not-found file, so the not-found files carry the metadata; the pages' own
  * generateMetadata returns the same for an unknown slug.
@@ -32,6 +33,7 @@ describe('a missing article or guide', () => {
     expect(await guideMetadata(params('no-such-guide'))).toEqual(ENGLISH);
     expect(await caseStoryMetadata(params('no-such-story'))).toEqual(ENGLISH);
     expect(await spanishNewsMetadata(params('no-existe'))).toEqual(SPANISH);
+    expect(await spanishGuideMetadata(params('no-existe'))).toEqual(SPANISH);
   });
 
   it('a real article keeps its own title and, unless withheld, no robots override', async () => {
@@ -40,6 +42,9 @@ describe('a missing article or guide', () => {
     expect(article.robots).toBeUndefined();
     const guide = await guideMetadata(params('government-injury-claim-orange-county'));
     expect(guide.title).toBe('Orange County Government Claim Deadline: The Six-Month Rule, Explained');
+    const spanishGuide = await spanishGuideMetadata(params('reclamo-gubernamental-por-lesiones-condado-de-orange'));
+    expect(spanishGuide.robots).toBeUndefined();
+    expect(spanishGuide.alternates?.languages).toMatchObject({ 'en-US': 'https://kjslaw.com/guides/government-injury-claim-orange-county' });
     const story = await caseStoryMetadata(params('octa-bus-crash-verdict'));
     expect(story.title).toBe('$928,493.12 jury verdict: Transit bus crashes into minivan; man suffers cognitive problems | Kyle Scott Law');
     expect(story.robots).toBeUndefined();

@@ -82,4 +82,20 @@ describe('government-claim deadline tool after the deadlines pass (Gov. Code §�
     expect(text).toMatch(/If the claim is presented on time…/);
     expect(text).toMatch(/Tuesday, August 1, 2028/);
   });
+
+  it('in Spanish (/es/guias): the same dates, in Spanish, and the same rules', () => {
+    render(<GovernmentClaimDeadlineTool locale="es" />);
+    fireEvent.change(screen.getByLabelText('Fecha de la lesión'), { target: { value: '2026-01-15' } });
+    let text = document.body.textContent ?? '';
+    expect(text).toMatch(/Último día para presentar el reclamo gubernamental \(Código de Gobierno, § 911\.2, seis meses\)/);
+    expect(text).toMatch(/Hace \d+ días — vea abajo el plazo para un reclamo tardío/);
+    expect(text).toMatch(/viernes, 15 de enero de 2027/);
+    expect(text).toMatch(/Si el reclamo se presenta a tiempo…/);
+    expect(text).toMatch(/sábado, 15 de enero de 2028/);
+    expect(text).not.toMatch(/\b(?:days|Date of injury|Deadline check)\b/);
+    fireEvent.change(screen.getByLabelText('Fecha de la lesión'), { target: { value: '2025-01-10' } });
+    text = document.body.textContent ?? '';
+    expect(text).toContain('Hace 257 días — el plazo para un reclamo tardío ya venció.');
+    expect(text).not.toMatch(/Si el reclamo se presenta a tiempo/);
+  });
 });

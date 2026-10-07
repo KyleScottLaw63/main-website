@@ -19,6 +19,7 @@ const navigation = {
     ['Resultados', '/es/resultados'],
     ['El equipo', '/es/equipo'],
     ['Testimonios', '/es/testimonios'],
+    ['Guías legales', '/es/guias'],
     ['Noticias', '/es/noticias'],
     ['Contacto', '/es/contacto'],
   ],
