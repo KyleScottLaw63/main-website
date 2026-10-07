@@ -30,11 +30,10 @@ export type LegalGuide = {
 const reviewDate = '2026-09-01';
 const reviewLabel = 'September 1, 2026';
 
-// The four content-round-1 guides (bedsores, rideshare, motorcycle, pedestrian) were drafted on
-// 2026-10-06 and await the attorney's review. The page shows this as "Updated October 6, 2026": the
-// date the text was written, not a review date. Move it to the approval date when they are approved.
-const contentRoundOneDraftDate = '2026-10-06';
-const contentRoundOneDraftLabel = 'October 6, 2026';
+// The four content-round-1 guides (bedsores, rideshare, motorcycle, pedestrian), approved by
+// Kyle J. Scott on 2026-10-06 and published that day.
+const contentRoundOneReviewDate = '2026-10-06';
+const contentRoundOneReviewLabel = 'October 6, 2026';
 
 export const legalGuides: LegalGuide[] = [
   {
@@ -669,8 +668,8 @@ export const legalGuides: LegalGuide[] = [
     seoTitle: 'Nursing Home Bedsores and Neglect Claims in California',
     description: 'How California law treats pressure injuries (bedsores) in nursing homes: the federal prevention rule, neglect under the Elder Abuse Act, custodial care versus malpractice, records, reporting, and deadlines.',
     directAnswer: 'It can. A pressure injury is not automatically neglect, because some develop despite good care. But a nursing home that participates in Medicare or Medi-Cal must ensure that a resident receives care, consistent with professional standards, to prevent pressure ulcers, and does not develop one unless the resident’s clinical condition shows it was unavoidable (42 CFR § 483.25(b)(1)). Under California’s Elder Abuse and Dependent Adult Civil Protection Act, a caregiver’s failure to use the care a reasonable person in that position would use is neglect (Welfare and Institutions Code § 15610.57). When neglect is proven together with recklessness, oppression, fraud, or malice, generally by clear and convincing evidence, the Act adds remedies an ordinary injury case does not have (§ 15657). The facility’s own records usually show what happened.',
-    updated: contentRoundOneDraftDate,
-    updatedLabel: contentRoundOneDraftLabel,
+    updated: contentRoundOneReviewDate,
+    updatedLabel: contentRoundOneReviewLabel,
     readingTime: '12 min read',
     practiceKey: 'elder-abuse',
     practicePath: '/orange-county-elder-abuse-attorney',
@@ -714,8 +713,8 @@ export const legalGuides: LegalGuide[] = [
     seoTitle: 'Uber and Lyft Accident Claims in California | Rideshare Insurance',
     description: 'How California rideshare insurance works: coverage while a driver waits for a request, during a trip, and with the app off; the 2026 change to uninsured-motorist coverage; evidence; and deadlines.',
     directAnswer: 'It depends on what the rideshare driver’s app showed at the moment of the crash. California’s Public Utilities Code requires rideshare companies such as Uber and Lyft, and their drivers, to carry insurance in stages. From the moment a driver accepts a ride until the trip is complete, $1,000,000 in primary coverage applies. While the driver is logged on and waiting for a request, the required primary coverage is $50,000 per person and $100,000 per incident for death and personal injury and $30,000 for property damage, plus at least $200,000 in excess coverage (Public Utilities Code § 5433). Since January 1, 2026, the company must also provide uninsured- and underinsured-motorist coverage of $60,000 per person and $300,000 per incident while a passenger is in the car. With the app off, the driver’s personal policy generally applies.',
-    updated: contentRoundOneDraftDate,
-    updatedLabel: contentRoundOneDraftLabel,
+    updated: contentRoundOneReviewDate,
+    updatedLabel: contentRoundOneReviewLabel,
     readingTime: '10 min read',
     practiceKey: 'car-accidents',
     practicePath: '/orange-county-auto-accidents-lawyer',
@@ -768,8 +767,8 @@ export const legalGuides: LegalGuide[] = [
     seoTitle: 'Motorcycle Accident Claims in California | Lane Splitting & Helmets',
     description: 'How California law treats motorcycle crashes: lane splitting, the helmet law, comparative fault, left-turn and lane-change collisions, evidence, insurance, and deadlines.',
     directAnswer: 'Motorcyclists have the same rights and responsibilities on the road as other drivers, and a rider hurt by another driver’s carelessness can bring the same kind of claim. Two issues come up often. Lane splitting is legal in California, according to the Highway Patrol and the DMV, but an insurer may still argue it was done unsafely. And California requires every rider and passenger to wear a compliant helmet (Vehicle Code § 27803); without one, the defense may argue that a head injury was worse than it would have been. Under California’s comparative-fault rule, a rider’s own share of fault, if proven, reduces the recovery rather than barring it.',
-    updated: contentRoundOneDraftDate,
-    updatedLabel: contentRoundOneDraftLabel,
+    updated: contentRoundOneReviewDate,
+    updatedLabel: contentRoundOneReviewLabel,
     readingTime: '10 min read',
     practiceKey: 'car-accidents',
     practicePath: '/orange-county-auto-accidents-lawyer',
@@ -817,8 +816,8 @@ export const legalGuides: LegalGuide[] = [
     seoTitle: 'Pedestrian Accident Claims in California | Crosswalks & Fault',
     description: 'A California pedestrian-accident guide: what drivers owe pedestrians at crosswalks, crossing outside one, what the 2023 jaywalking law changed, comparative fault, government claims, evidence, and deadlines.',
     directAnswer: 'A driver must yield to a pedestrian crossing within a marked crosswalk or an unmarked crosswalk at an intersection, and must use due care for any pedestrian on the roadway (Vehicle Code §§ 21950, 21954). A pedestrian crossing elsewhere must yield to vehicles close enough to be an immediate hazard. The 2023 law often called the Freedom to Walk Act (AB 2147) limited when police may stop pedestrians for crossing violations; it did not repeal the rules or anyone’s duty of care. If the pedestrian shares fault, the recovery is reduced, not barred. If a city, the County, or the State may be responsible, a written government claim is generally due within six months.',
-    updated: contentRoundOneDraftDate,
-    updatedLabel: contentRoundOneDraftLabel,
+    updated: contentRoundOneReviewDate,
+    updatedLabel: contentRoundOneReviewLabel,
     readingTime: '11 min read',
     practiceKey: 'car-accidents',
     practicePath: '/orange-county-auto-accidents-lawyer',
