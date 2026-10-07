@@ -167,13 +167,13 @@
     },
     {
       "source": "/about-orange-california",
-      "destination": "/personal-injury-lawyer-orange-county",
-      "why": "no city page; flagship serves Orange County"
+      "destination": "/orange-personal-injury-attorney",
+      "why": "city guide folded into city page"
     },
     {
       "source": "/about-costa-mesa-california",
-      "destination": "/personal-injury-lawyer-orange-county",
-      "why": "no city page"
+      "destination": "/costa-mesa-personal-injury-attorney",
+      "why": "city guide folded into city page"
     },
     {
       "source": "/about-fountain-valley-california",

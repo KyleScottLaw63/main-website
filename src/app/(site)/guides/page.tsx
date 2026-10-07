@@ -67,7 +67,7 @@ export default function GuidesPage() {
       </section>
 
       <section className="legal-guides-library" aria-labelledby="guide-library-title">
-        <header><div><p className="eyebrow">Legal resource library</p><h2 id="guide-library-title">13 in-depth guides</h2></div><p>Start with the question closest to your situation. Each guide gives a direct answer first, then explains the evidence, law, local details, and next decisions.</p></header>
+        <header><div><p className="eyebrow">Legal resource library</p><h2 id="guide-library-title">{legalGuides.length} in-depth guides</h2></div><p>Start with the question closest to your situation. Each guide gives a direct answer first, then explains the evidence, law, local details, and next decisions.</p></header>
         <div className="legal-guide-card-grid">
           {legalGuides.map((guide, index) => (
             <article className="legal-guide-card" key={guide.slug}>

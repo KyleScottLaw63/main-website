@@ -12,7 +12,7 @@ The previous kjslaw.com (WordPress) published 450 URLs that Google, directories,
 | The dated blog permalinks (`/2019/03/12/slug/`): 201, less the two withdrawn below | 301 in `next.config.ts`, generated from the migration data | `src/lib/marketing/data/legacyPosts.json` → `redirects[]` (`legacyPath` → `/news/<slug>`). The `[year]/[month]/[day]/[slug]` route remains as a fallback |
 | Gone for good (WordPress internals, filler pages, withdrawn posts) | 410 from the proxy, directly, with or without the trailing slash | `GONE` list in `src/lib/site-proxy.ts` |
 
-URLs that kept their exact path need nothing: the homepage, `/practice-areas`, `/meet-the-team`, `/testimonials`, `/contact`, the seven practice-area pages, and the three city pages (`/anaheim-personal-injury-attorney`, `/irvine-personal-injury-attorneys`, `/santa-ana-personal-injury-attorney`, rebuilt at their old URLs as service-area pages in `src/lib/marketing/data/serviceAreas.ts`).
+URLs that kept their exact path need nothing: the homepage, `/practice-areas`, `/meet-the-team`, `/testimonials`, `/contact`, the seven practice-area pages, and the three city pages (`/anaheim-personal-injury-attorney`, `/irvine-personal-injury-attorneys`, `/santa-ana-personal-injury-attorney`, rebuilt at their old URLs as service-area pages in `src/lib/marketing/data/serviceAreas.ts`). The old city guides `/about-orange-california` and `/about-costa-mesa-california` redirect to the Orange and Costa Mesa city pages added in content round 1 (2026-10-06). Before that they went to `/personal-injury-lawyer-orange-county`.
 
 ## Trailing slashes
 
