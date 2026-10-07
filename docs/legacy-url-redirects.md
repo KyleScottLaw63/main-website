@@ -14,6 +14,8 @@ The previous kjslaw.com (WordPress) published 450 URLs that Google, directories,
 
 URLs that kept their exact path need nothing: the homepage, `/practice-areas`, `/meet-the-team`, `/testimonials`, `/contact`, the seven practice-area pages, and the three city pages (`/anaheim-personal-injury-attorney`, `/irvine-personal-injury-attorneys`, `/santa-ana-personal-injury-attorney`, rebuilt at their old URLs as service-area pages in `src/lib/marketing/data/serviceAreas.ts`). The old city guides `/about-orange-california` and `/about-costa-mesa-california` redirect to the Orange and Costa Mesa city pages added in content round 1 (2026-10-06). Before that they went to `/personal-injury-lawyer-orange-county`.
 
+The old site's WordPress (Yoast) sitemaps redirect to the one sitemap this site has: `/sitemap_index.xml`, which Google Search Console still listed in October 2026 as "Couldn't fetch", and the Yoast child sitemaps (`/post-sitemap.xml`, `/page-sitemap.xml`, `/category-sitemap.xml`, `/post_tag-sitemap.xml`, `/author-sitemap.xml`) all 301 to `/sitemap.xml` (added 2026-10-07). Search Console keeps `/sitemap.xml` as the submitted sitemap.
+
 ## Trailing slashes
 
 WordPress URLs end in `/`; this site's canonical URLs have none. Every old URL reaches its page in **one hop**, with or without the slash:

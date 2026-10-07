@@ -2,6 +2,36 @@
   "$comment": "Old kjslaw.com URLs (WordPress) mapped to the routes that exist on this site. Consumed by next.config.ts (301s, in order: specific before catch-all) and by scripts/verify-redirects.mjs. Each source matches with or without the old trailing slash; each destination must be a final page (one hop: the QA script fails a chain). Dated blog permalinks come from legacyPosts.json; paths that are gone for good (410) live in src/lib/auth/middleware.ts.",
   "redirects": [
     {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "why": "the WordPress (Yoast) sitemap index, still registered in Google Search Console in 2026; the site has one sitemap"
+    },
+    {
+      "source": "/post-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "why": "Yoast child sitemap"
+    },
+    {
+      "source": "/page-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "why": "Yoast child sitemap"
+    },
+    {
+      "source": "/category-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "why": "Yoast child sitemap"
+    },
+    {
+      "source": "/post_tag-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "why": "Yoast child sitemap"
+    },
+    {
+      "source": "/author-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "why": "Yoast child sitemap"
+    },
+    {
       "source": "/contact-us",
       "destination": "/contact",
       "why": "duplicate contact page"
