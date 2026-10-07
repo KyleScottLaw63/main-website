@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const serviceAreaEntries = serviceAreas.map((area) => ({
     url: `${SITE_URL}${area.path}`,
-    lastModified: '2026-09-02',
+    lastModified: '2026-10-06',
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   }));
