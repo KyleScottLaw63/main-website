@@ -3,7 +3,8 @@ import type { MetadataRoute } from 'next';
 /**
  * Web app manifest for the public website: home-screen name, icons, and
  * colours. Served at /manifest.webmanifest and linked from every page.
- * The icons are generated from the KJS monogram (public/icons, app/apple-icon.png).
+ * The icons (public/icons, app/apple-icon.png, app/icon.png) are the firm's logo mark, cut from
+ * public/kjs-logo.jpeg; see docs/public-site-rendering.md.
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {

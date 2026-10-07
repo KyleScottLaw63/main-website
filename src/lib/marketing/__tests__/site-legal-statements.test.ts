@@ -65,7 +65,8 @@ describe('what a client pays without a recovery (the firm’s decision, 2026-09-
     expect(spanishPracticeAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.es.statement))).toHaveLength(2);
     expect(strings(whyHireUs.en).filter((text) => text.includes(noRecoveryTerms.en.statement))).toHaveLength(3);
     expect(strings(whyHireUs.es).filter((text) => text.includes(noRecoveryTerms.es.statement))).toHaveLength(3);
-  });
+    // Reads every site source file; under a full parallel run it can pass 5 s on a busy machine.
+  }, 30_000);
 
   it('no page or archived post calls a case risk-free: a client who loses can owe the other side’s costs (CCP § 1032)', () => {
     const RISK_FREE = /\b(?:no|zero|without any|without) financial risk\b|\brisk[- ]free\b|\bno risk\b|\briesgo financiero\b|\bsin (?:ningún )?riesgo\b|\bningún riesgo\b/i;
@@ -73,7 +74,7 @@ describe('what a client pays without a recovery (the firm’s decision, 2026-09-
     const pages = SITE_SOURCES.flatMap((dir) => sourceFiles(path.join(ROOT, dir))).filter((file) => file !== allowed && RISK_FREE.test(readFileSync(file, 'utf8')));
     expect(pages.map((file) => path.relative(ROOT, file))).toEqual([]);
     expect(legacyPosts.filter((post) => RISK_FREE.test(`${post.title} ${post.excerpt} ${legacyPostPlainText(post)}`)).map((post) => post.slug)).toEqual([]);
-  });
+  }, 30_000);
 });
 
 describe('childhood sexual abuse deadlines on the pages (CCP §§ 340.1, 340.11)', () => {
