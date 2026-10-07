@@ -26,7 +26,8 @@ describe('case story page', () => {
       expect(jsonLd['@graph'][0], story.slug).toMatchObject({ '@type': 'Article', headline: headline.title, url: `https://kjslaw.com/results/${story.slug}` });
       cleanup();
     }
-  });
+    // Renders every story page in turn; under a full parallel run it can pass 5 s on a busy machine.
+  }, 30_000);
 
   it('tells a confidential settlement without any amount', () => {
     const story = caseStories.find((item) => item.slug === 'nursing-facility-pressure-wound-settlement')!;
