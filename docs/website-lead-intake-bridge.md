@@ -63,6 +63,10 @@ The app never takes consent wording from the request: it rebuilds it from `conse
 3. Locally, with the same two values in `.env.local`: `npm run check:intake` → "Connected: … all 8 texts match".
 4. Send one test inquiry through the live form with obviously fictional details, confirm it appears in the app's lead inbox with its consent wording, then close it there.
 
+Connected on 2026-10-08: both projects run on Vercel (team `kyle-scott-law`, projects `main-website` and `app`), the token was rotated on both sides that day, and `npm run check:intake` reported all 8 texts matching.
+
+Rotating again (Vercel CLI, logged in to the team): the token is stored as a sensitive variable, so `vercel env pull` writes a placeholder for it and the only way back to a known value is a fresh one on both sides. Generate it locally, keep it in this machine's `.env.local`, then `vercel env add MATTERFOLD_INTAKE_TOKEN production --sensitive --force --yes < token.txt` here and `vercel env add WEBSITE_INTAKE_TOKEN production --sensitive --force --yes --cwd <folder linked to the app project> < token.txt`, then `vercel redeploy <latest production deployment>` for each project — the form answers "please call" between the two redeploys. An app redeploy can fail once on a transient `next/font/google` resolution error; a retry passes.
+
 ## Staff shortcut: kjslaw.com/admin
 
 The app runs on its own subdomain (for example `https://app.kjslaw.com`): it must own a whole origin (its release gate refuses an address with a path), and a separate origin keeps staff sessions away from the public site's pages and scripts. For convenience, once `MATTERFOLD_INTAKE_ENDPOINT` is set, `next.config.ts` redirects `/admin`, anything under it, and `/login` to `<the endpoint's origin>/login` — a 307, so no browser pins it, in one hop, slash or not. Without the setting those paths are ordinary 404s. Test: `src/lib/__tests__/staff-shortcuts.test.ts`.
