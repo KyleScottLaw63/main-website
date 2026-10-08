@@ -18,7 +18,7 @@ GA4 anonymizes IP addresses on its own, keeps no raw IPs, and the site passes it
 
 ## Privacy policy
 
-The privacy pages (`/privacy`, `/es/privacidad`; `src/lib/marketing/data/legalPages.ts`, "Sale, sharing, cookies, and advertising") say that the site uses Google Analytics, that it sets cookies and sends usage data to Google, and how to opt out (Google's browser add-on, or blocking cookies). That wording went up with the tag; it is attorney-reviewed text, so change it only with the attorney's approval (docs/website-content-compliance.md).
+The privacy pages (`/privacy`, `/es/privacidad`; `src/lib/marketing/data/legalPages.ts`, "Sale, sharing, cookies, and advertising") say that the site uses Google Analytics, that it sets cookies and sends usage data to Google, and how to opt out (Google's browser add-on, or blocking cookies). That wording went up with the tag on 2026-10-08, approved by the attorney; it is attorney-reviewed text, so change it only with the attorney's approval (docs/website-content-compliance.md). The property is the firm's, created under team@kjslaw.com on 2026-10-08; its web stream is `G-TGKDKL8GZ5`.
 
 ## Turning it on, and off
 
