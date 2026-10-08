@@ -69,7 +69,7 @@ export const legalPages: Record<
           id: 'automatic-information',
           title: 'Information received automatically',
           paragraphs: [
-            'The website’s hosting, security, and delivery systems may receive standard technical information when a page is requested. This can include an IP address, browser and device type, referring page, pages requested, timestamps, and error or security logs. The embedded Google Map on the contact page may also transmit technical information to Google when it loads.',
+            'The website’s hosting, security, and delivery systems may receive standard technical information when a page is requested. This can include an IP address, browser and device type, referring page, pages requested, timestamps, and error or security logs. The embedded Google Map on the contact page may also transmit technical information to Google when it loads, and Google Analytics receives the usage information described under “Sale, sharing, cookies, and advertising.”',
           ],
         },
         {
@@ -93,7 +93,8 @@ export const legalPages: Record<
           id: 'sale-and-advertising',
           title: 'Sale, sharing, cookies, and advertising',
           paragraphs: [
-            'Kyle Scott Law does not sell personal information for money and does not use information submitted through its public intake forms for cross-context behavioral advertising. This version of the site does not intentionally deploy advertising cookies. Essential website, security, or hosting technologies may still use limited storage or technical identifiers. If the firm later introduces analytics or advertising technology, this policy and any required choices will be updated before that use.',
+            'Kyle Scott Law does not sell personal information for money and does not use information submitted through its public intake forms for cross-context behavioral advertising. The site does not use advertising cookies.',
+            'The site does use Google Analytics, a service of Google LLC, to understand how it is used: which pages are read, how visitors arrive, and whether a visit ends in a call or an inquiry. Google Analytics sets cookies in your browser and sends Google technical information such as the pages viewed, the type of device and browser, the referring page, and an approximate (city-level) location derived from your IP address, which Google does not store. The firm sends it no names, contact details, or anything you type into a form. Google handles this information under its own privacy policy. You can prevent it by blocking cookies in your browser or by installing Google’s Analytics opt-out browser add-on (tools.google.com/dlpage/gaoptout); the site works the same either way. Essential website, security, or hosting technologies may still use limited storage or technical identifiers.',
           ],
         },
         {
@@ -321,7 +322,7 @@ export const legalPages: Record<
           id: 'informacion-automatica',
           title: 'Información recibida automáticamente',
           paragraphs: [
-            'Los sistemas de alojamiento, seguridad y entrega del sitio pueden recibir información técnica estándar cuando se solicita una página. Esto puede incluir una dirección IP, tipo de navegador y dispositivo, página de referencia, páginas solicitadas, marcas de tiempo y registros de errores o seguridad. El mapa de Google incorporado en la página de contacto también puede transmitir información técnica a Google cuando se carga.',
+            'Los sistemas de alojamiento, seguridad y entrega del sitio pueden recibir información técnica estándar cuando se solicita una página. Esto puede incluir una dirección IP, tipo de navegador y dispositivo, página de referencia, páginas solicitadas, marcas de tiempo y registros de errores o seguridad. El mapa de Google incorporado en la página de contacto también puede transmitir información técnica a Google cuando se carga, y Google Analytics recibe la información de uso descrita en “Venta, divulgación, cookies y publicidad”.',
           ],
         },
         {
@@ -345,7 +346,8 @@ export const legalPages: Record<
           id: 'venta-y-publicidad',
           title: 'Venta, divulgación, cookies y publicidad',
           paragraphs: [
-            'Kyle Scott Law no vende información personal por dinero ni usa la información enviada mediante sus formularios públicos de admisión para publicidad conductual entre distintos contextos. Esta versión del sitio no instala intencionalmente cookies publicitarias. Las tecnologías esenciales del sitio, seguridad o alojamiento pueden usar almacenamiento limitado o identificadores técnicos. Si el bufete incorpora tecnología analítica o publicitaria, esta política y las opciones exigidas se actualizarán antes de ese uso.',
+            'Kyle Scott Law no vende información personal por dinero ni usa la información enviada mediante sus formularios públicos de admisión para publicidad conductual entre distintos contextos. El sitio no usa cookies publicitarias.',
+            'El sitio sí usa Google Analytics, un servicio de Google LLC, para entender cómo se usa: qué páginas se leen, cómo llegan los visitantes y si una visita termina en una llamada o en una consulta. Google Analytics instala cookies en su navegador y envía a Google información técnica, como las páginas vistas, el tipo de dispositivo y de navegador, la página de referencia y una ubicación aproximada (a nivel de ciudad) derivada de su dirección IP, que Google no almacena. El bufete no le envía nombres, datos de contacto ni nada de lo que usted escribe en un formulario. Google trata esta información conforme a su propia política de privacidad. Puede impedirlo bloqueando las cookies en su navegador o instalando el complemento de Google para desactivar Analytics (tools.google.com/dlpage/gaoptout); el sitio funciona igual en ambos casos. Las tecnologías esenciales del sitio, de seguridad o de alojamiento pueden seguir usando almacenamiento limitado o identificadores técnicos.',
           ],
         },
         {

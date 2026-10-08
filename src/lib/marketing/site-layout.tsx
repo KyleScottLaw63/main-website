@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist } from 'next/font/google';
 import { RoutePrefetch } from '@/components/marketing/RoutePrefetch';
+import { SiteAnalytics } from '@/components/marketing/SiteAnalytics';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
@@ -103,6 +104,7 @@ export function SiteRootLayout({ language, children }: { language: SiteLanguage;
         <StructuredData data={legalServiceSchema(language)} />
         {children}
         <RoutePrefetch />
+        <SiteAnalytics />
       </body>
     </html>
   );

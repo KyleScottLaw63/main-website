@@ -12,6 +12,7 @@ import { chatLauncherCopy } from '@/components/marketing/chat-launcher-copy';
 import { ServerRefusal, submissionErrorMessage } from '@/components/marketing/submission-error';
 import { submitsThroughOnSubmit } from '@/components/shared/form-submit';
 import { contactConsentText, PUBLIC_CONSENT_VERSION, WEBSITE_FIRM_NAME } from '@/lib/leads/public-lead-rules';
+import { trackLead } from '@/lib/marketing/analytics';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 
 const matters = [
@@ -101,6 +102,7 @@ export function ChatWidgetPanel({ locale = 'en' }: { locale?: SiteLocale }) {
       const result = await response.json().catch(() => ({})) as { message?: string };
       if (!response.ok) throw new ServerRefusal(result.message ?? '');
       setStatus('success');
+      trackLead('chat');
     } catch (error) {
       setStatus('error');
       setMessage(submissionErrorMessage(error, locale));

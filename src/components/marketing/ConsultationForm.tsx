@@ -10,6 +10,7 @@ import { Textarea } from '@/components/marketing/ui/textarea';
 import { ServerRefusal, submissionErrorMessage } from '@/components/marketing/submission-error';
 import { submitsThroughOnSubmit } from '@/components/shared/form-submit';
 import { contactConsentText, PUBLIC_CONSENT_VERSION, smsDisclosureText, WEBSITE_FIRM_NAME } from '@/lib/leads/public-lead-rules';
+import { trackLead } from '@/lib/marketing/analytics';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 
 type FormStatus =
@@ -94,6 +95,7 @@ export function ConsultationForm({ locale = 'en' }: { locale?: SiteLocale }) {
       setConsent(false);
       setPreferredContact('phone');
       setStatus({ state: 'success' });
+      trackLead('form');
     } catch (error) {
       setStatus({ state: 'error', message: submissionErrorMessage(error, locale) });
     }
