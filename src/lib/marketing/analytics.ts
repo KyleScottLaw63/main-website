@@ -5,7 +5,7 @@
  * environment setting. Empty means analytics is off: the pages carry no tag at all. The tag runs only
  * on the production host, so previews, localhost, and *.vercel.app deployments send nothing.
  */
-export const GA_MEASUREMENT_ID = '';
+export const GA_MEASUREMENT_ID = 'G-TGKDKL8GZ5';
 export const ANALYTICS_HOST = 'kjslaw.com';
 
 type Gtag = (...args: unknown[]) => void;

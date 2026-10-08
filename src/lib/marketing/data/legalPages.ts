@@ -25,6 +25,9 @@ export type LegalPageContent = {
 
 const updatedEnglish = 'Last updated September 1, 2026';
 const updatedSpanish = 'Última actualización: 1 de septiembre de 2026';
+// The privacy policy changed when Google Analytics went up (docs/website-analytics.md).
+const updatedPrivacyEnglish = 'Last updated October 8, 2026';
+const updatedPrivacySpanish = 'Última actualización: 8 de octubre de 2026';
 
 export const legalPages: Record<
   SiteLocale,
@@ -41,7 +44,7 @@ export const legalPages: Record<
         'How Kyle Scott Law collects, uses, safeguards, and handles personal information submitted through this website.',
       introduction:
         'This policy explains how Kyle Scott Law handles personal information when you visit this website, submit a consultation request, use the KJS case assistant, or otherwise contact the firm online. Information handled during an attorney-client relationship is also subject to the firm’s professional and legal obligations.',
-      updatedLabel: updatedEnglish,
+      updatedLabel: updatedPrivacyEnglish,
       contentsLabel: 'On this page',
       contactLabel: 'Privacy questions or requests',
       sections: [
@@ -294,7 +297,7 @@ export const legalPages: Record<
         'Cómo Kyle Scott Law recopila, usa, protege y administra la información personal enviada a través de este sitio web.',
       introduction:
         'Esta política explica cómo Kyle Scott Law maneja la información personal cuando usted visita este sitio, envía una solicitud de consulta, usa el asistente de casos KJS o se comunica con el bufete en línea. La información administrada durante una relación abogado-cliente también está sujeta a las obligaciones profesionales y legales del bufete.',
-      updatedLabel: updatedSpanish,
+      updatedLabel: updatedPrivacySpanish,
       contentsLabel: 'En esta página',
       contactLabel: 'Preguntas o solicitudes de privacidad',
       sections: [
