@@ -133,7 +133,7 @@ function translateDetail(detail: string) {
     .replaceAll('Claim against school district', 'Reclamo contra el distrito escolar')
     .replaceAll('School district negligence', 'Negligencia del distrito escolar')
     .replaceAll('Largest molestation settlement at the time', 'Mayor acuerdo por abuso sexual en ese momento')
-    .replaceAll('Clergy malpractice', 'Negligencia del clero');
+    .replaceAll('Claim against a church', 'Reclamo contra una iglesia');
 }
 
 export function translateResultToSpanish(result: CaseResult): CaseResult {

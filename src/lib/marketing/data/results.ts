@@ -101,7 +101,7 @@ export const historicalResults: CaseResult[] = [
   {
     amount: '$2M',
     title: 'Teenage boy molested by church employee',
-    detail: 'Clergy malpractice · Riverside County Superior Court',
+    detail: 'Claim against a church · Riverside County Superior Court',
     category: 'Abuse & school liability',
     outcome: 'Jury verdict',
   },

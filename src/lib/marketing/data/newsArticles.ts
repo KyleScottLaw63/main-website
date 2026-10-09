@@ -288,7 +288,7 @@ const newsArticleRecords: NewsArticleRecord[] = [
         {
           heading: 'Compensatory and punitive damages serve different purposes',
           paragraphs: [
-            'Compensatory damages address losses such as medical expenses, lost income, pain, and disability. Punitive damages are intended to punish and deter sufficiently wrongful conduct. California allows punitive damages against a driver whose drunk driving shows a conscious disregard for others’ safety (Civil Code section 3294; Taylor v. Superior Court (1979) 24 Cal.3d 890); the jury instruction for an individual defendant is CACI No. 3940.',
+            'Compensatory damages address losses such as medical expenses, lost income, pain, and disability. Punitive damages are intended to punish and deter sufficiently wrongful conduct. California allows punitive damages against a driver whose drunk driving amounts to despicable conduct carried on with a willful and conscious disregard of others’ safety, proved by clear and convincing evidence (Civil Code section 3294(a), (c)(1); Taylor v. Superior Court (1979) 24 Cal.3d 890); the jury instruction for an individual defendant is CACI No. 3940.',
           ],
         },
         {
@@ -311,7 +311,7 @@ const newsArticleRecords: NewsArticleRecord[] = [
         {
           heading: 'Los daños compensatorios y punitivos tienen propósitos distintos',
           paragraphs: [
-            'Los daños compensatorios se relacionan con pérdidas como gastos médicos, ingresos perdidos, dolor y discapacidad. Los daños punitivos buscan castigar y disuadir conductas suficientemente indebidas. California permite daños punitivos contra un conductor cuya manera de conducir en estado de ebriedad demuestra un desprecio consciente por la seguridad de los demás (Código Civil, sección 3294; Taylor v. Superior Court (1979) 24 Cal.3d 890); la instrucción al jurado para un demandado individual es la CACI No. 3940.',
+            'Los daños compensatorios se relacionan con pérdidas como gastos médicos, ingresos perdidos, dolor y discapacidad. Los daños punitivos buscan castigar y disuadir conductas suficientemente indebidas. California permite daños punitivos contra un conductor cuya manera de conducir en estado de ebriedad constituye una conducta despreciable realizada con un desprecio deliberado y consciente por la seguridad de los demás, probada con evidencia clara y convincente (Código Civil, sección 3294(a), (c)(1); Taylor v. Superior Court (1979) 24 Cal.3d 890); la instrucción al jurado para un demandado individual es la CACI No. 3940.',
           ],
         },
         {
