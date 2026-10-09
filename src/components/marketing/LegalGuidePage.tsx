@@ -146,14 +146,6 @@ export function LegalGuidePage({ guide, locale = 'en' }: { guide: LegalGuide & {
         publisher: { '@id': `${SITE_URL}/#legal-service` },
       },
       {
-        '@type': 'Person',
-        '@id': attorneyId,
-        name: 'Kyle J. Scott',
-        jobTitle: text.attorneyTitle,
-        url: `${SITE_URL}${text.attorneyPath}`,
-        worksFor: { '@id': `${SITE_URL}/#legal-service` },
-      },
-      {
         '@type': 'BreadcrumbList',
         '@id': `${pageUrl}#breadcrumb`,
         itemListElement: [
@@ -170,6 +162,14 @@ export function LegalGuidePage({ guide, locale = 'en' }: { guide: LegalGuide & {
           name: faq.question,
           acceptedAnswer: { '@type': 'Answer', text: faq.answer },
         })),
+      },
+      {
+        '@type': 'Person',
+        '@id': attorneyId,
+        name: 'Kyle J. Scott',
+        jobTitle: text.attorneyTitle,
+        url: `${SITE_URL}${text.attorneyPath}`,
+        worksFor: { '@id': `${SITE_URL}/#legal-service` },
       },
     ],
   };
