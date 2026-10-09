@@ -5,6 +5,7 @@ import { caseStoryPath } from '@/lib/marketing/data/results';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
 import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
+import { spanishServiceAreas } from '@/lib/marketing/data/spanishServiceAreas';
 import { localizedRoutes } from '@/lib/marketing/i18n';
 import { SITE_URL } from '@/lib/marketing/site';
 
@@ -14,9 +15,14 @@ import { SITE_URL } from '@/lib/marketing/site';
  * setting is written (a trailing slash, a preview host) cannot change the
  * sitemap. robots.txt decides whether crawlers may use it (app/robots.ts).
  */
+// The Spanish city pages: content round 3 (2026-10-09); becomes the approval date when they are published.
+const spanishServiceAreasDate = '2026-10-09';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  // The guides are paired for the language switcher too, but take their entries, with dates, below.
-  const localizedEntries = localizedRoutes.filter((route) => !route.en.startsWith('/guides')).flatMap((route) =>
+  // The guides and the translated city pages are paired for the language switcher too, but take
+  // their entries, with dates, below.
+  const pairedElsewhere = new Set(['/guides', ...serviceAreas.map((area) => area.path)]);
+  const localizedEntries = localizedRoutes.filter((route) => !route.en.startsWith('/guides/') && !pairedElsewhere.has(route.en)).flatMap((route) =>
     ([route.en, route.es] as const).map((path, index) => {
       const englishPath = route.en;
       const isHome = englishPath === '/';
@@ -65,12 +71,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const serviceAreaEntries = serviceAreas.map((area) => ({
-    url: `${SITE_URL}${area.path}`,
-    lastModified: '2026-10-06',
-    changeFrequency: 'monthly' as const,
-    priority: 0.75,
-  }));
+  const serviceAreaEntries = [
+    ...serviceAreas.map((area) => ({
+      url: `${SITE_URL}${area.path}`,
+      lastModified: '2026-10-06',
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    })),
+    ...spanishServiceAreas.map((area) => ({
+      url: `${SITE_URL}${area.path}`,
+      lastModified: spanishServiceAreasDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    })),
+  ];
 
   const legacyPostEntries = legacyPosts.filter(legacyPostIsIndexable).map((post) => ({
     url: `${SITE_URL}${post.path}`,

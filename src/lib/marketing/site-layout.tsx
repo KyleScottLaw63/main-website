@@ -87,6 +87,26 @@ function legalServiceSchema(language: SiteLanguage) {
       { '@type': 'AdministrativeArea', name: 'Orange County, California' },
       { '@type': 'State', name: 'California' },
     ],
+    // The office's location and hours, as the Google Business Profile states them (2026-10-09).
+    geo: { '@type': 'GeoCoordinates', latitude: 33.7481961, longitude: -117.8239349 },
+    hasMap: 'https://maps.google.com/?q=Kyle+Scott+Law+17671+Irvine+Blvd+Suite+210+Tustin+CA+92780',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:30',
+      closes: '17:00',
+    },
+    knowsLanguage: ['en', 'es'],
+    // The firm's own profiles elsewhere; the attorney's are on his Person node (structured-data.ts).
+    sameAs: [
+      'https://www.instagram.com/KJS_Law/',
+      'https://www.youtube.com/channel/UCfF9jCbtt6aqBOkXnAGJpnw',
+      'https://x.com/KyleScottLaw2',
+      'https://www.facebook.com/kylescottlaw/',
+      'https://www.avvo.com/attorneys/92780-ca-kyle-scott-225782.html',
+      'https://lawyers.justia.com/lawyer/kyle-joseph-scott-1503298',
+      'https://apps.calbar.ca.gov/attorney/Licensee/Detail/155434',
+    ],
     founder: {
       '@type': 'Person',
       '@id': attorneyEntityId(spanish ? 'es' : 'en'),

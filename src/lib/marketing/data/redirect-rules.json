@@ -106,11 +106,6 @@
       "why": "planned slug"
     },
     {
-      "source": "/orange-county-motorcycle-accident-attorney",
-      "destination": "/orange-county-auto-accidents-lawyer",
-      "why": "planned slug"
-    },
-    {
       "source": "/personal-injury-attorney-tustin-ca",
       "destination": "/tustin-personal-injury-attorney",
       "why": "Tustin doorway merged into flagship page (the office is in Tustin)"
@@ -137,8 +132,8 @@
     },
     {
       "source": "/motorcycle-accident-attorney-tustin-ca",
-      "destination": "/orange-county-auto-accidents-lawyer",
-      "why": "motorcycle claims are covered on the vehicle-collision page"
+      "destination": "/orange-county-motorcycle-accident-attorney",
+      "why": "doorway merged into the motorcycle practice page (content round 3, 2026-10-09; the planned destination in redirect-map.csv)"
     },
     {
       "source": "/dog-bite-lawyer-tustin-ca",

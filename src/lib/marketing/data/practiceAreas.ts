@@ -9,7 +9,11 @@ export type PracticeAreaIcon =
   | 'brain'
   | 'support'
   | 'scale'
-  | 'care';
+  | 'care'
+  | 'motorcycle'
+  | 'truck'
+  | 'pedestrian'
+  | 'rideshare';
 
 export type PracticeAreaData = {
   key: string;

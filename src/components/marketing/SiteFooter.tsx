@@ -111,6 +111,10 @@ export const practiceLinks = {
     ['Sexual Harassment & Abuse', '/sexual-harassment-lawyer-in-orange-county'],
     ['Wrongful Death', '/orange-county-wrongful-death-attorney'],
     ['School Liability', '/orange-county-school-liability-attorney'],
+    ['Motorcycle Accidents', '/orange-county-motorcycle-accident-attorney'],
+    ['Truck Accidents', '/orange-county-truck-accident-attorney'],
+    ['Pedestrian Accidents', '/orange-county-pedestrian-accident-attorney'],
+    ['Uber & Lyft Accidents', '/orange-county-rideshare-accident-attorney'],
   ],
   es: [
     [
@@ -147,6 +151,10 @@ export const practiceLinks = {
     ],
     ['Muerte injusta', '/es/abogado-de-muerte-injusta-condado-de-orange'],
     ['Responsabilidad escolar', '/es/abogado-de-responsabilidad-escolar-condado-de-orange'],
+    ['Accidentes de motocicleta', '/es/abogado-de-accidentes-de-motocicleta-condado-de-orange'],
+    ['Accidentes de camión', '/es/abogado-de-accidentes-de-camion-condado-de-orange'],
+    ['Accidentes de peatones', '/es/abogado-de-accidentes-de-peatones-condado-de-orange'],
+    ['Accidentes de Uber y Lyft', '/es/abogado-de-accidentes-de-uber-y-lyft-condado-de-orange'],
   ],
 };
 
