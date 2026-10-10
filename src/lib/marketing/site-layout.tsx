@@ -3,6 +3,9 @@ import { Geist } from 'next/font/google';
 import { RoutePrefetch } from '@/components/marketing/RoutePrefetch';
 import { SiteAnalytics } from '@/components/marketing/SiteAnalytics';
 import { StructuredData } from '@/components/marketing/StructuredData';
+import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
+import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
+import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 import { firmIdentity, SITE_URL } from '@/lib/marketing/site';
@@ -68,6 +71,12 @@ function legalServiceSchema(language: SiteLanguage) {
     '@type': 'LegalService',
     '@id': `${SITE_URL}/#legal-service`,
     name: firmIdentity.name,
+    alternateName: 'KJS Law',
+    // The plain-language facts an answer engine quotes: what the firm is, who leads it, what it handles, where.
+    description: spanish
+      ? 'Bufete de lesiones personales en Tustin, California, fundado por el abogado litigante Kyle J. Scott (Colegio de Abogados de California, 1991). Representa a personas lesionadas en accidentes de auto, motocicleta, camión, Uber y Lyft y atropellos, caídas, mordeduras de perro, negligencia médica, abuso de personas mayores, lesiones cerebrales, abuso sexual, negligencia escolar y muerte injusta, en el Condado de Orange y en toda California. Consulta gratuita en español o inglés.'
+      : 'Personal injury law firm in Tustin, California, founded by trial attorney Kyle J. Scott (State Bar of California, 1991). Represents people injured in car, motorcycle, truck, rideshare, and pedestrian accidents, falls, dog bites, medical malpractice, elder abuse, brain injury, sexual abuse, school negligence, and wrongful death, in Orange County and throughout California. Free consultation in English or Spanish.',
+    foundingDate: '2003',
     url: spanish ? `${SITE_URL}/es` : SITE_URL,
     logo: `${SITE_URL}/kjs-logo.jpeg`,
     image: `${SITE_URL}/kyle-scott-original.webp`,
@@ -83,9 +92,40 @@ function legalServiceSchema(language: SiteLanguage) {
       postalCode: firmIdentity.postalCode,
       addressCountry: firmIdentity.country,
     },
+    // The county, each city with its own page, and the state.
     areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Orange County, California' },
+      { '@type': 'AdministrativeArea', name: spanish ? 'Condado de Orange, California' : 'Orange County, California' },
+      ...serviceAreas.map((area) => ({ '@type': 'City', name: `${area.city}, California` })),
       { '@type': 'State', name: 'California' },
+    ],
+    // The office's location and hours, as the Google Business Profile states them (2026-10-09).
+    geo: { '@type': 'GeoCoordinates', latitude: 33.7481961, longitude: -117.8239349 },
+    hasMap: 'https://maps.google.com/?q=Kyle+Scott+Law+17671+Irvine+Blvd+Suite+210+Tustin+CA+92780',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:30',
+      closes: '17:00',
+    },
+    knowsLanguage: ['en', 'es'],
+    // One Service per practice page, in the page's language, so the list of what the firm handles is machine-readable.
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: spanish ? 'Áreas de práctica' : 'Practice areas',
+      itemListElement: (spanish ? spanishPracticeAreas : practiceAreas).map((area) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: area.shortTitle, description: area.description, url: `${SITE_URL}${area.path}` },
+      })),
+    },
+    // The firm's own profiles elsewhere; the attorney's are on his Person node (structured-data.ts).
+    sameAs: [
+      'https://www.instagram.com/KJS_Law/',
+      'https://www.youtube.com/channel/UCfF9jCbtt6aqBOkXnAGJpnw',
+      'https://x.com/KyleScottLaw2',
+      'https://www.facebook.com/kylescottlaw/',
+      'https://www.avvo.com/attorneys/92780-ca-kyle-scott-225782.html',
+      'https://lawyers.justia.com/lawyer/kyle-joseph-scott-1503298',
+      'https://apps.calbar.ca.gov/attorney/Licensee/Detail/155434',
     ],
     founder: {
       '@type': 'Person',

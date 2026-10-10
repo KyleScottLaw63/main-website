@@ -109,6 +109,7 @@ export function attorneyProfileStructuredData(locale: SiteLocale) {
           'https://x.com/KyleScottLaw2',
           'https://www.facebook.com/kylescottlaw/',
           'https://www.avvo.com/attorneys/92780-ca-kyle-scott-225782.html',
+          'https://lawyers.justia.com/lawyer/kyle-joseph-scott-1503298',
         ],
       },
     ],

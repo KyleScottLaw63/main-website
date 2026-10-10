@@ -15,7 +15,8 @@
     "test:watch": "vitest",
     "check": "npm run lint && npm run typecheck && npm test",
     "verify:redirects": "node scripts/verify-redirects.mjs",
-    "check:intake": "node scripts/check-intake-bridge.mjs"
+    "check:intake": "node scripts/check-intake-bridge.mjs",
+    "submit:indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
