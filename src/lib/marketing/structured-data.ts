@@ -83,6 +83,10 @@ export function attorneyProfileStructuredData(locale: SiteLocale) {
           ? [
               'Lesiones personales',
               'Accidentes vehiculares',
+              'Accidentes de motocicleta',
+              'Accidentes de camión',
+              'Accidentes de peatones',
+              'Accidentes de Uber y Lyft',
               'Responsabilidad de propiedad',
               'Mordeduras de perro',
               'Lesiones cerebrales traumáticas',
@@ -94,6 +98,10 @@ export function attorneyProfileStructuredData(locale: SiteLocale) {
           : [
               'Personal injury',
               'Vehicle accidents',
+              'Motorcycle accidents',
+              'Truck accidents',
+              'Pedestrian accidents',
+              'Rideshare (Uber and Lyft) accidents',
               'Premises liability',
               'Dog bites',
               'Traumatic brain injuries',

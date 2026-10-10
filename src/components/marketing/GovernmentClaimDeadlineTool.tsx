@@ -31,7 +31,7 @@ const copy = {
     suitLead: 'If the claim is presented on time…',
     suitBody: 'a written rejection leaves six months from the notice to file the lawsuit (§ 945.6(a)(1)). If the entity never sends written notice, the lawsuit is due by',
     suitNote: 'Two years from the date of injury (§ 945.6(a)(2))',
-    note: 'General information, not legal advice. The clock runs from the date the claim accrued, which is usually but not always the injury date; childhood sexual assault claims are exempt from this requirement; federal agencies follow a different system; and a last day that falls on a weekend or court holiday generally moves to the next business day. Confirm your dates with a lawyer before relying on them.',
+    note: 'General information, not legal advice. The clock runs from the date the claim accrued, which is usually but not always the injury date; childhood sexual assault claims are exempt from this requirement; federal agencies follow a different system; a last day that falls on a weekend or court holiday generally moves to the next business day; and the one-year limit for a late-claim application leaves out certain periods of mental incapacity and juvenile detention (§ 911.4(c)). Confirm your dates with a lawyer before relying on them.',
   },
   es: {
     dateLocale: 'es-US',
@@ -49,7 +49,7 @@ const copy = {
     suitLead: 'Si el reclamo se presenta a tiempo…',
     suitBody: 'un rechazo por escrito deja seis meses a partir del aviso para presentar la demanda (§ 945.6(a)(1)). Si la entidad nunca envía un aviso por escrito, la demanda debe presentarse a más tardar el',
     suitNote: 'Dos años a partir de la fecha de la lesión (§ 945.6(a)(2))',
-    note: 'Información general, no asesoría legal. El plazo corre desde la fecha en que surgió el reclamo, que por lo general, pero no siempre, es la fecha de la lesión; los reclamos por abuso sexual infantil están exentos de este requisito; las agencias federales siguen un sistema distinto; y un último día que cae en fin de semana o en un día feriado de los tribunales generalmente pasa al siguiente día hábil. Confirme sus fechas con un abogado antes de confiar en ellas.',
+    note: 'Información general, no asesoría legal. El plazo corre desde la fecha en que surgió el reclamo, que por lo general, pero no siempre, es la fecha de la lesión; los reclamos por abuso sexual infantil están exentos de este requisito; las agencias federales siguen un sistema distinto; un último día que cae en fin de semana o en un día feriado de los tribunales generalmente pasa al siguiente día hábil; y el límite de un año para una solicitud de reclamo tardío no cuenta ciertos periodos de incapacidad mental y de detención juvenil (§ 911.4(c)). Confirme sus fechas con un abogado antes de confiar en ellas.',
   },
 } satisfies Record<SiteLocale, unknown>;
 

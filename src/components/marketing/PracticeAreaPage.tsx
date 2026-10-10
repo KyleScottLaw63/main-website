@@ -3,14 +3,18 @@ import {
   Brain,
   BriefcaseMedical,
   CarFront,
+  CarTaxiFront,
   Check,
   ChevronDown,
   Dog,
+  Footprints,
   HandHeart,
   HeartHandshake,
   MapPin,
+  Motorbike,
   Scale,
   ShieldCheck,
+  Truck,
   UserRoundCheck,
 } from 'lucide-react';
 import Link from 'next/link';
@@ -38,6 +42,10 @@ const iconMap = {
   support: HeartHandshake,
   scale: Scale,
   care: HandHeart,
+  motorcycle: Motorbike,
+  truck: Truck,
+  pedestrian: Footprints,
+  rideshare: CarTaxiFront,
 } satisfies Record<PracticeAreaIcon, typeof ShieldCheck>;
 
 export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaData; locale?: SiteLocale }) {

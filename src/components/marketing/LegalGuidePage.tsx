@@ -9,6 +9,7 @@ import {
   ExternalLink,
   MapPin,
   Scale,
+  UserRoundCheck,
 } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
@@ -19,6 +20,7 @@ import { legalGuideBySlug, type LegalGuide } from '@/lib/marketing/data/legalGui
 import { spanishLegalGuideBySlug } from '@/lib/marketing/data/spanishLegalGuides';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 import { SITE_URL } from '@/lib/marketing/site';
+import { attorneyEntityId } from '@/lib/marketing/structured-data';
 
 /** The page's own words in each language; the guide supplies everything else. */
 const copy = {
@@ -30,6 +32,9 @@ const copy = {
     breadcrumb: 'Breadcrumb',
     eyebrow: (category: string) => `${category} guide`,
     updated: 'Updated',
+    reviewedBy: 'Reviewed by Kyle J. Scott, attorney since 1991',
+    attorneyPath: '/meet-the-team',
+    attorneyTitle: 'Founder and Trial Attorney',
     place: 'Orange County & Tustin',
     placeSchema: 'Orange County, California',
     contents: 'Guide contents',
@@ -68,6 +73,9 @@ const copy = {
     breadcrumb: 'Ruta de navegación',
     eyebrow: (category: string) => `Guía · ${category}`,
     updated: 'Actualizada el',
+    reviewedBy: 'Revisada por Kyle J. Scott, abogado desde 1991',
+    attorneyPath: '/es/equipo',
+    attorneyTitle: 'Fundador y abogado litigante',
     place: 'Condado de Orange y Tustin',
     placeSchema: 'Condado de Orange, California',
     contents: 'Contenido de la guía',
@@ -111,6 +119,9 @@ export function LegalGuidePage({ guide, locale = 'en' }: { guide: LegalGuide & {
     .map((slug) => guideBySlug(slug))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
   const hasDeadlineTool = (guide.englishSlug ?? guide.slug) === DEADLINE_TOOL_GUIDE;
+  // The attorney stands behind every guide: the page says so, and the article's author and reviewer
+  // are his Person entity (the full node lives on the team page).
+  const attorneyId = attorneyEntityId(locale);
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -130,7 +141,8 @@ export function LegalGuidePage({ guide, locale = 'en' }: { guide: LegalGuide & {
           { '@type': 'AdministrativeArea', name: text.placeSchema },
           { '@type': 'City', name: 'Tustin, California' },
         ],
-        author: { '@id': `${SITE_URL}/#legal-service` },
+        author: { '@id': attorneyId },
+        reviewedBy: { '@id': attorneyId },
         publisher: { '@id': `${SITE_URL}/#legal-service` },
       },
       {
@@ -151,6 +163,14 @@ export function LegalGuidePage({ guide, locale = 'en' }: { guide: LegalGuide & {
           acceptedAnswer: { '@type': 'Answer', text: faq.answer },
         })),
       },
+      {
+        '@type': 'Person',
+        '@id': attorneyId,
+        name: 'Kyle J. Scott',
+        jobTitle: text.attorneyTitle,
+        url: `${SITE_URL}${text.attorneyPath}`,
+        worksFor: { '@id': `${SITE_URL}/#legal-service` },
+      },
     ],
   };
 
@@ -169,6 +189,7 @@ export function LegalGuidePage({ guide, locale = 'en' }: { guide: LegalGuide & {
           <p className="legal-guide-description">{guide.description}</p>
           <div className="legal-guide-meta">
             <span><CalendarDays aria-hidden="true" /> {text.updated} {guide.updatedLabel}</span>
+            <span><UserRoundCheck aria-hidden="true" /> <Link href={text.attorneyPath}>{text.reviewedBy}</Link></span>
             <span><Clock3 aria-hidden="true" /> {guide.readingTime}</span>
             <span><MapPin aria-hidden="true" /> {text.place}</span>
           </div>

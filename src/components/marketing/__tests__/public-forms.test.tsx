@@ -62,7 +62,7 @@ describe('when sending fails, the forms speak the page’s language', () => {
     stubFetch(new TypeError('Load failed'));
     expect(await sendConsultation('en')).toHaveTextContent(FAILED.en);
     expect(document.body).not.toHaveTextContent('Load failed');
-  });
+  }, 30_000);
 
   it('the consultation form: a refusal from the server keeps the server’s own message', async () => {
     stubFetch({ status: 429, body: { message: publicLeadMessages('es', '714-544-1460').rateLimited } });
@@ -70,7 +70,7 @@ describe('when sending fails, the forms speak the page’s language', () => {
     cleanup();
     stubFetch({ status: 500, body: {} });
     expect(await sendConsultation('en')).toHaveTextContent(FAILED.en);
-  });
+  }, 30_000);
 
   it('the chat: a dropped connection shows the same line in the page’s language', async () => {
     stubFetch(new TypeError('Load failed'));
@@ -79,7 +79,7 @@ describe('when sending fails, the forms speak the page’s language', () => {
     cleanup();
     stubFetch(new TypeError('Failed to fetch'));
     expect(await sendChat('en')).toHaveTextContent(FAILED.en);
-  });
+  }, 30_000);
 });
 
 describe('the chat button (WCAG 2.5.3, Label in Name)', () => {

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { newsArticleLocalizedRoutes } from '@/lib/marketing/data/newsArticles';
+import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
 import { legalGuideLocalizedRoutes } from '@/lib/marketing/data/spanishLegalGuides';
+import { serviceAreaLocalizedRoutes } from '@/lib/marketing/data/spanishServiceAreas';
 import { SITE_URL } from '@/lib/marketing/site';
 
 export type SiteLocale = 'en' | 'es';
@@ -61,9 +63,26 @@ export const localizedRoutes = [
     en: '/orange-county-school-liability-attorney',
     es: '/es/abogado-de-responsabilidad-escolar-condado-de-orange',
   },
+  {
+    en: '/orange-county-motorcycle-accident-attorney',
+    es: '/es/abogado-de-accidentes-de-motocicleta-condado-de-orange',
+  },
+  {
+    en: '/orange-county-truck-accident-attorney',
+    es: '/es/abogado-de-accidentes-de-camion-condado-de-orange',
+  },
+  {
+    en: '/orange-county-pedestrian-accident-attorney',
+    es: '/es/abogado-de-accidentes-de-peatones-condado-de-orange',
+  },
+  {
+    en: '/orange-county-rideshare-accident-attorney',
+    es: '/es/abogado-de-accidentes-de-uber-y-lyft-condado-de-orange',
+  },
   { en: '/why-hire-us', es: '/es/por-que-elegirnos' },
   ...newsArticleLocalizedRoutes,
   ...legalGuideLocalizedRoutes,
+  ...serviceAreaLocalizedRoutes(Object.fromEntries(serviceAreas.map((area) => [area.key, area.path]))),
 ] as const;
 
 function normalizePath(pathname: string) {

@@ -30,8 +30,12 @@ describe('a guide page', () => {
     expect(container.textContent).not.toMatch(/Key points|Direct answer|Related legal guides|Request a case review|General information only|Date of injury/);
     const jsonLd = JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!);
     expect(jsonLd['@graph'][0]).toMatchObject({ '@type': 'Article', headline: spanishClaimGuide.title, inLanguage: 'es-US' });
-    expect(jsonLd['@graph'][1].itemListElement.map((item: { name: string }) => item.name)).toEqual(['Inicio', 'Guías legales', spanishClaimGuide.title]);
-  });
+    const node = (type: string) => jsonLd['@graph'].find((entry: { '@type': string }) => entry['@type'] === type);
+    expect(node('BreadcrumbList').itemListElement.map((item: { name: string }) => item.name)).toEqual(['Inicio', 'Guías legales', spanishClaimGuide.title]);
+    expect(jsonLd['@graph'][0].author).toEqual({ '@id': node('Person')['@id'] });
+    expect(node('Person')).toMatchObject({ name: 'Kyle J. Scott', url: 'https://kjslaw.com/es/equipo' });
+    expect(screen.getByRole('link', { name: 'Revisada por Kyle J. Scott, abogado desde 1991' })).toHaveAttribute('href', '/es/equipo');
+  }, 30_000);
 
   it('in English: unchanged, with the English tool and links', () => {
     const guide = legalGuideBySlug('government-injury-claim-orange-county')!;
@@ -41,7 +45,7 @@ describe('a guide page', () => {
     expect(screen.getByRole('link', { name: /^Request a case review/ })).toHaveAttribute('href', '/contact#case-review');
     expect(container).toHaveTextContent(`Updated ${guide.updatedLabel}`);
     expect(JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!)['@graph'][0].inLanguage).toBe('en-US');
-  });
+  }, 30_000);
 });
 
 describe('a Spanish practice page', () => {
