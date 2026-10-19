@@ -25,9 +25,10 @@ export type LegalPageContent = {
 
 const updatedEnglish = 'Last updated September 1, 2026';
 const updatedSpanish = 'Última actualización: 1 de septiembre de 2026';
-// The privacy policy changed when Google Analytics went up (docs/website-analytics.md).
-const updatedPrivacyEnglish = 'Last updated October 8, 2026';
-const updatedPrivacySpanish = 'Última actualización: 8 de octubre de 2026';
+// The privacy policy changed when Google Analytics went up (docs/website-analytics.md),
+// and again when the "Text messages" section was added (docs/website-content-compliance.md).
+const updatedPrivacyEnglish = 'Last updated October 19, 2026';
+const updatedPrivacySpanish = 'Última actualización: 19 de octubre de 2026';
 
 export const legalPages: Record<
   SiteLocale,
@@ -90,6 +91,14 @@ export const legalPages: Record<
           title: 'How information may be disclosed',
           paragraphs: [
             'Information may be available to firm personnel and to service providers that support website hosting, security, intake, communications, data storage, or other business operations. Those providers are expected to process information for the services they provide to the firm. Information may also be disclosed when reasonably necessary to comply with law, protect rights or safety, investigate misuse, or complete a business reorganization.',
+          ],
+        },
+        {
+          id: 'text-messages',
+          title: 'Text messages',
+          paragraphs: [
+            'If you choose “Text message” as your preferred contact method, or otherwise give the firm your mobile number and agree to receive texts, Kyle Scott Law will text you only about your inquiry or legal matter, such as scheduling, requests for information or documents, and updates. Message frequency varies. Message and data rates may apply. Reply STOP at any time to stop receiving texts, or HELP for help. You can also call 714-544-1460.',
+            'Kyle Scott Law does not sell, rent, or share your mobile telephone number or your consent to receive text messages with third parties or affiliates for marketing or promotional purposes. Apart from the telephone and messaging providers the firm uses to send and receive its texts, text-message opt-in data and consent are not shared with any third party.',
           ],
         },
         {
@@ -343,6 +352,14 @@ export const legalPages: Record<
           title: 'Cómo puede divulgarse la información',
           paragraphs: [
             'La información puede estar disponible para el personal del bufete y para proveedores que respaldan el alojamiento, la seguridad, la admisión, las comunicaciones, el almacenamiento de datos u otras operaciones. Se espera que dichos proveedores procesen la información para prestar servicios al bufete. También puede divulgarse información cuando sea razonablemente necesario para cumplir con la ley, proteger derechos o seguridad, investigar un uso indebido o completar una reorganización empresarial.',
+          ],
+        },
+        {
+          id: 'mensajes-de-texto',
+          title: 'Mensajes de texto',
+          paragraphs: [
+            'Si usted elige “Mensaje de texto” como método de contacto preferido, o de otro modo proporciona al bufete su número de celular y acepta recibir mensajes de texto, Kyle Scott Law le enviará mensajes de texto solo sobre su solicitud o asunto legal, como citas, solicitudes de información o documentos y novedades. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Responda STOP en cualquier momento para dejar de recibir mensajes, o HELP para obtener ayuda. También puede llamar al 714-544-1460.',
+            'Kyle Scott Law no vende, alquila ni comparte su número de celular ni su consentimiento para recibir mensajes de texto con terceros ni con afiliados para fines de mercadeo o promoción. Aparte de los proveedores de telefonía y mensajería que el bufete usa para enviar y recibir sus mensajes, los datos de aceptación y el consentimiento para mensajes de texto no se comparten con ningún tercero.',
           ],
         },
         {
