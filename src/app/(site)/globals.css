@@ -1746,3 +1746,9 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
   .header-language-switcher .language-switcher { min-height: 42px; padding: 0 8px; }
   .header-language-switcher .language-switcher > svg:first-child { display: none; }
 }
+
+/* City pages: every practice the firm handles, as plain links under the related practices (2026-10-19). */
+.practice-every-case-title { margin: 34px 0 0; color: var(--navy-deep); font-size: 18px; font-weight: 700; }
+.practice-every-case { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 14px 0 0; padding: 0; list-style: none; }
+.practice-every-case a { display: inline-flex; align-items: center; min-height: 44px; border: 1px solid rgba(20,65,129,.13); border-radius: 999px; background: white; padding: 0 16px; color: var(--navy-deep); font-size: 14px; font-weight: 600; }
+.practice-every-case a:hover,.practice-every-case a:focus-visible { border-color: rgba(11,87,199,.36); color: var(--blue); }

@@ -4,6 +4,11 @@
  * cases are filed, where people are treated, which corridors and venues
  * generate claims. No statistics are quoted that the firm cannot source.
  */
+import type { PageSource } from '@/lib/marketing/data/practiceAreas';
+import { northWestCountyServiceAreas } from '@/lib/marketing/data/serviceAreasNorthWestCounty';
+import { regionalServiceAreas } from '@/lib/marketing/data/serviceAreasRegional';
+import { southCountyServiceAreas } from '@/lib/marketing/data/serviceAreasSouthCounty';
+
 export type ServiceAreaData = {
   key: string;
   path: string;
@@ -20,6 +25,16 @@ export type ServiceAreaData = {
   faqs: { question: string; answer: string }[];
   guideSlugs: string[];
   relatedPracticePaths: string[];
+  /** Official sources for every figure and rule of law the page states, listed under "Sources". */
+  sources?: PageSource[];
+  /** Results (by their exact title in results.ts) shown under "Related recoveries". */
+  featuredResults?: string[];
+  /** A region rather than an Orange County city (Long Beach, the Inland Empire, Southern California). */
+  placeType?: 'City' | 'AdministrativeArea' | 'Place';
+  /** Shown in the hero and the site's areaServed; defaults to "<city>, California". */
+  placeName?: string;
+  /** The larger area the place is in, for its structured data; defaults to Orange County. */
+  containedIn?: string;
 };
 
 export const serviceAreas: ServiceAreaData[] = [
@@ -453,6 +468,9 @@ export const serviceAreas: ServiceAreaData[] = [
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'talk-to-insurance-adjuster-california', 'how-much-is-personal-injury-case-worth-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-traumatic-brain-injury-attorney', '/personal-injury-lawyer-orange-county'],
   },
+  ...northWestCountyServiceAreas,
+  ...southCountyServiceAreas,
+  ...regionalServiceAreas,
 ];
 
 export const serviceAreaByKey = Object.fromEntries(serviceAreas.map((area) => [area.key, area])) as Record<string, ServiceAreaData>;

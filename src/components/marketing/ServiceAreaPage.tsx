@@ -1,17 +1,20 @@
 import { ArrowRight, Check, ChevronDown, MapPin, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
+import { PageSources } from '@/components/marketing/PageSources';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
+import { flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import type { ServiceAreaData } from '@/lib/marketing/data/serviceAreas';
 import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 import { SITE_URL } from '@/lib/marketing/site';
+import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
 /** "a Tustin case", "an Irvine case": the article follows the city name's first sound. */
 export const withArticle = (city: string) => (/^[aeiou]/i.test(city) ? `an ${city}` : `a ${city}`);
@@ -48,6 +51,14 @@ const copy = {
     practicesEyebrow: 'Practice areas',
     practicesTitle: (city: string) => `Cases Kyle Scott Law handles for ${city} clients.`,
     allPractices: 'View every practice area',
+    results: 'Published case results',
+    resultsTitle: 'Related recoveries.',
+    allResults: 'View all results',
+    resultsPath: '/results',
+    recovery: 'Recovery',
+    disclaimer: 'Prior results do not guarantee a similar outcome.',
+    everyCase: (city: string) => `Every type of case we handle for ${city} clients.`,
+    sources: 'Sources',
     trustLabel: 'Kyle Scott Law practice information',
     years: '30+ years',
     yearsBody: 'Personal injury experience',
@@ -85,6 +96,14 @@ const copy = {
     practicesEyebrow: 'Áreas de práctica',
     practicesTitle: (city: string) => `Casos que Kyle Scott Law maneja para clientes de ${city}.`,
     allPractices: 'Ver todas las áreas de práctica',
+    results: 'Resultados publicados',
+    resultsTitle: 'Recuperaciones relacionadas.',
+    allResults: 'Ver todos los resultados',
+    resultsPath: '/es/resultados',
+    recovery: 'Recuperación',
+    disclaimer: 'Los resultados anteriores no garantizan un resultado similar.',
+    everyCase: (city: string) => `Todos los tipos de casos que manejamos para clientes de ${city}.`,
+    sources: 'Fuentes',
     trustLabel: 'Información de práctica de Kyle Scott Law',
     years: 'Más de 30 años',
     yearsBody: 'Experiencia en lesiones personales',
@@ -101,7 +120,11 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
   const spanish = locale === 'es';
   const text = copy[locale];
   const guides = (spanish ? spanishLegalGuides : legalGuides).filter((guide) => area.guideSlugs.includes(guide.slug));
-  const related = (spanish ? spanishPracticeAreas : practiceAreas).filter((practice) => area.relatedPracticePaths.includes(practice.path));
+  const localizedPractices = spanish ? spanishPracticeAreas : practiceAreas;
+  const related = localizedPractices.filter((practice) => area.relatedPracticePaths.includes(practice.path));
+  const allResults = [...flagshipResults, ...historicalResults];
+  const results = (area.featuredResults ?? []).map((title) => allResults.find((result) => result.title === title)).filter((result) => result !== undefined).map((result) => (spanish ? translateResultToSpanish(result) : result));
+  const placeName = area.placeName ?? `${area.city}, California`;
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -116,7 +139,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
         description: area.metaDescription,
         url: `${SITE_URL}${area.path}`,
         provider: { '@id': `${SITE_URL}/#legal-service` },
-        areaServed: { '@type': 'City', name: area.city, containedInPlace: { '@type': 'AdministrativeArea', name: 'Orange County, California' } },
+        areaServed: { '@type': area.placeType ?? 'City', name: area.city, containedInPlace: { '@type': 'AdministrativeArea', name: area.containedIn ?? 'Orange County, California' } },
         serviceType: text.serviceType,
         inLanguage: spanish ? 'es-US' : 'en-US',
       },
@@ -152,7 +175,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
         <aside className="practice-hero-summary" aria-label={text.serviceInfo(area.city)}>
           <span className="practice-hero-icon"><MapPin aria-hidden="true" /></span>
           <p>{text.serviceArea}</p>
-          <strong>{area.city}, California</strong>
+          <strong>{placeName}</strong>
           <ul>
             <li><MapPin aria-hidden="true" />{text.office}</li>
             <li><ShieldCheck aria-hidden="true" />{text.consultation}</li>
@@ -166,8 +189,10 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           <a href="#overview">{text.howHelps(area.city)}</a>
           <a href="#matters">{text.cases}</a>
           <a href="#local">{text.local}</a>
+          {results.length ? <a href="#results">{text.results}</a> : null}
           {guides.length ? <a href="#guides">{text.guides}</a> : null}
           <a href="#questions">{text.questions}</a>
+          {area.sources?.length ? <a href="#sources">{text.sources}</a> : null}
           <div className="practice-sidebar-contact"><MapPin aria-hidden="true" /><strong>Kyle Scott Law</strong><span>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</span><Link href={text.contactPath}>{text.contact} <ArrowRight aria-hidden="true" /></Link></div>
         </aside>
 
@@ -193,6 +218,14 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
             </div>
           </section>
 
+          {results.length ? <section className="practice-related-results" id="results" aria-labelledby="area-results-title">
+            <div className="practice-results-heading"><div><p className="eyebrow">{text.results}</p><h2 id="area-results-title">{text.resultsTitle}</h2></div><Link href={text.resultsPath}>{text.allResults} <ArrowRight aria-hidden="true" /></Link></div>
+            <div className={`practice-results-grid results-count-${results.length}`}>
+              {results.map((result) => <article key={result.title}><span>{resultOutcomeLabel(result, text.recovery)}</span><strong>{result.amount}</strong><h3>{result.title}</h3><p>{result.detail}</p></article>)}
+            </div>
+            <p className="results-disclaimer">{text.disclaimer}</p>
+          </section> : null}
+
           {guides.length ? <section className="practice-guide-links" id="guides" aria-labelledby="guide-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{text.guides}</p><h2 id="guide-title">{text.guidesTitle(area.city)}</h2></div><Link href={text.guidesPath}>{text.allGuides} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-guide-grid">{guides.map((guide) => <Link href={guide.path} key={guide.path}><span>{guide.category}</span><strong>{guide.title}</strong><small>{guide.readingTime}</small><ArrowRight aria-hidden="true" /></Link>)}</div>
@@ -206,9 +239,13 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
             <p className="practice-information-note">{text.note}</p>
           </section>
 
+          <PageSources sources={area.sources} locale={locale} />
+
           <section className="practice-more" aria-labelledby="more-practices-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{text.practicesEyebrow}</p><h2 id="more-practices-title">{text.practicesTitle(area.city)}</h2></div><Link href={text.practicesPath}>{text.allPractices} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-more-grid">{related.map((item) => <a href={item.path} key={item.key}><ShieldCheck aria-hidden="true" /><span><strong>{item.shortTitle}</strong><small>{item.description}</small></span><ArrowRight aria-hidden="true" /></a>)}</div>
+            <h3 className="practice-every-case-title">{text.everyCase(area.city)}</h3>
+            <ul className="practice-every-case">{localizedPractices.map((item) => <li key={item.key}><Link href={item.path}>{item.shortTitle}</Link></li>)}</ul>
           </section>
         </article>
       </div>

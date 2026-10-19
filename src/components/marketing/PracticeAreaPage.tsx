@@ -1,52 +1,22 @@
-import {
-  ArrowRight,
-  Brain,
-  BriefcaseMedical,
-  CarFront,
-  CarTaxiFront,
-  Check,
-  ChevronDown,
-  Dog,
-  Footprints,
-  HandHeart,
-  HeartHandshake,
-  MapPin,
-  Motorbike,
-  Scale,
-  ShieldCheck,
-  Truck,
-  UserRoundCheck,
-} from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, MapPin, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
+import { PageSources } from '@/components/marketing/PageSources';
+import { practiceIcons } from '@/components/marketing/practice-icons';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import { legalGuidesForPractice } from '@/lib/marketing/data/legalGuides';
 import { spanishLegalGuidesForPractice } from '@/lib/marketing/data/spanishLegalGuides';
-import { practiceAreas, type PracticeAreaData, type PracticeAreaIcon } from '@/lib/marketing/data/practiceAreas';
+import { practiceAreas, type PracticeAreaData } from '@/lib/marketing/data/practiceAreas';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 import { SITE_URL } from '@/lib/marketing/site';
 import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
-const iconMap = {
-  shield: ShieldCheck,
-  car: CarFront,
-  fall: UserRoundCheck,
-  medical: BriefcaseMedical,
-  dog: Dog,
-  brain: Brain,
-  support: HeartHandshake,
-  scale: Scale,
-  care: HandHeart,
-  motorcycle: Motorbike,
-  truck: Truck,
-  pedestrian: Footprints,
-  rideshare: CarTaxiFront,
-} satisfies Record<PracticeAreaIcon, typeof ShieldCheck>;
+const iconMap = practiceIcons;
 
 /** English headings use the practice name as an adjective: "car accident matters", not "car accidents matters". */
 export const practiceNounPhrase = (shortTitle: string) => shortTitle.toLowerCase().replace(/\b(accidents|bites)$/, (word) => word.slice(0, -1));
@@ -61,9 +31,12 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
   const Icon = iconMap[area.icon];
   const allResults = [...flagshipResults, ...historicalResults];
   const results = area.featuredResults.map((title) => allResults.find((result) => result.title === title)).filter((result) => result !== undefined).map((result) => spanish ? translateResultToSpanish(result) : result);
-  const currentIndex = localizedPractices.findIndex((item) => item.key === area.key);
-  const related = [1, 2, 3].map((offset) => localizedPractices[(currentIndex + offset) % localizedPractices.length]);
-  const guideLinks = spanish ? spanishLegalGuidesForPractice(area.key) : legalGuidesForPractice(area.key);
+  // A city + case page takes its guides and related practices from its county-wide practice.
+  const practiceKey = area.parentKey ?? area.key;
+  const currentIndex = localizedPractices.findIndex((item) => item.key === practiceKey);
+  const related = (area.parentKey ? [0, 1, 2] : [1, 2, 3]).map((offset) => localizedPractices[(currentIndex + offset) % localizedPractices.length]);
+  const guideLinks = spanish ? spanishLegalGuidesForPractice(practiceKey) : legalGuidesForPractice(practiceKey);
+  const place = area.city ? `${area.city}, California` : spanish ? 'Condado de Orange y California' : 'Orange County and California';
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -74,6 +47,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
       url: `${SITE_URL}${area.path}`,
       provider: { '@id': `${SITE_URL}/#legal-service` },
       areaServed: [
+        ...(area.city ? [{ '@type': 'City', name: `${area.city}, California` }] : []),
         { '@type': 'AdministrativeArea', name: 'Orange County, California' },
         { '@type': 'State', name: 'California' },
       ],
@@ -118,7 +92,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           <p>{spanish ? 'Área de práctica' : 'Practice area'}</p>
           <strong>{area.shortTitle}</strong>
           <ul>
-            <li><MapPin aria-hidden="true" />{spanish ? 'Condado de Orange y California' : 'Orange County and California'}</li>
+            <li><MapPin aria-hidden="true" />{place}</li>
             <li><ShieldCheck aria-hidden="true" />{spanish ? 'Consulta confidencial gratuita' : 'Free confidential consultation'}</li>
           </ul>
         </aside>
@@ -130,9 +104,10 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           <a href="#overview">{spanish ? 'Qué implica el reclamo' : 'What the claim involves'}</a>
           <a href="#matters">{spanish ? 'Casos que revisa el bufete' : 'Cases the firm reviews'}</a>
           <a href="#evidence">{spanish ? 'Información importante' : 'Information that can matter'}</a>
-          <a href="#results">{spanish ? 'Resultados publicados' : 'Published results'}</a>
+          {results.length ? <a href="#results">{spanish ? 'Resultados publicados' : 'Published results'}</a> : null}
           {guideLinks.length ? <a href="#guides">{spanish ? 'Guías legales' : 'Legal guides'}</a> : null}
           <a href="#questions">{spanish ? 'Preguntas frecuentes' : 'Common questions'}</a>
+          {area.sources?.length ? <a href="#sources">{spanish ? 'Fuentes' : 'Sources'}</a> : null}
           <div className="practice-sidebar-contact"><MapPin aria-hidden="true" /><strong>Kyle Scott Law</strong><span>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</span><a href={contactPath}>{spanish ? 'Contacte al bufete' : 'Contact the firm'} <ArrowRight aria-hidden="true" /></a></div>
         </aside>
 
@@ -156,13 +131,13 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
             <div className="practice-evidence-list">{area.evidence.map((item) => <div key={item}><ShieldCheck aria-hidden="true" /><span>{item}</span></div>)}</div>
           </section>
 
-          <section className="practice-related-results" id="results" aria-labelledby="practice-results-title">
+          {results.length ? <section className="practice-related-results" id="results" aria-labelledby="practice-results-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Resultados publicados' : 'Published case results'}</p><h2 id="practice-results-title">{spanish ? 'Recuperaciones relacionadas.' : 'Related recoveries.'}</h2></div><a href={resultsPath}>{spanish ? 'Ver todos los resultados' : 'View all results'} <ArrowRight aria-hidden="true" /></a></div>
             <div className={`practice-results-grid results-count-${results.length}`}>
               {results.map((result) => <article key={result.title}><span>{resultOutcomeLabel(result, spanish ? 'Recuperación' : 'Recovery')}</span><strong>{result.amount}</strong><h3>{result.title}</h3><p>{result.detail}</p></article>)}
             </div>
             <p className="results-disclaimer">{spanish ? 'Los resultados anteriores no garantizan un resultado similar.' : 'Prior results do not guarantee a similar outcome.'}</p>
-          </section>
+          </section> : null}
 
           {guideLinks.length ? <section className="practice-guide-links" id="guides" aria-labelledby="practice-guide-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Guías legales' : 'Legal guides'}</p><h2 id="practice-guide-title">{spanish ? `Respuestas a preguntas comunes sobre ${area.shortTitle.toLowerCase()}.` : `Answers to common ${area.shortTitle.toLowerCase()} questions.`}</h2></div><Link href={spanish ? '/es/guias' : '/guides'}>{spanish ? 'Ver todas las guías' : 'View all guides'} <ArrowRight aria-hidden="true" /></Link></div>
@@ -176,6 +151,8 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
             </div>
             <p className="practice-information-note">{spanish ? 'Esta página ofrece información general, no asesoría legal. Se necesita una consulta para evaluar los hechos, plazos, partes y leyes que pueden aplicarse a un asunto específico.' : 'This page provides general information, not legal advice. A consultation is needed to evaluate the facts, deadlines, parties, and law that may apply to a specific matter.'}</p>
           </section>
+
+          <PageSources sources={area.sources} locale={locale} />
 
           <section className="practice-more" aria-labelledby="more-practices-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Áreas de práctica relacionadas' : 'Related practice areas'}</p><h2 id="more-practices-title">{spanish ? 'Otros casos que maneja Kyle Scott Law.' : 'Other cases Kyle Scott Law handles.'}</h2></div><a href={practicesPath}>{spanish ? 'Ver todas las áreas de práctica' : 'View every practice area'} <ArrowRight aria-hidden="true" /></a></div>

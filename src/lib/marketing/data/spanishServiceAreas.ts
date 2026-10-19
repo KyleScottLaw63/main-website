@@ -1,4 +1,5 @@
 import type { ServiceAreaData } from '@/lib/marketing/data/serviceAreas';
+import { spanishRoundFourServiceAreas } from '@/lib/marketing/data/spanishServiceAreasRoundFour';
 
 /**
  * City pages in Spanish, at /es/abogado-de-lesiones-personales-<city>. Each translates the English
@@ -142,6 +143,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     guideSlugs: ['que-hacer-despues-de-un-accidente-de-auto-condado-de-orange', 'que-hacer-despues-de-una-mordedura-de-perro-condado-de-orange', 'como-probar-un-reclamo-por-resbalon-y-caida-california', 'quien-paga-las-facturas-medicas-accidente-de-auto-california'],
     relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-lesiones-personales-condado-de-orange'],
   },
+  ...spanishRoundFourServiceAreas,
 ];
 
 export const spanishServiceAreaByKey = Object.fromEntries(spanishServiceAreas.map((area) => [area.key, area])) as Record<string, SpanishServiceAreaData>;

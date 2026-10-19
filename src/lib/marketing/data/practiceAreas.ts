@@ -13,7 +13,22 @@ export type PracticeAreaIcon =
   | 'motorcycle'
   | 'truck'
   | 'pedestrian'
-  | 'rideshare';
+  | 'rideshare'
+  | 'bicycle'
+  | 'bus'
+  | 'burn'
+  | 'spine'
+  | 'sports'
+  | 'government'
+  | 'insurance'
+  | 'property'
+  | 'impaired'
+  | 'hit-and-run'
+  | 'catastrophic'
+  | 'child';
+
+/** An official page that states a figure or a rule of law the page relies on (the firm, 2026-10-19). */
+export type PageSource = { label: string; url: string };
 
 export type PracticeAreaData = {
   key: string;
@@ -32,7 +47,15 @@ export type PracticeAreaData = {
   faqs: { question: string; answer: string }[];
   featuredResults: string[];
   sourceUrl?: string;
+  /** Official sources for every figure and rule of law the page states, listed under "Sources". */
+  sources?: PageSource[];
+  /** A city + case page (e.g. Tustin dog bites): the city it serves. */
+  city?: string;
+  /** A city + case page: the county-wide practice it belongs to, for its guides and related practices. */
+  parentKey?: string;
 };
+
+import { roundFourPracticeAreas } from '@/lib/marketing/data/practiceAreasRoundFour';
 
 export const practiceAreas: PracticeAreaData[] = [
   {
@@ -589,6 +612,7 @@ export const practiceAreas: PracticeAreaData[] = [
     ],
     featuredResults: ['Pedestrian struck in a marked crosswalk', 'Pedestrian struck by pickup suffers back injury'],
   },
+  ...roundFourPracticeAreas,
 ];
 
 export const practiceAreaByKey = Object.fromEntries(practiceAreas.map((area) => [area.key, area])) as Record<string, PracticeAreaData>;

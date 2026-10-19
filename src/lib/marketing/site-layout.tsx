@@ -95,7 +95,7 @@ function legalServiceSchema(language: SiteLanguage) {
     // The county, each city with its own page, and the state.
     areaServed: [
       { '@type': 'AdministrativeArea', name: spanish ? 'Condado de Orange, California' : 'Orange County, California' },
-      ...serviceAreas.map((area) => ({ '@type': 'City', name: `${area.city}, California` })),
+      ...serviceAreas.map((area) => ({ '@type': area.placeType ?? 'City', name: area.placeName ?? `${area.city}, California` })),
       { '@type': 'State', name: 'California' },
     ],
     // The office's location and hours, as the Google Business Profile states them (2026-10-09).

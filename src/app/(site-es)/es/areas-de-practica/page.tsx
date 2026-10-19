@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from 'next';
-import { ArrowRight, Brain, BriefcaseMedical, CarFront, CarTaxiFront, Dog, Footprints, HandHeart, HeartHandshake, Motorbike, Scale, ShieldCheck, Truck, UserRoundCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
+import { practiceIcons } from '@/components/marketing/practice-icons';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
-import { type PracticeAreaIcon } from '@/lib/marketing/data/practiceAreas';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: localizedAlternates('/es/areas-de-practica'),
 };
 
-const iconMap = { shield: ShieldCheck, car: CarFront, fall: UserRoundCheck, medical: BriefcaseMedical, dog: Dog, brain: Brain, support: HeartHandshake, scale: Scale, care: HandHeart, motorcycle: Motorbike, truck: Truck, pedestrian: Footprints, rideshare: CarTaxiFront } satisfies Record<PracticeAreaIcon, typeof ShieldCheck>;
+const iconMap = practiceIcons;
 
 export default function SpanishPracticeAreasPage() {
   return (

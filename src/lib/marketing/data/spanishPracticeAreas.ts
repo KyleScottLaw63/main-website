@@ -1,5 +1,6 @@
 import type { PracticeAreaData } from '@/lib/marketing/data/practiceAreas';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
+import { spanishRoundFourPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreasRoundFour';
 
 export const spanishPracticeAreas: PracticeAreaData[] = [
   {
@@ -555,6 +556,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     ],
     featuredResults: ['Pedestrian struck in a marked crosswalk', 'Pedestrian struck by pickup suffers back injury'],
   },
+  ...spanishRoundFourPracticeAreas,
 ];
 
 export const spanishPracticeAreaByKey = Object.fromEntries(spanishPracticeAreas.map((area) => [area.key, area])) as Record<string, PracticeAreaData>;
