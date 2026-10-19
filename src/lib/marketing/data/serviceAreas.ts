@@ -37,6 +37,14 @@ export type ServiceAreaData = {
   containedIn?: string;
 };
 
+/** UCI Health (a public entity's own page): "the only Level 1 trauma center in Orange County". */
+const UCI_LEVEL_I: PageSource = { label: 'UCI Health — emergency services (the only Level I trauma center in Orange County)', url: 'https://www.ucihealth.org/medical-services/programs/emergency-services' };
+
+/** The county's list of trauma centers (it names them without their levels). */
+const OC_EMS_TRAUMA_CENTERS: PageSource = { label: 'Orange County EMS Policy 240.30 — Orange County specialty services, including trauma centers (effective June 1, 2026)', url: 'https://www.ochealthinfo.com/sites/healthcare/files/2026-06/240.30%20OC%20Specialty%20Service%20(6-2026).pdf' };
+const GOV_CLAIM_DEADLINE: PageSource = { label: 'Government Code § 911.2: six months to present an injury claim to a public entity — California Legislative Information', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=911.2' };
+const DOG_BITE_STATUTE: PageSource = { label: 'Civil Code § 3342: a dog owner’s liability for bites — California Legislative Information', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3342' };
+
 export const serviceAreas: ServiceAreaData[] = [
   {
     key: 'anaheim',
@@ -80,6 +88,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'prove-slip-and-fall-california', 'personal-injury-evidence-checklist-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county', '/orange-county-traumatic-brain-injury-attorney'],
+    sources: [UCI_LEVEL_I, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'irvine',
@@ -123,6 +132,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'uninsured-driver-accident-california', 'partly-at-fault-california-personal-injury', 'how-much-is-personal-injury-case-worth-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-traumatic-brain-injury-attorney', '/personal-injury-lawyer-orange-county'],
+    sources: [UCI_LEVEL_I],
   },
   {
     key: 'santa-ana',
@@ -155,7 +165,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     local: [
       { label: 'Where cases are filed', items: ['Orange County Superior Court, Central Justice Center — 700 Civic Center Drive West, Santa Ana', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana'] },
-      { label: 'Where people are treated', items: ['Orange County Global Medical Center, Santa Ana — a Level II trauma center', 'Providence St. Joseph Hospital, Orange', 'UCI Health — Orange (UCI Medical Center), the county’s Level I trauma center'] },
+      { label: 'Where people are treated', items: ['Orange County Global Medical Center, Santa Ana, which Orange County EMS lists as a trauma center', 'Providence St. Joseph Hospital, Orange', 'UCI Health — Orange (UCI Medical Center), the county’s Level I trauma center'] },
       { label: 'Reports and agencies', items: ['Santa Ana Police Department for collisions on city streets', 'California Highway Patrol for the 5, 55, and 22', 'Santa Ana Police Department Animal Services for bite reports'] },
     ],
     faqs: [
@@ -166,6 +176,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'california-personal-injury-statute-of-limitations', 'who-pays-medical-bills-after-car-accident-california', 'what-to-do-after-dog-bite-orange-county'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county', '/personal-injury-lawyer-orange-county'],
+    sources: [UCI_LEVEL_I, OC_EMS_TRAUMA_CENTERS, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'tustin',
@@ -209,6 +220,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'prove-slip-and-fall-california', 'personal-injury-evidence-checklist-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-school-liability-attorney', '/dog-bite-attorney-in-orange-county'],
+    sources: [UCI_LEVEL_I, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'orange',
@@ -252,6 +264,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'personal-injury-evidence-checklist-california', 'how-long-personal-injury-case-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-traumatic-brain-injury-attorney', '/dog-bite-attorney-in-orange-county'],
+    sources: [UCI_LEVEL_I, OC_EMS_TRAUMA_CENTERS, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'costa-mesa',
@@ -295,6 +308,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'prove-slip-and-fall-california', 'government-injury-claim-orange-county', 'talk-to-insurance-adjuster-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county', '/personal-injury-lawyer-orange-county'],
+    sources: [UCI_LEVEL_I, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'huntington-beach',
@@ -338,6 +352,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'uninsured-driver-accident-california', 'partly-at-fault-california-personal-injury'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-traumatic-brain-injury-attorney', '/dog-bite-attorney-in-orange-county'],
+    sources: [UCI_LEVEL_I, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'garden-grove',
@@ -370,7 +385,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     local: [
       { label: 'Where cases are filed', items: ['Orange County Superior Court, Central Justice Center — 700 Civic Center Drive West, Santa Ana', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana', 'West Justice Center — 8141 13th Street, Westminster, where criminal and traffic cases from Garden Grove are filed (a charge against the other driver, for example)'] },
-      { label: 'Where people are treated', items: ['Garden Grove Hospital and Medical Center, Garden Grove Boulevard', 'UCI Health — Fountain Valley', 'Orange County Global Medical Center, Santa Ana — a Level II trauma center', 'UCI Health — Orange (UCI Medical Center), the county’s Level I trauma center'] },
+      { label: 'Where people are treated', items: ['Garden Grove Hospital and Medical Center, Garden Grove Boulevard', 'UCI Health — Fountain Valley', 'Orange County Global Medical Center, Santa Ana, which Orange County EMS lists as a trauma center', 'UCI Health — Orange (UCI Medical Center), the county’s Level I trauma center'] },
       { label: 'Reports and agencies', items: ['Garden Grove Police Department for collisions and incidents on city streets', 'California Highway Patrol for the 22', 'Garden Grove Animal Care Services for bite reports'] },
     ],
     faqs: [
@@ -381,6 +396,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'what-to-do-after-dog-bite-orange-county', 'prove-slip-and-fall-california', 'who-pays-medical-bills-after-car-accident-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county', '/personal-injury-lawyer-orange-county'],
+    sources: [UCI_LEVEL_I, OC_EMS_TRAUMA_CENTERS, DOG_BITE_STATUTE],
   },
   {
     key: 'fullerton',
@@ -424,6 +440,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'partly-at-fault-california-personal-injury', 'personal-injury-evidence-checklist-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-traumatic-brain-injury-attorney', '/personal-injury-lawyer-orange-county'],
+    sources: [UCI_LEVEL_I, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'newport-beach',
@@ -467,6 +484,7 @@ export const serviceAreas: ServiceAreaData[] = [
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'talk-to-insurance-adjuster-california', 'how-much-is-personal-injury-case-worth-california'],
     relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-traumatic-brain-injury-attorney', '/personal-injury-lawyer-orange-county'],
+    sources: [UCI_LEVEL_I, GOV_CLAIM_DEADLINE],
   },
   ...northWestCountyServiceAreas,
   ...southCountyServiceAreas,

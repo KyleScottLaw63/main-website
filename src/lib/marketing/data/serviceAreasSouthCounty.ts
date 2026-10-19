@@ -37,7 +37,7 @@ export const officialSources = {
   centralJustice: { label: 'Orange County Superior Court — Central Justice Center', url: 'https://www.occourts.org/location/central-justice-center' },
   civilComplex: { label: 'Orange County Superior Court — Civil Complex Center', url: 'https://www.occourts.org/location/civil-complex-center' },
   harborJustice: { label: 'Orange County Superior Court — Harbor Justice Center', url: 'https://www.occourts.org/location/harbor-justice-center-newport-beach' },
-  ocems: { label: 'Orange County EMS Agency — Policy #240.30, Orange County specialty services (trauma centers)', url: 'https://www.ochealthinfo.com/sites/healthcare/files/2026-04/Attachment%235%20-%20Policy%20240.30%20OC%20Specialty%20Services%20REDLINE%20April%202026.pdf' },
+  ocems: { label: 'Orange County EMS Agency — Policy #240.30, Orange County specialty services (trauma centers; effective June 1, 2026)', url: 'https://www.ochealthinfo.com/sites/healthcare/files/2026-06/240.30%20OC%20Specialty%20Service%20(6-2026).pdf' },
   uciEmergency: { label: 'UCI Health — emergency services (Level I trauma center)', url: 'https://www.ucihealth.org/medical-services/programs/emergency-services' },
   sheriffRecords: { label: 'Orange County Sheriff’s Department — report request guidelines', url: 'https://www.ocsheriff.gov/commands-divisions/professional-services-command/records/information-management/report-request' },
   chpCapistrano: { label: 'California Highway Patrol — Capistrano Area', url: 'https://www.chp.ca.gov/find-an-office/border-division/690-capistrano/' },

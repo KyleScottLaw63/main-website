@@ -1,3 +1,4 @@
+import type { PageSource } from '@/lib/marketing/data/practiceAreas';
 import type { ServiceAreaData } from '@/lib/marketing/data/serviceAreas';
 import { spanishRoundFourServiceAreas } from '@/lib/marketing/data/spanishServiceAreasRoundFour';
 
@@ -9,6 +10,14 @@ import { spanishRoundFourServiceAreas } from '@/lib/marketing/data/spanishServic
  * hreflang on itself. `spanish-service-areas.test.ts` holds each translation to its original.
  */
 export type SpanishServiceAreaData = ServiceAreaData & { englishKey: string };
+
+/** UCI Health (página propia de una entidad pública): "the only Level 1 trauma center in Orange County". */
+const UCI_LEVEL_I: PageSource = { label: 'UCI Health — servicios de emergencia (el único centro de trauma de nivel I del Condado de Orange)', url: 'https://www.ucihealth.org/medical-services/programs/emergency-services' };
+
+/** La lista de centros de trauma del condado (sin sus niveles). */
+const OC_EMS_TRAUMA_CENTERS: PageSource = { label: 'Política 240.30 de Orange County EMS — servicios especializados del Condado de Orange, incluidos los centros de trauma (vigente desde el 1 de junio de 2026)', url: 'https://www.ochealthinfo.com/sites/healthcare/files/2026-06/240.30%20OC%20Specialty%20Service%20(6-2026).pdf' };
+const GOV_CLAIM_DEADLINE: PageSource = { label: 'Código de Gobierno, § 911.2: seis meses para presentar un reclamo por lesiones ante una entidad pública — California Legislative Information', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=911.2' };
+const DOG_BITE_STATUTE: PageSource = { label: 'Código Civil, § 3342: la responsabilidad del dueño de un perro por mordeduras — California Legislative Information', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3342' };
 
 export const spanishServiceAreas: SpanishServiceAreaData[] = [
   {
@@ -43,7 +52,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     ],
     local: [
       { label: 'Dónde se presentan los casos', items: ['Tribunal Superior del Condado de Orange, Central Justice Center — 700 Civic Center Drive West, Santa Ana', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana'] },
-      { label: 'Dónde se atiende a las personas', items: ['Orange County Global Medical Center, Santa Ana — centro de trauma de nivel II', 'Providence St. Joseph Hospital, Orange', 'UCI Health — Orange (UCI Medical Center), el centro de trauma de nivel I del condado'] },
+      { label: 'Dónde se atiende a las personas', items: ['Orange County Global Medical Center, Santa Ana, que los Servicios Médicos de Emergencia del Condado de Orange (Orange County EMS) incluyen como centro de trauma', 'Providence St. Joseph Hospital, Orange', 'UCI Health — Orange (UCI Medical Center), el centro de trauma de nivel I del condado'] },
       { label: 'Reportes y agencias', items: ['Departamento de Policía de Santa Ana (Santa Ana Police Department) para choques en calles de la ciudad', 'Patrulla de Caminos de California (CHP) para la 5, la 55 y la 22', 'Santa Ana Police Department Animal Services (control de animales de la policía de Santa Ana) para reportes de mordeduras'] },
     ],
     faqs: [
@@ -54,6 +63,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     ],
     guideSlugs: ['que-hacer-despues-de-un-accidente-de-auto-condado-de-orange', 'plazo-para-demandar-por-lesiones-personales-california', 'quien-paga-las-facturas-medicas-accidente-de-auto-california', 'que-hacer-despues-de-una-mordedura-de-perro-condado-de-orange'],
     relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-lesiones-personales-condado-de-orange'],
+    sources: [UCI_LEVEL_I, OC_EMS_TRAUMA_CENTERS, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'anaheim',
@@ -98,6 +108,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     ],
     guideSlugs: ['que-hacer-despues-de-un-accidente-de-auto-condado-de-orange', 'reclamo-gubernamental-por-lesiones-condado-de-orange', 'como-probar-un-reclamo-por-resbalon-y-caida-california', 'pruebas-para-un-reclamo-de-lesiones-personales-california'],
     relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange'],
+    sources: [UCI_LEVEL_I, GOV_CLAIM_DEADLINE],
   },
   {
     key: 'garden-grove',
@@ -131,7 +142,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     ],
     local: [
       { label: 'Dónde se presentan los casos', items: ['Tribunal Superior del Condado de Orange, Central Justice Center — 700 Civic Center Drive West, Santa Ana', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana', 'West Justice Center — 8141 13th Street, Westminster, donde se presentan los casos penales y de tránsito de Garden Grove (por ejemplo, un cargo contra el otro conductor)'] },
-      { label: 'Dónde se atiende a las personas', items: ['Garden Grove Hospital and Medical Center, Garden Grove Boulevard', 'UCI Health — Fountain Valley', 'Orange County Global Medical Center, Santa Ana — centro de trauma de nivel II', 'UCI Health — Orange (UCI Medical Center), el centro de trauma de nivel I del condado'] },
+      { label: 'Dónde se atiende a las personas', items: ['Garden Grove Hospital and Medical Center, Garden Grove Boulevard', 'UCI Health — Fountain Valley', 'Orange County Global Medical Center, Santa Ana, que los Servicios Médicos de Emergencia del Condado de Orange (Orange County EMS) incluyen como centro de trauma', 'UCI Health — Orange (UCI Medical Center), el centro de trauma de nivel I del condado'] },
       { label: 'Reportes y agencias', items: ['Departamento de Policía de Garden Grove (Garden Grove Police Department) para choques e incidentes en calles de la ciudad', 'Patrulla de Caminos de California (CHP) para la 22', 'Garden Grove Animal Care Services para reportes de mordeduras'] },
     ],
     faqs: [
@@ -142,6 +153,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     ],
     guideSlugs: ['que-hacer-despues-de-un-accidente-de-auto-condado-de-orange', 'que-hacer-despues-de-una-mordedura-de-perro-condado-de-orange', 'como-probar-un-reclamo-por-resbalon-y-caida-california', 'quien-paga-las-facturas-medicas-accidente-de-auto-california'],
     relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-lesiones-personales-condado-de-orange'],
+    sources: [UCI_LEVEL_I, OC_EMS_TRAUMA_CENTERS, DOG_BITE_STATUTE],
   },
   ...spanishRoundFourServiceAreas,
 ];

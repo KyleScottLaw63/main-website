@@ -83,7 +83,7 @@ describe('childhood sexual abuse deadlines on the pages (CCP §§ 340.1, 340.11)
 
   it('every page text that gives the age-40 rule also gives the law since 2024, with both sections', () => {
     // In English and Spanish: the school-liability page, the government-claim guide, the child sexual abuse page
-    // (one key point), and the childhood-abuse deadlines guide (its direct answer, first section, and first FAQ).
+    // (one key point), and the childhood-abuse deadlines guide (its direct answer, its "before 2024" section, and first FAQ).
     const texts = strings([practiceAreas, spanishPracticeAreas, legalGuides, spanishLegalGuides]).filter((text) => AGE_40.test(text));
     expect(texts.length).toBe(12);
     for (const text of texts) {
