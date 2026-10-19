@@ -171,11 +171,13 @@ const legalLinks = {
     ['Privacy Policy', '/privacy'],
     ['Legal Disclaimer', '/disclaimer'],
     ['Accessibility Statement', '/accessibility'],
+    ['Terms & Conditions', '/terms'],
   ],
   es: [
     ['Política de privacidad', '/es/privacidad'],
     ['Aviso legal', '/es/aviso-legal'],
     ['Declaración de accesibilidad', '/es/accesibilidad'],
+    ['Términos y condiciones', '/es/terminos'],
   ],
 };
 
