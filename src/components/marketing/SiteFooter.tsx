@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ArrowRight, ChevronDown, Mail, MapPin, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
@@ -361,6 +362,11 @@ export function SiteFooter({ locale = 'en' }: { locale?: SiteLocale }) {
                 <a href={href}>{city}</a>
               </li>
             ))}
+            {spanish ? null : (
+              <li>
+                <Link href="/areas-we-serve">All areas we serve</Link>
+              </li>
+            )}
           </ul>
         </nav>
 

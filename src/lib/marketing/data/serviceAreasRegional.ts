@@ -1,3 +1,205 @@
+/**
+ * Regional pages (round 4, approved by Kyle J. Scott on 2026-10-19): Long Beach, the Inland Empire,
+ * and Southern California. The firm's only office is in Tustin. Outside Orange County these pages
+ * list only courts and agencies the firm's research confirmed on official sites, and each figure or
+ * statement of law has an official source under "Official sources"
+ * (docs/website-content-compliance.md). The animal services agency named for bite reports is the
+ * one for the place where the bite happened, never OC Animal Care.
+ */
 import type { ServiceAreaData } from '@/lib/marketing/data/serviceAreas';
+import { officialSources as src } from '@/lib/marketing/data/serviceAreasSouthCounty';
 
-export const regionalServiceAreas: ServiceAreaData[] = [];
+export const regionalServiceAreas: ServiceAreaData[] = [
+  {
+    key: 'long-beach',
+    path: '/long-beach-personal-injury-attorney',
+    city: 'Long Beach',
+    title: 'Long Beach Personal Injury Attorney',
+    eyebrow: 'Serving Long Beach from the Tustin office',
+    description:
+      'Representation for people injured in Long Beach crashes on the 405, the 710, and Pacific Coast Highway, falls, dog attacks, and school injuries. The firm’s only office is in Tustin, in Orange County, and consultations are by phone or video.',
+    metaDescription:
+      'Long Beach personal injury lawyer for 405, 710 and PCH crashes, dog bites and school injuries. Free consultation by phone or video, in English or Spanish.',
+    placeType: 'City',
+    placeName: 'Long Beach, California',
+    containedIn: 'Los Angeles County, California',
+    introTitle: 'Long Beach claims run through Los Angeles County’s court and the city’s own agencies.',
+    intro: [
+      'Long Beach is in Los Angeles County, but it borders Orange County at Seal Beach and Los Alamitos, so a person who lives a few miles away in Orange County can be hurt under a different county’s court rules. Long Beach also runs its own police department, its own health department, and its own animal care services, so crash reports on city streets and bite reports come from city agencies, not Los Angeles County ones.',
+      'Kyle Scott Law represents Long Beach clients from its only office, in Tustin, in Orange County. A free review covers what happened, who controlled the road or property, which insurance applies, and which deadlines are running.',
+    ],
+    keyPoints: [
+      { title: 'The 405, the 710, and Pacific Coast Highway', body: 'The 405 crosses the city, the 710 runs along its west side to the Port of Long Beach, and Pacific Coast Highway (State Route 1) runs through its southern half. Caltrans and Metro describe the 710 as the principal connection for goods movement between the ports and the rail yards in Commerce and Vernon. Truck crashes often involve a motor carrier and several insurers, so evidence is secured early.' },
+      { title: 'Long Beach streets and police reports', body: 'The Long Beach Police Department investigates crashes on city streets. Copies of collision reports are requested with the department’s application form, mailed or delivered to its Information Management Division at 400 West Broadway, and the department says processing can take up to about six months. If an insurer argues the injured person was partly at fault, California’s comparative-fault rule (CACI No. 405) reduces a recovery by that share instead of barring it.' },
+      { title: 'Schools, city property, and government claims', body: 'The school district that serves Long Beach also serves Lakewood, Signal Hill, and Avalon on Catalina Island. Claims against the district are handled by its Risk Management office, and claims against the City go to the City Clerk at 411 West Ocean Boulevard. For an injury claim against either, a written government claim is generally due within six months (Government Code § 911.2).' },
+      { title: 'Dog bites in Long Beach', body: 'All animal bites to people are legally reportable in Long Beach. The bite is reported to the city’s Health Department, which notifies Animal Care Services, and dogs and cats are quarantined for at least 10 days. Under Civil Code § 3342, a dog’s owner is liable for bites in a public place or to someone lawfully on private property, even if the dog never bit before.' },
+    ],
+    matters: [
+      'Car, truck, and motorcycle collisions on the 405, the 710, Pacific Coast Highway, and Long Beach streets',
+      'Truck crashes involving port and delivery traffic',
+      'Falls and other unsafe-property injuries',
+      'Student injuries on campuses, fields, and trips, which follow the government claim rules',
+      'Dog bites in Long Beach neighborhoods and parks',
+    ],
+    local: [
+      { label: 'Where cases are filed', items: ['The Superior Court of Los Angeles County; every new civil case must include a Statement of Location (form LASC CIV 109), and for injury cases the listed reason is generally where the injury happened'] },
+      { label: 'Reports and agencies', items: ['Long Beach Police Department for city streets; California Highway Patrol for the 405, the 710, and other freeways', 'Long Beach Health Department, which notifies Long Beach Animal Care Services, for bite reports'] },
+      { label: 'Government claims', items: ['The Long Beach City Clerk, 411 West Ocean Boulevard, for the City; the school district’s Risk Management office for the district'] },
+    ],
+    faqs: [
+      { question: 'Where would a Long Beach injury case be filed?', answer: 'In the Superior Court of Los Angeles County, because Long Beach is in Los Angeles County. Every new civil case there must include a Statement of Location explaining the choice of courthouse, and for an injury case that is generally where the injury happened. Many claims resolve with the insurer before any lawsuit is filed.' },
+      { question: 'I live in Orange County but was hurt in Long Beach. Does that change anything?', answer: 'It can. A lawsuit may be filed where the injury happened or where a defendant lives (Code of Civil Procedure section 395), so a Long Beach injury often belongs in the Los Angeles court even if you live in Orange County. The police report, bite report, and any government claim also come from Long Beach agencies, not your home city.' },
+      { question: 'How do I get the police report for a Long Beach crash?', answer: 'For crashes on city streets, the Long Beach Police Department releases collision reports through its written application, mailed or delivered to the Information Management Division at 400 West Broadway; the department says processing can take up to about six months. Crashes on the 405, the 710, and other freeways are handled by the California Highway Patrol. Keep the report number you were given at the scene.' },
+      { question: 'A dog bit me in Long Beach. Who takes the report?', answer: 'Long Beach has its own Health Department, and bites are reported there; it notifies Long Beach Animal Care Services. Dogs and cats that bite are quarantined for at least 10 days. Under California Civil Code section 3342, a dog’s owner is liable for bite injuries in a public place or while you were lawfully on private property, even if the dog never bit anyone before.' },
+      { question: 'My child was hurt at a Long Beach public school. What should I know?', answer: 'A public school district is a public entity, so a written claim generally must be presented to the district within six months of the injury (Government Code section 911.2) before any lawsuit. Get medical care, keep the school’s incident paperwork, and note the names of staff and witnesses.' },
+      { question: 'Does Kyle Scott Law have a Long Beach office?', answer: 'No. The firm’s only office is at 17671 Irvine Blvd., Suite 210, in Tustin, in Orange County. It represents Long Beach clients from there. The first consultation is free and can be by phone or video, in English or Spanish, and in-person meetings are arranged when a case calls for one.' },
+    ],
+    guideSlugs: ['california-personal-injury-statute-of-limitations', 'government-injury-claim-orange-county', 'pedestrian-accident-claims-california', 'personal-injury-evidence-checklist-california'],
+    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-truck-accident-attorney', '/orange-county-school-liability-attorney', '/dog-bite-attorney-in-orange-county'],
+    featuredResults: ['Student suffers skull fracture and brain bleed', 'Shoulder surgery after slip and fall in supermarket', 'Rear-end freeway crash causes back injury'],
+    sources: [
+      src.ccp395,
+      src.gov911_2,
+      src.civ3342,
+      src.caci405,
+      src.lasc109,
+      { label: 'Caltrans and Metro — I-710 Corridor Project Final EIR/EIS, Volume 1', url: 'https://dot.ca.gov/-/media/dot-media/district-7/documents/env-docs/i-710-final-eir_eis-volume-1_reduced_a11y.pdf' },
+      { label: 'City of Long Beach — request a police report', url: 'https://longbeach.gov/police/how-do-i/request-a-police-report' },
+      { label: 'City of Long Beach — animal bite reporting (Health Department)', url: 'https://www.longbeach.gov/health/diseases-and-condition/reporting-requirement/animal-bite-reporting/' },
+      { label: 'City of Long Beach — claim form (City Clerk)', url: 'https://longbeach.gov/cityclerk/services/claim-form' },
+      { label: 'Long Beach school district — schools and cities served', url: 'https://www.lbschools.net/our-schools/home' },
+      { label: 'Long Beach school district — Risk Management', url: 'https://www.lbschools.net/departments/risk-management/home' },
+    ],
+  },
+  {
+    key: 'inland-empire',
+    path: '/inland-empire-personal-injury-attorney',
+    city: 'Inland Empire',
+    title: 'Inland Empire Personal Injury Attorney',
+    eyebrow: 'Serving Riverside and San Bernardino counties from the Tustin office',
+    description:
+      'Representation for people injured in Riverside and San Bernardino counties, in crashes on the 91, the 15, the 10, and the 215, in falls, in dog attacks, and in medical malpractice cases. The firm’s only office is in Tustin, in Orange County.',
+    metaDescription:
+      'Inland Empire personal injury lawyer for crashes, falls, dog bites and malpractice in Riverside and San Bernardino counties. Free consultation by phone or video, in English or Spanish.',
+    placeType: 'Place',
+    placeName: 'The Inland Empire',
+    containedIn: 'Riverside and San Bernardino Counties, California',
+    introTitle: 'Two counties, two superior courts, and many local agencies.',
+    intro: [
+      'The Inland Empire is usually defined as Riverside and San Bernardino counties, centered on the cities of Riverside and San Bernardino. Each county has its own superior court, sheriff, and animal services agency, and many cities run their own police and animal control. Which ones apply depends on exactly where the injury happened.',
+      'Kyle Scott Law represents Inland Empire clients from its only office, in Tustin, and its published results include cases in both the Riverside and San Bernardino superior courts. A free review covers what happened, who controlled the road or property, which insurance applies, and which deadlines are already running.',
+    ],
+    keyPoints: [
+      { title: 'The 91 between Orange and Riverside counties', body: 'The 91 is a main link between Orange County and Riverside County. In western Riverside County, the California Highway Patrol’s Riverside Area patrols the 91, the 15, the 215, the 60, the 71, and the 74. A crash near the county line may fall in either county, which decides the court, the agencies, and any government claim.' },
+      { title: 'The 15, the 10, and the High Desert', body: 'In San Bernardino County, the CHP’s Rancho Cucamonga Area covers freeways and unincorporated roads across Chino, Chino Hills, Fontana, Montclair, Ontario, Rancho Cucamonga, and Upland. North of the Cajon Pass, the Victorville Area serves High Desert communities including Apple Valley, Victorville, Hesperia, and Adelanto and patrols parts of the 15 and US 395. The Morongo Basin Area covers Highway 62 through Joshua Tree. City police handle crashes on their own city streets.' },
+      { title: 'Dog bites in Riverside County and the High Desert', body: 'Who takes a bite report depends on the city. Riverside County Animal Services covers unincorporated areas and contract cities including Riverside, Hemet, Jurupa Valley, Eastvale, and Indio; cities such as Corona and Moreno Valley run their own, and Animal Friends of the Valley serves Temecula, Murrieta, Menifee, and Lake Elsinore. San Bernardino County Animal Care serves all unincorporated areas, including Joshua Tree, plus Big Bear Lake, Highland, and Yucaipa; Victorville runs its own Animal Services Division. Civil Code § 3342 makes the owner liable for bites in a public place or to someone lawfully on private property.' },
+      { title: 'Public entities and county-run hospitals', body: 'When a county, city, school district, or county-run hospital may be responsible, a written government claim is generally due within six months (Government Code § 911.2). For care at a public hospital, that is in addition to the separate medical malpractice time limits (Code of Civil Procedure § 340.5).' },
+    ],
+    matters: [
+      'Car, truck, and motorcycle collisions on the 91, the 15, the 10, the 215, and Inland Empire streets, including uninsured drivers',
+      'Dog bites in Riverside County cities and in High Desert communities such as Victorville and Joshua Tree',
+      'Pedestrian and bicycle injuries in crosswalks and along arterial roads',
+      'Falls and other unsafe-property injuries',
+      'Medical malpractice, including missed diagnoses and treatment errors and care at county-run hospitals',
+    ],
+    local: [
+      { label: 'Where cases are filed (Riverside County)', items: ['Riverside Superior Court — civil cases are heard at the Historic Courthouse, 4050 Main Street, Riverside, and at other courthouses in the county, and the court has adjusted where civil cases from some communities are filed, so the firm confirms the current location for each case'] },
+      { label: 'Where cases are filed (San Bernardino County)', items: ['San Bernardino Superior Court accepts limited and unlimited civil cases at the San Bernardino Justice Center, 247 West Third Street; the Rancho Cucamonga Courthouse, 8303 Haven Avenue; and the Victorville Courthouse, 14455 Civic Drive, each serving listed communities'] },
+      { label: 'Reports and agencies', items: ['CHP Riverside, Rancho Cucamonga, San Bernardino, Victorville, and Morongo Basin Areas for freeways, state highways, and unincorporated roads; city police for city streets', 'The animal services agency of the city or county where the bite happened (Riverside County Animal Services, San Bernardino County Animal Care, or the city’s own agency) for bite reports'] },
+      { label: 'Government claims', items: ['The clerk or claims office of the city, county, school district, or agency that may be responsible'] },
+    ],
+    faqs: [
+      { question: 'Does Kyle Scott Law handle cases in Riverside and San Bernardino counties?', answer: 'Yes. The firm represents people injured in both counties, and its published results include cases in the Riverside and San Bernardino superior courts, such as a Fontana intersection crash and a Hemet crosswalk case. Its only office is in Tustin, and the first consultation can be by phone or video.' },
+      { question: 'Where would an Inland Empire injury case be filed?', answer: 'Usually in the superior court of the county where the injury happened, or where a defendant lives (Code of Civil Procedure section 395). Riverside Superior Court hears civil cases at the Historic Courthouse in Riverside and other courthouses in the county. San Bernardino Superior Court hears civil cases at the San Bernardino Justice Center and the Rancho Cucamonga and Victorville courthouses, depending on the community.' },
+      { question: 'A dog bit me in Victorville, Joshua Tree or elsewhere in the High Desert. Who takes the report?', answer: 'It depends on the community. Victorville runs its own Animal Services Division, and Joshua Tree and other unincorporated areas are served by San Bernardino County Animal Care. Contact the agency for the community where the bite happened. Get medical care, photograph the wounds, and get the owner’s name, address and insurance. Under Civil Code section 3342, the owner is generally liable even if the dog never bit anyone before.' },
+      { question: 'I was hurt in a crash on the 91 near the county line. Which county handles it?', answer: 'The county where the crash happened, which can be Orange or Riverside on the 91. That decides which superior court is proper, which agencies hold the reports, and where any government claim goes. The California Highway Patrol’s Riverside Area patrols the 91 in western Riverside County. Keep the report number you were given at the scene.' },
+      { question: 'I was treated at a county hospital. Does that change my claim?', answer: 'It can. A county is a public entity, so a claim involving care at a county-run hospital generally requires a written government claim within six months (Government Code section 911.2), along with the medical malpractice time limits. Ask about deadlines early.' },
+      { question: 'Do I have to come to Tustin?', answer: 'No. Kyle Scott Law has no office in Riverside or San Bernardino County; it represents Inland Empire clients from 17671 Irvine Blvd. in Tustin. The first consultation is free and can be by phone or video, in English or Spanish, and in-person meetings are arranged when a case calls for one.' },
+    ],
+    guideSlugs: ['california-personal-injury-statute-of-limitations', 'medical-malpractice-statute-of-limitations-california', 'what-to-do-after-dog-bite-orange-county', 'government-injury-claim-orange-county'],
+    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/dog-bite-attorney-in-orange-county', '/orange-county-pedestrian-accident-attorney', '/orange-county-medical-malpractice-attorney'],
+    featuredResults: ['Mother and her children hurt in a Fontana intersection crash', 'Pedestrian struck in a marked crosswalk', 'Child suffers dog bites to abdomen'],
+    sources: [
+      src.ccp395,
+      src.civ3342,
+      src.gov911_2,
+      src.gov811_2,
+      src.ccp340_5,
+      { label: 'California Highway Patrol — Riverside Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/840-riverside/' },
+      { label: 'California Highway Patrol — Rancho Cucamonga Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/855-rancho-cucamonga/' },
+      { label: 'California Highway Patrol — San Bernardino Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/860-san-bernardino/' },
+      { label: 'California Highway Patrol — Victorville Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/850-victorville/' },
+      { label: 'California Highway Patrol — Morongo Basin Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/870-morongo-basin/' },
+      { label: 'Riverside County Department of Animal Services — service areas', url: 'https://rcdas.org/service-areas' },
+      { label: 'San Bernardino County Animal Care', url: 'https://animalcare.sbcounty.gov/' },
+      { label: 'City of Victorville — Animal Services', url: 'https://www.victorvilleca.gov/Government/City-Departments/Animal-Services' },
+      { label: 'Riverside Superior Court — civil filing location adjustments', url: 'https://www.riverside.courts.ca.gov/news/riverside-superior-court-announces-civil-filing-location-adjustments' },
+      { label: 'San Bernardino Superior Court — where can I file', url: 'https://sanbernardino.courts.ca.gov/general-information/where-can-i-file' },
+    ],
+  },
+  {
+    key: 'southern-california',
+    path: '/southern-california-personal-injury-lawyer',
+    city: 'Southern California',
+    title: 'Southern California Personal Injury Lawyer',
+    eyebrow: 'Serving Southern California from the Tustin office',
+    description:
+      'Representation for people injured in Orange, Los Angeles, Riverside, and San Bernardino counties, in every type of personal injury case listed on this page. The firm has one office, in Tustin, and consultations are by phone or video.',
+    metaDescription:
+      'Southern California personal injury lawyer for people hurt in Orange, Los Angeles, Riverside and San Bernardino counties. Free consultation by phone or video, in English or Spanish.',
+    placeType: 'Place',
+    placeName: 'Southern California',
+    containedIn: 'California',
+    introTitle: 'One office in Tustin, and results from four county courts.',
+    intro: [
+      'Kyle Scott Law represents people injured in Orange, Los Angeles, Riverside, and San Bernardino counties, and it handles every type of personal injury case listed on this page, from car crashes and dog bites to medical malpractice and wrongful death. The firm’s only office is at 17671 Irvine Blvd., Suite 210, in Tustin. It has no office in Los Angeles, Riverside, or San Bernardino County, so if you were hurt somewhere else you can start with a free consultation by phone or video, in English or Spanish.',
+      'The firm’s published verdicts and settlements include cases from the superior courts of Orange, Los Angeles, Riverside, and San Bernardino counties. Each county has its own courthouses, filing rules, police agencies, and animal control departments. This page explains what changes when your injury happened outside Orange County, and what stays the same.',
+    ],
+    keyPoints: [
+      { title: 'If you were injured in a different county than where you live', body: 'Your home address usually is not what decides where an injury case is filed. A personal injury lawsuit may be filed in the county where the injury happened or in the county where a defendant lives (Code of Civil Procedure § 395), and a corporation may also be sued where the liability arose or where its principal place of business is (§ 395.5). A Tustin resident hurt in a Fontana crash may end up in San Bernardino Superior Court, and a Riverside resident rear-ended on the 5 in Irvine may end up in the Orange County Superior Court.' },
+      { title: 'The records come from where it happened', body: 'The crash report comes from the police department or California Highway Patrol office that responded, the bite report from that area’s animal control or health agency, and the treatment records from the hospital that treated you. The firm requests them from the right agency, wherever you live, and works on the case from Tustin.' },
+      { title: 'A government claim goes to the government that may be responsible', body: 'If a city, county, school district, or transit agency may be at fault, a written claim generally must be presented to that entity within six months of the injury (Government Code § 911.2), usually by delivering or mailing it to its clerk or secretary (§ 915). No lawsuit for damages can be filed against it until the claim has been acted on or deemed rejected (§ 945.4). A lawsuit against a city, county, or local agency over an injury in its own territory can generally be tried in that county (Code of Civil Procedure § 394).' },
+      { title: 'The rules that are the same in every county', body: 'The deadline to sue is generally two years from the injury (Code of Civil Procedure § 335.1); claims against a doctor or hospital follow a separate rule (§ 340.5). A person partly at fault can still recover, reduced by that share (CACI No. 405). In a motor vehicle case, an injured person generally cannot recover non-economic damages, such as pain and suffering, if they owned the vehicle and it was uninsured, could not show financial responsibility as its driver, or were driving under the influence and convicted of it; there are exceptions (Civil Code § 3333.4). A dog’s owner is liable for bites in a public place or to someone lawfully on private property, even if the dog never bit before (Civil Code § 3342).' },
+    ],
+    matters: [
+      'Vehicle crashes: car, truck, motorcycle, rideshare, pedestrian, bicycle, bus, hit-and-run, and drunk-driver crashes',
+      'Unsafe property and places: falls, premises liability, dog bites, school liability, sports and recreation injuries, and claims against government entities',
+      'Serious injuries: traumatic brain, spinal cord, catastrophic, and burn injuries, and wrongful death',
+      'Abuse, neglect, and professional negligence: medical malpractice, elder abuse and neglect, sexual harassment and abuse, child sexual abuse, and insurance bad faith',
+    ],
+    local: [
+      { label: 'Where cases are filed', items: ['Orange County — the Orange County Superior Court hears unlimited civil cases at the Central Justice Center, 700 Civic Center Drive West, Santa Ana', 'Los Angeles County — every new civil case in the Los Angeles Superior Court must include a Statement of Location (form LASC CIV 109) giving the reason for the courthouse chosen; for injury cases the reason listed is generally the place where the injury happened', 'Riverside County — Riverside Superior Court hears civil cases at the Historic Courthouse, 4050 Main Street, Riverside, and at other courthouses in the county, and the court has adjusted where civil cases from some communities are filed', 'San Bernardino County — San Bernardino Superior Court accepts limited and unlimited civil filings at the San Bernardino Justice Center, the Rancho Cucamonga Courthouse, and the Victorville Courthouse, each serving listed communities'] },
+      { label: 'Reports and agencies', items: ['The police department or California Highway Patrol office that responded to the crash', 'The animal services agency of the city or county where the bite happened, for bite reports'] },
+      { label: 'Government claims', items: ['The clerk, secretary, or claims office of the city, county, school district, or agency that may be responsible'] },
+    ],
+    faqs: [
+      { question: 'Does Kyle Scott Law handle cases outside Orange County?', answer: 'Yes. The firm represents people injured in Orange, Los Angeles, Riverside and San Bernardino counties, and its published results include cases from the superior courts of all four. Its one office is in Tustin. Where the injury happened affects which court, agencies and local rules apply, so the free consultation starts there.' },
+      { question: 'Does the firm have an office in Los Angeles, Riverside or San Bernardino County?', answer: 'No. Kyle Scott Law has one office, at 17671 Irvine Blvd., Suite 210, in Tustin. It represents people from other counties from that office. The first consultation is free and can be by phone or video, in English or Spanish.' },
+      { question: 'I live in one county but was hurt in another. Where would my case be filed?', answer: 'Usually in the county where the injury happened or the county where a defendant lives (Code of Civil Procedure section 395). Your own home county usually isn’t what decides it. Many claims resolve with the insurer before any lawsuit is filed, so the court question may never come up.' },
+      { question: 'A city or county where I was hurt may be responsible. What is different?', answer: 'A written government claim generally must be presented to that city, county, school district or transit agency within six months of the injury (Government Code section 911.2), and a lawsuit can’t be filed until the claim is acted on or deemed rejected. It goes to the entity that may be responsible, not to the county where you live.' },
+      { question: 'Do I have to travel to Tustin?', answer: 'No. Your first conversation with Kyle Scott can be by phone or video, in English or Spanish, and in-person meetings in Tustin are arranged when a case calls for one. The firm requests police, medical and agency records from wherever the injury happened.' },
+      { question: 'How long do I have to file an injury claim in California?', answer: 'Generally two years from the injury to file a lawsuit (Code of Civil Procedure section 335.1). Claims against a public entity generally need a written government claim within six months. Claims against a doctor or hospital follow a separate rule with its own time limits (section 340.5). The same rules apply in every California county.' },
+    ],
+    guideSlugs: ['california-personal-injury-statute-of-limitations', 'partly-at-fault-california-personal-injury', 'uninsured-driver-accident-california', 'government-injury-claim-orange-county'],
+    relatedPracticePaths: ['/personal-injury-lawyer-orange-county', '/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county'],
+    featuredResults: ['Student suffers skull fracture and brain bleed', 'Mother and her children hurt in a Fontana intersection crash', 'Pedestrian struck in a marked crosswalk'],
+    sources: [
+      src.ccp395,
+      src.ccp3955,
+      src.ccp394,
+      src.gov911_2,
+      src.gov915,
+      src.gov945_4,
+      src.ccp335_1,
+      src.ccp340_5,
+      src.caci405,
+      src.civ3333_4,
+      src.civ3342,
+      src.lasc109,
+      src.courtDesignation,
+      src.centralJustice,
+      { label: 'Riverside Superior Court — civil filing location adjustments', url: 'https://www.riverside.courts.ca.gov/news/riverside-superior-court-announces-civil-filing-location-adjustments' },
+      { label: 'San Bernardino Superior Court — where can I file', url: 'https://sanbernardino.courts.ca.gov/general-information/where-can-i-file' },
+    ],
+  },
+];

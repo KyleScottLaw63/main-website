@@ -8,11 +8,11 @@ import { spanishServiceAreas } from '@/lib/marketing/data/spanishServiceAreas';
 afterEach(cleanup);
 
 describe('footer "Areas we serve"', () => {
-  it('links every English city page from the English footer', () => {
+  it('links every English city page, and the areas index, from the English footer', () => {
     render(<SiteFooter />);
     const nav = screen.getByRole('navigation', { name: 'Areas we serve' });
     const hrefs = within(nav).getAllByRole('link').map((link) => link.getAttribute('href'));
-    expect(hrefs.sort()).toEqual(serviceAreas.map((area) => area.path).sort());
+    expect(hrefs.sort()).toEqual([...serviceAreas.map((area) => area.path), '/areas-we-serve'].sort());
   });
 
   it('links every Spanish city page, and only Spanish pages, from the Spanish footer', () => {

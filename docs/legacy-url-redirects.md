@@ -47,6 +47,15 @@ Two posts withdrawn on 2026-10-01, on the firm's instruction: the $2.3M Riversid
 
 Six more old URLs that Search Console still reported in October 2026 answered 404, because the 2026-08-31 crawl never saw them: five undated WordPress posts that sat at the site root (`/recover-damages-from-car-crash-caused-by-drunk-driver`, `/auto-accident-attorney-on-california-fatal-crashes`, `/tales-of-an-orange-county-car-accident-lawyer`, `/why-are-there-so-many-dog-bite-cases`, `/in-person-court-appearances-now-the-norm`), and a second 2017 permalink for the State Farm post (`/2017/05/13/state-farm-insurance-company-s-law-firm-michael-maguire`). Each now has a rule in `redirect-rules.json` to its `/news` page, in one hop.
 
+**Content round 4 (2026-10-19).**
+- The old WordPress city guides (`/about-<city>-california`) now lead to their city pages, for every city that has one.
+  - 24 new rules were added.
+  - Fountain Valley and Laguna Beach used to go to the county page.
+  - Tustin and Anaheim had none and fell through to a 404.
+- The old Tustin practice pages lead to the Tustin city + case pages: `/car-accident-attorney-tustin-ca`, `/dog-bite-lawyer-tustin-ca`, `/motorcycle-accident-attorney-tustin-ca`, `/slip-and-fall-attorney-tustin-ca`, and `/medical-malpractice-attorney-tustin-ca`. `/sexual-molestation-attorney-tustin-ca` leads to the child sexual abuse page.
+- `/fiery-crash-that-took-5-lives-in-irvine` leads to its archived post.
+- Archived posts were not redirected to the new pages, because the firm keeps them at their own URLs. The withdrawn Riverside verdict posts stay 410.
+
 ## Adding or changing a redirect
 
 Edit `redirect-rules.json` (a `why` per rule is required by convention), keep specific sources above catch-alls, point each rule at the final page (never at a URL that redirects again), and re-run `npx vitest run src/lib/marketing/__tests__/legacy-url-redirects.test.ts` and the script. The dev server must restart to pick up a `redirect-rules.json` change (`next.config.ts` reads it at startup). `GONE` paths are regexes in `src/lib/site-proxy.ts` (mirrored in `scripts/verify-redirects.mjs`); list a file name there with and without its slash (`/^\/wp-login\.php\/?$/`), because file names are never normalized.

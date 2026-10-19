@@ -147,28 +147,28 @@
     },
     {
       "source": "/car-accident-attorney-tustin-ca",
-      "destination": "/orange-county-auto-accidents-lawyer",
-      "why": "doorway merged into practice page"
+      "destination": "/tustin-car-accident-lawyer",
+      "why": "Tustin practice page → its Tustin page (content round 4)"
     },
     {
       "source": "/slip-and-fall-attorney-tustin-ca",
-      "destination": "/orange-county-slip-and-fall-attorney",
-      "why": "doorway merged into practice page"
+      "destination": "/tustin-slip-and-fall-lawyer",
+      "why": "Tustin practice page → its Tustin page (content round 4)"
     },
     {
       "source": "/sexual-molestation-attorney-tustin-ca",
-      "destination": "/sexual-harassment-lawyer-in-orange-county",
-      "why": "doorway merged into practice page"
+      "destination": "/orange-county-child-sexual-abuse-lawyer",
+      "why": "Tustin practice page → its Tustin page (content round 4)"
     },
     {
       "source": "/motorcycle-accident-attorney-tustin-ca",
-      "destination": "/orange-county-motorcycle-accident-attorney",
-      "why": "doorway merged into the motorcycle practice page (content round 3, 2026-10-09; the planned destination in redirect-map.csv)"
+      "destination": "/tustin-motorcycle-accident-lawyer",
+      "why": "Tustin practice page → its Tustin page (content round 4)"
     },
     {
       "source": "/dog-bite-lawyer-tustin-ca",
-      "destination": "/dog-bite-attorney-in-orange-county",
-      "why": "doorway merged into practice page"
+      "destination": "/tustin-dog-bite-lawyer",
+      "why": "Tustin practice page → its Tustin page (content round 4)"
     },
     {
       "source": "/choosing-a-lawyer-with-excellent-credentials",
@@ -232,13 +232,143 @@
     },
     {
       "source": "/about-fountain-valley-california",
-      "destination": "/personal-injury-lawyer-orange-county",
-      "why": "no city page"
+      "destination": "/fountain-valley-personal-injury-attorney",
+      "why": "city guide folded into city page"
     },
     {
       "source": "/about-laguna-beach-california",
-      "destination": "/personal-injury-lawyer-orange-county",
-      "why": "no city page"
+      "destination": "/laguna-beach-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-brea-california",
+      "destination": "/brea-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-buena-park-california",
+      "destination": "/buena-park-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-cypress-california",
+      "destination": "/cypress-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-la-habra-california",
+      "destination": "/la-habra-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-la-palma-california",
+      "destination": "/la-palma-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-los-alamitos-california",
+      "destination": "/los-alamitos-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-placentia-california",
+      "destination": "/placentia-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-seal-beach-california",
+      "destination": "/seal-beach-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-stanton-california",
+      "destination": "/stanton-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-villa-park-california",
+      "destination": "/villa-park-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-westminster-california",
+      "destination": "/westminster-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-yorba-linda-california",
+      "destination": "/yorba-linda-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-aliso-viejo-california",
+      "destination": "/aliso-viejo-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-dana-point-california",
+      "destination": "/dana-point-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-laguna-hills-california",
+      "destination": "/laguna-hills-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-laguna-niguel-california",
+      "destination": "/laguna-niguel-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-laguna-woods-california",
+      "destination": "/laguna-woods-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-lake-forest-california",
+      "destination": "/lake-forest-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-mission-viejo-california",
+      "destination": "/mission-viejo-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-rancho-santa-margarita-california",
+      "destination": "/rancho-santa-margarita-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-san-clemente-california",
+      "destination": "/san-clemente-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-san-juan-capistrano-california",
+      "destination": "/san-juan-capistrano-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/medical-malpractice-attorney-tustin-ca",
+      "destination": "/tustin-medical-malpractice-lawyer",
+      "why": "Tustin practice page → its Tustin page (content round 4)"
+    },
+    {
+      "source": "/about-tustin-california",
+      "destination": "/tustin-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/about-anaheim-california",
+      "destination": "/anaheim-personal-injury-attorney",
+      "why": "city guide folded into city page"
+    },
+    {
+      "source": "/fiery-crash-that-took-5-lives-in-irvine",
+      "destination": "/news/fiery-crash-that-took-5-lives-in-irvine",
+      "why": "root-level WordPress post → its archived post"
     },
     {
       "source": "/category/car-accident-lawyer",

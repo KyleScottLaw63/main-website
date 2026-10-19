@@ -30,6 +30,7 @@ export default function PracticeAreasPage() {
           {practiceAreas.map((area) => { const Icon = iconMap[area.icon]; return <a href={area.path} key={area.key}><span><Icon aria-hidden="true" /></span><div><strong>{area.shortTitle}</strong><p>{area.description}</p><small>Review this practice area <ArrowRight aria-hidden="true" /></small></div></a>; })}
         </div>
       </section>
+      <p className="practice-hub-areas-link"><Link href="/areas-we-serve">Find your Orange County city <ArrowRight aria-hidden="true" /></Link></p>
       <section className="practice-hub-note"><div><p className="eyebrow light-eyebrow">Not sure which category applies?</p><h2>Tell the firm what happened.</h2><p>A short consultation request is enough to begin. Do not send medical records, Social Security numbers, or financial account information through the general form.</p></div><Link className="primary-button" href="/contact#case-review">Start a free consultation <ArrowRight aria-hidden="true" /></Link></section>
       <SiteFooter />
       <ChatWidget />

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from 'next/image';
 import {
@@ -22,16 +23,31 @@ import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ConsultationForm } from '@/components/marketing/ConsultationForm';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
+import { areaRegions, practiceGroups } from '@/lib/marketing/data/areasWeServe';
+import { practiceAreaByKey } from '@/lib/marketing/data/practiceAreas';
+import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 
 const terms = noRecoveryTerms.en;
+
+// The home page's own description; the layout's stays the default for pages that set none (content round 4, 2026-10-19).
+export const metadata: Metadata = {
+  description: 'Orange County personal injury lawyer Kyle Scott handles every type of injury case, from car crashes to malpractice. Free consultation, English or Spanish.',
+};
+
+// "Every type of personal injury case": every practice page, in the order of /areas-we-serve, from the same data,
+// so a new practice page appears here once its record exists. The county-wide hub is linked in the sentence above the list.
+const everyPractice = practiceGroups.flatMap((group) => group.keys).filter((key) => key !== 'personal-injury').flatMap((key) => (practiceAreaByKey[key] ? [practiceAreaByKey[key]] : []));
+
+// "Areas we serve": the Orange County regions of /areas-we-serve, each city linked to its page (a key with no record is left out).
+const countyRegions = areaRegions.filter((region) => region.name !== 'Beyond Orange County');
 
 const recoveries = [
   {
     amount: '$6.8M',
     type: 'School district negligence',
     title: 'Elementary school boys molested by a teacher',
-    meta: 'Confidential • Largest molestation settlement at the time',
+    meta: 'Confidential • Settlement',
     date: '2004',
     href: '/results',
     cta: 'View in results',
@@ -104,8 +120,8 @@ export default function Home() {
           <div className="hero-copy">
             <h1 id="home-title">Orange County Personal Injury Lawyer</h1>
             <span className="headline-rule" aria-hidden="true" />
-            <p className="hero-thesis">30+ years helping clients get the justice they deserve.</p>
-            <p className="hero-description">From its Tustin office, Kyle Scott Law represents people injured in auto accidents, falls, dog bites, medical malpractice, brain injury, and abuse cases.</p>
+            <p className="hero-thesis">Kyle Scott Law handles every type of personal injury case for people across Orange County and Southern California.</p>
+            <p className="hero-description">From its Tustin office, attorney Kyle J. Scott, admitted in 1991, represents people hurt in car and truck crashes, falls, dog bites, medical malpractice, brain injuries, abuse, and wrongful death.</p>
             <div className="hero-actions">
               <a className="primary-button" href="#consultation">Start a free consultation <ArrowRight aria-hidden="true" size={17} /></a>
               <a className="text-link" href="#results">View case results <ArrowRight aria-hidden="true" size={17} /></a>
@@ -124,9 +140,9 @@ export default function Home() {
           </div>
 
           <div className="trust-rail" aria-label="Firm highlights">
-            <div className="trust-item"><span className="trust-icon"><Award aria-hidden="true" /></span><span><strong>30+ years</strong><small>Personal injury trial experience</small></span></div>
+            <div className="trust-item"><span className="trust-icon"><Award aria-hidden="true" /></span><span><strong>Since 1991</strong><small>Practicing law in California</small></span></div>
             <div className="trust-item"><span className="trust-icon"><BadgeDollarSign aria-hidden="true" /></span><span><strong>$50+ million recovered</strong><small>Published verdicts &amp; settlements</small></span></div>
-            <div className="trust-item"><span className="trust-icon"><Scale aria-hidden="true" /></span><span><strong>No fee</strong><small>Unless there is a recovery</small></span></div>
+            <div className="trust-item"><span className="trust-icon"><Scale aria-hidden="true" /></span><span><strong>{terms.label}</strong><small>{terms.condition}</small></span></div>
           </div>
         </div>
 
@@ -141,7 +157,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="results-disclaimer">Prior results do not guarantee a similar outcome.</p>
+          <p className="results-disclaimer">Every case is different. Prior results do not guarantee a similar outcome.</p>
         </section>
       </section>
 
@@ -155,6 +171,9 @@ export default function Home() {
               return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
           })}
         </div>
+        <h3 className="practice-every-case-title">Every type of personal injury case, in one place.</h3>
+        <p>Kyle Scott Law handles each type of case below. See how each one works on the <Link href="/personal-injury-lawyer-orange-county">Orange County personal injury attorney page</Link>.</p>
+        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path}>{area.shortTitle}</Link></li>)}<li><Link href="/practice-areas">View every practice area</Link></li></ul>
         <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>No pressure. No generic intake line.</strong> Your consultation request goes directly into the firm’s private case-review system.</p></div>
       </section>
 
@@ -163,8 +182,8 @@ export default function Home() {
           <div className="firm-photo"><Image src="/kyle-scott.jpg" alt="Trial attorney Kyle Scott" width={600} height={900} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /><span>Trial attorney Kyle J. Scott</span></div>
           <div className="firm-copy">
             <h2 id="firm-title" className="firm-heading">About Us</h2>
-            <p className="firm-lead">I’m Kyle Scott. For more than 30 years, I’ve represented people who were seriously hurt, and the families who care for them, throughout Orange County and California. An injury can upend everything at once: your health, your work, your family’s plans. My job is to take the legal fight off your shoulders so you can focus on getting better.</p>
-            <p className="firm-experience">I handle <Link href="/orange-county-auto-accidents-lawyer">auto and truck accidents</Link>, Uber and Lyft collisions, <Link href="/orange-county-slip-and-fall-attorney">slip-and-fall and trip-and-fall injuries</Link>, <Link href="/dog-bite-attorney-in-orange-county">dog bites</Link>, product-liability matters, <Link href="/orange-county-wrongful-death-attorney">wrongful-death claims</Link>, and <Link href="/orange-county-traumatic-brain-injury-attorney">traumatic brain injuries</Link>. I also represent people in <Link href="/orange-county-medical-malpractice-attorney">medical malpractice</Link>, <Link href="/orange-county-elder-abuse-attorney">elder abuse and elder neglect</Link>, clergy and legal malpractice, school and institutional liability, <Link href="/sexual-harassment-lawyer-in-orange-county">sexual molestation and abuse, assault and battery, workplace sexual harassment</Link>, wrongful termination, and employment discrimination cases.</p>
+            <p className="firm-lead">I’m Kyle Scott. I was admitted to the State Bar of California in 1991 and founded this firm in 2003. I represent people who were seriously hurt, and the families who care for them, throughout Orange County and Southern California. An injury can upend everything at once: your health, your work, your family’s plans. My job is to take the legal fight off your shoulders so you can focus on getting better.</p>
+            <p className="firm-experience">I handle every type of personal injury case: <Link href="/orange-county-auto-accidents-lawyer">car, truck, motorcycle, rideshare, pedestrian, and bicycle crashes</Link>; <Link href="/orange-county-slip-and-fall-attorney">slip-and-fall and other unsafe-property injuries</Link>; <Link href="/dog-bite-attorney-in-orange-county">dog bites</Link>; <Link href="/orange-county-school-liability-attorney">school, institutional, and government claims</Link>; <Link href="/orange-county-traumatic-brain-injury-attorney">brain, spinal cord, burn, and other catastrophic injuries</Link>; and <Link href="/orange-county-wrongful-death-attorney">wrongful death</Link>. I also represent people in <Link href="/orange-county-medical-malpractice-attorney">medical malpractice</Link>, <Link href="/orange-county-elder-abuse-attorney">elder abuse and neglect</Link>, <Link href="/sexual-harassment-lawyer-in-orange-county">sexual abuse (including abuse by clergy)</Link>, and <Link href="/orange-county-insurance-bad-faith-attorney">insurance bad faith</Link> cases.</p>
             <p className="firm-experience">From our office in Tustin, my team and I dig into what happened, find everyone who may be responsible, document what the injury has cost you, and explain your options in plain language, so you can make each decision with the full picture.</p>
             <div className="firm-actions">
               <Link className="primary-button firm-team-button" href="/meet-the-team">Meet the full team <ArrowRight aria-hidden="true" /></Link>
@@ -209,6 +228,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section areas-home-section" id="areas-we-serve" aria-labelledby="areas-home-title">
+        <div className="news-heading">
+          <div><p className="eyebrow">Areas we serve</p><h2 id="areas-home-title">Injury cases from every Orange County city, and across Southern California.</h2></div>
+          <p>The firm’s office is in Tustin, and it represents people injured in every Orange County city and the county’s unincorporated communities. It also represents people hurt elsewhere in Southern California: its published results include cases in the San Bernardino, Riverside County, and Los Angeles superior courts.</p>
+        </div>
+        <div className="areas-region-grid">
+          {countyRegions.map((region) => (
+            <section key={region.name} aria-label={region.name}>
+              <h3>{region.name}</h3>
+              <ul>{region.keys.map((key) => { const area = serviceAreaByKey[key]; return area ? <li key={key}><Link href={area.path}>{area.city}</Link></li> : null; })}</ul>
+            </section>
+          ))}
+        </div>
+        <Link className="news-archive-link" href="/areas-we-serve">See all areas we serve <ArrowRight aria-hidden="true" /></Link>
+      </section>
+
       <section className="section news-section" id="news" aria-labelledby="news-title">
         <div className="news-heading">
           <div><p className="eyebrow">Latest from KJS Law</p><h2 id="news-title">Results, stories, and firm updates.</h2></div>
@@ -230,7 +265,7 @@ export default function Home() {
 
       <section className="consultation-section" id="consultation" aria-labelledby="consultation-title">
         <div className="consultation-copy">
-          <p className="eyebrow">Free consultation</p><h2 id="consultation-title">Start with a free consultation.</h2><p>Tell the firm what happened and how to reach you. No fee is charged unless there is a recovery.</p>
+          <p className="eyebrow">Free consultation</p><h2 id="consultation-title">Start with a free consultation.</h2><p>Tell the firm what happened and how to reach you. {terms.statement}.</p>
           <div className="contact-card"><Phone aria-hidden="true" /><span><small>Call the firm directly</small><a href="tel:+17145441460">714-544-1460</a></span></div>
           <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Tustin office</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
         </div>

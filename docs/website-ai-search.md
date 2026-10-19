@@ -12,6 +12,11 @@ People increasingly ask an assistant (ChatGPT, Claude, Perplexity, Gemini, Copil
 4. **Pages answer the question in the words people use.** Guides are titled as the question ("How Much Is a Personal Injury Case Worth in California?"), open with a direct answer, and carry FAQs; practice and city pages carry FAQs in the same form. Titles and H1s use both "lawyer" and "attorney" across the site, and each city page names the city in its title. The home page's first paragraph states the firm, the office city, and the case types in one sentence, which is what an assistant quotes.
 5. **IndexNow.** `public/indexnow-key.txt` holds the site's IndexNow key (served at `/indexnow-key.txt`, which the engines fetch to confirm ownership). `npm run submit:indexnow` posts every sitemap URL (or the paths given as arguments) to api.indexnow.org, which tells Bing, Yandex, Naver, and Seznam to fetch them now. Run it after a content release, after the deployment is live. Google ignores IndexNow; use Search Console's URL inspection for Google (docs/public-site-rendering.md). A 200 or 202 means accepted; a 422 means a URL was not on kjslaw.com or the key file was unreachable.
 
+**Content round 4 (2026-10-19).**
+- `public/llms.txt` lists every new practice, city, regional, and guide page, in both languages.
+- It also adds a "City and case-type pages" section and `/areas-we-serve`. `llms-txt.test.ts` keeps it complete.
+- The `LegalService` node's `areaServed` covers every city page, plus Long Beach, the Inland Empire, and Southern California, as `placeType` gives them. Its OfferCatalog covers every practice.
+
 ## Outside the repo (needs the firm's logins)
 
 - **Bing Places for Business.** Bing shows a business card for the firm ("Legal services in Tustin, CA", 2026-10-09) that nobody has claimed; the category should be "Personal injury attorney" and the hours, photos, and description should match Google. Bing Places can import the Google Business Profile in one step.

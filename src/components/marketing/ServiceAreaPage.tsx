@@ -245,7 +245,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
             <div className="practice-results-heading"><div><p className="eyebrow">{text.practicesEyebrow}</p><h2 id="more-practices-title">{text.practicesTitle(area.city)}</h2></div><Link href={text.practicesPath}>{text.allPractices} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-more-grid">{related.map((item) => <a href={item.path} key={item.key}><ShieldCheck aria-hidden="true" /><span><strong>{item.shortTitle}</strong><small>{item.description}</small></span><ArrowRight aria-hidden="true" /></a>)}</div>
             <h3 className="practice-every-case-title">{text.everyCase(area.city)}</h3>
-            <ul className="practice-every-case">{localizedPractices.map((item) => <li key={item.key}><Link href={item.path}>{item.shortTitle}</Link></li>)}</ul>
+            <ul className="practice-every-case">{localizedPractices.map((item) => <li key={item.key}><Link href={item.path}>{item.shortTitle}</Link></li>)}{spanish ? null : <li><Link href="/areas-we-serve">All Orange County areas we serve</Link></li>}</ul>
           </section>
         </article>
       </div>
