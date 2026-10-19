@@ -1,5 +1,7 @@
 import { ArrowRight, ChevronDown, Mail, MapPin, Phone } from 'lucide-react';
 import Image from 'next/image';
+import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
+import { spanishServiceAreas } from '@/lib/marketing/data/spanishServiceAreas';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 import { firmIdentity } from '@/lib/marketing/site';
 
@@ -156,6 +158,12 @@ export const practiceLinks = {
     ['Accidentes de peatones', '/es/abogado-de-accidentes-de-peatones-condado-de-orange'],
     ['Accidentes de Uber y Lyft', '/es/abogado-de-accidentes-de-uber-y-lyft-condado-de-orange'],
   ],
+};
+
+/** Every city page, from the city data, so each new city page is linked from every page of its language. */
+export const areaLinks = {
+  en: serviceAreas.map((area) => [area.city, area.path]).sort(([a], [b]) => a.localeCompare(b)),
+  es: spanishServiceAreas.map((area) => [area.city, area.path]).sort(([a], [b]) => a.localeCompare(b)),
 };
 
 const legalLinks = {
@@ -339,6 +347,22 @@ export function SiteFooter({ locale = 'en' }: { locale?: SiteLocale }) {
             </a>
           </div>
         </div>
+
+        <nav
+          className="footer-areas"
+          aria-labelledby="footer-areas-title"
+        >
+          <h3 id="footer-areas-title">
+            {spanish ? 'Ciudades que atendemos' : 'Areas we serve'}
+          </h3>
+          <ul>
+            {areaLinks[locale].map(([city, href]) => (
+              <li key={href}>
+                <a href={href}>{city}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div className="footer-bottom">
           <p>

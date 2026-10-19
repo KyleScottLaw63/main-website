@@ -48,6 +48,9 @@ const iconMap = {
   rideshare: CarTaxiFront,
 } satisfies Record<PracticeAreaIcon, typeof ShieldCheck>;
 
+/** English headings use the practice name as an adjective: "car accident matters", not "car accidents matters". */
+export const practiceNounPhrase = (shortTitle: string) => shortTitle.toLowerCase().replace(/\b(accidents|bites)$/, (word) => word.slice(0, -1));
+
 export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaData; locale?: SiteLocale }) {
   const spanish = locale === 'es';
   const localizedPractices = spanish ? spanishPracticeAreas : practiceAreas;
@@ -144,7 +147,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           </section>
 
           <section className="practice-matters" id="matters" aria-labelledby="matters-title">
-            <div className="practice-section-heading"><p className="eyebrow">{spanish ? 'Casos que revisa el bufete' : 'Cases the firm reviews'}</p><h2 id="matters-title">{spanish ? `Asuntos comunes de ${area.shortTitle.toLowerCase()}.` : `Common ${area.shortTitle.toLowerCase()} matters.`}</h2></div>
+            <div className="practice-section-heading"><p className="eyebrow">{spanish ? 'Casos que revisa el bufete' : 'Cases the firm reviews'}</p><h2 id="matters-title">{spanish ? `Asuntos comunes de ${area.shortTitle.toLowerCase()}.` : `Common ${practiceNounPhrase(area.shortTitle)} matters.`}</h2></div>
             <div className="practice-matter-grid">{area.matters.map((matter) => <div key={matter}><Check aria-hidden="true" /><span>{matter}</span></div>)}</div>
           </section>
 
@@ -167,7 +170,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           </section> : null}
 
           <section className="practice-faq" id="questions" aria-labelledby="practice-faq-title">
-            <div className="practice-section-heading"><p className="eyebrow">{spanish ? 'Preguntas frecuentes' : 'Common questions'}</p><h2 id="practice-faq-title">{spanish ? `Preguntas sobre reclamos de ${area.shortTitle.toLowerCase()}.` : `Questions about ${area.shortTitle.toLowerCase()} claims.`}</h2></div>
+            <div className="practice-section-heading"><p className="eyebrow">{spanish ? 'Preguntas frecuentes' : 'Common questions'}</p><h2 id="practice-faq-title">{spanish ? `Preguntas sobre reclamos de ${area.shortTitle.toLowerCase()}.` : `Questions about ${practiceNounPhrase(area.shortTitle)} claims.`}</h2></div>
             <div className="practice-faq-list">
               {area.faqs.map((faq) => <details key={faq.question}><summary><span>{faq.question}</span><ChevronDown aria-hidden="true" /></summary><p>{faq.answer}</p></details>)}
             </div>

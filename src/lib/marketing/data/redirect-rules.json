@@ -52,6 +52,36 @@
       "why": "blog index"
     },
     {
+      "source": "/2017/05/13/state-farm-insurance-company-s-law-firm-michael-maguire",
+      "destination": "/news/state-farm-insurance-companys-law-firm-michael-maguire-associates-o-c",
+      "why": "a second 2017 WordPress permalink for the same post (Search Console lists it); it answered 404"
+    },
+    {
+      "source": "/in-person-court-appearances-now-the-norm",
+      "destination": "/news/in-person-court-appearances-now-the-norm",
+      "why": "old undated WordPress post URL at the site root; Search Console still reports impressions for it (October 2026), and it answered 404"
+    },
+    {
+      "source": "/why-are-there-so-many-dog-bite-cases",
+      "destination": "/news/why-are-there-so-many-dog-bite-cases",
+      "why": "old undated WordPress post URL at the site root; Search Console still reports impressions for it (October 2026), and it answered 404"
+    },
+    {
+      "source": "/tales-of-an-orange-county-car-accident-lawyer",
+      "destination": "/news/tales-of-an-orange-county-car-accident-lawyer",
+      "why": "old undated WordPress post URL at the site root; Search Console still reports impressions for it (October 2026), and it answered 404"
+    },
+    {
+      "source": "/auto-accident-attorney-on-california-fatal-crashes",
+      "destination": "/news/auto-accident-attorney-on-california-fatal-crashes",
+      "why": "old undated WordPress post URL at the site root; Search Console still reports impressions for it (October 2026), and it answered 404"
+    },
+    {
+      "source": "/recover-damages-from-car-crash-caused-by-drunk-driver",
+      "destination": "/news/recover-damages-from-car-crash-caused-by-drunk-driver",
+      "why": "old undated WordPress post URL at the site root; Search Console still reports impressions for it (October 2026), and it answered 404"
+    },
+    {
       "source": "/kjs-law-blog/page/:page",
       "destination": "/news",
       "why": "blog index pagination"

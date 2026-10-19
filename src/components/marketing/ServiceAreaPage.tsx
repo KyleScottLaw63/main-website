@@ -13,6 +13,9 @@ import type { SiteLocale } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 import { SITE_URL } from '@/lib/marketing/site';
 
+/** "a Tustin case", "an Irvine case": the article follows the city name's first sound. */
+export const withArticle = (city: string) => (/^[aeiou]/i.test(city) ? `an ${city}` : `a ${city}`);
+
 /** The page's own words in each language; the city data supplies everything else. */
 const copy = {
   en: {
@@ -36,7 +39,7 @@ const copy = {
     questions: 'Common questions',
     contact: 'Contact the firm',
     mattersTitle: (city: string) => `Common ${city} injury matters.`,
-    localTitle: (city: string) => `Where a ${city} case actually happens.`,
+    localTitle: (city: string) => `Where ${withArticle(city)} case actually happens.`,
     localBody: 'The facts of a claim live in specific places: the courthouse where it would be filed, the hospitals that hold the treatment records, and the agencies that wrote the report. Knowing them from day one shortens everything that follows.',
     guidesTitle: (city: string) => `Answers to questions ${city} clients ask.`,
     allGuides: 'View all guides',
