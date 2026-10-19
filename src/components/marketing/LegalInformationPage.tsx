@@ -6,6 +6,17 @@ import { StructuredData } from '@/components/marketing/StructuredData';
 import type { LegalPageContent } from '@/lib/marketing/data/legalPages';
 import { SITE_URL, firmIdentity } from '@/lib/marketing/site';
 
+/** The firm's phone number and email inside legal-page text become tap-to-call and mailto links. */
+function withContactLinks(text: string) {
+  const parts = text.split(/(714-544-1460|Team@kjslaw\.com)/);
+  if (parts.length === 1) return text;
+  return parts.map((part, index) => {
+    if (part === '714-544-1460') return <a key={index} href="tel:+17145441460">{part}</a>;
+    if (part === firmIdentity.email) return <a key={index} href={`mailto:${firmIdentity.email}`}>{part}</a>;
+    return part;
+  });
+}
+
 export function LegalInformationPage({
   content,
 }: {
@@ -75,12 +86,12 @@ export function LegalInformationPage({
             <section id={section.id} key={section.id}>
               <h2>{section.title}</h2>
               {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph}>{withContactLinks(paragraph)}</p>
               ))}
               {section.bullets ? (
                 <ul>
                   {section.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
+                    <li key={bullet}>{withContactLinks(bullet)}</li>
                   ))}
                 </ul>
               ) : null}
