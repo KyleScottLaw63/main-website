@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/privacy',
         '/disclaimer',
         '/accessibility',
+        '/terms',
       ].includes(englishPath);
       const isPracticePage =
         !isHome &&
