@@ -23,6 +23,7 @@ export const localizedRoutes = [
   { en: '/privacy', es: '/es/privacidad' },
   { en: '/disclaimer', es: '/es/aviso-legal' },
   { en: '/accessibility', es: '/es/accesibilidad' },
+  { en: '/terms', es: '/es/terminos' },
   {
     en: '/personal-injury-lawyer-orange-county',
     es: '/es/abogado-de-lesiones-personales-condado-de-orange',
