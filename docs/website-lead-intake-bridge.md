@@ -75,7 +75,7 @@ The app runs on its own subdomain (for example `https://app.kjslaw.com`): it mus
 
 - **Nothing in a URL.** Both forms send their JSON from `onSubmit` and carry a function `action` (`submitsThroughOnSubmit`), so a press before the page has finished loading is held in the browser instead of going out as a GET with the visitor's details in the address (test: `src/components/shared/__tests__/form-native-submission.test.tsx`).
 - **Page-language errors.** A refusal from the server keeps its own message; anything the form did not create itself (a dropped connection makes the browser throw "Failed to fetch" or "Load failed", always in English) shows the "could not be submitted, please call" line in the page's language (`src/components/marketing/submission-error.ts`; test: `public-forms.test.tsx`).
-- **SMS disclosure beside the choice.** When "Text message" is chosen, the disclosure appears beside it (English and Spanish); choosing it records the lead's text consent in the app.
+- **SMS disclosure under the permission box, always shown.** The disclosure (English and Spanish) sits right below the permission checkbox whether or not "Text message" is chosen, because the carriers' texting review (and Twilio's pre-check) looks for the SMS terms next to the consent box; the "How should we contact you?" field points to it (`aria-describedby`) when "Text message" is chosen. Choosing "Text message" is still what records the lead's text consent in the app; the wording is unchanged, so `PUBLIC_CONSENT_VERSION` is too.
 
 ## Verification
 
