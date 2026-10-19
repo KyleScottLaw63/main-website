@@ -9,7 +9,7 @@ import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas'
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 import { firmIdentity, SITE_URL } from '@/lib/marketing/site';
-import { attorneyEntityId } from '@/lib/marketing/structured-data';
+import { attorneyEntityId, websiteStructuredData } from '@/lib/marketing/structured-data';
 
 /**
  * Shared root-layout pieces for the public website. The English and Spanish
@@ -142,6 +142,7 @@ export function SiteRootLayout({ language, children }: { language: SiteLanguage;
     <html lang={language}>
       <body className={geist.variable}>
         <StructuredData data={legalServiceSchema(language)} />
+        <StructuredData data={websiteStructuredData(language === 'es-US' ? 'es' : 'en')} />
         {children}
         <RoutePrefetch />
         <SiteAnalytics />

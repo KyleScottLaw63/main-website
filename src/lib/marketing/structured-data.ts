@@ -1,5 +1,5 @@
 import { localeTags, type SiteLocale } from '@/lib/marketing/i18n';
-import { SITE_URL } from '@/lib/marketing/site';
+import { firmIdentity, SITE_URL } from '@/lib/marketing/site';
 
 const attorneyRoutes: Record<SiteLocale, string> = {
   en: '/meet-the-team',
@@ -19,6 +19,21 @@ export type NewsCollectionItem = {
   url: string;
   sourceUrl: string;
 };
+
+/** The site itself, so search results can show "Kyle Scott Law" as the site name. One per language, published by the firm. */
+export function websiteStructuredData(locale: SiteLocale) {
+  const spanish = locale === 'es';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': spanish ? `${SITE_URL}/es#website` : `${SITE_URL}/#website`,
+    url: spanish ? `${SITE_URL}/es` : SITE_URL,
+    name: firmIdentity.name,
+    alternateName: 'KJS Law',
+    inLanguage: spanish ? 'es-US' : 'en-US',
+    publisher: { '@id': `${SITE_URL}/#legal-service` },
+  };
+}
 
 export function attorneyEntityId(locale: SiteLocale) {
   return `${SITE_URL}${attorneyRoutes[locale]}#kyle-scott`;
