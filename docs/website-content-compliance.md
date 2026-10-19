@@ -205,7 +205,7 @@ Each card states only what the firm's own record supports. The $5.75M card (Kody
     3. **Spanish pages say exactly what their English pages say**, with the same cuts and sources.
   - **Unchanged, and reported to the firm:**
     - The Spanish home page and the Spanish versions of the six rewritten practice pages keep their approved text, so they say less than the English now.
-    - The English home page's About section no longer lists product liability, legal malpractice, assault and battery, wrongful termination, or employment discrimination; the firm decides whether to restore them.
+    - The English home page's About section keeps product liability, legal malpractice, assault and battery, workplace sexual harassment, wrongful termination, and employment discrimination (the firm, 2026-10-19). "Clergy malpractice" is not restored, because it is not a California tort (law audit); abuse by clergy stays.
     - Archived posts keep their URLs (the firm's keep-and-rewrite approach). None was redirected to a new page.
   - **Every page still follows the standing rules:**
     - No party from the firm's cases is named.
