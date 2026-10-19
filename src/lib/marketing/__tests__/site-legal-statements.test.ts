@@ -62,7 +62,7 @@ describe('what a client pays without a recovery (the firm’s decision, 2026-09-
     expect(offenders).toEqual([]);
     // The FAQ answers and the "why hire us" page carry it word for word.
     expect(practiceAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.en.statement))).toHaveLength(3);
-    expect(spanishPracticeAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.es.statement))).toHaveLength(2);
+    expect(spanishPracticeAreas.flatMap((area) => area.faqs.map((faq) => faq.answer)).filter((answer) => answer.includes(noRecoveryTerms.es.statement))).toHaveLength(3);
     expect(strings(whyHireUs.en).filter((text) => text.includes(noRecoveryTerms.en.statement))).toHaveLength(3);
     expect(strings(whyHireUs.es).filter((text) => text.includes(noRecoveryTerms.es.statement))).toHaveLength(3);
     // Reads every site source file; under a full parallel run it can pass 5 s on a busy machine.

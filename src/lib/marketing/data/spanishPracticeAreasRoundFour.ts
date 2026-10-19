@@ -10,34 +10,36 @@ import type { PageSource, PracticeAreaData } from '@/lib/marketing/data/practice
  * date passes (docs/website-content-compliance.md, "Calendar").
  */
 
-const CODE_NAMES = {
+export const CODE_NAMES = {
   BPC: 'Código de Negocios y Profesiones',
   CCP: 'Código de Procedimiento Civil',
   CIV: 'Código Civil',
   EDC: 'Código de Educación',
   EVID: 'Código de Evidencia',
+  FAC: 'Código de Alimentos y Agricultura',
   GOV: 'Código de Gobierno',
   HSC: 'Código de Salud y Seguridad',
   INS: 'Código de Seguros',
   LAB: 'Código Laboral',
   PEN: 'Código Penal',
   PROB: 'Código de Sucesiones',
+  PUC: 'Código de Servicios Públicos',
   VEH: 'Código de Vehículos',
   WIC: 'Código de Bienestar e Instituciones',
 } as const;
 
 /** The official text of a California code section on the Legislature's site (the same URL the English page lists). */
-const leginfo = (lawCode: keyof typeof CODE_NAMES, sectionNum: string) =>
+export const leginfo = (lawCode: keyof typeof CODE_NAMES, sectionNum: string) =>
   `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=${lawCode}&sectionNum=${sectionNum}`;
 
 /** A code section as a source, labeled in Spanish; the official page itself is in English. */
-const ley = (lawCode: keyof typeof CODE_NAMES, sectionNum: string, note?: string): PageSource => ({
+export const ley = (lawCode: keyof typeof CODE_NAMES, sectionNum: string, note?: string): PageSource => ({
   label: `${CODE_NAMES[lawCode]} de California, § ${sectionNum}${note ? ` (${note})` : ''}`,
   url: leginfo(lawCode, sectionNum),
 });
 
 /** The Judicial Council's civil jury instructions, 2026 edition (one PDF; listed once per page). */
-const CACI_2026 = 'https://courts.ca.gov/system/files/file/judicial_council_of_california_civil_jury_instructions_2026.pdf';
+export const CACI_2026 = 'https://courts.ca.gov/system/files/file/judicial_council_of_california_civil_jury_instructions_2026.pdf';
 
 const caci = (numbers: string): PageSource => ({ label: `Consejo Judicial de California — Instrucciones al jurado en casos civiles (CACI) Nos. ${numbers} (edición 2026)`, url: CACI_2026 });
 

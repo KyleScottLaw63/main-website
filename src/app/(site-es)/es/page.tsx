@@ -23,6 +23,11 @@ import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ConsultationForm } from '@/components/marketing/ConsultationForm';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
+import { areaRegions, practiceGroups } from '@/lib/marketing/data/areasWeServe';
+import { practiceAreaByKey } from '@/lib/marketing/data/practiceAreas';
+import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
+import { spanishPracticeAreaByKey } from '@/lib/marketing/data/spanishPracticeAreas';
+import { spanishServiceAreaByKey } from '@/lib/marketing/data/spanishServiceAreas';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 
@@ -30,9 +35,31 @@ const terms = noRecoveryTerms.es;
 
 export const metadata: Metadata = {
   title: 'Abogado de lesiones personales en el Condado de Orange | Kyle Scott Law',
-  description: 'Kyle Scott Law representa a clientes de habla hispana en accidentes, caídas, mordeduras de perro, negligencia médica, lesiones cerebrales, abuso y muerte injusta.',
+  description: 'Kyle Scott, abogado de lesiones personales en el Condado de Orange, maneja todo tipo de casos de lesiones, desde choques de auto hasta negligencia médica. Consulta gratuita, en español o inglés.',
   alternates: localizedAlternates('/es'),
 };
+
+// "Todos los tipos de casos de lesiones personales": every practice page, in the order of /areas-we-serve, from the same data,
+// so a new practice page appears here once its record exists. Each links its Spanish page; a practice with no Spanish record
+// links the English page. The county-wide hub is linked in the sentence above the list.
+const everyPractice = practiceGroups
+  .flatMap((group) => group.keys)
+  .filter((key) => key !== 'personal-injury')
+  .flatMap((key) => {
+    const page = spanishPracticeAreaByKey[key] ?? practiceAreaByKey[key];
+    return page ? [{ key, path: page.path, shortTitle: page.shortTitle, inEnglish: !spanishPracticeAreaByKey[key] }] : [];
+  });
+
+// "Áreas que atendemos": the Orange County regions of /areas-we-serve (which has no Spanish version), each city linked to its
+// Spanish page where there is one and to its English page otherwise (a key with no record is left out).
+const regionNames: Record<string, string> = {
+  'Central Orange County': 'Centro del Condado de Orange',
+  'North Orange County': 'Norte del Condado de Orange',
+  'West Orange County': 'Oeste del Condado de Orange',
+  'Coastal Orange County': 'Costa del Condado de Orange',
+  'South Orange County': 'Sur del Condado de Orange',
+};
+const countyRegions = areaRegions.filter((region) => region.name !== 'Beyond Orange County');
 
 const practiceAreas = [
   { title: 'Lesiones personales', copy: 'Reclamos por lesiones graves y negligencia', icon: ShieldCheck, href: '/es/abogado-de-lesiones-personales-condado-de-orange' },
@@ -46,7 +73,7 @@ const practiceAreas = [
 ];
 
 const recoveries = [
-  { amount: '$6.8M', type: 'Negligencia del distrito escolar', title: 'Alumnos de primaria abusados sexualmente por un maestro', meta: 'Confidencial • Mayor acuerdo por abuso sexual en ese momento', date: '2004', href: '/es/resultados', cta: 'Ver en resultados' },
+  { amount: '$6.8M', type: 'Negligencia del distrito escolar', title: 'Alumnos de primaria abusados sexualmente por un maestro', meta: 'Confidencial • Acuerdo', date: '2004', href: '/es/resultados', cta: 'Ver en resultados' },
   { amount: '$5.75M', type: 'Veredicto del jurado', title: 'Estudiante sufre fractura de cráneo y hemorragia cerebral', meta: 'Juicio con jurado de dos semanas • Tribunal Superior de Los Ángeles', date: '2019', href: '/es/resultados#flagship-title', cta: 'Ver en resultados' },
   { amount: '$2.7M', type: 'Acuerdo', title: 'Madre e hijos lesionados en un choque en una intersección de Fontana', meta: 'Tribunal Superior de San Bernardino • Acuerdo combinado para cinco personas lesionadas', date: '2026', href: '/es/resultados#results-explorer-title', cta: 'Ver en resultados' },
 ];
@@ -66,8 +93,8 @@ export default function SpanishHomePage() {
           <div className="hero-copy">
             <h1 id="home-title">Abogado de lesiones personales en el Condado de Orange</h1>
             <span className="headline-rule" aria-hidden="true" />
-            <p className="hero-thesis">Más de 30 años ayudando a clientes lesionados.</p>
-            <p className="hero-description">Desde su oficina en Tustin, Kyle Scott Law representa a personas lesionadas en accidentes, caídas, mordeduras de perro, negligencia médica, lesiones cerebrales y casos de abuso.</p>
+            <p className="hero-thesis">Kyle Scott Law maneja todo tipo de casos de lesiones personales de personas en todo el Condado de Orange y el sur de California.</p>
+            <p className="hero-description">Desde su oficina en Tustin, el abogado Kyle J. Scott, admitido en 1991, representa a personas lesionadas en choques de auto y de camión, caídas, mordeduras de perro, negligencia médica, lesiones cerebrales, abuso y muerte injusta.</p>
             <div className="hero-actions">
               <a className="primary-button" href="#consulta">Comenzar una consulta gratuita <ArrowRight aria-hidden="true" size={17} /></a>
               <a className="text-link" href="#resultados">Ver resultados de casos <ArrowRight aria-hidden="true" size={17} /></a>
@@ -84,9 +111,9 @@ export default function SpanishHomePage() {
             <div className="photo-caption">Kyle Scott y el equipo de KJS Law</div>
           </div>
           <div className="trust-rail" aria-label="Datos del despacho">
-            <div className="trust-item"><span className="trust-icon"><Award aria-hidden="true" /></span><span><strong>Más de 30 años</strong><small>Experiencia en lesiones personales</small></span></div>
+            <div className="trust-item"><span className="trust-icon"><Award aria-hidden="true" /></span><span><strong>Desde 1991</strong><small>Ejerciendo la abogacía en California</small></span></div>
             <div className="trust-item"><span className="trust-icon"><BadgeDollarSign aria-hidden="true" /></span><span><strong>Más de $50 millones recuperados</strong><small>Veredictos y acuerdos publicados</small></span></div>
-            <div className="trust-item"><span className="trust-icon"><Scale aria-hidden="true" /></span><span><strong>Sin honorarios</strong><small>A menos que haya recuperación</small></span></div>
+            <div className="trust-item"><span className="trust-icon"><Scale aria-hidden="true" /></span><span><strong>{terms.label}</strong><small>{terms.condition}</small></span></div>
           </div>
         </div>
         <section className="recovery-rail" id="resultados" aria-labelledby="recovery-title">
@@ -100,7 +127,7 @@ export default function SpanishHomePage() {
               </article>
             ))}
           </div>
-          <p className="results-disclaimer">Los resultados anteriores no garantizan un resultado similar.</p>
+          <p className="results-disclaimer">Cada caso es diferente. Los resultados anteriores no garantizan un resultado similar.</p>
         </section>
       </section>
 
@@ -112,6 +139,9 @@ export default function SpanishHomePage() {
             return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
           })}
         </div>
+        <h3 className="practice-every-case-title">Todos los tipos de casos de lesiones personales, en un solo lugar.</h3>
+        <p>Kyle Scott Law maneja cada tipo de caso que aparece abajo. Vea cómo funciona cada uno en la <Link href="/es/abogado-de-lesiones-personales-condado-de-orange">página del abogado de lesiones personales del Condado de Orange</Link>.</p>
+        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path} {...(area.inEnglish ? { hrefLang: 'en', lang: 'en' } : {})}>{area.shortTitle}</Link></li>)}<li><Link href="/es/areas-de-practica">Ver todas las áreas de práctica</Link></li></ul>
         <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>Sin presión. Sin una línea genérica de recepción.</strong> Su solicitud de consulta entra directamente al sistema privado de revisión del despacho.</p></div>
       </section>
 
@@ -120,8 +150,8 @@ export default function SpanishHomePage() {
           <div className="firm-photo"><Image src="/kyle-scott.jpg" alt="Abogado litigante Kyle Scott" width={600} height={900} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /><span>Abogado litigante Kyle J. Scott</span></div>
           <div className="firm-copy">
             <h2 id="firm-title" className="firm-heading">Sobre Nosotros</h2>
-            <p className="firm-lead">Soy Kyle Scott. Durante más de 30 años he representado a personas que sufrieron lesiones graves, y a las familias que las cuidan, en el Condado de Orange y en toda California. Una lesión puede trastocarlo todo a la vez: su salud, su trabajo, los planes de su familia. Mi trabajo es encargarme de la batalla legal para que usted pueda concentrarse en recuperarse.</p>
-            <p className="firm-experience">Atiendo casos de <Link href="/es/abogado-de-accidentes-de-auto-condado-de-orange">accidentes de auto y camión</Link>, choques de Uber y Lyft, <Link href="/es/abogado-de-resbalones-y-caidas-condado-de-orange">resbalones, tropiezos y caídas</Link>, <Link href="/es/abogado-de-mordeduras-de-perro-condado-de-orange">mordeduras de perro</Link>, responsabilidad por productos, <Link href="/es/abogado-de-muerte-injusta-condado-de-orange">reclamos por muerte injusta</Link> y <Link href="/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange">lesiones cerebrales traumáticas</Link>. También represento a personas en casos de <Link href="/es/abogado-de-negligencia-medica-condado-de-orange">negligencia médica</Link>, <Link href="/es/abogado-de-abuso-de-personas-mayores-condado-de-orange">abuso y negligencia de personas mayores</Link>, negligencia clerical y legal, responsabilidad escolar e institucional, <Link href="/es/abogado-de-acoso-y-abuso-sexual-condado-de-orange">abuso sexual, agresión y acoso sexual en el trabajo</Link>, despido injustificado y discriminación laboral.</p>
+            <p className="firm-lead">Soy Kyle Scott. Fui admitido en el Colegio de Abogados de California (State Bar of California) en 1991 y fundé este despacho en 2003. Represento a personas que sufrieron lesiones graves, y a las familias que las cuidan, en todo el Condado de Orange y el sur de California. Una lesión puede trastocarlo todo a la vez: su salud, su trabajo, los planes de su familia. Mi trabajo es encargarme de la batalla legal para que usted pueda concentrarse en recuperarse.</p>
+            <p className="firm-experience">Atiendo todo tipo de casos de lesiones personales: <Link href="/es/abogado-de-accidentes-de-auto-condado-de-orange">choques de auto, camión, motocicleta, viaje compartido, peatones y bicicleta</Link>; <Link href="/es/abogado-de-resbalones-y-caidas-condado-de-orange">resbalones, caídas y otras lesiones por propiedades inseguras</Link>; <Link href="/es/abogado-de-mordeduras-de-perro-condado-de-orange">mordeduras de perro</Link>; asuntos de responsabilidad por productos; <Link href="/es/abogado-de-responsabilidad-escolar-condado-de-orange">reclamos contra escuelas, instituciones y el gobierno</Link>; <Link href="/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange">lesiones cerebrales, de la médula espinal, quemaduras y otras lesiones catastróficas</Link>; y <Link href="/es/abogado-de-muerte-injusta-condado-de-orange">muerte injusta</Link>. También represento a personas en casos de <Link href="/es/abogado-de-negligencia-medica-condado-de-orange">negligencia médica</Link>, negligencia legal (legal malpractice), <Link href="/es/abogado-de-abuso-de-personas-mayores-condado-de-orange">abuso y negligencia de personas mayores</Link>, <Link href="/es/abogado-de-acoso-y-abuso-sexual-condado-de-orange">abuso sexual (incluido el abuso por parte del clero), agresión (assault and battery) y acoso sexual en el trabajo</Link>, <Link href="/es/abogado-de-mala-fe-de-seguros-condado-de-orange">mala fe de seguros</Link>, despido injustificado y discriminación laboral.</p>
             <p className="firm-experience">Desde nuestra oficina en Tustin, mi equipo y yo investigamos lo que pasó, identificamos a todos los que podrían ser responsables, documentamos lo que la lesión le ha costado y le explicamos sus opciones con palabras claras, para que pueda tomar cada decisión con toda la información.</p>
             <div className="firm-actions"><Link className="primary-button firm-team-button" href="/es/equipo">Conozca al equipo <ArrowRight aria-hidden="true" /></Link></div>
           </div>
@@ -146,6 +176,25 @@ export default function SpanishHomePage() {
         </div>
       </section>
 
+      <section className="section areas-home-section" id="areas-que-atendemos" aria-labelledby="areas-home-title">
+        <div className="news-heading">
+          <div><p className="eyebrow">Áreas que atendemos</p><h2 id="areas-home-title">Casos de lesiones de todas las ciudades del Condado de Orange, y de todo el sur de California.</h2></div>
+          <p>La oficina del despacho está en Tustin, y el despacho representa a personas lesionadas en todas las ciudades del Condado de Orange y en las comunidades no incorporadas del condado. También representa a personas lesionadas en otras partes del sur de California: sus resultados publicados incluyen casos en los tribunales superiores de San Bernardino, del Condado de Riverside y de Los Ángeles.</p>
+        </div>
+        <div className="areas-region-grid">
+          {countyRegions.map((region) => {
+            const name = regionNames[region.name] ?? region.name;
+            return (
+              <section key={region.name} aria-label={name}>
+                <h3>{name}</h3>
+                <ul>{region.keys.map((key) => { const spanish = spanishServiceAreaByKey[key]; const area = spanish ?? serviceAreaByKey[key]; return area ? <li key={key}><Link href={area.path} hrefLang={spanish ? undefined : 'en'}>{area.city}</Link></li> : null; })}</ul>
+              </section>
+            );
+          })}
+        </div>
+        <Link className="news-archive-link" href="/areas-we-serve" hrefLang="en">Ver todas las áreas que atendemos (en inglés) <ArrowRight aria-hidden="true" /></Link>
+      </section>
+
       <section className="section news-section" id="noticias" aria-labelledby="news-title">
         <div className="news-heading"><div><p className="eyebrow">Noticias de KJS Law</p><h2 id="news-title">Resultados, historias y novedades del despacho.</h2></div><p>Lea resultados publicados y novedades legales de Kyle Scott Law. Cada artículo destacado abre su página completa en este sitio.</p></div>
         <div className="news-grid">
@@ -160,7 +209,7 @@ export default function SpanishHomePage() {
 
       <section className="consultation-section" id="consulta" aria-labelledby="consultation-title">
         <div className="consultation-copy">
-          <p className="eyebrow">Consulta gratuita</p><h2 id="consultation-title">Comience con una consulta gratuita.</h2><p>Cuéntenos qué ocurrió y cómo comunicarnos con usted. No se cobra ningún honorario a menos que haya una recuperación.</p>
+          <p className="eyebrow">Consulta gratuita</p><h2 id="consultation-title">Comience con una consulta gratuita.</h2><p>Cuéntenos qué ocurrió y cómo comunicarnos con usted. {terms.statement}.</p>
           <div className="contact-card"><Phone aria-hidden="true" /><span><small>Llame directamente al despacho</small><a href="tel:+17145441460">714-544-1460</a></span></div>
           <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Oficina de Tustin</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
         </div>
