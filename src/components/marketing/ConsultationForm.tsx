@@ -128,8 +128,6 @@ export function ConsultationForm({ locale = 'en' }: { locale?: SiteLocale }) {
         <label className="field"><span>{spanish ? 'Teléfono' : 'Phone'}</span><Input name="phone" type="tel" autoComplete="tel" placeholder="(714) 555-0123" /></label>
         <label className="field"><span>{spanish ? 'Correo electrónico' : 'Email'}</span><Input name="email" type="email" autoComplete="email" placeholder={spanish ? 'usted@ejemplo.com' : 'you@example.com'} /></label>
         <label className="field"><span>{spanish ? '¿Cómo debemos comunicarnos con usted?' : 'How should we contact you?'}</span><NativeSelect name="preferredContact" className="w-full" value={preferredContact} onChange={(event) => setPreferredContact(event.target.value)} aria-describedby={preferredContact === 'sms' ? smsNoteId : undefined}><NativeSelectOption value="phone">{spanish ? 'Llamada telefónica' : 'Phone call'}</NativeSelectOption><NativeSelectOption value="sms">{spanish ? 'Mensaje de texto' : 'Text message'}</NativeSelectOption><NativeSelectOption value="email">{spanish ? 'Correo electrónico' : 'Email'}</NativeSelectOption></NativeSelect></label>
-        {/* The SMS disclosure, beside the text-message choice (a full-width row so the two columns stay aligned). */}
-        {preferredContact === 'sms' ? <p className="field-wide" role="note" id={smsNoteId} style={{ margin: 0, fontSize: 13, lineHeight: 1.45, color: 'var(--ink-soft)' }}>{smsDisclosureText(locale, WEBSITE_FIRM_NAME)}</p> : null}
         <label className="field field-wide">
           <span>{spanish ? 'Tipo de caso' : 'Case type'}</span>
           <NativeSelect name="caseTypeChoice" className="w-full" defaultValue="" required>
@@ -146,6 +144,9 @@ export function ConsultationForm({ locale = 'en' }: { locale?: SiteLocale }) {
         <Checkbox checked={consent} onCheckedChange={(checked) => setConsent(checked === true)} aria-label={spanish ? 'Permiso para comunicarse' : 'Permission to contact'} />
         <span>{contactConsentText('form', locale, WEBSITE_FIRM_NAME)}</span>
       </label>
+      {/* The SMS disclosure stays visible under the permission box, so carriers reviewing the form (and visitors) see the
+          text-message terms before anyone chooses "Text message"; choosing it is what records text consent. */}
+      <p className="sms-disclosure" role="note" id={smsNoteId} style={{ margin: '8px 0 0', paddingLeft: 28, fontSize: 13, lineHeight: 1.45, color: 'var(--ink-soft)' }}>{smsDisclosureText(locale, WEBSITE_FIRM_NAME)}</p>
       <input className="honeypot" name="companyWebsite" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       {status.state === 'error' ? <p className="form-error" role="alert">{status.message}</p> : null}
       <Button className="submit-button" type="submit" disabled={status.state === 'submitting'}>

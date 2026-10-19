@@ -8,6 +8,8 @@ vi.mock('@/components/marketing/SiteFooter', () => ({ SiteFooter: () => null }))
 vi.mock('@/components/marketing/ChatWidget', () => ({ ChatWidget: () => null }));
 
 import TestimonialsPage from '@/app/(site)/testimonials/page';
+import TermsPage from '@/app/(site)/terms/page';
+import SpanishTermsPage from '@/app/(site-es)/es/terminos/page';
 import SpanishTestimonialsPage from '@/app/(site-es)/es/testimonios/page';
 import { LegacyNewsArticlePage } from '@/components/marketing/LegacyNewsArticlePage';
 import { Dialog, DialogContent, DialogTitle } from '@/components/marketing/ui/dialog';
@@ -94,5 +96,23 @@ describe('dialog close button', () => {
       </Dialog>,
     );
     expect(screen.getByRole('button', { name: 'Cerrar' })).toBeInTheDocument();
+  });
+});
+
+describe('terms & conditions pages', () => {
+  // docs/website-content-compliance.md: the carriers' texting review reads these pages for the
+  // registered brand name and the required SMS lines.
+  it('name the registered brand and carry the required text-message lines, with tap-to-call', () => {
+    for (const [Page, required] of [
+      [TermsPage, ['Terms & Conditions', 'Law Offices of Kyle Scott, PLC', 'Message frequency varies.', 'Message and data rates may apply.', 'reply STOP', 'reply HELP']],
+      [SpanishTermsPage, ['Términos y condiciones', 'Law Offices of Kyle Scott, PLC', 'La frecuencia de los mensajes varía.', 'Pueden aplicarse tarifas de mensajes y datos.', 'responda STOP', 'responda HELP']],
+    ] as const) {
+      const { container } = render(<Page />);
+      expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(required[0]);
+      for (const line of required) expect(container.textContent).toContain(line);
+      const callLinks = [...container.querySelectorAll('a[href="tel:+17145441460"]')];
+      expect(callLinks.some((link) => link.closest('li'))).toBe(true);
+      cleanup();
+    }
   });
 });

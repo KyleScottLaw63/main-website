@@ -1,6 +1,6 @@
 import type { SiteLocale } from '@/lib/marketing/i18n';
 
-export type LegalPageKind = 'privacy' | 'disclaimer' | 'accessibility';
+export type LegalPageKind = 'privacy' | 'disclaimer' | 'accessibility' | 'terms';
 
 export type LegalPageSection = {
   id: string;
@@ -29,6 +29,9 @@ const updatedSpanish = 'Última actualización: 1 de septiembre de 2026';
 // and again when the "Text messages" section was added (docs/website-content-compliance.md).
 const updatedPrivacyEnglish = 'Last updated October 19, 2026';
 const updatedPrivacySpanish = 'Última actualización: 19 de octubre de 2026';
+// The Terms & Conditions (text-message terms) went up for the carriers' texting review (docs/website-content-compliance.md).
+const updatedTermsEnglish = 'Last updated October 19, 2026';
+const updatedTermsSpanish = 'Última actualización: 19 de octubre de 2026';
 
 export const legalPages: Record<
   SiteLocale,
@@ -44,7 +47,7 @@ export const legalPages: Record<
       description:
         'How Kyle Scott Law collects, uses, safeguards, and handles personal information submitted through this website.',
       introduction:
-        'This policy explains how Kyle Scott Law handles personal information when you visit this website, submit a consultation request, use the KJS case assistant, or otherwise contact the firm online. Information handled during an attorney-client relationship is also subject to the firm’s professional and legal obligations.',
+        'This policy explains how Kyle Scott Law (Law Offices of Kyle Scott, PLC) handles personal information when you visit this website, submit a consultation request, use the KJS case assistant, or otherwise contact the firm online. Information handled during an attorney-client relationship is also subject to the firm’s professional and legal obligations.',
       updatedLabel: updatedPrivacyEnglish,
       contentsLabel: 'On this page',
       contactLabel: 'Privacy questions or requests',
@@ -97,7 +100,7 @@ export const legalPages: Record<
           id: 'text-messages',
           title: 'Text messages',
           paragraphs: [
-            'If you choose “Text message” as your preferred contact method, or otherwise give the firm your mobile number and agree to receive texts, Kyle Scott Law will text you only about your inquiry or legal matter, such as scheduling, requests for information or documents, and updates. Message frequency varies. Message and data rates may apply. Reply STOP at any time to stop receiving texts, or HELP for help. You can also call 714-544-1460.',
+            'If you choose “Text message” as your preferred contact method, or otherwise give the firm your mobile number and agree to receive texts, Kyle Scott Law will text you only about your inquiry or legal matter, such as scheduling, requests for information or documents, and updates. Message frequency varies. Message and data rates may apply. Reply STOP at any time to stop receiving texts, or HELP for help. You can also call 714-544-1460. The full text-message terms are in the firm’s Terms & Conditions.',
             'Kyle Scott Law does not sell, rent, or share your mobile telephone number or your consent to receive text messages with third parties or affiliates for marketing or promotional purposes. Apart from the telephone and messaging providers the firm uses to send and receive its texts, text-message opt-in data and consent are not shared with any third party.',
           ],
         },
@@ -294,6 +297,60 @@ export const legalPages: Record<
         },
       ],
     },
+    terms: {
+      kind: 'terms',
+      locale: 'en',
+      path: '/terms',
+      eyebrow: 'Website information',
+      title: 'Terms & Conditions',
+      description:
+        'Terms for Kyle Scott Law’s text messages, including how to opt in, message frequency, rates, and how to stop texts, and for use of this website.',
+      introduction:
+        'These terms cover the text messages Kyle Scott Law sends and receives and your use of this website. Kyle Scott Law is the name used by Law Offices of Kyle Scott, PLC.',
+      updatedLabel: updatedTermsEnglish,
+      contentsLabel: 'On this page',
+      contactLabel: 'Questions about these terms',
+      sections: [
+        {
+          id: 'who-we-are',
+          title: 'Who we are',
+          paragraphs: [
+            'Kyle Scott Law is the name under which Law Offices of Kyle Scott, PLC practices law from 17671 Irvine Blvd., Suite 210, Tustin, CA 92780. In these terms, “Kyle Scott Law,” “the firm,” “we,” and “us” mean Law Offices of Kyle Scott, PLC.',
+          ],
+        },
+        {
+          id: 'text-message-terms',
+          title: 'Text message (SMS) terms',
+          paragraphs: [
+            'Kyle Scott Law texts people who have asked the firm for help, and the firm’s clients, when they agree to receive texts. The texts are only about your own inquiry or legal matter, such as scheduling, requests for information or documents, and updates. The firm does not send marketing texts.',
+          ],
+          bullets: [
+            'How you agree: by choosing “Text message” as your preferred contact method on the firm’s website consultation form, or by otherwise giving the firm your mobile number and agreeing to receive texts. Agreeing to texts is not a condition of hiring the firm.',
+            'Message frequency varies.',
+            'Message and data rates may apply.',
+            'To stop texts, reply STOP at any time. You will receive one text confirming that you have been unsubscribed, and no further texts unless you reply START.',
+            'For help, reply HELP, call 714-544-1460, or email Team@kjslaw.com.',
+            'Wireless carriers are not liable for delayed or undelivered messages.',
+            'Text messages are not a secure channel. Do not text confidential or sensitive information unless the firm asks you to, and do not rely on a text for a deadline or an emergency.',
+            'Your mobile number and your consent to receive texts are never sold or shared for marketing. The Privacy Policy explains how the firm handles your information.',
+          ],
+        },
+        {
+          id: 'website-use',
+          title: 'Use of this website',
+          paragraphs: [
+            'Website content is general information, not legal advice, and using the website, texting, or calling the firm does not by itself create an attorney-client relationship. The Legal Disclaimer and the Privacy Policy explain more and apply together with these terms.',
+          ],
+        },
+        {
+          id: 'changes-to-these-terms',
+          title: 'Changes to these terms',
+          paragraphs: [
+            'The firm may update these terms. The date at the top of this page shows when they last changed.',
+          ],
+        },
+      ],
+    },
   },
   es: {
     privacy: {
@@ -305,7 +362,7 @@ export const legalPages: Record<
       description:
         'Cómo Kyle Scott Law recopila, usa, protege y administra la información personal enviada a través de este sitio web.',
       introduction:
-        'Esta política explica cómo Kyle Scott Law maneja la información personal cuando usted visita este sitio, envía una solicitud de consulta, usa el asistente de casos KJS o se comunica con el bufete en línea. La información administrada durante una relación abogado-cliente también está sujeta a las obligaciones profesionales y legales del bufete.',
+        'Esta política explica cómo Kyle Scott Law (Law Offices of Kyle Scott, PLC) maneja la información personal cuando usted visita este sitio, envía una solicitud de consulta, usa el asistente de casos KJS o se comunica con el bufete en línea. La información administrada durante una relación abogado-cliente también está sujeta a las obligaciones profesionales y legales del bufete.',
       updatedLabel: updatedPrivacySpanish,
       contentsLabel: 'En esta página',
       contactLabel: 'Preguntas o solicitudes de privacidad',
@@ -358,7 +415,7 @@ export const legalPages: Record<
           id: 'mensajes-de-texto',
           title: 'Mensajes de texto',
           paragraphs: [
-            'Si usted elige “Mensaje de texto” como método de contacto preferido, o de otro modo proporciona al bufete su número de celular y acepta recibir mensajes de texto, Kyle Scott Law le enviará mensajes de texto solo sobre su solicitud o asunto legal, como citas, solicitudes de información o documentos y novedades. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Responda STOP en cualquier momento para dejar de recibir mensajes, o HELP para obtener ayuda. También puede llamar al 714-544-1460.',
+            'Si usted elige “Mensaje de texto” como método de contacto preferido, o de otro modo proporciona al bufete su número de celular y acepta recibir mensajes de texto, Kyle Scott Law le enviará mensajes de texto solo sobre su solicitud o asunto legal, como citas, solicitudes de información o documentos y novedades. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Responda STOP en cualquier momento para dejar de recibir mensajes, o HELP para obtener ayuda. También puede llamar al 714-544-1460. Los términos completos de los mensajes de texto están en los Términos y condiciones del bufete.',
             'Kyle Scott Law no vende, alquila ni comparte su número de celular ni su consentimiento para recibir mensajes de texto con terceros ni con afiliados para fines de mercadeo o promoción. Aparte de los proveedores de telefonía y mensajería que el bufete usa para enviar y recibir sus mensajes, los datos de aceptación y el consentimiento para mensajes de texto no se comparten con ningún tercero.',
           ],
         },
@@ -551,6 +608,60 @@ export const legalPages: Record<
           title: 'Revisión continua',
           paragraphs: [
             'El bufete revisa periódicamente el contenido, la navegación, los formularios y las funciones nuevas, y atiende los problemas de accesibilidad a medida que se identifican. Esta declaración se actualizará cuando cambien de forma importante las prácticas.',
+          ],
+        },
+      ],
+    },
+    terms: {
+      kind: 'terms',
+      locale: 'es',
+      path: '/es/terminos',
+      eyebrow: 'Información del sitio web',
+      title: 'Términos y condiciones',
+      description:
+        'Términos de los mensajes de texto de Kyle Scott Law —cómo aceptarlos, su frecuencia, las tarifas y cómo dejar de recibirlos— y del uso de este sitio.',
+      introduction:
+        'Estos términos cubren los mensajes de texto que Kyle Scott Law envía y recibe y el uso de este sitio web. Kyle Scott Law es el nombre que usa Law Offices of Kyle Scott, PLC.',
+      updatedLabel: updatedTermsSpanish,
+      contentsLabel: 'En esta página',
+      contactLabel: 'Preguntas sobre estos términos',
+      sections: [
+        {
+          id: 'quienes-somos',
+          title: 'Quiénes somos',
+          paragraphs: [
+            'Kyle Scott Law es el nombre con el que Law Offices of Kyle Scott, PLC ejerce la abogacía desde 17671 Irvine Blvd., Suite 210, Tustin, CA 92780. En estos términos, “Kyle Scott Law”, “el bufete” y “nosotros” se refieren a Law Offices of Kyle Scott, PLC.',
+          ],
+        },
+        {
+          id: 'terminos-de-mensajes-de-texto',
+          title: 'Términos de mensajes de texto (SMS)',
+          paragraphs: [
+            'Kyle Scott Law envía mensajes de texto a las personas que le han pedido ayuda y a sus clientes, cuando aceptan recibirlos. Los mensajes tratan solo sobre su propia solicitud o asunto legal, como citas, solicitudes de información o documentos y novedades. El bufete no envía mensajes de mercadeo.',
+          ],
+          bullets: [
+            'Cómo acepta: al elegir “Mensaje de texto” como método de contacto preferido en el formulario de consulta del sitio, o al proporcionar de otro modo su número de celular al bufete y aceptar recibir mensajes de texto. Aceptar los mensajes no es una condición para contratar al bufete.',
+            'La frecuencia de los mensajes varía.',
+            'Pueden aplicarse tarifas de mensajes y datos.',
+            'Para dejar de recibir mensajes, responda STOP en cualquier momento. Recibirá un mensaje que confirma la baja y ningún otro, salvo que responda START.',
+            'Para obtener ayuda, responda HELP, llame al 714-544-1460 o escriba a Team@kjslaw.com.',
+            'Los operadores de telefonía móvil no son responsables por mensajes retrasados o no entregados.',
+            'Los mensajes de texto no son un medio seguro. No envíe información confidencial o delicada por mensaje de texto a menos que el bufete se lo pida, y no dependa de un mensaje de texto para un plazo o una emergencia.',
+            'Su número de celular y su consentimiento para recibir mensajes de texto nunca se venden ni se comparten con fines de mercadeo. La Política de privacidad explica cómo el bufete maneja su información.',
+          ],
+        },
+        {
+          id: 'uso-del-sitio',
+          title: 'Uso de este sitio',
+          paragraphs: [
+            'El contenido del sitio es información general, no asesoría legal, y usar el sitio, enviar mensajes de texto o llamar al bufete no crea por sí solo una relación abogado-cliente. El Aviso legal y la Política de privacidad explican más y se aplican junto con estos términos.',
+          ],
+        },
+        {
+          id: 'cambios-a-estos-terminos',
+          title: 'Cambios a estos términos',
+          paragraphs: [
+            'El bufete puede actualizar estos términos. La fecha al inicio de esta página indica cuándo cambiaron por última vez.',
           ],
         },
       ],
