@@ -19,7 +19,7 @@ import { attorneyProfileStructuredData } from '@/lib/marketing/structured-data';
 
 export const metadata: Metadata = {
   title: 'Meet the Team | Kyle Scott Law',
-  description: 'Meet trial attorney Kyle J. Scott and the Kyle Scott Law team serving injured clients from the firm’s Tustin office throughout Orange County and California.',
+  description: 'Meet attorney Kyle J. Scott and the Kyle Scott Law team in Tustin, representing injured people across Orange County since 1991. Free consultation.',
   alternates: localizedAlternates('/meet-the-team'),
 };
 

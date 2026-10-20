@@ -8,7 +8,7 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Contacte a Kyle Scott Law | Abogado de lesiones en Tustin',
-  description: 'Llame a Kyle Scott Law en Tustin al 714-544-1460 o envíe una solicitud confidencial para revisar un caso de lesiones personales en el Condado de Orange.',
+  description: 'Contacte a la oficina de Kyle Scott Law en Tustin o envíe los datos de su caso en línea, en español o inglés. Llame al 714-544-1460.',
   alternates: localizedAlternates('/es/contacto'),
 };
 

@@ -17,13 +17,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const guide = legalGuideBySlug(slug);
   if (!guide) return missingPageMetadata('en');
   const image = `${SITE_URL}/legal-guides-hero.webp`;
+  // The short search-result text; the guide's own description is shown on the page.
+  const description = guide.metaDescription ?? guide.description;
   return {
     title: guide.seoTitle,
-    description: guide.description,
+    description,
     // Paired with its Spanish translation when there is one; otherwise hreflang points at itself.
     alternates: localizedAlternates(guide.path),
-    openGraph: { title: guide.title, description: guide.description, type: 'article', images: [image] },
-    twitter: { card: 'summary_large_image', title: guide.title, description: guide.description, images: [image] },
+    openGraph: { title: guide.title, description, type: 'article', images: [image] },
+    twitter: { card: 'summary_large_image', title: guide.title, description, images: [image] },
   };
 }
 

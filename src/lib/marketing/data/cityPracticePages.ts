@@ -13,7 +13,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Anaheim Dog Bite Lawyer',
     eyebrow: 'Dog bites in Anaheim, California',
     description: 'If a dog bit you in Anaheim, California law generally makes the owner responsible for a bite in a public place or while lawfully on private property, even if the dog never bit anyone before. Kyle Scott Law represents people bitten or knocked down by dogs across Anaheim.',
-    metaDescription: 'Anaheim dog bite lawyer Kyle Scott helps people hurt by dogs in parks, homes, and apartments. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Anaheim dog bite lawyer for bites in parks, homes and apartments. California generally holds the owner liable, even for a first bite. Free consultation.',
     icon: 'dog',
     introTitle: 'An Anaheim dog bite claim turns on where it happened and who pays.',
     intro: [
@@ -79,7 +79,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Costa Mesa Dog Bite Lawyer',
     eyebrow: 'Dog bites in Costa Mesa, California',
     description: 'If a dog bit you in Costa Mesa, California law generally makes the owner responsible for a bite in a public place or while lawfully on private property, even if the dog never bit anyone before. Kyle Scott Law represents people bitten or knocked down by dogs in Costa Mesa neighborhoods, apartment communities, and parks.',
-    metaDescription: 'Costa Mesa dog bite lawyer Kyle Scott helps people hurt by dogs in parks, on trails, and at home. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Costa Mesa dog bite lawyer for bites at the Bark Park, on trails and at home, and children bitten at a neighbor’s house. Free consultation.',
     icon: 'dog',
     introTitle: 'A Costa Mesa dog bite claim turns on where it happened and who pays.',
     intro: [
@@ -140,7 +140,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Irvine Brain Injury Lawyer',
     eyebrow: 'Brain injury in Irvine, California',
     description: 'Kyle Scott Law represents people who suffered a concussion, skull fracture, or other head or brain injury in a crash, fall, sports accident, or school incident caused by someone else.',
-    metaDescription: 'Irvine brain injury lawyer for concussion, skull fracture, and head injury claims after crashes, falls, and sports. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Irvine brain injury lawyer for concussions, skull fractures and head injuries after crashes, falls, school incidents and youth sports. Free consultation.',
     icon: 'brain',
     introTitle: 'A brain injury can be real even when the first scan looks normal.',
     intro: [
@@ -205,7 +205,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Irvine Car Accident Lawyer',
     eyebrow: 'Car accidents in Irvine, California',
     description: 'Kyle Scott Law represents people injured in Irvine car accidents, from crashes on the 405, the 5, and the toll roads to collisions on Jamboree Road, Culver Drive, and Irvine Center Drive.',
-    metaDescription: 'Irvine car accident lawyer Kyle Scott handles crash claims on the 405, the 5, toll roads, and city streets. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Irvine car accident lawyer for crashes on Jamboree Road, Culver Drive and Irvine Center Drive, and on the toll roads. Free consultation.',
     icon: 'car',
     introTitle: 'An Irvine crash claim is about more than the damage you can see.',
     intro: [
@@ -268,7 +268,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Irvine Dog Bite Lawyer',
     eyebrow: 'Dog bites in Irvine, California',
     description: 'If a dog bit you in Irvine, California law generally makes the owner responsible for a bite in a public place or while lawfully on private property, even if the dog never bit anyone before. Kyle Scott Law represents people bitten or knocked down by dogs in Irvine’s parks, neighborhoods, and apartment communities.',
-    metaDescription: 'Irvine dog bite lawyer Kyle Scott helps people bitten at parks, homes, and apartment communities. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Irvine dog bite lawyer for bites in parks, apartment courtyards and near off-leash dog parks, including workers bitten on the job. Free consultation.',
     icon: 'dog',
     introTitle: 'An Irvine dog bite claim turns on where it happened and who pays.',
     intro: [
@@ -328,7 +328,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Irvine Medical Malpractice Lawyer',
     eyebrow: 'Medical malpractice in Irvine, California',
     description: 'Kyle Scott Law represents patients and families in Irvine harmed by medical malpractice and hospital negligence, including missed or delayed diagnoses, surgical and anesthesia errors, medication mistakes, and failures in hospital care. California law also caps the contingency fee in malpractice cases (Business and Professions Code § 6146).',
-    metaDescription: 'Irvine medical malpractice lawyer Kyle Scott reviews hospital negligence, misdiagnosis, surgical, and medication errors. Free consultation.',
+    metaDescription: 'Irvine medical malpractice lawyer for hospital negligence, missed diagnoses and surgical or medication errors. Free consultation.',
     icon: 'medical',
     introTitle: 'Medical malpractice and hospital negligence claims run on their own rules.',
     intro: [
@@ -392,7 +392,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Orange, CA Brain Injury Lawyer',
     eyebrow: 'Brain injury in the City of Orange, California',
     description: 'Kyle Scott Law represents people in the City of Orange who suffered a concussion, skull fracture, or other traumatic brain injury (TBI) in a crash, fall, sports accident, or school incident caused by someone else.',
-    metaDescription: 'Brain injury and TBI lawyer for the City of Orange, CA: concussion and skull fracture claims after crashes and falls. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange, CA brain injury lawyer for concussions and skull fractures after pedestrian, bicycle and motorcycle crashes and falls. Free consultation.',
     icon: 'brain',
     introTitle: 'A brain injury can be real even when the first scan looks normal.',
     intro: [
@@ -460,7 +460,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Orange, CA Car Accident Lawyer',
     eyebrow: 'Car accidents in the City of Orange, California',
     description: 'Kyle Scott Law represents people injured in car accidents in the City of Orange, from freeway crashes at the Orange Crush and on the 55 to collisions on Chapman Avenue, Tustin Street, Glassell Street, and Katella Avenue.',
-    metaDescription: 'Car accident lawyer for the City of Orange, CA: crashes at the Orange Crush, on the 55, and on city streets. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange, CA car accident lawyer for crashes at the Orange Crush and on Chapman, Tustin, Glassell and Katella. Free consultation.',
     icon: 'car',
     introTitle: 'An Orange car accident claim is about more than the damage you can see.',
     intro: [
@@ -524,7 +524,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Orange, CA Dog Bite Lawyer',
     eyebrow: 'Dog bites in the City of Orange, California',
     description: 'If a dog bit you in the City of Orange, California law generally makes the owner responsible for a bite in a public place or while lawfully on private property, even if the dog never bit anyone before. Kyle Scott Law represents people bitten or knocked down by dogs on Old Towne sidewalks, in city parks, and in Orange neighborhoods and apartment communities.',
-    metaDescription: 'Dog bite lawyer for the City of Orange, CA, handling bites in parks, homes, and apartments. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange, CA dog bite lawyer for bites on Old Towne sidewalks, in city parks and in apartments, including people bitten protecting a pet. Free consultation.',
     icon: 'dog',
     introTitle: 'An Orange dog bite claim turns on where it happened and who pays.',
     intro: [
@@ -585,7 +585,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Orange, CA Slip and Fall Lawyer',
     eyebrow: 'Slip and fall in the City of Orange, California',
     description: 'Kyle Scott Law represents people hurt in slip, trip, and stair falls in the City of Orange: in stores and restaurants, apartment communities, parking lots, and on city sidewalks. A claim usually turns on whether whoever controlled the property knew, or should have known, about the hazard and failed to fix it or warn about it in time.',
-    metaDescription: 'Slip and fall lawyer for the City of Orange, CA: falls in stores, apartments, Old Towne, and on city sidewalks. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange, CA slip and fall lawyer for falls in stores and restaurants, on apartment stairs and on cracked city sidewalks. Free consultation.',
     icon: 'fall',
     introTitle: 'In an Orange fall case, notice and control usually decide the claim.',
     intro: [
@@ -646,7 +646,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Santa Ana Dog Bite Lawyer',
     eyebrow: 'Dog bites in Santa Ana, California',
     description: 'If a dog bit you in Santa Ana, California law generally makes the owner responsible for a bite in a public place or while lawfully on private property, even if the dog never bit anyone before. Kyle Scott Law represents people bitten or knocked down by dogs on Santa Ana sidewalks, in city parks, and in apartment communities and neighborhoods across the city.',
-    metaDescription: 'Santa Ana dog bite lawyer handling bites on city streets, in parks, and in apartments. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Santa Ana dog bite lawyer for bites on city sidewalks, in parks and in apartment courtyards, including claims against landlords. Free consultation.',
     icon: 'dog',
     introTitle: 'A Santa Ana dog bite claim turns on where it happened and who pays.',
     intro: [
@@ -708,7 +708,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Santa Ana Medical Malpractice Lawyer',
     eyebrow: 'Medical malpractice in Santa Ana, California',
     description: 'Kyle Scott Law represents patients and families in Santa Ana harmed by medical malpractice and hospital negligence, including missed or delayed diagnoses, surgical and anesthesia errors, medication mistakes, birth injuries, and failures in hospital care. California law also caps the contingency fee in malpractice cases (Business and Professions Code § 6146).',
-    metaDescription: 'Santa Ana medical malpractice lawyer Kyle Scott reviews misdiagnosis, surgical, medication, and hospital negligence claims. Free consultation.',
+    metaDescription: 'Santa Ana medical malpractice lawyer for missed diagnoses, emergency department errors, surgical errors and birth injuries. Free consultation.',
     icon: 'medical',
     introTitle: 'Malpractice claims run on their own rules.',
     intro: [
@@ -770,7 +770,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Santa Ana Sexual Harassment Lawyer',
     eyebrow: 'Sexual harassment and abuse in Santa Ana, California',
     description: 'If you were sexually harassed at work in Santa Ana, or harassed or assaulted by someone in a position of trust such as a doctor, landlord, or teacher, California law may let you hold that person, and sometimes an employer or institution, responsible in a civil case. Kyle Scott Law offers a confidential review of workplace harassment, sexual assault and battery, and sexual abuse by people in positions of trust, and you decide how much to share and when.',
-    metaDescription: 'Confidential help from a Santa Ana sexual harassment lawyer for workplace harassment, sexual assault, and abuse by professionals. Free consultation.',
+    metaDescription: 'Santa Ana sexual harassment lawyer for workplace harassment, assault and abuse by a doctor, landlord or teacher. Free consultation.',
     icon: 'support',
     introTitle: 'A private review, at your pace.',
     intro: [
@@ -833,7 +833,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Tustin Bicycle Accident Lawyer',
     eyebrow: 'Bicycle accidents in Tustin, California',
     description: 'Kyle Scott Law represents cyclists and e-bike riders hurt in Tustin by careless drivers, opened car doors, and dangerous road conditions. A rider on a Tustin street has the same rights as a driver, and an injured cyclist can bring a claim against the driver or anyone else responsible.',
-    metaDescription: 'Tustin bicycle accident lawyer Kyle Scott helps cyclists and e-bike riders hit by drivers. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Tustin bicycle accident lawyer for cyclists and e-bike riders hit by drivers, doored by parked cars or hurt by road hazards. Free consultation.',
     icon: 'bicycle',
     introTitle: 'Most Tustin bicycle claims start with a duty a driver ignored.',
     intro: [
@@ -904,7 +904,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Tustin Brain Injury Lawyer',
     eyebrow: 'Brain injury in Tustin, California',
     description: 'Kyle Scott Law represents people who suffered a concussion, skull fracture, or other traumatic brain injury in a crash, fall, sports accident, or school incident caused by someone else.',
-    metaDescription: 'Tustin brain injury lawyer for concussion, skull fracture, and TBI claims after crashes, falls, and sports. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Tustin brain injury lawyer for concussions, skull fractures and head injuries at school, on the road or in youth sports. Free consultation.',
     icon: 'brain',
     introTitle: 'A brain injury can be real even when the first scan looks normal.',
     intro: [
@@ -972,7 +972,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Tustin Car Accident Lawyer',
     eyebrow: 'Car accidents in Tustin, California',
     description: 'Kyle Scott Law represents people injured in Tustin car accidents, from crashes on the 5 and the 55 to collisions on Jamboree Road, Red Hill Avenue, Newport Avenue, and Irvine Boulevard.',
-    metaDescription: 'Tustin car accident lawyer Kyle Scott handles crash claims on the 5, the 55, and city streets. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Tustin car accident lawyer for crashes on Jamboree Road, Red Hill Avenue, Newport Avenue and Irvine Boulevard. Free consultation.',
     icon: 'car',
     introTitle: 'A Tustin crash claim is about more than the damage you can see.',
     intro: [
@@ -1034,7 +1034,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Tustin Dog Bite Lawyer',
     eyebrow: 'Dog bites in Tustin, California',
     description: 'If a dog bit you in Tustin, California law generally makes the owner responsible for a bite in a public place or while lawfully on private property, even if the dog never bit anyone before. Kyle Scott Law represents people bitten or knocked down by dogs in Tustin’s parks, neighborhoods, and apartment communities.',
-    metaDescription: 'Tustin dog bite lawyer Kyle Scott helps people hurt in dog attacks at parks, homes, and apartments. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Tustin dog bite lawyer for bites in parks, neighborhoods and apartments, including mail carriers and delivery workers. Free consultation.',
     icon: 'dog',
     introTitle: 'A Tustin dog bite claim turns on where it happened and who pays.',
     intro: [
@@ -1097,7 +1097,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Tustin Medical Malpractice Lawyer',
     eyebrow: 'Medical malpractice in Tustin, California',
     description: 'Kyle Scott Law represents patients and families in Tustin and North Tustin harmed by medical malpractice, including missed or delayed diagnoses, surgical and anesthesia errors, medication mistakes, and hospital errors. California law also caps the contingency fee in malpractice cases (Business and Professions Code § 6146).',
-    metaDescription: 'Tustin medical malpractice lawyer Kyle Scott reviews misdiagnosis, surgery, anesthesia, and medication errors. Free consultation in English or Spanish.',
+    metaDescription: 'Tustin medical malpractice lawyer for patients in Tustin and North Tustin: missed diagnoses, surgical and medication errors. Free consultation.',
     icon: 'medical',
     introTitle: 'A malpractice claim runs on different rules than other injury cases.',
     intro: [
@@ -1163,7 +1163,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Tustin Motorcycle Accident Lawyer',
     eyebrow: 'Motorcycle accidents in Tustin, California',
     description: 'Kyle Scott Law represents motorcycle riders and passengers hurt in Tustin crashes, from intersections on Jamboree Road, Red Hill Avenue, and Irvine Boulevard to lane changes on the 5 and the 55.',
-    metaDescription: 'Tustin motorcycle accident lawyer Kyle Scott represents injured riders and passengers. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Tustin motorcycle accident lawyer for riders and passengers hurt at Jamboree Road and Red Hill Avenue intersections or by lane changes. Free consultation.',
     icon: 'motorcycle',
     introTitle: 'A Tustin motorcycle claim usually starts with what another driver failed to do.',
     intro: [
@@ -1233,7 +1233,7 @@ export const cityPracticePages: PracticeAreaData[] = [
     title: 'Tustin Slip and Fall Lawyer',
     eyebrow: 'Slip and fall in Tustin, California',
     description: 'Kyle Scott Law represents people hurt in falls on unsafe property in Tustin, from store aisles and restaurant floors to apartment stairways, parking lots, and sidewalks. A claim usually turns on whether whoever controlled the property knew, or should have known, about the hazard and failed to fix it or warn about it in time.',
-    metaDescription: 'Tustin slip and fall lawyer Kyle Scott handles falls in stores, apartments, parking lots, and on sidewalks. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Tustin slip and fall lawyer for falls in store aisles, on apartment stairways, in parking lots and on sidewalks. Call 714-544-1460 for a free consultation.',
     icon: 'fall',
     introTitle: 'A fall alone does not prove a claim. What the owner knew usually decides it.',
     intro: [

@@ -28,7 +28,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Bicycle Accident Attorney',
     eyebrow: 'Cyclists, e-bike riders, and scooter riders hurt on Orange County roads and paths',
     description: 'Representation for cyclists, e-bike riders, and scooter riders hit by drivers in Orange County, including dooring, hit-and-run, uninsured-driver, and road-defect claims.',
-    metaDescription: 'Orange County bicycle accident attorney Kyle Scott represents cyclists and e-bike riders hit by drivers. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County bicycle accident attorney for cyclists and e-bike riders hit by drivers, doored by parked cars or hurt by road defects. Free consultation.',
     icon: 'bicycle',
     introTitle: 'A person on a bicycle has a driver’s rights, and drivers owe cyclists specific duties.',
     intro: [
@@ -99,7 +99,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Burn Injury Attorney',
     eyebrow: 'Burn injuries from fires, scalds, electricity, and chemicals',
     description: 'Representation for people and families after serious burns caused by vehicle fires, scalding, electrical or chemical hazards, or fires in homes, apartments, and businesses.',
-    metaDescription: 'Orange County burn injury attorney Kyle Scott represents people burned in vehicle fires, scalds, electrical and chemical accidents, and building fires. Free consultation.',
+    metaDescription: 'Orange County burn injury attorney for vehicle fires, scalds, electrical and chemical burns, and apartment fires. Free consultation.',
     icon: 'burn',
     introTitle: 'A burn claim has to prove two things: what caused it, and what recovery will really involve.',
     intro: [
@@ -164,7 +164,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Bus Accident Attorney',
     eyebrow: 'Public transit buses, school buses, shuttles, and charter coaches',
     description: 'Representation for passengers, drivers, cyclists, and pedestrians hurt in public transit, school bus, shuttle, and charter bus crashes in Orange County, including the government claims those cases often require.',
-    metaDescription: 'Orange County bus accident attorney Kyle Scott represents people hurt in transit, school, shuttle, and charter bus crashes. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County bus accident attorney for transit, school, shuttle and charter bus crashes, including claims against public agencies. Free consultation.',
     icon: 'bus',
     introTitle: 'Bus operators owe passengers the utmost care, and public transit claims run on a short clock.',
     intro: [
@@ -227,7 +227,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Catastrophic Injury Attorney',
     eyebrow: 'Paralysis, amputation, severe brain injury, and serious burns',
     description: 'Representation for people and families after injuries that permanently change a life, including paralysis, amputation, severe brain injury, and serious burns, with a focus on future care and lost earning capacity.',
-    metaDescription: 'Orange County catastrophic injury attorney Kyle Scott represents people after paralysis, amputation, severe brain injury, and burns. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County catastrophic injury attorney for paralysis, amputation and severe brain injury, with future care in focus. Free consultation.',
     icon: 'catastrophic',
     introTitle: 'The claim has to cover the rest of a life.',
     intro: [
@@ -296,7 +296,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Child Sexual Abuse Lawyer',
     eyebrow: 'Civil claims for survivors of childhood sexual abuse and molestation, and their families',
     description: 'Confidential representation for survivors of childhood sexual abuse and their families in civil claims against abusers and against the schools, churches, daycares, youth programs, and other institutions that failed to protect them.',
-    metaDescription: 'Orange County child sexual abuse lawyer for survivors and families: claims against abusers, schools, churches, and daycares. Free, confidential consult.',
+    metaDescription: 'Orange County child sexual abuse lawyer for survivors, with claims against schools, churches, daycares and youth programs. Free consultation.',
     icon: 'child',
     introTitle: 'A civil case asks two questions: who caused the harm, and who allowed it.',
     intro: [
@@ -354,7 +354,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Drunk Driving Accident Lawyer',
     eyebrow: 'Injuries caused by drunk, drugged, and impaired drivers',
     description: 'Representation for people injured by drunk, drugged, or impaired drivers in Orange County, including punitive damages and claims involving alcohol furnished to minors.',
-    metaDescription: 'Orange County drunk driving accident lawyer Kyle Scott represents people hurt by drunk, drugged, and impaired drivers. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County drunk driving accident lawyer for people hurt by drunk or drugged drivers, including punitive damages claims. Free consultation.',
     icon: 'impaired',
     introTitle: 'The criminal case punishes the driver. The civil claim pays for what you lost.',
     intro: [
@@ -416,7 +416,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Government Claims Attorney',
     eyebrow: 'Claims against cities, the County, school districts, transit agencies, and the State',
     description: 'Representation for people hurt by dangerous public property, public vehicles, or public employees, including the government claim that must come before a lawsuit.',
-    metaDescription: 'Orange County government claims attorney Kyle Scott represents people hurt by dangerous public property, public vehicles, and public employees. Six-month claim deadlines apply.',
+    metaDescription: 'Orange County government claims attorney for injuries on public roads, sidewalks and property. The claim comes before the lawsuit. Free consultation.',
     icon: 'government',
     introTitle: 'Municipal liability follows its own statutes, deadlines, and defenses.',
     intro: [
@@ -490,7 +490,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Hit-and-Run Accident Attorney',
     eyebrow: 'Hit-and-run drivers and uninsured or underinsured motorists',
     description: 'Representation after hit-and-run crashes and crashes with uninsured or underinsured drivers in Orange County, including uninsured and underinsured motorist claims and arbitration.',
-    metaDescription: 'Orange County hit-and-run accident attorney Kyle Scott represents people hurt by drivers who fled or had no insurance. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County hit-and-run accident attorney for people hurt by drivers who fled or had no insurance, with uninsured motorist claims. Free consultation.',
     icon: 'hit-and-run',
     introTitle: 'When the other driver flees or has no insurance, the claim usually turns to your own policy.',
     intro: [
@@ -547,7 +547,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Insurance Bad Faith Attorney',
     eyebrow: 'Insurance bad faith in injury claims',
     description: 'Representation for policyholders whose own insurer unreasonably denied, delayed, or underpaid an injury-related claim, including uninsured and underinsured motorist coverage.',
-    metaDescription: 'Orange County insurance bad faith attorney for UM/UIM and other injury claims your own insurer denied, delayed, or underpaid. Free consultation.',
+    metaDescription: 'Orange County insurance bad faith attorney when your own insurer denies, delays or underpays an uninsured motorist claim. Free consultation.',
     icon: 'insurance',
     introTitle: 'A low offer is not always bad faith. An unreasonable one can be.',
     intro: [
@@ -604,7 +604,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Premises Liability Attorney',
     eyebrow: 'Premises liability and dangerous property',
     description: 'Claims against property owners, landlords, and businesses for injuries caused by falling objects and trees, pools and water parks, rides, unsafe stairs, parking lots, and other dangerous conditions.',
-    metaDescription: 'Orange County premises liability attorney Kyle Scott represents people hurt by falling objects and trees, pools, stairs, parking lots, and other unsafe property. Free consultation.',
+    metaDescription: 'Orange County premises liability attorney for falling objects and trees, pool and stair injuries, and unsafe parking lots. Free consultation.',
     icon: 'property',
     introTitle: 'Premises liability covers far more than slips and falls.',
     intro: [
@@ -666,7 +666,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Spinal Cord Injury Attorney',
     eyebrow: 'Spinal cord, back, and neck injuries',
     description: 'Representation for people with spinal cord injuries and other spine injuries, such as herniated discs, fractured vertebrae, and whiplash, after crashes, falls, and other incidents someone else caused.',
-    metaDescription: 'Orange County spinal cord, back, and neck injury attorney Kyle Scott represents people with herniated discs, fractures, and paralysis. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County spinal cord injury attorney for paralysis, fractured vertebrae, herniated discs and whiplash. Free consultation.',
     icon: 'spine',
     introTitle: 'Not every spine injury is a spinal cord injury. Both can change a life.',
     intro: [
@@ -726,7 +726,7 @@ export const roundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Orange County Sports Injury Attorney',
     eyebrow: 'Sports, recreation, and playground injuries',
     description: 'Representation for children and adults hurt in youth and school sports, at ballparks, gyms, trampoline and skate parks, pools, and playgrounds, when a coach, league, or facility made an activity more dangerous than it had to be.',
-    metaDescription: 'Orange County sports injury attorney for youth sports, ballpark, playground, gym, and recreation injuries caused by unsafe coaching, facilities, or gear.',
+    metaDescription: 'Orange County sports injury attorney for youth sports concussions and injuries at ballparks, gyms and trampoline parks. Free consultation.',
     icon: 'sports',
     introTitle: 'The question is not whether the sport was risky. It is whether someone made it riskier.',
     intro: [

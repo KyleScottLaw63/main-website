@@ -12,7 +12,7 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Verdicts & Settlements | Kyle Scott Law',
-  description: 'Review published Kyle Scott Law jury verdicts and settlements involving abuse, school liability, vehicle crashes, premises liability, dog bites, malpractice, and other serious injury matters.',
+  description: 'Orange County injury verdicts and settlements published by Kyle Scott Law, from abuse and school cases to crashes and malpractice. Free consultation.',
   alternates: localizedAlternates('/results'),
 };
 

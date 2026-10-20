@@ -32,7 +32,7 @@ const terms = noRecoveryTerms.en;
 
 // The home page's own description; the layout's stays the default for pages that set none (content round 4, 2026-10-19).
 export const metadata: Metadata = {
-  description: 'Orange County personal injury lawyer Kyle Scott handles every type of injury case, from car crashes to malpractice. Free consultation, English or Spanish.',
+  description: 'Orange County personal injury lawyer in Tustin. Kyle Scott Law has represented injured people since 1991, from crashes to malpractice. Free consultation.',
 };
 
 // "Every type of personal injury case": every practice page, in the order of /areas-we-serve, from the same data,

@@ -11,7 +11,7 @@ import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
 export const metadata: Metadata = {
   title: 'Veredictos y acuerdos | Kyle Scott Law',
-  description: 'Revise veredictos y acuerdos publicados de Kyle Scott Law en casos de abuso, escuelas, accidentes, propiedades peligrosas, mordeduras y negligencia profesional.',
+  description: 'Veredictos y acuerdos publicados por Kyle Scott Law en casos de abuso, escuelas, accidentes, mordeduras y negligencia profesional. Consulta gratuita.',
   alternates: localizedAlternates('/es/resultados'),
 };
 

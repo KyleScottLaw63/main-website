@@ -58,7 +58,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Aliso Viejo brain and spinal cord injuries, falls at stores and common areas, crashes on the 73 and Aliso Creek Road, and trail and park accidents.',
     metaDescription:
-      'Aliso Viejo personal injury lawyer for brain and spinal cord injuries, falls, and crashes. Free consultation, no fee unless there is a recovery.',
+      'Aliso Viejo personal injury attorney for brain and spinal cord injuries, falls and crashes on Aliso Creek Road and Alicia Parkway. Free consultation.',
     introTitle: 'Aliso Viejo injuries happen on the 73, along the city’s parkways, and on the trails at its edge.',
     intro: [
       'Aliso Viejo is a master-planned city that the 73 toll road crosses. Aliso Creek Road, Pacific Park Drive, Aliso Viejo Parkway, Glenwood Drive, and Alicia Parkway carry local traffic past the Aliso Viejo Town Center and the offices along Enterprise. Much of the city’s open space is not city-run: the city says the Aliso Viejo Community Association administers landscape maintenance of most slopes, medians, and parks, and the city owns Iglesia Park. The claims that follow are freeway and intersection crashes, bicycle and e-bike collisions, falls at stores, offices, and association common areas, and trail accidents, and the most serious of them involve brain and spinal cord injuries.',
@@ -132,7 +132,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Dana Point dog bites, falls at the harbor, on the beaches, and at local businesses, crashes on Pacific Coast Highway, and catastrophic injuries.',
     metaDescription:
-      'Dana Point personal injury attorney for dog bites, falls at the harbor and beaches, and crashes on Pacific Coast Highway. Free consultation, no fee unless there is a recovery.',
+      'Dana Point personal injury attorney for harbor and beach falls, Pacific Coast Highway crashes and catastrophic injuries. Free consultation.',
     introTitle: 'Dana Point injuries happen along Pacific Coast Highway, around the harbor, and on the beaches.',
     intro: [
       'Dana Point is a coastal city between Laguna Beach and San Clemente. Pacific Coast Highway runs its length, from Eastline Road at the Laguna Beach line past the harbor to Doheny State Beach and Capistrano Beach, and Crown Valley Parkway, Niguel Road, Street of the Golden Lantern, Del Obispo Street, and Stonehill Drive carry traffic to and from it. The County of Orange leases the harbor to private operators, Doheny State Beach is a state park, and Capistrano Beach Park is run by OC Parks. The claims that follow are dog bites near the beaches and in neighborhoods, falls at harbor shops, restaurants, and hotels, highway and intersection crashes, and injuries serious enough to change a life.',
@@ -207,7 +207,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Laguna Beach crashes on Coast Highway and Laguna Canyon Road, pedestrian collisions downtown, falls at shops, restaurants, hotels, and on public property, and dog bites.',
     metaDescription:
-      'Laguna Beach personal injury lawyer for crashes on Coast Highway and Laguna Canyon Road, pedestrian injuries, falls, and dog bites. Free consultation, no fee unless there is a recovery.',
+      'Laguna Beach personal injury attorney for Coast Highway and Laguna Canyon Road crashes, downtown pedestrian injuries and dog bites. Free consultation.',
     introTitle: 'Laguna Beach injuries happen on Coast Highway, in the canyon, downtown, and on the beaches.',
     intro: [
       'Coast Highway (State Route 1) runs the length of Laguna Beach’s coast, and Laguna Canyon Road (State Route 133), which the city calls one of its main ways in and out, meets it downtown. Laguna Coast Wilderness Park and Aliso and Wood Canyons Wilderness Park, both run by OC Parks, wrap the hills above town. The claims that follow are collisions on Coast Highway and in the canyon, pedestrians and cyclists struck downtown and in crosswalks, falls at shops, galleries, restaurants, hotels, and on public property, and dog bites.',
@@ -283,7 +283,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Laguna Hills crashes on the 5 and on El Toro Road, La Paz Road, Alicia Parkway, and Moulton Parkway, falls at stores and medical office buildings, and medical negligence.',
     metaDescription:
-      'Laguna Hills personal injury attorney for crashes on the 5 and the parkways, falls, and medical negligence. Free consultation, no fee unless there is a recovery.',
+      'Laguna Hills personal injury attorney for crashes on El Toro Road and Moulton Parkway, falls and medical negligence. Free consultation.',
     introTitle: 'Laguna Hills injuries happen at busy freeway interchanges, on the parkways between them, and around the city’s medical center.',
     intro: [
       'The 5 runs along Laguna Hills’ eastern edge, and El Toro Road, La Paz Road, Alicia Parkway, Moulton Parkway, and Paseo de Valencia carry traffic between the freeway, the city’s shopping centers, and neighboring Laguna Woods, Aliso Viejo, and Laguna Niguel. MemorialCare Saddleback Medical Center and its medical office buildings are in the city. The claims that follow are freeway and interchange crashes, intersection and pedestrian collisions, falls at stores, restaurants, and medical buildings, dog bites, and medical negligence.',
@@ -356,7 +356,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Laguna Niguel crashes on Crown Valley Parkway, Alicia Parkway, the 5, and the 73, bicycle and e-bike collisions, falls, and brain and spinal cord injuries.',
     metaDescription:
-      'Laguna Niguel personal injury lawyer for brain and spinal cord injuries, e-bike and car crashes, and falls. Free consultation, no fee unless there is a recovery.',
+      'Laguna Niguel personal injury attorney for Crown Valley Parkway crashes, e-bike collisions and brain and spinal cord injuries. Free consultation.',
     introTitle: 'Laguna Niguel injuries happen on long parkways between the 5 and the 73, on bikes headed to school, and in the city’s open space.',
     intro: [
       'Laguna Niguel began as a master-planned community, and much of it is parkland and open space. The 5 runs along its eastern border and the 73 starts at the 5 and runs northwest through the city. The city names Alicia Parkway, Crown Valley Parkway, Niguel Road, La Paz Road, Moulton Parkway/Golden Lantern, and Pacific Park Drive as its major roadways, and the Laguna Niguel/Mission Viejo Metrolink station is on Forbes Road, off Crown Valley Parkway near the 5. The claims that follow are arterial and freeway crashes, students and adults hurt on bicycles and e-bikes, falls at shopping centers and in parks, and the head and spine injuries those events can cause.',
@@ -430,7 +430,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for Laguna Woods residents and their families after elder abuse and neglect, falls, pedestrian and car crashes, and medical errors.',
     metaDescription:
-      'Laguna Woods personal injury attorney for elder abuse and neglect, falls, pedestrian and car crashes, and medical errors. Free consultation, no fee unless there is a recovery.',
+      'Laguna Woods personal injury attorney for elder abuse and neglect, falls, golf cart and pedestrian injuries, and medical errors. Free consultation.',
     introTitle: 'In Laguna Woods, injury claims often involve older adults, so the law and the evidence work a little differently.',
     intro: [
       'Laguna Woods is home to five private communities, the largest of which is Laguna Woods Village, and the city says the median age of its residents is approximately 75. That shapes the claims: elder abuse and neglect at home and in care facilities, falls that cause head injuries, pedestrian and golf cart collisions on the city’s streets, and harm from medical care.',
@@ -500,7 +500,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Lake Forest crashes on the 5, the 241 toll road, and the city’s parkways, falls at stores and business parks, skatepark and trail injuries, and dog attacks.',
     metaDescription:
-      'Lake Forest personal injury lawyer for crashes on the 5, the 241, and city parkways, falls, recreation injuries, and dog bites. Free consultation, no fee unless there is a recovery.',
+      'Lake Forest personal injury attorney for crashes on El Toro Road and Lake Forest Drive, skatepark and trail injuries and dog attacks. Free consultation.',
     introTitle: 'Lake Forest injuries happen between the 5 and the 241, on the parkways that link them, and on the trails at the city’s edge.',
     intro: [
       'Lake Forest grew from the community long known as El Toro and later took in Foothill Ranch and Portola Hills. The 5 forms its western border with Laguna Hills, and the 241 toll road runs through Foothill Ranch. El Toro Road crosses the whole city, and its other main streets include Lake Forest Drive, Bake Parkway, Portola Parkway, Alton Parkway, Trabuco Road, and Muirlands Boulevard. The city runs the Etnies Skatepark and the Sports Park, and the County runs Whiting Ranch Wilderness Park. The claims that follow are freeway, toll-road, and parkway collisions, falls at stores, offices, and apartment communities, skatepark and trail injuries, and dog bites.',
@@ -576,7 +576,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Mission Viejo crashes on the 5 and on Marguerite, Crown Valley, Oso, and La Paz, falls at stores and on public or association property, and dog attacks.',
     metaDescription:
-      'Mission Viejo personal injury lawyer for crashes on the 5 and city parkways, falls, and dog bites. Free consultation, no fee unless there is a recovery.',
+      'Mission Viejo personal injury attorney for crashes on Marguerite and Crown Valley, Oso Creek Trail injuries and falls. Free consultation.',
     introTitle: 'Mission Viejo injuries happen on the 5, on parkways laid along the valleys, and on the trails, lake, and campuses between them.',
     intro: [
       'The 5 runs along Mission Viejo’s western side, and the 241 toll road crosses the city’s northeast corner. Marguerite Parkway passes Saddleback College and runs along Lake Mission Viejo, the Oso Creek Trail follows the creek through the city, and Providence Mission Hospital sits on Medical Center Road. The claims that follow are freeway and parkway collisions, children and adults hit while walking or riding bikes, falls at stores, offices, and apartment communities, injuries on city, school, and association property, and dog bites.',
@@ -649,7 +649,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Rancho Santa Margarita crashes on the 241 toll road and the parkways, falls on association and business property, and catastrophic brain and spinal cord injuries.',
     metaDescription:
-      'Rancho Santa Margarita personal injury attorney for crashes on the 241 and the parkways, falls, and catastrophic injuries. Free consultation, no fee unless there is a recovery.',
+      'Rancho Santa Margarita personal injury attorney for Santa Margarita Parkway crashes, HOA property falls and catastrophic injuries. Free consultation.',
     introTitle: 'Rancho Santa Margarita injuries happen on the 241 and the parkways, and often on property the homeowners association owns, not the city.',
     intro: [
       'Rancho Santa Margarita sits on the Plano Trabuco plateau next to Mission Viejo and Trabuco Canyon. The 241 toll road has interchanges at Antonio Parkway and Santa Margarita Parkway, Santa Margarita Parkway and Antonio Parkway are the main thoroughfares, and Alicia Parkway ends at Santa Margarita Parkway. The city notes that most facilities in town are owned and maintained by private organizations, chiefly the master homeowners association, SAMLARC; O’Neill Regional Park, run by the County, sits next door in Trabuco Canyon. The claims that follow are toll-road and parkway collisions, cyclists and pedestrians at crossings and on trails, falls on association and business property, park and trail injuries, and dog bites.',
@@ -721,7 +721,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in San Clemente: dog bites and knockdowns, falls at businesses and on public property, and brain injuries after crashes and falls.',
     metaDescription:
-      'San Clemente personal injury attorney for dog bites, falls, and brain injuries after crashes and falls. Free consultation, no fee unless there is a recovery.',
+      'San Clemente personal injury attorney for dog bites, Beach Trail and pier falls, and brain injuries after crashes. Free consultation.',
     introTitle: 'San Clemente injuries happen along the 5, on the Beach Trail and the pier, and in its neighborhoods.',
     intro: [
       'San Clemente sits at the south end of Orange County and borders Dana Point, San Juan Capistrano, and Camp Pendleton. El Camino Real, the historic coast route, crosses downtown at Avenida Del Mar; Camino de los Mares and Camino de Estrella form the northern gateway from the 5; and Avenida Pico and Avenida Vista Hermosa run inland to Avenida La Pata. The Beach Trail runs from North Beach past the Municipal Pier to Calafia Beach. The city’s local hospital closed in 2016, and emergency care is in neighboring cities.',
@@ -794,7 +794,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in San Juan Capistrano crashes on the 5, Ortega Highway, and downtown streets, motorcycle crashes, pedestrian and bicycle injuries, and falls and trail injuries.',
     metaDescription:
-      'San Juan Capistrano personal injury attorney for crashes on the 5 and Ortega Highway, motorcycle and pedestrian injuries, and falls. Free consultation, no fee unless there is a recovery.',
+      'San Juan Capistrano personal injury attorney for Ortega Highway crashes, motorcycle and pedestrian injuries, and falls. Free consultation.',
     introTitle: 'San Juan Capistrano injuries happen where the 5 meets Ortega Highway, downtown around the Mission, and on the trails.',
     intro: [
       'San Juan Capistrano lies between Dana Point and Mission Viejo. The 5 runs through it, and State Route 74, the Ortega Highway, starts at the freeway and heads east into the mountains. Camino Capistrano and Del Obispo Street carry traffic through downtown, home to the Mission, Los Rios Street, and the train station, where visitors on foot share the streets with cars. The claims that follow are collisions, motorcycle crashes, people struck while walking or cycling, falls, and trail injuries.',

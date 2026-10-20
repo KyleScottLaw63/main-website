@@ -9,7 +9,7 @@ import { StructuredData } from '@/components/marketing/StructuredData';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { attorneyProfileStructuredData } from '@/lib/marketing/structured-data';
 
-export const metadata: Metadata = { title: 'El equipo de Kyle Scott Law | Tustin', description: 'Conozca al abogado litigante Kyle J. Scott y al equipo profesional de Kyle Scott Law en Tustin, California.', alternates: localizedAlternates('/es/equipo') };
+export const metadata: Metadata = { title: 'El equipo de Kyle Scott Law | Tustin', description: 'Conozca al abogado Kyle J. Scott y al equipo de Kyle Scott Law en Tustin, que representa a personas lesionadas desde 1991. Consulta gratuita.', alternates: localizedAlternates('/es/equipo') };
 
 const teamMembers = [
   { name: 'Naomi Moore', role: 'Gerente de oficina', image: '/naomi-moore.webp' },

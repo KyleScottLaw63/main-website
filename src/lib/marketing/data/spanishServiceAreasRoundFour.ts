@@ -31,7 +31,7 @@ export const spanishRoundFourServiceAreas: SpanishServiceAreaData[] = [
     description:
       'Representación para personas lesionadas en Fountain Valley — en choques en la 405 y en Brookhurst, Euclid y Magnolia, en caídas en tiendas y en propiedades públicas, en Mile Square Park y en ataques de perros.',
     metaDescription:
-      'El abogado de lesiones personales en Fountain Valley Kyle Scott representa a personas lesionadas en choques en la 405 y en los bulevares de la ciudad, caídas, lesiones en Mile Square Park y mordeduras de perro. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+      'Abogado de lesiones personales en Fountain Valley: choques en Brookhurst, Euclid y Magnolia y lesiones en Mile Square Park. Consulta gratuita.',
     introTitle: 'Las lesiones en Fountain Valley ocurren donde la 405 atraviesa una cuadrícula de bulevares concurridos, y alrededor de Mile Square Park.',
     intro: [
       'La 405 cruza Fountain Valley en diagonal. Las calles Brookhurst, Euclid, Magnolia, Bushard y Ward llevan el tráfico de norte a sur, y las avenidas Edinger, Warner, Slater, Talbert y Ellis las cruzan. Mile Square Regional Park, administrado por el Condado, y el Santa Ana River Trail (el sendero que sigue el río Santa Ana) a lo largo del borde este de la ciudad llevan a ciclistas y peatones a la mezcla. Los reclamos que resultan son choques en la autopista y en intersecciones, ciclistas y peatones atropellados cerca del parque y del sendero del río, caídas en tiendas, restaurantes y oficinas, y mordeduras de perro en zonas residenciales.',

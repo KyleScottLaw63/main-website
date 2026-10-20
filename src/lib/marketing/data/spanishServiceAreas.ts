@@ -30,7 +30,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     description:
       'Representación para personas lesionadas en Santa Ana en choques de auto y atropellos de peatones, caídas en tiendas y complejos de apartamentos, mordeduras de perro y otros reclamos por negligencia — en inglés y en español.',
     metaDescription:
-      'El abogado de lesiones personales en Santa Ana Kyle Scott representa a personas lesionadas en accidentes de auto y atropellos de peatones, caídas y mordeduras de perro. Admisión bilingüe. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+      'Abogado de lesiones personales en Santa Ana: atropellos de peatones, caídas en apartamentos y mordeduras de perro. En español o inglés. Consulta gratuita.',
     introTitle: 'Santa Ana es la sede del condado, y ahí está el tribunal donde se decide la mayoría de los casos por lesiones del Condado de Orange.',
     intro: [
       'Santa Ana es la sede del condado y una de las ciudades más densamente pobladas de California. Los tribunales civiles del Tribunal Superior del Condado de Orange están en el centro de la ciudad, a pocas millas de la oficina del despacho en Tustin. Sus calles — Bristol, Main, First, 17th, y la 5, la 55 y la 22 que la cruzan — llevan un tráfico intenso de personas que viajan al trabajo y de peatones, y sus complejos de apartamentos, centros comerciales y MainPlace Mall generan los reclamos por caídas y propiedades inseguras que acompañan a una población grande y activa.',
@@ -75,7 +75,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     description:
       'Representación para personas lesionadas en Anaheim en choques de auto y camión, caídas e incidentes por propiedades inseguras en resorts, estadios, hoteles y tiendas, mordeduras de perro y otras lesiones evitables.',
     metaDescription:
-      'El abogado de lesiones personales en Anaheim Kyle Scott representa a personas lesionadas en accidentes de auto, caídas en resorts y recintos, mordeduras de perro y otros reclamos por negligencia. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+      'Abogado de lesiones personales en Anaheim: caídas en resorts y estadios, autobuses públicos y peatones cerca del Platinum Triangle. Consulta gratuita.',
     introTitle: 'En Anaheim las lesiones ocurren donde se reúne el condado: sus autopistas, su zona de resorts y sus recintos.',
     intro: [
       'Anaheim es la ciudad más poblada del Condado de Orange y su destino de visitantes más concurrido. Sus parques temáticos y hoteles de resort, su estadio y su arena, y su centro de convenciones atraen a millones de personas al año a Harbor Boulevard, Katella Avenue y los corredores de la 5, la 57 y la 91 que llevan el tráfico hasta ellos. Ese volumen produce los reclamos que Kyle Scott Law atiende: choques con personas que viajan al trabajo, conductores de viajes compartidos, autobuses turísticos y camiones comerciales; caídas en hoteles, estructuras de estacionamiento, restaurantes y tiendas; y lesiones en propiedades que están abiertas al público y son responsables de mantenerlo seguro.',
@@ -120,7 +120,7 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     description:
       'Representación para personas lesionadas en Garden Grove — en choques en la 22 y en Harbor Boulevard, Garden Grove Boulevard, Brookhurst Street y Beach Boulevard, en atropellos de peatones, en caídas en hoteles, restaurantes, tiendas y complejos de apartamentos, y en ataques de perros.',
     metaDescription:
-      'El abogado de lesiones personales en Garden Grove Kyle Scott representa a personas lesionadas en choques en la 22 y en los bulevares de la ciudad, atropellos de peatones, caídas en hoteles, restaurantes y tiendas, y mordeduras de perro.',
+      'Abogado de lesiones personales en Garden Grove: choques en Harbor, Brookhurst y Garden Grove Boulevard, y caídas en hoteles. Consulta gratuita.',
     introTitle: 'Las lesiones en Garden Grove ocurren en la 22 y en los bulevares anchos que cruzan la ciudad.',
     intro: [
       'La 22 cruza Garden Grove de este a oeste, en su mayor parte dentro de la ciudad o a lo largo de su límite con Westminster, con salidas desde Beach Boulevard hasta Harbor Boulevard. Harbor Boulevard lleva visitantes a los hoteles del extremo de la ciudad que colinda con Anaheim, y en Garden Grove Boulevard están los restaurantes y las tiendas del OC Koreatown, entre Beach Boulevard y Brookhurst Street. Los choques en las rampas y las intersecciones, los peatones atropellados al cruzar bulevares anchos y las caídas en hoteles, restaurantes, tiendas y complejos de apartamentos son los reclamos que resultan.',

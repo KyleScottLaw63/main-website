@@ -13,7 +13,7 @@ import { newsCollectionStructuredData } from '@/lib/marketing/structured-data';
 
 export const metadata: Metadata = {
   title: 'Noticias y Artículos Legales | Kyle Scott Law',
-  description: 'Resultados de casos, noticias del despacho y artículos de Kyle Scott Law sobre asuntos de lesiones personales en el Condado de Orange y California.',
+  description: 'Noticias de Kyle Scott Law y artículos legales sobre lesiones personales en el Condado de Orange y California. Consulta gratuita.',
   alternates: localizedAlternates('/es/noticias'),
 };
 

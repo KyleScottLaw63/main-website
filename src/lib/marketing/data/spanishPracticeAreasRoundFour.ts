@@ -54,7 +54,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de bicicleta en el Condado de Orange',
     eyebrow: 'Ciclistas y usuarios de e-bikes y scooters lesionados en las calles y senderos del Condado de Orange',
     description: 'Representación para ciclistas y usuarios de e-bikes y scooters atropellados por conductores en el Condado de Orange, incluidos reclamos por puertas abiertas (“dooring”), choque y fuga, conductores sin seguro y defectos en la vía.',
-    metaDescription: 'El abogado de accidentes de bicicleta en el Condado de Orange Kyle Scott representa a ciclistas y usuarios de e-bikes atropellados por conductores. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de bicicleta en el Condado de Orange: ciclistas y e-bikes atropellados, puertas abiertas y baches. Consulta gratuita.',
     icon: 'bicycle',
     introTitle: 'Una persona en bicicleta tiene los derechos de un conductor, y los conductores tienen deberes específicos hacia los ciclistas.',
     intro: [
@@ -125,7 +125,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de lesiones por quemaduras en el Condado de Orange',
     eyebrow: 'Quemaduras por incendios, escaldaduras, electricidad y productos químicos',
     description: 'Representación para personas y familias después de quemaduras graves causadas por incendios de vehículos, escaldaduras, peligros eléctricos o químicos, o incendios en casas, apartamentos y negocios.',
-    metaDescription: 'El abogado de lesiones por quemaduras en el Condado de Orange Kyle Scott representa a personas quemadas en incendios de vehículos, escaldaduras, accidentes eléctricos y químicos, e incendios de edificios. Consulta gratuita.',
+    metaDescription: 'Abogado de lesiones por quemaduras en el Condado de Orange: incendios de vehículos, escaldaduras y quemaduras eléctricas o químicas. Consulta gratuita.',
     icon: 'burn',
     introTitle: 'Un reclamo por quemaduras tiene que probar dos cosas: qué las causó y qué implicará realmente la recuperación.',
     intro: [
@@ -190,7 +190,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de autobús en el Condado de Orange',
     eyebrow: 'Autobuses de transporte público, autobuses escolares, shuttles y autobuses chárter',
     description: 'Representación para pasajeros, conductores, ciclistas y peatones lesionados en choques de autobuses de transporte público, autobuses escolares, shuttles y autobuses chárter en el Condado de Orange, incluidos los reclamos gubernamentales que esos casos suelen requerir.',
-    metaDescription: 'El abogado de accidentes de autobús en el Condado de Orange Kyle Scott representa a personas lesionadas en choques de autobuses de transporte público, escolares, shuttles y chárter. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de autobús en el Condado de Orange: choques de autobuses públicos, escolares, shuttles y chárter. Consulta gratuita.',
     icon: 'bus',
     introTitle: 'Los operadores de autobuses deben a sus pasajeros el mayor cuidado, y los reclamos por transporte público corren contra un plazo corto.',
     intro: [
@@ -253,7 +253,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de lesiones catastróficas en el Condado de Orange',
     eyebrow: 'Parálisis, amputación, lesión cerebral grave y quemaduras graves',
     description: 'Representación para personas y familias después de lesiones que cambian una vida de manera permanente, como parálisis, amputación, lesión cerebral grave y quemaduras graves, con un enfoque en la atención médica futura y en la pérdida de capacidad de ingresos.',
-    metaDescription: 'El abogado de lesiones catastróficas en el Condado de Orange Kyle Scott representa a personas después de parálisis, amputación, lesión cerebral grave y quemaduras. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de lesiones catastróficas en el Condado de Orange tras parálisis, amputación o lesión cerebral grave, con atención futura. Consulta gratuita.',
     icon: 'catastrophic',
     introTitle: 'El reclamo tiene que cubrir el resto de una vida.',
     intro: [
@@ -322,7 +322,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de abuso sexual infantil en el Condado de Orange',
     eyebrow: 'Reclamos civiles para sobrevivientes de abuso sexual y tocamientos indebidos en la infancia, y para sus familias',
     description: 'Representación confidencial para sobrevivientes de abuso sexual infantil y sus familias en reclamos civiles contra quienes cometieron el abuso y contra las escuelas, iglesias, guarderías, programas juveniles y otras instituciones que no los protegieron.',
-    metaDescription: 'Abogado de abuso sexual infantil en el Condado de Orange para sobrevivientes y familias: reclamos contra abusadores, escuelas, iglesias y guarderías. Consulta gratuita y confidencial.',
+    metaDescription: 'Abogado de abuso sexual infantil en el Condado de Orange para sobrevivientes: reclamos contra escuelas, iglesias y guarderías. Consulta gratuita.',
     icon: 'child',
     introTitle: 'Un caso civil responde a dos preguntas: quién causó el daño y quién lo permitió.',
     intro: [
@@ -380,7 +380,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes con conductor ebrio en el Condado de Orange',
     eyebrow: 'Lesiones causadas por conductores ebrios, drogados o con las facultades afectadas',
     description: 'Representación para personas lesionadas por conductores ebrios, drogados o con las facultades afectadas en el Condado de Orange, incluidos los daños punitivos y los reclamos que involucran alcohol proporcionado a menores.',
-    metaDescription: 'El abogado de accidentes con conductor ebrio en el Condado de Orange Kyle Scott representa a personas lesionadas por conductores ebrios, drogados y con las facultades afectadas. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes con conductor ebrio en el Condado de Orange: lesionados por conductores ebrios o drogados y daños punitivos. Consulta gratuita.',
     icon: 'impaired',
     introTitle: 'El caso penal castiga al conductor. El reclamo civil paga lo que usted perdió.',
     intro: [
@@ -442,7 +442,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de reclamos contra el gobierno en el Condado de Orange',
     eyebrow: 'Reclamos contra ciudades, el Condado, distritos escolares, agencias de transporte y el Estado',
     description: 'Representación para personas lesionadas por propiedades públicas peligrosas, vehículos públicos o empleados públicos, incluido el reclamo gubernamental que debe presentarse antes de una demanda.',
-    metaDescription: 'El abogado de reclamos contra el gobierno en el Condado de Orange Kyle Scott representa a personas lesionadas por propiedades públicas peligrosas, vehículos públicos y empleados públicos. Se aplican plazos de seis meses para presentar el reclamo.',
+    metaDescription: 'Abogado de reclamos contra el gobierno en el Condado de Orange: lesiones en vías, aceras y propiedades públicas. Consulta gratuita.',
     icon: 'government',
     introTitle: 'La responsabilidad municipal sigue sus propias leyes, plazos y defensas.',
     intro: [
@@ -516,7 +516,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de atropello y fuga en el Condado de Orange',
     eyebrow: 'Conductores que huyen del lugar y conductores sin seguro o con seguro insuficiente',
     description: 'Representación después de choques en los que el conductor huye del lugar (atropello y fuga) y de choques con conductores sin seguro o con seguro insuficiente en el Condado de Orange, incluidos los reclamos de cobertura para conductores sin seguro y con seguro insuficiente y el arbitraje.',
-    metaDescription: 'El abogado de accidentes de atropello y fuga en el Condado de Orange Kyle Scott representa a personas lesionadas por conductores que huyeron o no tenían seguro. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de atropello y fuga en el Condado de Orange para personas lesionadas por conductores que huyeron o sin seguro. Consulta gratuita.',
     icon: 'hit-and-run',
     introTitle: 'Cuando el otro conductor huye o no tiene seguro, el reclamo por lo general se dirige a su propia póliza.',
     intro: [
@@ -573,7 +573,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de mala fe de seguros en el Condado de Orange',
     eyebrow: 'Mala fe de seguros en reclamos por lesiones',
     description: 'Representación para asegurados cuya propia aseguradora negó, retrasó o pagó de menos, sin un motivo razonable, un reclamo relacionado con una lesión, incluida la cobertura para conductores sin seguro o con seguro insuficiente.',
-    metaDescription: 'Abogado de mala fe de seguros en el Condado de Orange para reclamos UM/UIM y otros reclamos por lesiones que su propia aseguradora negó, retrasó o pagó de menos. Consulta gratuita.',
+    metaDescription: 'Abogado de mala fe de seguros en el Condado de Orange: su propia aseguradora niega, retrasa o paga de menos su reclamo. Consulta gratuita.',
     icon: 'insurance',
     introTitle: 'Una oferta baja no siempre es mala fe. Una oferta irrazonable puede serlo.',
     intro: [
@@ -630,7 +630,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de responsabilidad de propiedades en el Condado de Orange',
     eyebrow: 'Responsabilidad de propiedades y propiedades peligrosas',
     description: 'Reclamos contra dueños de propiedades, arrendadores y negocios por lesiones causadas por objetos y árboles que caen, piscinas y parques acuáticos, juegos mecánicos, escaleras inseguras, estacionamientos y otras condiciones peligrosas.',
-    metaDescription: 'El abogado de responsabilidad de propiedades en el Condado de Orange Kyle Scott representa a personas lesionadas por objetos y árboles que caen, piscinas, escaleras, estacionamientos y otras propiedades inseguras. Consulta gratuita.',
+    metaDescription: 'Abogado de responsabilidad de propiedades en el Condado de Orange: objetos y árboles que caen, piscinas y escaleras. Consulta gratuita.',
     icon: 'property',
     introTitle: 'La responsabilidad de propiedades abarca mucho más que resbalones y caídas.',
     intro: [
@@ -692,7 +692,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de lesión de médula espinal en el Condado de Orange',
     eyebrow: 'Lesiones de médula espinal, espalda y cuello',
     description: 'Representación para personas con lesiones de médula espinal y otras lesiones de columna, como hernias de disco, vértebras fracturadas y latigazo cervical, después de choques, caídas y otros incidentes causados por otra persona.',
-    metaDescription: 'El abogado de lesiones de médula espinal, espalda y cuello en el Condado de Orange Kyle Scott representa a personas con hernias de disco, fracturas y parálisis. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de lesión de médula espinal en el Condado de Orange para parálisis, vértebras fracturadas, hernias de disco y latigazo cervical. Consulta gratuita.',
     icon: 'spine',
     introTitle: 'No toda lesión de columna es una lesión de médula espinal. Ambas pueden cambiar una vida.',
     intro: [
@@ -752,7 +752,7 @@ export const spanishRoundFourPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de lesiones deportivas en el Condado de Orange',
     eyebrow: 'Lesiones deportivas, recreativas y en parques infantiles',
     description: 'Representación para niños y adultos lesionados en deportes juveniles y escolares, en estadios de béisbol, gimnasios, parques de trampolines y de patinaje, piscinas y parques infantiles (playgrounds), cuando un entrenador, una liga o una instalación hizo una actividad más peligrosa de lo necesario.',
-    metaDescription: 'Abogado de lesiones deportivas en el Condado de Orange para lesiones en deportes juveniles, estadios de béisbol, parques infantiles, gimnasios y actividades recreativas causadas por entrenamiento, instalaciones o equipo inseguros.',
+    metaDescription: 'Abogado de lesiones deportivas en el Condado de Orange: conmociones en deportes juveniles, gimnasios y parques de trampolines. Consulta gratuita.',
     icon: 'sports',
     introTitle: 'La pregunta no es si el deporte era riesgoso. Es si alguien lo hizo más riesgoso.',
     intro: [

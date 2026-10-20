@@ -8,7 +8,7 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Client Testimonials | Kyle Scott Law',
-  description: 'Read client feedback published by Kyle Scott Law and verified reviews connected to the firm’s Google Business Profile.',
+  description: 'Kyle Scott Law client testimonials and Google reviews from Orange County injury clients, published by the Tustin firm. Free consultation.',
   alternates: localizedAlternates('/testimonials'),
 };
 

@@ -55,7 +55,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Anaheim car and truck collisions, falls and unsafe-property incidents at resorts, stadiums, hotels, and stores, dog bites, and other preventable injuries.',
     metaDescription:
-      'Anaheim personal injury attorney Kyle Scott represents people hurt in car accidents, falls at resorts and venues, dog bites, and other negligence claims. Free consultation, no fee unless there is a recovery.',
+      'Anaheim personal injury attorney for resort and stadium falls, transit bus crashes and pedestrian injuries near the Platinum Triangle. Free consultation.',
     introTitle: 'Anaheim injuries happen where the county gathers: its freeways, its resort district, and its venues.',
     intro: [
       'Anaheim is Orange County’s largest city by population and its busiest visitor destination. Its theme parks and resort hotels, its stadium and arena, and its convention center draw millions of people a year onto Harbor Boulevard, Katella Avenue, and the I-5, SR-57, and SR-91 corridors that feed them. That volume produces the claims Kyle Scott Law handles: collisions with commuters, rideshare drivers, tour buses, and commercial trucks; falls in hotels, parking structures, restaurants, and retail; and injuries on premises that are open to the public and responsible for keeping it safe.',
@@ -99,7 +99,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Irvine collisions on the 405, the 5, and the toll roads, bicycle and pedestrian injuries, falls at offices and shopping centers, and other negligence claims.',
     metaDescription:
-      'Irvine personal injury attorneys at Kyle Scott Law represent people hurt in car, rideshare, bicycle, and pedestrian accidents and unsafe-property incidents. Free consultation, no fee unless there is a recovery.',
+      'Irvine personal injury attorneys for bicycle and pedestrian crashes, toll road collisions and falls at shopping centers. Free consultation.',
     introTitle: 'Irvine is planned around its roads and its workplaces, and that is where its injuries happen.',
     intro: [
       'Irvine’s master-planned layout moves an enormous daily population — residents, UC Irvine students, and commuters to the business parks and the Spectrum — along the 405, the 5, Jamboree, Culver, Irvine Center Drive, and the 133, 241, and 261 toll roads. The same design that makes the city orderly produces high-speed arterial collisions, rideshare and delivery-vehicle crashes, and, on one of the county’s largest bicycle networks, serious injuries to riders and pedestrians.',
@@ -143,7 +143,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Santa Ana car and pedestrian collisions, falls at stores and apartment properties, dog bites, and other negligence claims — in English and Spanish.',
     metaDescription:
-      'Santa Ana personal injury attorney Kyle Scott represents people hurt in car and pedestrian accidents, falls, and dog bites. Bilingual intake, free consultation, no fee unless there is a recovery.',
+      'Santa Ana personal injury attorney for pedestrian crashes, apartment falls and dog bites, with intake in English and Spanish. Free consultation.',
     introTitle: 'Santa Ana is the county seat, and the courthouse where most Orange County injury cases are decided.',
     intro: [
       'Santa Ana is the county seat and one of the densest cities in California. The Orange County Superior Court’s civil courthouses sit downtown, a few miles from the firm’s office in Tustin. Its streets — Bristol, Main, First, 17th, and the 5, 55, and 22 that cross it — carry heavy commuter and pedestrian traffic, and its apartment communities, shopping centers, and MainPlace Mall generate the falls and unsafe-property claims that come with a large, busy population.',
@@ -187,7 +187,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Tustin collisions on the 5 and the 55 and on Jamboree, Red Hill, Newport, and Irvine Boulevard, in falls at shopping centers and apartment communities, in dog attacks, and in incidents involving schools and public property.',
     metaDescription:
-      'Tustin personal injury attorney Kyle Scott represents neighbors hurt in car accidents, falls, dog bites, and school incidents from his Irvine Boulevard office. Free consultation, no fee unless you win.',
+      'Tustin personal injury attorney with an office on Irvine Boulevard. Crashes on Jamboree and Red Hill, falls, dog bites, school injuries. Free consultation.',
     introTitle: 'Kyle Scott Law is a Tustin firm: the office is on Irvine Boulevard, and the courthouse is one exit down the 5.',
     intro: [
       'Tustin sits at the interchange of the 5 and the 55, with Jamboree Road, Red Hill Avenue, Newport Avenue, Irvine Boulevard, and First Street carrying commuter and retail traffic through Old Town, Tustin Ranch, the Market Place, and The District at Tustin Legacy. That mix of freeway speed, shopping-center parking, apartment communities, and school traffic is where most of the city’s injury claims begin.',
@@ -231,7 +231,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in the City of Orange — in collisions where the 5, the 22, and the 57 meet and on the 55, in pedestrian and bicycle crashes around Old Towne and Chapman University, in falls at stores, restaurants, and apartment communities, and in dog attacks.',
     metaDescription:
-      'Orange personal injury attorney Kyle Scott represents people hurt in the City of Orange: crashes at the 5, 22, and 57 interchange and on the 55, pedestrian injuries around Old Towne, falls, and dog bites.',
+      'Orange personal injury attorney for Old Towne and Chapman University pedestrian crashes, freeway collisions, falls and dog bites. Free consultation.',
     introTitle: 'Orange is where three freeways meet and where Old Towne’s streets fill with people on foot.',
     intro: [
       'The 5, the 22, and the 57 meet in Orange at the interchange known as the Orange Crush, and the 55 and the 241 and 261 toll roads also serve the city. Off the freeways, Chapman Avenue and Glassell Street meet at the Plaza in Old Towne, where restaurants, shops, older storefronts, and Chapman University’s campus bring heavy foot traffic into a historic street grid. That mix produces the claims that follow: interchange and freeway collisions, pedestrians and cyclists struck at intersections, and falls on sidewalks, stairs, and floors at businesses and apartment communities.',
@@ -275,7 +275,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Costa Mesa — in collisions on the 405, the 55, and the 73 and on Harbor Boulevard, Bristol Street, and Newport Boulevard, in falls at shopping centers, theaters, and apartment communities, at the OC Fair & Event Center, and in dog attacks.',
     metaDescription:
-      'Costa Mesa personal injury attorney Kyle Scott represents people hurt in crashes on the 405, the 55, and the 73, in falls at shopping centers and venues, at the OC Fair & Event Center, and in dog bites.',
+      'Costa Mesa personal injury attorney for crashes on Harbor Boulevard, Bristol Street and Newport Boulevard, plus theater and store falls. Free consultation.',
     introTitle: 'In Costa Mesa, injuries follow the crowds: freeway traffic, shoppers and audiences, and fair visitors.',
     intro: [
       'The 405, the 55, and the 73 all run through Costa Mesa, and Harbor Boulevard, Bristol Street, and Newport Boulevard carry their traffic into the city. South Coast Plaza and the Segerstrom Center for the Arts bring shoppers and audiences to Bristol Street and Town Center Drive; the OC Fair & Event Center on Fair Drive hosts the annual OC Fair and events through the year; and Orange Coast College sits on Fairview Road. The claims that follow are freeway and arterial collisions, pedestrians struck in parking lots and crosswalks, and falls in stores, restaurants, garages, and event grounds.',
@@ -319,7 +319,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Huntington Beach — in collisions on Pacific Coast Highway, Beach Boulevard, and the 405, in bicycle and pedestrian crashes along the coast, in falls downtown and on public property, and in dog attacks.',
     metaDescription:
-      'Huntington Beach personal injury attorney Kyle Scott represents people hurt in crashes on Pacific Coast Highway, Beach Boulevard, and the 405, in bicycle and pedestrian collisions, in falls, and in dog bites.',
+      'Huntington Beach personal injury attorney for Pacific Coast Highway crashes, beachfront bicycle and pedestrian injuries and pier falls. Free consultation.',
     introTitle: 'Huntington Beach’s claims start on the coast: Pacific Coast Highway, the pier, and the beaches.',
     intro: [
       'Pacific Coast Highway runs along Huntington Beach’s shoreline, Beach Boulevard runs north from the coast across the 405, and Main Street ends at the pier. Between them are the city beach, Bolsa Chica and Huntington state beaches, the beachfront bike path, and a downtown of restaurants and shops. Highway speed, beach crowds, and bicycles produce the claims that follow: drivers, riders, and pedestrians hit on PCH and its cross streets, falls downtown and on public property, and serious injuries treated at hospitals across west Orange County.',
@@ -363,7 +363,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Garden Grove — in collisions on the 22 and on Harbor Boulevard, Garden Grove Boulevard, Brookhurst Street, and Beach Boulevard, in pedestrian crashes, in falls at hotels, restaurants, stores, and apartment communities, and in dog attacks.',
     metaDescription:
-      'Garden Grove personal injury attorney Kyle Scott represents people hurt in crashes on the 22 and the city’s boulevards, pedestrian collisions, falls at hotels, restaurants, and stores, and dog bites.',
+      'Garden Grove personal injury attorney for crashes on Harbor, Brookhurst and Garden Grove Boulevard, hotel falls and dog bites. Free consultation.',
     introTitle: 'Garden Grove’s injuries happen on the 22 and on the wide boulevards that cross the city.',
     intro: [
       'The 22 runs east–west through Garden Grove, mostly inside the city or along its border with Westminster, with exits from Beach Boulevard to Harbor Boulevard. Harbor Boulevard brings visitors to the hotels at the city’s Anaheim end, and Garden Grove Boulevard is home to OC Koreatown’s restaurants and shops between Beach Boulevard and Brookhurst Street. Collisions at the ramps and intersections, pedestrians struck crossing wide boulevards, and falls at hotels, restaurants, stores, and apartment communities are the claims that follow.',
@@ -407,7 +407,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Fullerton — in collisions on the 57 and the 91 and on Harbor and State College Boulevards, in pedestrian and bicycle crashes near Cal State Fullerton and downtown, in falls, and in dog attacks.',
     metaDescription:
-      'Fullerton personal injury attorney Kyle Scott represents people hurt in crashes on the 57 and the 91, pedestrian and bicycle collisions near Cal State Fullerton and downtown, falls, and dog bites.',
+      'Fullerton personal injury attorney for crashes on Harbor and State College Boulevards and bicycle and pedestrian injuries near campus. Free consultation.',
     introTitle: 'Fullerton’s injuries come from its freeways, its campuses, and its downtown.',
     intro: [
       'The 57 and the 91 carry Fullerton’s freeway traffic, and the 5 and Imperial Highway also serve the city. Cal State Fullerton and Fullerton College bring students, staff, and visitors onto State College Boulevard, Chapman Avenue, and the streets around them, and downtown — centered on Harbor Boulevard and Commonwealth Avenue, near the Metrolink and Amtrak station — fills with diners and nightlife. The claims that follow are freeway and arterial collisions, pedestrians and cyclists struck near campus and downtown, and falls at restaurants, apartment communities, and parking structures.',
@@ -451,7 +451,7 @@ export const serviceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Newport Beach — in collisions on Pacific Coast Highway, Jamboree Road, Newport Boulevard, and the 73, in bicycle and e-bike crashes on the Balboa Peninsula, in boating and harbor accidents, in falls, and in dog attacks.',
     metaDescription:
-      'Newport Beach personal injury attorney Kyle Scott represents people hurt in crashes on Pacific Coast Highway and the 73, bicycle and e-bike collisions on the peninsula, boating accidents, falls, and dog bites.',
+      'Newport Beach personal injury attorney for Pacific Coast Highway crashes, Balboa Peninsula e-bike injuries and boating accidents. Free consultation.',
     introTitle: 'In Newport Beach, the claims come from Coast Highway, the Balboa Peninsula, and the harbor.',
     intro: [
       'Pacific Coast Highway runs through Newport Beach from Mariners’ Mile to Corona del Mar, the 73 crosses the city, and Newport Boulevard and Jamboree Road carry traffic down to the harbor. The Balboa Peninsula fits two piers, an oceanfront boardwalk, and its beaches into a narrow strip shared by cars, bicycles, e-bikes, and people on foot; Balboa Island and Lido Isle sit in a busy harbor; and Fashion Island draws shoppers to Newport Center. The claims that follow are highway and arterial collisions, riders and pedestrians hit on the peninsula, boating injuries, and falls at restaurants, hotels, and rental properties.',

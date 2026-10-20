@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 
-export const metadata: Metadata = { title: 'Testimonios de clientes | Kyle Scott Law', description: 'Lea comentarios de clientes publicados por Kyle Scott Law y reseñas vinculadas al Perfil de Empresa de Google del bufete.', alternates: localizedAlternates('/es/testimonios') };
+export const metadata: Metadata = { title: 'Testimonios de clientes | Kyle Scott Law', description: 'Testimonios de clientes de Kyle Scott Law: comentarios publicados por el bufete y reseñas del Perfil de Empresa de Google. Consulta gratuita.', alternates: localizedAlternates('/es/testimonios') };
 const googleProfile = 'https://www.google.com/maps/place/Kyle+Scott+Law/@33.7487925,-117.8262336,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcde535fc87d6b:0x6370f74d3890160a!8m2!3d33.7487925!4d-117.8240449?place_id=ChIJa33IX1Pe3IARChaQOE33cGM';
 // Clients only — see the English page: a firm paralegal's endorsement is not a client
 // testimonial (Cal. Rules of Prof. Conduct 7.1) and is not carried over.

@@ -30,7 +30,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de lesiones personales en el Condado de Orange',
     eyebrow: 'Lesiones personales · Condado de Orange y el sur de California',
     description: 'Kyle Scott Law maneja todo tipo de casos de lesiones personales de personas lesionadas en el Condado de Orange, desde choques de auto y de camión y caídas hasta mordeduras de perro, negligencia médica, abuso y muerte injusta.',
-    metaDescription: 'Kyle Scott, abogado de lesiones personales en el Condado de Orange: todos los tipos de casos que maneja el bufete, con los plazos, las reglas de culpa, los daños y los honorarios de California explicados.',
+    metaDescription: 'Abogado de lesiones personales en el Condado de Orange: Kyle J. Scott, sin honorarios a menos que haya una recuperación. Consulta gratuita.',
     icon: 'shield',
     introTitle: 'Un bufete de lesiones personales en Tustin, fundado en 2003.',
     intro: [
@@ -100,7 +100,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de auto en el Condado de Orange',
     eyebrow: 'Choques de auto, camión, motocicleta y viajes compartidos',
     description: 'Kyle Scott Law representa a personas lesionadas en choques de auto, camión, motocicleta, viajes compartidos y de peatones en todo el Condado de Orange, desde una oficina en Tustin.',
-    metaDescription: 'Kyle Scott, abogado de accidentes de auto en el Condado de Orange, maneja reclamos por choques en autopistas, de viajes compartidos, de camiones y con conductores sin seguro. Consulta gratuita en español o inglés.',
+    metaDescription: 'Abogado de accidentes de auto en el Condado de Orange: choques en autopistas, intersecciones y conductores que huyen o sin seguro. Consulta gratuita.',
     icon: 'car',
     introTitle: 'Un reclamo por una colisión es más que el daño visible al vehículo.',
     intro: [
@@ -167,7 +167,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de resbalones y caídas en el Condado de Orange',
     eyebrow: 'Resbalones, tropiezos y caídas por propiedades inseguras',
     description: 'Kyle Scott Law representa a personas lesionadas en resbalones, tropiezos y caídas en todo el Condado de Orange, desde pisos mojados en tiendas y escaleras rotas hasta aceras levantadas y estacionamientos.',
-    metaDescription: 'Kyle Scott, abogado de resbalones y caídas en el Condado de Orange, maneja lesiones por pisos mojados, tropiezos, escaleras y aceras. Consulta gratuita en español o inglés.',
+    metaDescription: 'Abogado de resbalones y caídas en el Condado de Orange: pisos mojados, escaleras rotas, aceras levantadas y estacionamientos. Consulta gratuita.',
     icon: 'fall',
     introTitle: 'Los casos de resbalones y caídas dependen de lo que el dueño de la propiedad sabía, y de cuándo lo supo.',
     intro: [
@@ -227,7 +227,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de negligencia médica en el Condado de Orange',
     eyebrow: 'Errores médicos que causan daños graves',
     description: 'Kyle Scott Law representa a pacientes y familias del Condado de Orange que sufrieron daños por negligencia médica, desde un diagnóstico de cáncer omitido o un error de anestesia hasta lesiones quirúrgicas, por medicamentos, en hospitales y en el parto.',
-    metaDescription: 'Kyle Scott, abogado de negligencia médica en el Condado de Orange, revisa reclamos por diagnósticos erróneos y errores quirúrgicos, de anestesia, de medicamentos y lesiones en el parto. Consulta gratuita.',
+    metaDescription: 'Abogado de negligencia médica en el Condado de Orange: diagnósticos omitidos, errores quirúrgicos y de anestesia, lesiones del parto. Consulta gratuita.',
     icon: 'medical',
     introTitle: 'Un mal resultado médico no es automáticamente negligencia médica.',
     intro: [
@@ -291,7 +291,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de abuso y negligencia de personas mayores en el Condado de Orange',
     eyebrow: 'Abuso y negligencia de personas mayores y adultos dependientes',
     description: 'Representación para personas mayores, adultos dependientes y sus familias cuando un asilo de ancianos, un centro de vida asistida, un hospital o un cuidador descuidó su atención o los maltrató, incluidas úlceras por presión, caídas, deshidratación y desnutrición.',
-    metaDescription: 'Kyle Scott, abogado de abuso y negligencia de personas mayores en el Condado de Orange, representa a personas mayores y adultos dependientes lesionados por negligencia o maltrato en asilos, centros de cuidado y atención en el hogar.',
+    metaDescription: 'Abogado de abuso y negligencia de personas mayores en el Condado de Orange: asilos, úlceras por presión, caídas y desnutrición. Consulta gratuita.',
     icon: 'care',
     introTitle: 'California da protección adicional a las personas mayores y a los adultos dependientes cuando quienes los cuidan les fallan.',
     intro: [
@@ -339,7 +339,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de mordeduras de perro en el Condado de Orange',
     eyebrow: 'Ataques de perros y lesiones prevenibles causadas por animales',
     description: 'Kyle Scott Law representa a adultos y niños lesionados en mordeduras y ataques de perros en todo el Condado de Orange, reclamos que a menudo paga el seguro de propietario de vivienda o de inquilino del dueño.',
-    metaDescription: 'Kyle Scott, abogado de mordeduras de perro en el Condado de Orange, ayuda a adultos y niños lesionados en ataques de perros. Consulta gratuita en español o inglés.',
+    metaDescription: 'Abogado de mordeduras de perro en el Condado de Orange para mordeduras en el rostro, cicatrices y niños mordidos en casa de un vecino. Consulta gratuita.',
     icon: 'dog',
     introTitle: 'Las mordeduras de perro pueden causar lesiones físicas y psicológicas duraderas.',
     intro: [
@@ -408,7 +408,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de lesiones cerebrales en el Condado de Orange',
     eyebrow: 'Reclamos por lesión cerebral traumática y lesiones en la cabeza',
     description: 'Kyle Scott Law representa a personas en todo el Condado de Orange que sufrieron una lesión cerebral traumática, desde una conmoción cerebral con síntomas duraderos hasta una fractura de cráneo o una hemorragia en el cerebro, en un choque, una caída, un accidente deportivo o un incidente escolar causado por otra persona.',
-    metaDescription: 'Kyle Scott, abogado de lesiones cerebrales en el Condado de Orange, representa a personas con conmociones cerebrales, fracturas de cráneo y lesión cerebral traumática (TBI). Consulta gratuita en español o inglés.',
+    metaDescription: 'Abogado de lesiones cerebrales en el Condado de Orange: conmociones, fracturas de cráneo y golpes en la cabeza tras choques y caídas. Consulta gratuita.',
     icon: 'brain',
     introTitle: 'Las lesiones cerebrales pueden cambiar la cognición, el trabajo, las relaciones y la independencia.',
     intro: [
@@ -475,7 +475,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de acoso y abuso sexual en el Condado de Orange',
     eyebrow: 'Abuso, agresión y responsabilidad institucional',
     description: 'Representación confidencial en asuntos de abuso sexual, agresión, acoso laboral, mala conducta institucional y fallas de supervisión o protección.',
-    metaDescription: 'Abogado del Condado de Orange para sobrevivientes de abuso sexual, agresión, acoso laboral y reclamos contra escuelas, empleadores e instituciones.',
+    metaDescription: 'Abogado de acoso y abuso sexual en el Condado de Orange para casos de acoso laboral, agresión y abuso por alguien de confianza. Consulta gratuita.',
     icon: 'support',
     introTitle: 'Los reclamos por abuso requieren privacidad, sensibilidad y una investigación rigurosa.',
     intro: [
@@ -509,7 +509,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de muerte injusta en el Condado de Orange',
     eyebrow: 'Negligencia fatal y reclamos familiares',
     description: 'Representación para familias después de una muerte evitable causada por accidentes, propiedades peligrosas, negligencia profesional, productos defectuosos o fallas institucionales.',
-    metaDescription: 'Abogado de muerte injusta en el Condado de Orange para familias afectadas por accidentes fatales, negligencia, mala práctica y fallas institucionales.',
+    metaDescription: 'Abogado de muerte injusta en el Condado de Orange para familias tras choques fatales, propiedades peligrosas o negligencia. Llame al 714-544-1460.',
     icon: 'scale',
     introTitle: 'Un reclamo por muerte injusta exige preparación respetuosa y precisa.',
     intro: [
@@ -540,7 +540,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de responsabilidad escolar en el Condado de Orange',
     eyebrow: 'Lesiones y abuso en el plantel, en eventos escolares y en el transporte escolar',
     description: 'Representación para estudiantes y familias cuando un distrito escolar, una escuela privada o sus empleados no supervisaron, no protegieron o no mantuvieron el plantel: abuso sexual por parte del personal, lesiones en el patio y en deportes, acoso y agresiones, y condiciones inseguras.',
-    metaDescription: 'Abogado de responsabilidad escolar en el Condado de Orange. Kyle Scott representa a estudiantes lesionados o abusados en la escuela; resultados de $6.8M y $5.75M. Consulta gratuita, sin honorarios sin recuperación.',
+    metaDescription: 'Abogado de responsabilidad escolar en el Condado de Orange: lesiones en el patio y mala conducta del personal. Consulta gratuita.',
     icon: 'scale',
     introTitle: 'Las escuelas deben supervisar a sus estudiantes, y los distritos públicos responden por ello con un plazo de seis meses.',
     intro: [
@@ -593,7 +593,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de motocicleta en el Condado de Orange',
     eyebrow: 'Choques de motocicleta en las calles y autopistas del Condado de Orange',
     description: 'Representación para motociclistas y pasajeros lesionados cuando un conductor giró a la izquierda cruzándose en su camino, los embistió al cambiar de carril, abrió una puerta hacia el tráfico o no vio ni cedió el paso a una motocicleta en las vías del Condado de Orange.',
-    metaDescription: 'Abogado de accidentes de motocicleta en el Condado de Orange para motociclistas heridos. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de motocicleta en el Condado de Orange: giros a la izquierda, cambios de carril y puertas abiertas. Consulta gratuita.',
     icon: 'motorcycle',
     introTitle: 'Los motociclistas tienen los mismos derechos en la vía que los demás conductores, y el Código de Vehículos detalla lo que los conductores les deben.',
     intro: [
@@ -641,7 +641,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de Uber y Lyft en el Condado de Orange',
     eyebrow: 'Choques de Uber, Lyft y otros viajes compartidos',
     description: 'Representación para pasajeros, otros conductores, ciclistas y peatones lesionados en un choque con un vehículo de Uber, Lyft u otro servicio de viajes compartidos, en el que el estado de la aplicación del conductor decide qué seguro aplica.',
-    metaDescription: 'Abogado de accidentes de Uber y Lyft en el Condado de Orange para personas lesionadas. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de Uber y Lyft en el Condado de Orange: el estado de la aplicación del conductor decide el seguro. Consulta gratuita.',
     icon: 'rideshare',
     introTitle: 'Después de un choque de viaje compartido, lo que mostraba la aplicación del conductor en ese momento decide qué seguro paga.',
     intro: [
@@ -689,7 +689,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de camión en el Condado de Orange',
     eyebrow: 'Choques de camiones de carga pesada, tráileres y vehículos comerciales',
     description: 'Representación para conductores, pasajeros, motociclistas y peatones lesionados por un camión de carga pesada, un camión de reparto u otro vehículo comercial en las vías del Condado de Orange, contra el conductor y cada empresa detrás del camión.',
-    metaDescription: 'Abogado de accidentes de camión en el Condado de Orange para personas lesionadas. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de camión en el Condado de Orange: camiones de carga pesada, de reparto y comerciales, y la empresa detrás. Consulta gratuita.',
     icon: 'truck',
     introTitle: 'Un camión comercial viene con un reglamento que ningún conductor común tiene que seguir, y un caso de choque de camión empieza ahí.',
     intro: [
@@ -737,7 +737,7 @@ export const spanishPracticeAreas: PracticeAreaData[] = [
     title: 'Abogado de accidentes de peatones en el Condado de Orange',
     eyebrow: 'Peatones atropellados por autos en las calles del Condado de Orange',
     description: 'Representación para personas atropelladas por un auto, un camión o un vehículo de viaje compartido mientras caminaban en el Condado de Orange, en un cruce peatonal, en una intersección, en un estacionamiento o a mitad de cuadra, incluidos los reclamos por choque y fuga y por vías peligrosas.',
-    metaDescription: 'Abogado de accidentes de peatones en el Condado de Orange para personas atropelladas. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de peatones en el Condado de Orange: cruces peatonales, estacionamientos y conductores que huyen. Consulta gratuita.',
     icon: 'pedestrian',
     introTitle: 'El Código de Vehículos pone el deber de cuidado sobre el conductor, en el cruce peatonal y en cualquier otro lugar de la vía donde haya un peatón.',
     intro: [

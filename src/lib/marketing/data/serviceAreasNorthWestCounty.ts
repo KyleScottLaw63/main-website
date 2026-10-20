@@ -53,7 +53,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Brea — in crashes on the 57, Imperial Highway, and Brea Boulevard, in falls at stores and restaurants and along the Tracks at Brea trail, and in the brain injuries that follow.',
     metaDescription:
-      'Brea personal injury attorney Kyle Scott represents people hurt in crashes on the 57 and Imperial Highway, falls, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'Brea personal injury attorney for crashes on Imperial Highway and Brea Boulevard, falls downtown and Tracks at Brea trail injuries. Free consultation.',
     introTitle: 'Brea injuries happen on the 57 and Imperial Highway, around Brea Mall, and on the Tracks at Brea trail.',
     intro: [
       'State Route 57 crosses Brea, Imperial Highway (State Route 90) runs through it, and Brea Boulevard carries traffic south of Imperial. Downtown Brea and Brea Mall draw shoppers, diners, and moviegoers, and the Tracks at Brea, a paved bikeway with a separate footpath on a former railroad corridor, crosses the city. Crashes on those roads, falls at businesses, and injuries on the trail are the claims that follow, along with the brain injuries that can come with them.',
@@ -118,7 +118,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Buena Park — in crashes on the 5 and the 91 and on Beach Boulevard, Orangethorpe, and La Palma, in falls at hotels, restaurants, stores, and venues along Beach, and in the brain injuries that follow.',
     metaDescription:
-      'Buena Park personal injury attorney Kyle Scott represents people hurt in crashes on the 5, the 91, and Beach Boulevard, falls at hotels and venues, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'Buena Park personal injury attorney for crashes on Beach Boulevard, Orangethorpe and La Palma, plus falls at hotels and venues. Free consultation.',
     introTitle: 'Buena Park injuries happen where the 5 and the 91 meet Beach Boulevard and its entertainment corridor.',
     intro: [
       'The 91 splits Buena Park and the 5 crosses it. Beach Boulevard runs the length of the city, from the entertainment corridor around Knott’s Berry Farm north to the Los Angeles County line, crossed by La Palma Avenue, Orangethorpe Avenue, and Artesia Boulevard. The claims that follow are freeway and arterial collisions, pedestrians struck along Beach and near bus stops and the Metrolink station, and falls at hotels, restaurants, stores, and venues.',
@@ -184,7 +184,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Cypress — in crashes on Valley View Street, Katella Avenue, and Lincoln Avenue, in falls at stores and other public places, and in the brain injuries that follow.',
     metaDescription:
-      'Cypress personal injury attorney Kyle Scott represents people hurt in crashes on Valley View, Katella, and Lincoln, falls, dog bites, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'Cypress personal injury attorney for crashes on Valley View Street, Katella Avenue and Lincoln Avenue, plus falls and brain injuries. Free consultation.',
     introTitle: 'Cypress injuries happen on busy arterial streets, with the 91 and the 605 a short drive away.',
     intro: [
       'Cypress sits on the Los Angeles County line. Its main streets are Valley View Street, Katella Avenue, Lincoln Avenue, Orange Avenue, and Walker Street, and Cypress College, the Los Alamitos Race Course, and the city’s schools bring students, visitors, and traffic onto them. The claims that follow are collisions on those streets, pedestrians and cyclists struck near campuses and bus stops, and falls at stores, restaurants, and venues.',
@@ -249,7 +249,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Fountain Valley — in crashes on the 405 and on Brookhurst, Euclid, and Magnolia, in falls at stores and on public property, at Mile Square Park, and in dog attacks.',
     metaDescription:
-      'Fountain Valley personal injury attorney Kyle Scott represents people hurt in crashes on the 405 and the city’s boulevards, falls, injuries at Mile Square Park, and dog bites. Free consultation, no fee unless there is a recovery.',
+      'Fountain Valley personal injury attorney for crashes on Brookhurst, Euclid and Magnolia, Mile Square Park injuries and dog bites. Free consultation.',
     introTitle: 'Fountain Valley injuries happen where the 405 cuts across a grid of busy boulevards, and around Mile Square Park.',
     intro: [
       'The 405 runs diagonally through Fountain Valley. Brookhurst, Euclid, Magnolia, Bushard, and Ward Streets carry its north–south traffic, and Edinger, Warner, Slater, Talbert, and Ellis Avenues cross them. Mile Square Regional Park, run by the County, and the Santa Ana River Trail along the city’s eastern edge bring cyclists and pedestrians into the mix. The claims that follow are freeway and intersection collisions, cyclists and pedestrians struck near the park and the river trail, falls at stores, restaurants, and offices, and dog bites in residential neighborhoods.',
@@ -316,7 +316,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in La Habra — in crashes on Whittier, Beach, and Harbor Boulevards and Imperial Highway, in falls, and in the brain injuries that follow, including injuries near the Los Angeles County line.',
     metaDescription:
-      'La Habra personal injury attorney Kyle Scott represents people hurt in crashes on Whittier, Beach, and Harbor Boulevards and Imperial Highway, falls, dog bites, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'La Habra personal injury attorney for crashes on Whittier, Beach and Harbor Boulevards and Imperial Highway, plus falls and dog bites. Free consultation.',
     introTitle: 'La Habra injuries happen on its state-route boulevards and near the Los Angeles County line.',
     intro: [
       'La Habra is bordered by La Habra Heights and Los Angeles County to the north, Brea to the east, Fullerton to the south, and La Mirada, Whittier, and unincorporated East Whittier in Los Angeles County to the west. Whittier Boulevard (State Routes 39 and 72), Beach Boulevard (State Route 39), and Imperial Highway (State Route 90) cross the city, and Harbor Boulevard is a main north–south street. Because La Habra borders Los Angeles County, a case may belong in either county’s court, depending on where the injury happened and where a defendant lives.',
@@ -382,7 +382,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in La Palma — in crashes on the 91 and on La Palma Avenue, Valley View Street, and Walker Street, in falls at businesses and public places, and in the brain injuries that follow.',
     metaDescription:
-      'La Palma personal injury attorney Kyle Scott represents people hurt in crashes on the 91 and the city’s main avenues, falls, dog bites, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'La Palma personal injury attorney for crashes on La Palma Avenue, Valley View and Walker Streets, plus falls and brain injuries. Free consultation.',
     introTitle: 'La Palma injuries happen where the 91 meets Valley View Street and the city’s main avenues.',
     intro: [
       'The 91 runs through La Palma. The city’s streets include La Palma Avenue, Valley View Street, Walker Street, and Moody Street, and students attend schools in five districts: Anaheim Union High, Buena Park, Centralia, Cypress, and Fullerton Joint Union High. The claims that follow are freeway and street collisions, falls at businesses and public places, and the brain injuries that can come with them.',
@@ -444,7 +444,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Los Alamitos — in crashes on the 605, Katella Avenue, and Los Alamitos Boulevard, in falls at businesses and public places, and in the brain injuries that follow.',
     metaDescription:
-      'Los Alamitos personal injury attorney Kyle Scott represents people hurt in crashes on the 605, Katella Avenue, and Los Alamitos Boulevard, falls, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'Los Alamitos personal injury attorney for crashes on Katella Avenue and Los Alamitos Boulevard, plus falls and brain injuries. Free consultation.',
     introTitle: 'Los Alamitos injuries happen on the county line, where the 605 meets Katella Avenue.',
     intro: [
       'Los Alamitos borders Long Beach, in Los Angeles County, and the 605 runs through the city, meeting Katella Avenue. A lawsuit for injury may be filed in the county where the injury occurred or the county where a defendant lives (Code of Civil Procedure § 395(a)), so an injury in Los Alamitos can be filed in the Orange County Superior Court, and an injury in Long Beach can be filed in the Los Angeles County Superior Court. The claims that follow are freeway and arterial collisions, falls at businesses and public places, and the brain injuries that can come with them.',
@@ -506,7 +506,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Placentia — in crashes on the 57 and on Kraemer Boulevard, Chapman Avenue, and Orangethorpe Avenue, in falls at stores and restaurants, and in the brain injuries that follow.',
     metaDescription:
-      'Placentia personal injury attorney Kyle Scott represents people hurt in crashes on the 57 and the city’s main streets, falls, dog bites, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'Placentia personal injury attorney for crashes on Kraemer Boulevard, Chapman and Orangethorpe Avenues, plus falls and brain injuries. Free consultation.',
     introTitle: 'Placentia injuries happen on the 57 and on the city’s main streets: Kraemer, Chapman, and Orangethorpe.',
     intro: [
       'State Route 57 runs through Placentia, and Kraemer Boulevard, Chapman Avenue, and Orangethorpe Avenue carry the city’s cross-town traffic. The Chapman corridor, Kraemer Memorial Park, and the schools of the Placentia-Yorba Linda Unified School District bring people onto those streets on foot, by bike, and by car. The claims that follow are freeway and arterial collisions, pedestrians and cyclists struck at crossings, and falls at stores and restaurants.',
@@ -569,7 +569,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Seal Beach — in crashes on Pacific Coast Highway, Seal Beach Boulevard, and the 405, in falls and pedestrian injuries around Main Street and the pier, and for older adults harmed by abuse or neglect.',
     metaDescription:
-      'Seal Beach personal injury attorney Kyle Scott represents people hurt in crashes on Pacific Coast Highway and the 405, falls near Main Street and the pier, and elder abuse or neglect. Free consultation, no fee unless there is a recovery.',
+      'Seal Beach personal injury attorney for Pacific Coast Highway crashes, falls near the pier and elder abuse or neglect claims. Free consultation.',
     introTitle: 'Seal Beach claims come from its roads, its beach district, and its age-restricted Leisure World community.',
     intro: [
       'Pacific Coast Highway marks the north edge of the beach district, Seal Beach Boulevard runs along Leisure World’s east side, and the 405 and the 22 cross the city’s north. Main Street is the city’s traditional commercial core. The claims that follow are crashes on those roads, falls and pedestrian injuries around Main Street and the pier, and the abuse or neglect of older adults.',
@@ -626,7 +626,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Stanton — in crashes on Beach Boulevard and on Katella, Western, Magnolia, and Cerritos Avenues, in falls at stores and apartment communities, and in dog attacks.',
     metaDescription:
-      'Stanton personal injury attorney Kyle Scott represents people hurt in crashes on Beach Boulevard and the city’s avenues, pedestrian collisions, falls, and dog bites. Free consultation, no fee unless there is a recovery.',
+      'Stanton personal injury attorney for crashes on Beach Boulevard and Katella Avenue, pedestrian injuries and apartment falls. Free consultation.',
     introTitle: 'Most Stanton injury claims start on a few surface streets.',
     intro: [
       'Stanton’s traffic runs on a few surface streets: Beach Boulevard and Katella, Western, Magnolia, and Cerritos Avenues. Stanton Central Park, Hollenbeck Park, and the Civic Center on Katella Avenue are among the places residents gather. The claims that follow are collisions on those streets, pedestrians struck at crossings, falls at stores and apartment communities, and dog bites.',
@@ -682,7 +682,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Villa Park — in crashes on Santiago Boulevard and the city’s other streets, in falls at Villa Park Town Center, in dog bites, and in the brain injuries that follow.',
     metaDescription:
-      'Villa Park personal injury attorney Kyle Scott represents people hurt in crashes on Santiago Boulevard, falls at the Town Center, dog bites, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'Villa Park personal injury attorney for crashes on Santiago Boulevard, falls at the Town Center, dog bites and brain injuries. Free consultation.',
     introTitle: 'Villa Park’s injuries happen on Santiago Boulevard, at the Town Center, and in its neighborhoods.',
     intro: [
       'Villa Park is a city of single-family neighborhoods with one shopping center, on Santiago Boulevard, that holds a grocery store, banks, City Hall, and a public library branch. Santiago Boulevard and the city’s other streets carry its traffic, and the Orange Unified School District serves its schools. The claims that follow are crashes on those streets, falls at the Town Center and other businesses, and dog bites in neighborhoods.',
@@ -743,7 +743,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Westminster — in crashes on the 405 and on Beach Boulevard, Bolsa Avenue, Brookhurst Street, and Westminster Boulevard, in falls at stores and restaurants, and in dog attacks.',
     metaDescription:
-      'Westminster personal injury attorney Kyle Scott represents people hurt in crashes on the 405 and the city’s boulevards, pedestrian collisions, falls, and dog bites. Free consultation, no fee unless there is a recovery.',
+      'Westminster personal injury attorney for crashes on Beach Boulevard, Bolsa Avenue and Brookhurst Street, pedestrian injuries and falls. Free consultation.',
     introTitle: 'Westminster injuries happen on the boulevards that cross the city, on the 405, and in Little Saigon.',
     intro: [
       'The 405 runs through Westminster, and Beach Boulevard, Bolsa Avenue, Brookhurst Street, and Westminster Boulevard carry its cross-town traffic. Little Saigon, a business and cultural district for the Vietnamese American community, lies in Westminster and Garden Grove, and Sid Goldstein Freedom Park holds the Vietnamese-American War Memorial. The claims that follow are freeway and boulevard collisions, pedestrians struck at crossings and bus stops, falls at stores and restaurants, and dog bites.',
@@ -802,7 +802,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Yorba Linda — in crashes on the 91 and on Imperial Highway, Yorba Linda Boulevard, and Esperanza Road, in falls at Savi Ranch stores and other businesses, on the city’s trails, and in the brain injuries that can follow.',
     metaDescription:
-      'Yorba Linda personal injury attorney Kyle Scott represents people hurt in crashes on the 91 and Imperial Highway, falls at Savi Ranch, trail injuries, and brain injuries. Free consultation, no fee unless there is a recovery.',
+      'Yorba Linda personal injury attorney for crashes on Imperial Highway and Esperanza Road, Savi Ranch falls and trail injuries. Free consultation.',
     introTitle: 'Yorba Linda injuries happen along the 91, on Imperial Highway and the city’s boulevards, and on its trails.',
     intro: [
       'The 91 runs along Yorba Linda’s southern edge, and the city’s main streets include Imperial Highway, Yorba Linda Boulevard, Bastanchury Road, Esperanza Road, Fairmont Boulevard, and La Palma Avenue. Savi Ranch, the city’s main retail and job center, sits beside the 91, and the city’s trails lead into the hills and Chino Hills State Park. The claims that follow are freeway and arterial collisions, falls at stores and other businesses, injuries on trails and in parks, and the brain injuries that can follow.',

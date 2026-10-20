@@ -81,7 +81,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Personal Injury Attorney',
     eyebrow: 'Personal injury · Orange County and Southern California',
     description: 'Kyle Scott Law handles every type of personal injury case for people hurt in Orange County, from car and truck crashes and falls to dog bites, medical malpractice, abuse, and wrongful death.',
-    metaDescription: 'Orange County personal injury attorney Kyle Scott: every case type the firm handles, with California deadlines, fault rules, damages, and fees explained.',
+    metaDescription: 'Orange County personal injury attorney Kyle J. Scott: crashes, falls, dog bites and malpractice, with no fee unless there is a recovery. Free consultation.',
     icon: 'shield',
     introTitle: 'A Tustin injury firm, founded in 2003.',
     intro: [
@@ -152,7 +152,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Car Accident Lawyer',
     eyebrow: 'Auto, truck, motorcycle, and rideshare crashes',
     description: 'Kyle Scott Law represents people hurt in car, truck, motorcycle, rideshare, and pedestrian crashes across Orange County, from an office in Tustin.',
-    metaDescription: 'Orange County car accident attorney Kyle Scott handles freeway, rideshare, truck, and uninsured-driver claims. Free consultation in English or Spanish.',
+    metaDescription: 'Orange County car accident lawyer for freeway pileups, intersection collisions and drivers who flee or have no insurance. Free consultation.',
     icon: 'car',
     introTitle: 'A collision claim is about more than the visible vehicle damage.',
     intro: [
@@ -219,7 +219,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Slip and Fall Lawyer',
     eyebrow: 'Slip, trip, and fall injuries on unsafe property',
     description: 'Kyle Scott Law represents people hurt in slip, trip, and fall accidents across Orange County, from wet store floors and broken stairs to lifted sidewalks and parking lots.',
-    metaDescription: 'Orange County slip and fall lawyer Kyle Scott handles wet-floor, trip-and-fall, stair, and sidewalk injuries. Free consultation in English or Spanish.',
+    metaDescription: 'Orange County slip and fall lawyer for wet store floors, broken stairs, lifted sidewalks and parking lot hazards. Free consultation.',
     icon: 'fall',
     introTitle: 'Slip and fall cases turn on what the property owner knew, and when.',
     intro: [
@@ -279,7 +279,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Medical Malpractice Lawyer',
     eyebrow: 'Medical errors that cause serious harm',
     description: 'Kyle Scott Law represents patients and families across Orange County who were harmed by medical malpractice, from a missed cancer diagnosis or an anesthesia error to surgical, medication, hospital, and birth injuries.',
-    metaDescription: 'Orange County medical malpractice lawyer Kyle Scott reviews misdiagnosis, surgical, anesthesia, medication, and birth injury claims. Free consultation.',
+    metaDescription: 'Orange County medical malpractice lawyer reviewing missed diagnoses, surgical and anesthesia errors, and birth injuries. Free consultation.',
     icon: 'medical',
     introTitle: 'A poor medical outcome is not automatically malpractice.',
     intro: [
@@ -343,7 +343,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Elder Abuse and Neglect Attorney',
     eyebrow: 'Abuse and neglect of elders and dependent adults',
     description: 'Representation for older adults, dependent adults, and their families when a nursing home, assisted-living facility, hospital, or caregiver neglected their care or abused them, including pressure injuries, falls, dehydration, and malnutrition.',
-    metaDescription: 'Orange County elder abuse and neglect attorney Kyle Scott represents older and dependent adults hurt by neglect or abuse in nursing homes, care facilities, and home care. Free consultation.',
+    metaDescription: 'Orange County elder abuse attorney for nursing home neglect, bedsores, falls, dehydration and malnutrition. Free consultation.',
     icon: 'care',
     introTitle: 'California gives elders and dependent adults extra protection when the people caring for them fail them.',
     intro: [
@@ -391,7 +391,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Dog Bite Lawyer',
     eyebrow: 'Dog attacks and preventable animal injuries',
     description: 'Kyle Scott Law represents adults and children hurt in dog bites and dog attacks across Orange County, claims that are often paid by the owner’s homeowner’s or renter’s insurance.',
-    metaDescription: 'Orange County dog bite attorney Kyle Scott helps adults and children hurt in dog attacks. Free consultation in English or Spanish.',
+    metaDescription: 'Orange County dog bite lawyer for facial bites, scarring and children bitten at a neighbor’s home. English or Spanish. Free consultation.',
     icon: 'dog',
     introTitle: 'Dog bites can cause lasting physical and psychological injuries.',
     intro: [
@@ -460,7 +460,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Brain Injury Attorney',
     eyebrow: 'Traumatic brain injury and head injury claims',
     description: 'Kyle Scott Law represents people across Orange County who suffered a traumatic brain injury, from a concussion with lasting symptoms to a skull fracture or bleeding on the brain, in a crash, fall, sports accident, or school incident caused by someone else.',
-    metaDescription: 'Orange County brain injury lawyer Kyle Scott represents people with concussions, skull fractures, and TBI. Free consultation in English or Spanish.',
+    metaDescription: 'Orange County brain injury attorney for concussions, skull fractures and head injuries from crashes, falls and school sports. Free consultation.',
     icon: 'brain',
     introTitle: 'Brain injuries can change cognition, work, relationships, and independence.',
     intro: [
@@ -527,7 +527,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Sexual Harassment and Abuse Lawyer in Orange County',
     eyebrow: 'Harassment, assault, abuse, and institutional liability',
     description: 'Confidential representation in matters involving workplace harassment, sexual assault, child sexual abuse, abuse by people in positions of trust, and institutional failures.',
-    metaDescription: 'Orange County sexual harassment and abuse lawyer Kyle Scott represents survivors in workplace, assault, molestation, school, clergy, and institutional-liability matters.',
+    metaDescription: 'Orange County sexual harassment and abuse lawyer for workplace harassment, assault and abuse by someone in a position of trust. Free consultation.',
     icon: 'support',
     introTitle: 'Survivors deserve privacy, respect, and a careful legal review.',
     intro: [
@@ -561,7 +561,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Wrongful Death Attorney',
     eyebrow: 'Fatal negligence and family claims',
     description: 'Representation for families after a preventable death involving vehicle crashes, unsafe property, professional negligence, defective conduct, or institutional failures.',
-    metaDescription: 'Orange County wrongful death attorney Kyle Scott represents families after fatal vehicle crashes, unsafe property, negligence, malpractice, and institutional failures.',
+    metaDescription: 'Orange County wrongful death attorney for families after fatal crashes, unsafe property or negligence. Call 714-544-1460 for a free consultation.',
     icon: 'scale',
     introTitle: 'A wrongful-death claim requires respectful, exacting preparation.',
     intro: [
@@ -592,7 +592,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County School Liability Attorney',
     eyebrow: 'Injuries and abuse on campus, at school events, and on school transportation',
     description: 'Representation for students and families when a school district, private school, or its employees failed to supervise, protect, or maintain — including sexual abuse by staff, playground and sports injuries, bullying and assaults, and unsafe campus conditions.',
-    metaDescription: 'Orange County school liability attorney Kyle Scott represents students injured or abused at school. Results include a $6.8M school negligence settlement and a $5.75M verdict. Free consultation.',
+    metaDescription: 'Orange County school liability attorney for students hurt or abused at school, from playground injuries to staff misconduct. Free consultation.',
     icon: 'scale',
     introTitle: 'Schools owe students a duty of supervision, and public school districts answer for it on a six-month clock.',
     intro: [
@@ -645,7 +645,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Motorcycle Accident Attorney',
     eyebrow: 'Motorcycle crashes on Orange County streets and freeways',
     description: 'Representation for riders and passengers hurt when a driver turned left across their path, changed lanes into them, opened a door into traffic, or failed to see and yield to a motorcycle on Orange County roads.',
-    metaDescription: 'Orange County motorcycle accident attorney Kyle Scott represents injured riders and passengers. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County motorcycle accident attorney for riders hit by left-turning drivers, lane changes and opened car doors. Free consultation.',
     icon: 'motorcycle',
     introTitle: 'Motorcyclists have the same rights on the road as drivers, and the Vehicle Code spells out what drivers owe them.',
     intro: [
@@ -693,7 +693,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Uber and Lyft Accident Attorney',
     eyebrow: 'Uber, Lyft, and other rideshare crashes',
     description: 'Representation for passengers, other drivers, cyclists, and pedestrians hurt in a crash involving an Uber, Lyft, or other rideshare vehicle, where the driver’s app status decides which insurance applies.',
-    metaDescription: 'Orange County Uber and Lyft accident attorney Kyle Scott represents people hurt in rideshare crashes. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County Uber and Lyft accident attorney for passengers, drivers and pedestrians. The driver’s app status decides the insurance. Free consultation.',
     icon: 'rideshare',
     introTitle: 'After a rideshare crash, what the driver’s app showed at that moment decides which insurance pays.',
     intro: [
@@ -741,7 +741,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Truck Accident Attorney',
     eyebrow: 'Big-rig, semi-truck, and commercial vehicle crashes',
     description: 'Representation for drivers, passengers, motorcyclists, and pedestrians hurt by a big rig, delivery truck, or other commercial vehicle on Orange County roads, against the driver and every company behind it.',
-    metaDescription: 'Orange County truck accident attorney Kyle Scott represents people hurt in commercial truck crashes. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County truck accident attorney for big-rig, delivery and commercial truck crashes, against the driver and the company behind it. Free consultation.',
     icon: 'truck',
     introTitle: 'A commercial truck comes with a rulebook that no ordinary driver has to follow, and a truck crash case starts there.',
     intro: [
@@ -789,7 +789,7 @@ export const practiceAreas: PracticeAreaData[] = [
     title: 'Orange County Pedestrian Accident Attorney',
     eyebrow: 'Pedestrians struck by cars on Orange County streets',
     description: 'Representation for people struck by a car, truck, or rideshare vehicle while walking in Orange County, in a crosswalk, at an intersection, in a parking lot, or mid-block, including hit-and-run and dangerous-road claims.',
-    metaDescription: 'Orange County pedestrian accident attorney Kyle Scott represents people hit by cars while walking. Free consultation, no fee unless there is a recovery.',
+    metaDescription: 'Orange County pedestrian accident attorney for people struck in crosswalks, in parking lots or by hit-and-run drivers. Free consultation.',
     icon: 'pedestrian',
     introTitle: 'The Vehicle Code puts the duty of care on the driver, in the crosswalk and everywhere else a pedestrian is on the road.',
     intro: [

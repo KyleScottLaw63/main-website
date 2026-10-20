@@ -19,7 +19,7 @@ export const regionalServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Long Beach crashes on the 405, the 710, and Pacific Coast Highway, falls, dog attacks, and school injuries. The firm’s only office is in Tustin, in Orange County, and consultations are by phone or video.',
     metaDescription:
-      'Long Beach personal injury lawyer for 405, 710 and PCH crashes, dog bites and school injuries. Free consultation by phone or video, in English or Spanish.',
+      'Long Beach personal injury attorney for Pacific Coast Highway and port truck crashes, by phone or video from a Tustin office. Free consultation.',
     placeType: 'City',
     placeName: 'Long Beach, California',
     containedIn: 'Los Angeles County, California',
@@ -80,7 +80,7 @@ export const regionalServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Riverside and San Bernardino counties, in crashes on the 91, the 15, the 10, and the 215, in falls, in dog attacks, and in medical malpractice cases. The firm’s only office is in Tustin, in Orange County.',
     metaDescription:
-      'Inland Empire personal injury lawyer for crashes, falls, dog bites and malpractice in Riverside and San Bernardino counties. Free consultation by phone or video, in English or Spanish.',
+      'Inland Empire personal injury attorney for crashes in Riverside and San Bernardino counties, by phone or video from Tustin. Free consultation.',
     placeType: 'Place',
     placeName: 'The Inland Empire',
     containedIn: 'Riverside and San Bernardino Counties, California',
@@ -146,7 +146,7 @@ export const regionalServiceAreas: ServiceAreaData[] = [
     description:
       'Representation for people injured in Orange, Los Angeles, Riverside, and San Bernardino counties, in every type of personal injury case listed on this page. The firm has one office, in Tustin, and consultations are by phone or video.',
     metaDescription:
-      'Southern California personal injury lawyer for people hurt in Orange, Los Angeles, Riverside and San Bernardino counties. Free consultation by phone or video, in English or Spanish.',
+      'Southern California personal injury lawyer for people hurt in Orange, Los Angeles, Riverside and San Bernardino counties. Free consultation.',
     placeType: 'Place',
     placeName: 'Southern California',
     containedIn: 'California',

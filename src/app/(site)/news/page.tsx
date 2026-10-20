@@ -17,7 +17,7 @@ import { newsCollectionStructuredData } from '@/lib/marketing/structured-data';
 export const metadata: Metadata = {
   title: 'Latest News & Legal Articles | Kyle Scott Law',
   description:
-    'Read Kyle Scott Law case results, firm news, and legal articles concerning personal injury matters in Orange County and California.',
+    'Kyle Scott Law news and legal articles on Orange County personal injury law, with firm case announcements. Free consultation.',
   alternates: localizedAlternates('/news'),
 };
 

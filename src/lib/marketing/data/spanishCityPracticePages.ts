@@ -10,7 +10,7 @@ export const spanishCityPracticePages: (PracticeAreaData & { englishKey: string 
     title: 'Abogado de accidentes de auto en Tustin',
     eyebrow: 'Accidentes de auto en Tustin, California',
     description: 'Kyle Scott Law representa a personas lesionadas en accidentes de auto en Tustin, desde choques en la 5 y la 55 hasta colisiones en Jamboree Road, Red Hill Avenue, Newport Avenue e Irvine Boulevard.',
-    metaDescription: 'El abogado de accidentes de auto en Tustin Kyle Scott atiende reclamos por choques en la 5, la 55 y las calles de la ciudad. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de accidentes de auto en Tustin para choques en Jamboree Road, Red Hill Avenue, Newport Avenue e Irvine Boulevard. Consulta gratuita.',
     icon: 'car',
     introTitle: 'Un reclamo por un choque en Tustin implica más que los daños que usted puede ver.',
     intro: [
@@ -73,7 +73,7 @@ export const spanishCityPracticePages: (PracticeAreaData & { englishKey: string 
     title: 'Abogado de acoso y abuso sexual en Santa Ana',
     eyebrow: 'Acoso y abuso sexual en Santa Ana, California',
     description: 'Si fue objeto de acoso sexual en el trabajo en Santa Ana, o de acoso o agresión por parte de alguien en una posición de confianza, como un médico, un arrendador o un maestro, la ley de California puede permitirle hacer responsable a esa persona, y en ocasiones a un empleador o a una institución, en un caso civil. Kyle Scott Law ofrece una revisión confidencial de casos de acoso en el trabajo, agresión sexual y abuso sexual cometido por personas en posiciones de confianza, y usted decide cuánto compartir y cuándo.',
-    metaDescription: 'Ayuda confidencial de un abogado de acoso sexual en Santa Ana para casos de acoso en el trabajo, agresión sexual y abuso por parte de profesionales. Consulta gratuita.',
+    metaDescription: 'Abogado de acoso y abuso sexual en Santa Ana: acoso laboral, agresión y abuso por un médico, un arrendador o un maestro. Consulta gratuita.',
     icon: 'support',
     introTitle: 'Una revisión privada, a su ritmo.',
     intro: [
@@ -137,7 +137,7 @@ export const spanishCityPracticePages: (PracticeAreaData & { englishKey: string 
     title: 'Abogado de mordeduras de perro en Anaheim',
     eyebrow: 'Mordeduras de perro en Anaheim, California',
     description: 'Si un perro lo mordió en Anaheim, la ley de California por lo general hace responsable al dueño de una mordedura ocurrida en un lugar público o mientras la persona lesionada estaba legalmente en una propiedad privada, aunque el perro nunca hubiera mordido antes. Kyle Scott Law representa a personas mordidas o derribadas por perros en todo Anaheim.',
-    metaDescription: 'El abogado de mordeduras de perro en Anaheim Kyle Scott ayuda a personas lesionadas por perros en parques, casas y apartamentos. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de mordeduras de perro en Anaheim para mordeduras en parques, casas y apartamentos. California suele hacer responsable al dueño. Consulta gratuita.',
     icon: 'dog',
     introTitle: 'Un reclamo por una mordedura de perro en Anaheim depende de dónde ocurrió y de quién paga.',
     intro: [
@@ -204,7 +204,7 @@ export const spanishCityPracticePages: (PracticeAreaData & { englishKey: string 
     title: 'Abogado de mordeduras de perro en Santa Ana',
     eyebrow: 'Mordeduras de perro en Santa Ana, California',
     description: 'Si un perro lo mordió en Santa Ana, la ley de California por lo general hace responsable al dueño de una mordedura ocurrida en un lugar público o mientras la persona lesionada estaba legalmente en una propiedad privada, aunque el perro nunca hubiera mordido antes. Kyle Scott Law representa a personas mordidas o derribadas por perros en las aceras de Santa Ana, en los parques de la ciudad, y en complejos de apartamentos y vecindarios de toda la ciudad.',
-    metaDescription: 'Abogado de mordeduras de perro en Santa Ana para mordeduras en las calles de la ciudad, en parques y en apartamentos. Consulta gratuita; sin honorarios a menos que haya una recuperación.',
+    metaDescription: 'Abogado de mordeduras de perro en Santa Ana: aceras, parques y patios de apartamentos, incluidos reclamos contra arrendadores. Consulta gratuita.',
     icon: 'dog',
     introTitle: 'Un reclamo por mordedura de perro en Santa Ana depende de dónde ocurrió y de quién paga.',
     intro: [
@@ -267,7 +267,7 @@ export const spanishCityPracticePages: (PracticeAreaData & { englishKey: string 
     title: 'Abogado de negligencia médica en Santa Ana',
     eyebrow: 'Negligencia médica en Santa Ana, California',
     description: 'Kyle Scott Law representa a pacientes y familias de Santa Ana perjudicados por negligencia médica y negligencia hospitalaria, incluidos diagnósticos omitidos o tardíos, errores quirúrgicos y de anestesia, errores con medicamentos, lesiones durante el parto y fallas en la atención hospitalaria. La ley de California también limita los honorarios de contingencia en los casos de negligencia médica (Código de Negocios y Profesiones, § 6146).',
-    metaDescription: 'El abogado de negligencia médica en Santa Ana Kyle Scott revisa reclamos por diagnósticos erróneos, errores quirúrgicos y con medicamentos, y negligencia hospitalaria. Consulta gratuita.',
+    metaDescription: 'Abogado de negligencia médica en Santa Ana: diagnósticos omitidos, errores en emergencias, errores quirúrgicos y lesiones en el parto. Consulta gratuita.',
     icon: 'medical',
     introTitle: 'Los reclamos por negligencia médica tienen sus propias reglas.',
     intro: [

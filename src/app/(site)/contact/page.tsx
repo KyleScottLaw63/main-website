@@ -8,7 +8,7 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Contact Kyle Scott Law | Tustin Personal Injury Lawyer',
-  description: 'Contact Kyle Scott Law in Tustin for an Orange County personal injury case review. Call 714-544-1460 or send a confidential consultation request.',
+  description: 'Contact Kyle Scott Law at the Tustin office on Irvine Boulevard, or send your case details online. Call 714-544-1460 for a free consultation.',
   alternates: localizedAlternates('/contact'),
 };
 

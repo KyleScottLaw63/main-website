@@ -12,7 +12,7 @@ import { SITE_URL } from '@/lib/marketing/site';
 
 export const metadata: Metadata = {
   title: 'California Personal Injury Legal Guides | Kyle Scott Law',
-  description: 'Practical legal guides answering common California personal injury questions for Orange County and Tustin residents, with primary-law and agency sources.',
+  description: 'California personal injury guides for Orange County: deadlines, evidence, insurance and case value, with official sources. Free consultation.',
   alternates: localizedAlternates('/guides'),
   openGraph: { title: 'California Personal Injury Legal Guides | Kyle Scott Law', description: 'Clear answers to common California injury, insurance, evidence, and deadline questions.', images: [`${SITE_URL}/legal-guides-hero.webp`] },
 };

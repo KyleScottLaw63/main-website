@@ -29,7 +29,7 @@ export const whyHireUs: Record<SiteLocale, WhyHireUsContent> = {
     path: '/why-hire-us',
     title: 'Why Hire Kyle Scott Law',
     metaDescription:
-      'Why hire Kyle Scott Law: a trial attorney since 1991, published results of $6.8M, $6M, and $5.75M, no fee unless there is a recovery, and a Tustin office serving Orange County in English and Spanish.',
+      'Why hire Kyle Scott Law? A Tustin trial attorney since 1991, no fee unless there is a recovery, and service in English and Spanish. Free consultation.',
     eyebrow: 'Straight answers before you decide',
     heading: 'Why hire Kyle Scott Law',
     lede: 'Choosing a lawyer after an injury is a decision most people make once, under pressure. This page sets out plainly how the firm works, what it costs, what happens in the first week, and the questions worth asking any lawyer you are considering.',
@@ -86,7 +86,7 @@ export const whyHireUs: Record<SiteLocale, WhyHireUsContent> = {
     path: '/es/por-que-elegirnos',
     title: 'Por qué elegir a Kyle Scott Law',
     metaDescription:
-      'Por qué elegir a Kyle Scott Law: abogado litigante desde 1991, resultados de $6.8M, $6M y $5.75M, sin honorarios a menos que haya recuperación, y oficina en Tustin con atención en español.',
+      'Por qué elegir a Kyle Scott Law: abogado litigante desde 1991, en español o inglés, sin honorarios a menos que haya una recuperación. Consulta gratuita.',
     eyebrow: 'Respuestas claras antes de decidir',
     heading: 'Por qué elegir a Kyle Scott Law',
     lede: 'Elegir a un abogado después de una lesión es una decisión que la mayoría toma una sola vez y bajo presión. Esta página explica con claridad cómo trabaja el despacho, cuánto cuesta, qué ocurre en la primera semana y qué preguntas conviene hacerle a cualquier abogado que esté considerando.',

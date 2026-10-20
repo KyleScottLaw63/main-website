@@ -26,7 +26,7 @@ export const practiceGroups: { name: string; keys: string[] }[] = [
 export const areasWeServe = {
   path: '/areas-we-serve',
   title: 'Areas We Serve in Orange County',
-  metaDescription: 'Kyle Scott Law represents injured people in every Orange County city from its Tustin office. Find your city and every type of case the firm handles.',
+  metaDescription: 'Orange County personal injury lawyer serving every city from Brea to San Clemente from a Tustin office. Find your city. Free consultation.',
   intro: 'Kyle Scott Law represents people injured anywhere in Orange County, from Brea to San Clemente, from its office at 17671 Irvine Blvd., Suite 210, in Tustin. Find your city below to see how a case there works, or go straight to the type of case you have.',
   citiesBody: 'Each city page covers where injuries tend to happen there, which agencies investigate, where a case would be filed, and every type of case the firm handles for people who live or were hurt there.',
   unincorporated: 'Unincorporated communities such as North Tustin, Ladera Ranch, Rancho Mission Viejo, Coto de Caza, and Midway City are served too. For these areas, county agencies, not a city, usually handle reports and claims.',

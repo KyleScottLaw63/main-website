@@ -10,7 +10,7 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Personal Injury Practice Areas | Kyle Scott Law',
-  description: 'Review Kyle Scott Law practice areas, including personal injury, car accidents, unsafe property, malpractice, elder abuse, dog bites, brain injury, abuse, and wrongful death.',
+  description: 'Orange County personal injury practice areas: car crashes, falls, dog bites, malpractice, elder abuse, brain injury and wrongful death. Free consultation.',
   alternates: localizedAlternates('/practice-areas'),
 };
 

@@ -35,7 +35,7 @@ const terms = noRecoveryTerms.es;
 
 export const metadata: Metadata = {
   title: 'Abogado de lesiones personales en el Condado de Orange | Kyle Scott Law',
-  description: 'Kyle Scott, abogado de lesiones personales en el Condado de Orange, maneja todo tipo de casos de lesiones, desde choques de auto hasta negligencia médica. Consulta gratuita, en español o inglés.',
+  description: 'Abogado de lesiones personales en el Condado de Orange. Kyle Scott Law representa a personas lesionadas desde 1991, en español o inglés. Consulta gratuita.',
   alternates: localizedAlternates('/es'),
 };
 

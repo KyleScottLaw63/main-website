@@ -13,7 +13,7 @@ import { SITE_URL } from '@/lib/marketing/site';
 // The Spanish guide library, the counterpart of /guides: the same page, with the guides that have a translation.
 export const metadata: Metadata = {
   title: 'Guías legales de lesiones personales en California | Kyle Scott Law',
-  description: 'Guías prácticas que responden preguntas comunes sobre lesiones personales en California para residentes del Condado de Orange y Tustin, con fuentes legales y oficiales.',
+  description: 'Guías legales sobre lesiones personales en California: plazos, pruebas, seguros y valor del caso, con fuentes oficiales. Consulta gratuita.',
   alternates: localizedAlternates('/es/guias'),
   openGraph: { title: 'Guías legales de lesiones personales en California | Kyle Scott Law', description: 'Respuestas claras a preguntas comunes sobre lesiones, seguros, pruebas y plazos en California.', locale: 'es_US', images: [`${SITE_URL}/legal-guides-hero.webp`] },
 };
