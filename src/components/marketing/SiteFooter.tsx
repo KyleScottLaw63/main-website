@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { MobileCallBar } from '@/components/marketing/CallActions';
 import { ArrowRight, ChevronDown, Mail, MapPin, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
@@ -203,6 +204,7 @@ export function SiteFooter({ locale = 'en' }: { locale?: SiteLocale }) {
     ? '/es/contacto#revision-del-caso'
     : '/contact#case-review';
   return (
+    <>
     <footer
       className="site-footer"
       id="site-footer"
@@ -406,5 +408,7 @@ export function SiteFooter({ locale = 'en' }: { locale?: SiteLocale }) {
         </div>
       </div>
     </footer>
+    <MobileCallBar locale={locale} />
+    </>
   );
 }

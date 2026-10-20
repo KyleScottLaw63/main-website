@@ -62,6 +62,7 @@ const copy = {
     ctaTitle: 'Discuss the facts with Kyle Scott Law.',
     ctaBody: 'Call the Tustin office or send a secure case-review request.',
     ctaButton: 'Request a case review',
+    ctaCall: 'Call 714-544-1460',
     contactPath: '/contact#case-review',
     practiceLink: (label: string) => `Review ${label}`,
   },
@@ -103,6 +104,7 @@ const copy = {
     ctaTitle: 'Hable de los hechos con Kyle Scott Law.',
     ctaBody: 'Llame a la oficina de Tustin o envíe una solicitud segura de revisión de su caso.',
     ctaButton: 'Solicitar revisión del caso',
+    ctaCall: 'Llame al 714-544-1460',
     contactPath: '/es/contacto#revision-del-caso',
     practiceLink: (label: string) => `Más sobre ${label.toLowerCase()}`,
   },
@@ -270,7 +272,7 @@ export function LegalGuidePage({ guide, locale = 'en' }: { guide: LegalGuide & {
 
       <section className="legal-guide-cta" aria-labelledby="guide-cta-title">
         <div><p className="eyebrow light-eyebrow">{text.ctaEyebrow}</p><h2 id="guide-cta-title">{text.ctaTitle}</h2><p>{text.ctaBody}</p></div>
-        <div><Link className="primary-button" href={text.contactPath}>{text.ctaButton} <ArrowRight aria-hidden="true" /></Link><Link href={guide.practicePath}>{text.practiceLink(guide.practiceLabel)} <ArrowRight aria-hidden="true" /></Link></div>
+        <div><Link className="primary-button" href={text.contactPath}>{text.ctaButton} <ArrowRight aria-hidden="true" /></Link><a className="legal-guide-cta-call" href="tel:+17145441460">{text.ctaCall}</a><Link href={guide.practicePath}>{text.practiceLink(guide.practiceLabel)} <ArrowRight aria-hidden="true" /></Link></div>
       </section>
 
       <SiteFooter locale={locale} />

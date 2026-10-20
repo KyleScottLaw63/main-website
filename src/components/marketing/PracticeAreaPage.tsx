@@ -1,5 +1,6 @@
 import { ArrowRight, Check, ChevronDown, MapPin, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import { HeroCallActions } from '@/components/marketing/CallActions';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { PageSources } from '@/components/marketing/PageSources';
 import { practiceIcons } from '@/components/marketing/practice-icons';
@@ -86,6 +87,7 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           <p className="eyebrow light-eyebrow">{area.eyebrow}</p>
           <h1 id="practice-detail-title">{area.title}</h1>
           <p>{area.description}</p>
+          <HeroCallActions locale={locale} />
         </div>
         <aside className="practice-hero-summary" aria-label={spanish ? `Información sobre ${area.shortTitle}` : `${area.shortTitle} practice information`}>
           <span className="practice-hero-icon"><Icon aria-hidden="true" /></span>

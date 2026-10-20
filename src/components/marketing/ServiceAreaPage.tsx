@@ -1,5 +1,6 @@
 import { ArrowRight, Check, ChevronDown, MapPin, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import { HeroCallActions } from '@/components/marketing/CallActions';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { PageSources } from '@/components/marketing/PageSources';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
@@ -65,6 +66,10 @@ const copy = {
     officeTitle: 'Tustin office',
     officeBody: (city: string) => `Serving ${city} and all of Orange County`,
     serviceType: 'Personal injury representation',
+    ctaEyebrow: 'Free consultation',
+    ctaTitle: 'Discuss your case with Kyle Scott Law.',
+    ctaBody: 'Call the Tustin office or send a confidential case-review request.',
+    ctaButton: 'Request a case review',
   },
   es: {
     home: 'Inicio',
@@ -110,6 +115,10 @@ const copy = {
     officeTitle: 'Oficina en Tustin',
     officeBody: (city: string) => `Servicio a ${city} y a todo el Condado de Orange`,
     serviceType: 'Representación por lesiones personales',
+    ctaEyebrow: 'Consulta gratuita',
+    ctaTitle: 'Hable sobre su caso con Kyle Scott Law.',
+    ctaBody: 'Llame a la oficina de Tustin o envíe una solicitud confidencial de revisión del caso.',
+    ctaButton: 'Solicitar revisión del caso',
   },
 } satisfies Record<SiteLocale, unknown>;
 
@@ -171,6 +180,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           <p className="eyebrow light-eyebrow">{area.eyebrow}</p>
           <h1 id="practice-detail-title">{area.title}</h1>
           <p>{area.description}</p>
+          <HeroCallActions locale={locale} />
         </div>
         <aside className="practice-hero-summary" aria-label={text.serviceInfo(area.city)}>
           <span className="practice-hero-icon"><MapPin aria-hidden="true" /></span>
@@ -255,6 +265,8 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
         <article><strong>{text.officeTitle}</strong><span>{text.officeBody(area.city)}</span></article>
         <article><strong>{noRecoveryTerms[locale].label}</strong><span>{noRecoveryTerms[locale].condition}</span></article>
       </section>
+
+      <section className="practice-final-cta" aria-labelledby="area-cta-title"><div><p className="eyebrow light-eyebrow">{text.ctaEyebrow}</p><h2 id="area-cta-title">{text.ctaTitle}</h2><p>{text.ctaBody}</p></div><div><Link className="primary-button" href={text.contactPath}>{text.ctaButton} <ArrowRight aria-hidden="true" /></Link><a href="tel:+17145441460">714-544-1460</a></div></section>
 
       <SiteFooter locale={locale} />
       <ChatWidget locale={locale} />
