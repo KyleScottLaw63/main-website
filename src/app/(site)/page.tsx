@@ -180,15 +180,6 @@ export default function Home() {
         <Link className="news-archive-link" href="/news">View all news &amp; articles <ArrowRight aria-hidden="true" /></Link>
       </section>
 
-      <section className="consultation-section" id="consultation" aria-labelledby="consultation-title">
-        <div className="consultation-copy">
-          <p className="eyebrow">Free consultation</p><h2 id="consultation-title">Start with a free consultation.</h2><p>Tell the firm what happened and how to reach you. {terms.statement}.</p>
-          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Call the firm directly</small><a href="tel:+17145441460">714-544-1460</a></span></div>
-          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Tustin office</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
-        </div>
-        <ConsultationForm />
-      </section>
-
       <section className="firm-section" id="meet-the-team" aria-labelledby="firm-title">
         <div className="firm-intro">
           <div className="firm-photo"><Image src="/kyle-scott-headshot.jpg" alt="Trial attorney Kyle Scott" width={573} height={803} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /></div>
@@ -202,6 +193,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="consultation-section" id="consultation" aria-labelledby="consultation-title">
+        <div className="consultation-copy">
+          <p className="eyebrow">Free consultation</p><h2 id="consultation-title">Start with a free consultation.</h2><p>Tell the firm what happened and how to reach you. {terms.statement}.</p>
+          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Call the firm directly</small><a href="tel:+17145441460">714-544-1460</a></span></div>
+          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Tustin office</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
+        </div>
+        <ConsultationForm />
       </section>
 
       <section className="section process-section" id="process" aria-labelledby="process-title">

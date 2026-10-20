@@ -143,15 +143,6 @@ export default function SpanishHomePage() {
         <Link className="news-archive-link" href="/es/noticias">Ver todas las noticias y artículos <ArrowRight aria-hidden="true" /></Link>
       </section>
 
-      <section className="consultation-section" id="consulta" aria-labelledby="consultation-title">
-        <div className="consultation-copy">
-          <p className="eyebrow">Consulta gratuita</p><h2 id="consultation-title">Comience con una consulta gratuita.</h2><p>Cuéntenos qué ocurrió y cómo comunicarnos con usted. {terms.statement}.</p>
-          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Llame directamente al despacho</small><a href="tel:+17145441460">714-544-1460</a></span></div>
-          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Oficina de Tustin</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
-        </div>
-        <ConsultationForm locale="es" />
-      </section>
-
       <section className="firm-section" id="equipo" aria-labelledby="firm-title">
         <div className="firm-intro">
           <div className="firm-photo"><Image src="/kyle-scott-headshot.jpg" alt="Abogado litigante Kyle Scott" width={573} height={803} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /></div>
@@ -163,6 +154,15 @@ export default function SpanishHomePage() {
             <div className="firm-actions"><Link className="primary-button firm-team-button" href="/es/equipo">Conozca al equipo <ArrowRight aria-hidden="true" /></Link></div>
           </div>
         </div>
+      </section>
+
+      <section className="consultation-section" id="consulta" aria-labelledby="consultation-title">
+        <div className="consultation-copy">
+          <p className="eyebrow">Consulta gratuita</p><h2 id="consultation-title">Comience con una consulta gratuita.</h2><p>Cuéntenos qué ocurrió y cómo comunicarnos con usted. {terms.statement}.</p>
+          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Llame directamente al despacho</small><a href="tel:+17145441460">714-544-1460</a></span></div>
+          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Oficina de Tustin</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
+        </div>
+        <ConsultationForm locale="es" />
       </section>
 
       <section className="section process-section" id="proceso" aria-labelledby="process-title">
