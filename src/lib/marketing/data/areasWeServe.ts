@@ -1,8 +1,8 @@
 import type { PageSource } from '@/lib/marketing/data/practiceAreas';
 
 /**
- * /areas-we-serve: every city page, grouped by part of the county, and every practice, grouped by
- * kind of case (draft approved by Kyle J. Scott, 2026-10-19). The page builds its links from the city,
+ * /areas-we-serve: every city page, grouped by part of the county (each city's own case-type pages are
+ * linked from its city page), and every practice, grouped by kind of case (draft approved by Kyle J. Scott, 2026-10-19). The page builds its links from the city,
  * city + case, and practice data, so a new page appears here once its record exists; a key with no
  * record yet shows as plain text. The groupings are editorial and carry no legal meaning.
  * `areas-we-serve.test.ts` fails if a city or practice record is left out.
@@ -28,7 +28,7 @@ export const areasWeServe = {
   title: 'Areas We Serve in Orange County',
   metaDescription: 'Kyle Scott Law represents injured people in every Orange County city from its Tustin office. Find your city and every type of case the firm handles.',
   intro: 'Kyle Scott Law represents people injured anywhere in Orange County, from Brea to San Clemente, from its office at 17671 Irvine Blvd., Suite 210, in Tustin. Find your city below to see how a case there works, or go straight to the type of case you have.',
-  citiesBody: 'Each city page covers where injuries tend to happen there, which agencies investigate, where a case would be filed, and every type of case the firm handles for people who live or were hurt there. Some cities also have pages for a single type of case.',
+  citiesBody: 'Each city page covers where injuries tend to happen there, which agencies investigate, where a case would be filed, and every type of case the firm handles for people who live or were hurt there.',
   unincorporated: 'Unincorporated communities such as North Tustin, Ladera Ranch, Rancho Mission Viejo, Coto de Caza, and Midway City are served too. For these areas, county agencies, not a city, usually handle reports and claims.',
   faqs: [
     { question: 'Does Kyle Scott Law handle cases in my Orange County city?', answer: 'Yes. The firm represents injured people in every Orange County city and in the county’s unincorporated communities. The office is in Tustin, near the 5 and the 55, which is central to most of the county. Find your city above to see how a case there works, or start with a free consultation by phone or video.' },

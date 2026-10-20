@@ -7,7 +7,6 @@ import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { areaRegions, areasWeServe, practiceGroups } from '@/lib/marketing/data/areasWeServe';
-import { cityPracticePages } from '@/lib/marketing/data/cityPracticePages';
 import { practiceAreaByKey } from '@/lib/marketing/data/practiceAreas';
 import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
 import { spanishServiceAreas } from '@/lib/marketing/data/spanishServiceAreas';
@@ -46,12 +45,10 @@ function CityEntry({ cityKey }: { cityKey: string }) {
   const area = serviceAreaByKey[cityKey];
   if (!area) return null;
   const spanish = spanishServiceAreas.find((page) => page.englishKey === area.key);
-  const local = cityPracticePages.filter((page) => page.city === area.city);
   return (
     <li>
-      <Link href={area.path}><strong>{area.city}</strong></Link>
-      {spanish ? <> (<Link href={spanish.path} hrefLang="es" lang="es">en español</Link>)</> : null}
-      {local.length ? <span className="areas-city-cases">Also: {local.map((page, index) => <span key={page.key}>{index ? ' · ' : ''}<Link href={page.path}>{page.shortTitle.toLowerCase()}</Link></span>)}</span> : null}
+      <Link href={area.path}>{area.city}</Link>
+      {spanish ? <Link className="areas-city-es" href={spanish.path} hrefLang="es" lang="es" aria-label={`${area.city} en español`}>ES</Link> : null}
     </li>
   );
 }

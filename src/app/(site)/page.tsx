@@ -161,20 +161,32 @@ export default function Home() {
         </section>
       </section>
 
-      <section className="section practice-section" id="practice-areas" aria-labelledby="practice-title">
-        <div className="section-heading practice-heading">
-          <div><p className="eyebrow">Practice areas</p><h2 id="practice-title">Personal injury cases we handle.</h2></div>
+      <section className="section news-section" id="news" aria-labelledby="news-title">
+        <div className="news-heading">
+          <div><p className="eyebrow">Latest from KJS Law</p><h2 id="news-title">Results, stories, and firm updates.</h2></div>
+          <p>Read published case outcomes and legal developments from Kyle Scott Law. Every featured item opens its full page on this website.</p>
         </div>
-        <div className="practice-grid">
-          {practiceAreas.map((area) => {
-            const Icon = area.icon;
-              return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
-          })}
+        <div className="news-grid">
+          {newsItems.map((item, index) => (
+            <article className={index === 0 ? 'news-card news-card-featured' : 'news-card'} key={item.href}>
+              <div className="news-card-meta"><span>{item.category}</span><time>{item.date}</time></div>
+              <strong className="news-accent">{item.accent}</strong>
+              <h3>{item.title}</h3>
+              <p>{item.excerpt}</p>
+              <a href={item.href}>Read the story <ArrowRight aria-hidden="true" /></a>
+            </article>
+          ))}
         </div>
-        <h3 className="practice-every-case-title">Every type of personal injury case, in one place.</h3>
-        <p>Kyle Scott Law handles each type of case below. See how each one works on the <Link href="/personal-injury-lawyer-orange-county">Orange County personal injury attorney page</Link>.</p>
-        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path}>{area.shortTitle}</Link></li>)}<li><Link href="/practice-areas">View every practice area</Link></li></ul>
-        <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>No pressure. No generic intake line.</strong> Your consultation request goes directly into the firm’s private case-review system.</p></div>
+        <Link className="news-archive-link" href="/news">View all news &amp; articles <ArrowRight aria-hidden="true" /></Link>
+      </section>
+
+      <section className="consultation-section" id="consultation" aria-labelledby="consultation-title">
+        <div className="consultation-copy">
+          <p className="eyebrow">Free consultation</p><h2 id="consultation-title">Start with a free consultation.</h2><p>Tell the firm what happened and how to reach you. {terms.statement}.</p>
+          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Call the firm directly</small><a href="tel:+17145441460">714-544-1460</a></span></div>
+          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Tustin office</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
+        </div>
+        <ConsultationForm />
       </section>
 
       <section className="firm-section" id="meet-the-team" aria-labelledby="firm-title">
@@ -244,32 +256,20 @@ export default function Home() {
         <Link className="news-archive-link" href="/areas-we-serve">See all areas we serve <ArrowRight aria-hidden="true" /></Link>
       </section>
 
-      <section className="section news-section" id="news" aria-labelledby="news-title">
-        <div className="news-heading">
-          <div><p className="eyebrow">Latest from KJS Law</p><h2 id="news-title">Results, stories, and firm updates.</h2></div>
-          <p>Read published case outcomes and legal developments from Kyle Scott Law. Every featured item opens its full page on this website.</p>
+      <section className="section practice-section" id="practice-areas" aria-labelledby="practice-title">
+        <div className="section-heading practice-heading">
+          <div><p className="eyebrow">Practice areas</p><h2 id="practice-title">Personal injury cases we handle.</h2></div>
         </div>
-        <div className="news-grid">
-          {newsItems.map((item, index) => (
-            <article className={index === 0 ? 'news-card news-card-featured' : 'news-card'} key={item.href}>
-              <div className="news-card-meta"><span>{item.category}</span><time>{item.date}</time></div>
-              <strong className="news-accent">{item.accent}</strong>
-              <h3>{item.title}</h3>
-              <p>{item.excerpt}</p>
-              <a href={item.href}>Read the story <ArrowRight aria-hidden="true" /></a>
-            </article>
-          ))}
+        <div className="practice-grid">
+          {practiceAreas.map((area) => {
+            const Icon = area.icon;
+              return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
+          })}
         </div>
-        <Link className="news-archive-link" href="/news">View all news &amp; articles <ArrowRight aria-hidden="true" /></Link>
-      </section>
-
-      <section className="consultation-section" id="consultation" aria-labelledby="consultation-title">
-        <div className="consultation-copy">
-          <p className="eyebrow">Free consultation</p><h2 id="consultation-title">Start with a free consultation.</h2><p>Tell the firm what happened and how to reach you. {terms.statement}.</p>
-          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Call the firm directly</small><a href="tel:+17145441460">714-544-1460</a></span></div>
-          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Tustin office</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
-        </div>
-        <ConsultationForm />
+        <h3 className="practice-every-case-title">Every type of personal injury case, in one place.</h3>
+        <p>Kyle Scott Law handles each type of case below. See how each one works on the <Link href="/personal-injury-lawyer-orange-county">Orange County personal injury attorney page</Link>.</p>
+        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path}>{area.shortTitle}</Link></li>)}<li><Link href="/practice-areas">View every practice area</Link></li></ul>
+        <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>No pressure. No generic intake line.</strong> Your consultation request goes directly into the firm’s private case-review system.</p></div>
       </section>
 
       <SiteFooter />

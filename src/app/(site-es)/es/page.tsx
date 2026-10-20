@@ -131,18 +131,25 @@ export default function SpanishHomePage() {
         </section>
       </section>
 
-      <section className="section practice-section" id="areas-de-practica" aria-labelledby="practice-title">
-        <div className="section-heading practice-heading"><div><p className="eyebrow">Áreas de práctica</p><h2 id="practice-title">Casos de lesiones personales que manejamos.</h2></div></div>
-        <div className="practice-grid">
-          {practiceAreas.map((area) => {
-            const Icon = area.icon;
-            return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
-          })}
+      <section className="section news-section" id="noticias" aria-labelledby="news-title">
+        <div className="news-heading"><div><p className="eyebrow">Noticias de KJS Law</p><h2 id="news-title">Resultados, historias y novedades del despacho.</h2></div><p>Lea resultados publicados y novedades legales de Kyle Scott Law. Cada artículo destacado abre su página completa en este sitio.</p></div>
+        <div className="news-grid">
+          {newsItems.map((item, index) => (
+            <article className={index === 0 ? 'news-card news-card-featured' : 'news-card'} key={item.href}>
+              <div className="news-card-meta"><span>{item.category}</span><time>{item.date}</time></div><strong className="news-accent">{item.accent}</strong><h3>{item.title}</h3><p>{item.excerpt}</p><a href={item.href}>{item.cta ?? 'Leer la historia'} <ArrowRight aria-hidden="true" /></a>
+            </article>
+          ))}
         </div>
-        <h3 className="practice-every-case-title">Todos los tipos de casos de lesiones personales, en un solo lugar.</h3>
-        <p>Kyle Scott Law maneja cada tipo de caso que aparece abajo. Vea cómo funciona cada uno en la <Link href="/es/abogado-de-lesiones-personales-condado-de-orange">página del abogado de lesiones personales del Condado de Orange</Link>.</p>
-        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path} {...(area.inEnglish ? { hrefLang: 'en', lang: 'en' } : {})}>{area.shortTitle}</Link></li>)}<li><Link href="/es/areas-de-practica">Ver todas las áreas de práctica</Link></li></ul>
-        <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>Sin presión. Sin una línea genérica de recepción.</strong> Su solicitud de consulta entra directamente al sistema privado de revisión del despacho.</p></div>
+        <Link className="news-archive-link" href="/es/noticias">Ver todas las noticias y artículos <ArrowRight aria-hidden="true" /></Link>
+      </section>
+
+      <section className="consultation-section" id="consulta" aria-labelledby="consultation-title">
+        <div className="consultation-copy">
+          <p className="eyebrow">Consulta gratuita</p><h2 id="consultation-title">Comience con una consulta gratuita.</h2><p>Cuéntenos qué ocurrió y cómo comunicarnos con usted. {terms.statement}.</p>
+          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Llame directamente al despacho</small><a href="tel:+17145441460">714-544-1460</a></span></div>
+          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Oficina de Tustin</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
+        </div>
+        <ConsultationForm locale="es" />
       </section>
 
       <section className="firm-section" id="equipo" aria-labelledby="firm-title">
@@ -195,25 +202,18 @@ export default function SpanishHomePage() {
         <Link className="news-archive-link" href="/areas-we-serve" hrefLang="en">Ver todas las áreas que atendemos (en inglés) <ArrowRight aria-hidden="true" /></Link>
       </section>
 
-      <section className="section news-section" id="noticias" aria-labelledby="news-title">
-        <div className="news-heading"><div><p className="eyebrow">Noticias de KJS Law</p><h2 id="news-title">Resultados, historias y novedades del despacho.</h2></div><p>Lea resultados publicados y novedades legales de Kyle Scott Law. Cada artículo destacado abre su página completa en este sitio.</p></div>
-        <div className="news-grid">
-          {newsItems.map((item, index) => (
-            <article className={index === 0 ? 'news-card news-card-featured' : 'news-card'} key={item.href}>
-              <div className="news-card-meta"><span>{item.category}</span><time>{item.date}</time></div><strong className="news-accent">{item.accent}</strong><h3>{item.title}</h3><p>{item.excerpt}</p><a href={item.href}>{item.cta ?? 'Leer la historia'} <ArrowRight aria-hidden="true" /></a>
-            </article>
-          ))}
+      <section className="section practice-section" id="areas-de-practica" aria-labelledby="practice-title">
+        <div className="section-heading practice-heading"><div><p className="eyebrow">Áreas de práctica</p><h2 id="practice-title">Casos de lesiones personales que manejamos.</h2></div></div>
+        <div className="practice-grid">
+          {practiceAreas.map((area) => {
+            const Icon = area.icon;
+            return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
+          })}
         </div>
-        <Link className="news-archive-link" href="/es/noticias">Ver todas las noticias y artículos <ArrowRight aria-hidden="true" /></Link>
-      </section>
-
-      <section className="consultation-section" id="consulta" aria-labelledby="consultation-title">
-        <div className="consultation-copy">
-          <p className="eyebrow">Consulta gratuita</p><h2 id="consultation-title">Comience con una consulta gratuita.</h2><p>Cuéntenos qué ocurrió y cómo comunicarnos con usted. {terms.statement}.</p>
-          <div className="contact-card"><Phone aria-hidden="true" /><span><small>Llame directamente al despacho</small><a href="tel:+17145441460">714-544-1460</a></span></div>
-          <div className="contact-card"><MapPin aria-hidden="true" /><span><small>Oficina de Tustin</small><strong>17671 Irvine Blvd., Suite 210<br />Tustin, CA 92780</strong></span></div>
-        </div>
-        <ConsultationForm locale="es" />
+        <h3 className="practice-every-case-title">Todos los tipos de casos de lesiones personales, en un solo lugar.</h3>
+        <p>Kyle Scott Law maneja cada tipo de caso que aparece abajo. Vea cómo funciona cada uno en la <Link href="/es/abogado-de-lesiones-personales-condado-de-orange">página del abogado de lesiones personales del Condado de Orange</Link>.</p>
+        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path} {...(area.inEnglish ? { hrefLang: 'en', lang: 'en' } : {})}>{area.shortTitle}</Link></li>)}<li><Link href="/es/areas-de-practica">Ver todas las áreas de práctica</Link></li></ul>
+        <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>Sin presión. Sin una línea genérica de recepción.</strong> Su solicitud de consulta entra directamente al sistema privado de revisión del despacho.</p></div>
       </section>
 
       <SiteFooter locale="es" />

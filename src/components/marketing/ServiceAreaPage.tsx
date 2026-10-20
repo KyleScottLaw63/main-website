@@ -6,10 +6,12 @@ import { PageSources } from '@/components/marketing/PageSources';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
+import { cityPracticePages } from '@/lib/marketing/data/cityPracticePages';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
 import { flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
 import type { ServiceAreaData } from '@/lib/marketing/data/serviceAreas';
+import { spanishCityPracticePages } from '@/lib/marketing/data/spanishCityPracticePages';
 import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import type { SiteLocale } from '@/lib/marketing/i18n';
@@ -134,6 +136,9 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
   const allResults = [...flagshipResults, ...historicalResults];
   const results = (area.featuredResults ?? []).map((title) => allResults.find((result) => result.title === title)).filter((result) => result !== undefined).map((result) => (spanish ? translateResultToSpanish(result) : result));
   const placeName = area.placeName ?? `${area.city}, California`;
+  // A practice with its own page for this city (e.g. Tustin dog bites) links that page instead of the county one,
+  // which is how the city + case pages are reached from the rest of the site.
+  const localPages = new Map((spanish ? spanishCityPracticePages : cityPracticePages).filter((page) => page.city === area.city && page.parentKey).map((page) => [page.parentKey!, page.path]));
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -255,7 +260,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
             <div className="practice-results-heading"><div><p className="eyebrow">{text.practicesEyebrow}</p><h2 id="more-practices-title">{text.practicesTitle(area.city)}</h2></div><Link href={text.practicesPath}>{text.allPractices} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-more-grid">{related.map((item) => <a href={item.path} key={item.key}><ShieldCheck aria-hidden="true" /><span><strong>{item.shortTitle}</strong><small>{item.description}</small></span><ArrowRight aria-hidden="true" /></a>)}</div>
             <h3 className="practice-every-case-title">{text.everyCase(area.city)}</h3>
-            <ul className="practice-every-case">{localizedPractices.map((item) => <li key={item.key}><Link href={item.path}>{item.shortTitle}</Link></li>)}{spanish ? null : <li><Link href="/areas-we-serve">All Orange County areas we serve</Link></li>}</ul>
+            <ul className="practice-every-case">{localizedPractices.map((item) => <li key={item.key}><Link href={localPages.get(item.key) ?? item.path}>{item.shortTitle}</Link></li>)}{spanish ? null : <li><Link href="/areas-we-serve">All Orange County areas we serve</Link></li>}</ul>
           </section>
         </article>
       </div>
