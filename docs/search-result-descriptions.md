@@ -1,6 +1,6 @@
 # Search-result descriptions
 
-What Google shows under a page's title. In October 2026 the site appeared in search about 511,000 times and was rarely clicked, and many descriptions ran 170 to 250 characters, so Google cut them off mid-sentence. Every description is now short, specific to its page, and ends in a call to action.
+What Google shows under a page's title. In October 2026 the site appeared in search about 511,000 times and was rarely clicked, and many descriptions ran 170 to 250 characters, so Google cut them off mid-sentence. Every description is now short, specific to its page, and ends in a call to action. The 181 rewritten descriptions were approved by Kyle J. Scott and published 2026-10-20; the Spanish ones went out on the firm's instruction ahead of the Spanish-reading reviewer's check.
 
 ## Where each description lives
 
