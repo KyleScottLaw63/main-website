@@ -1,6 +1,8 @@
 import type { PageSource } from '@/lib/marketing/data/practiceAreas';
 import type { ServiceAreaData } from '@/lib/marketing/data/serviceAreas';
+import { spanishNorthCoastServiceAreas } from '@/lib/marketing/data/spanishServiceAreasNorthCoast';
 import { spanishRoundFourServiceAreas } from '@/lib/marketing/data/spanishServiceAreasRoundFour';
+import { spanishSouthRegionalServiceAreas } from '@/lib/marketing/data/spanishServiceAreasSouthRegional';
 
 /**
  * City pages in Spanish, at /es/abogado-de-lesiones-personales-<city>. Each translates the English
@@ -156,6 +158,8 @@ export const spanishServiceAreas: SpanishServiceAreaData[] = [
     sources: [UCI_LEVEL_I, OC_EMS_TRAUMA_CENTERS, DOG_BITE_STATUTE],
   },
   ...spanishRoundFourServiceAreas,
+  ...spanishNorthCoastServiceAreas,
+  ...spanishSouthRegionalServiceAreas,
 ];
 
 export const spanishServiceAreaByKey = Object.fromEntries(spanishServiceAreas.map((area) => [area.key, area])) as Record<string, SpanishServiceAreaData>;
