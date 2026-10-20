@@ -16,11 +16,11 @@ import {
   Phone,
   Scale,
   ShieldCheck,
-  Star,
   UserRoundCheck,
 } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ConsultationForm } from '@/components/marketing/ConsultationForm';
+import { GoogleRatingBadge } from '@/components/marketing/HowItWorks';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { areaRegions, practiceGroups } from '@/lib/marketing/data/areasWeServe';
@@ -100,11 +100,7 @@ export default function SpanishHomePage() {
               <a className="text-link" href="#resultados">Ver resultados de casos <ArrowRight aria-hidden="true" size={17} /></a>
             </div>
             <p className="no-fee-note">{terms.statement}.</p>
-            <a className="hero-review-badge" href="https://www.google.com/maps/search/?api=1&query=Kyle+Scott+Law+17671+Irvine+Blvd+Tustin+CA">
-              <span className="google-mark" aria-hidden="true">G</span>
-              <span><strong>Calificación de 5.0 en Google</strong><small><span className="stars" role="img" aria-label="Cinco estrellas"><Star /><Star /><Star /><Star /><Star /></span>Ver reseñas de clientes</small></span>
-              <ArrowRight aria-hidden="true" />
-            </a>
+            <GoogleRatingBadge locale="es" />
           </div>
           <div className="hero-media" aria-label="Kyle Scott y el equipo de Kyle Scott Law">
             <Image src="/kjs-team.jpg" alt="Kyle Scott con el equipo de Kyle Scott Law en Tustin" width={900} height={600} priority fetchPriority="high" quality={90} sizes="(max-width: 1023px) 94vw, 57vw" />

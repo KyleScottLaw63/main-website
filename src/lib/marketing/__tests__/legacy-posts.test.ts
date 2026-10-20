@@ -387,6 +387,8 @@ describe('titles and descriptions are unique (docs/public-site-rendering.md)', (
     const duplicates = (values: string[]) => values.filter((value, index) => values.indexOf(value) !== index);
     expect(duplicates(indexable.map((post) => post.title.trim().toLowerCase()))).toEqual([]);
     expect(duplicates(indexable.map((post) => legacyPostDescription(post)))).toEqual([]);
+    // Google shows about 155 characters; a longer description is cut off mid-thought in the results.
+    expect(indexable.map((post) => legacyPostDescription(post)).filter((text) => text.length > 155)).toEqual([]);
   });
 
   it('no archived post reuses the title of a city page, guide, or news article', () => {

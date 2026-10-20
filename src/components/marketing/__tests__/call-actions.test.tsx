@@ -2,6 +2,8 @@ import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen, within } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { HeroCallActions } from '@/components/marketing/CallActions';
+import { HowItWorks } from '@/components/marketing/HowItWorks';
+import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 
 afterEach(cleanup);
@@ -23,5 +25,16 @@ describe('calls to action', () => {
     render(<HeroCallActions />);
     expect(screen.getByRole('link', { name: 'Call 714-544-1460' })).toHaveAttribute('href', 'tel:+17145441460');
     expect(screen.getByRole('link', { name: /Free case review/ })).toHaveAttribute('href', '/contact#case-review');
+  });
+
+  it('"How it works" gives three steps, the tap-to-call number, the Google rating, and the firm’s one fee statement', () => {
+    for (const locale of ['en', 'es'] as const) {
+      const { container } = render(<HowItWorks locale={locale} />);
+      expect(container.querySelectorAll('.how-it-works-steps li')).toHaveLength(3);
+      expect(container.querySelector('a[href="tel:+17145441460"]')).not.toBeNull();
+      expect(container.querySelector('a.hero-review-badge')).not.toBeNull();
+      expect(container.textContent).toContain(noRecoveryTerms[locale].statement);
+      cleanup();
+    }
   });
 });

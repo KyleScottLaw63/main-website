@@ -1,6 +1,7 @@
 import { ArrowRight, Check, ChevronDown, MapPin, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { HeroCallActions } from '@/components/marketing/CallActions';
+import { HowItWorks } from '@/components/marketing/HowItWorks';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { PageSources } from '@/components/marketing/PageSources';
 import { practiceIcons } from '@/components/marketing/practice-icons';
@@ -99,6 +100,8 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           </ul>
         </aside>
       </section>
+
+      <HowItWorks locale={locale} />
 
       <div className="practice-content-layout">
         <aside className="practice-page-nav" aria-label={spanish ? 'Navegación de la página' : 'Page navigation'}>

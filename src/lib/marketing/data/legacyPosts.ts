@@ -153,16 +153,19 @@ export function legacyPostIsIndexable(post: Pick<LegacyPost, 'contentHtml' | 'no
  */
 export function legacyPostDescription(post: Pick<LegacyPost, 'contentHtml' | 'excerpt' | 'title' | 'dateTime'>) {
   const excerpt = (post.excerpt ?? '').trim();
-  if (excerpt) return excerpt;
+  if (excerpt) return fitDescription(excerpt);
   const text = legacyPostPlainText(post);
-  if (text.length >= 40) {
-    if (text.length <= 155) return text;
-    const cut = text.slice(0, 155);
-    return `${cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:\-–—]$/, '')}…`;
-  }
+  if (text.length >= 40) return fitDescription(text);
   const year = (post.dateTime ?? '').slice(0, 4) || 'earlier';
   const title = post.title.trim().replace(/[.!?…]+$/, '');
-  return `${title} — from the Kyle Scott Law journal (${year}). Orange County personal injury attorney Kyle Scott, Tustin, California.`;
+  return fitDescription(`${title} — from the Kyle Scott Law journal (${year}). Orange County personal injury attorney Kyle Scott, Tustin, California.`);
+}
+
+/** Google shows about 155 characters of a description; longer text is cut at a word, never mid-word, with "…". */
+function fitDescription(text: string) {
+  if (text.length <= 155) return text;
+  const cut = text.slice(0, 154);
+  return `${cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:\-–—]$/, '')}…`;
 }
 
 export function legacyRedirectForPath(pathname: string) {

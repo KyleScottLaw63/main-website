@@ -276,7 +276,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .google-mark { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid rgba(13,67,143,.12); border-radius: 9px; background: #fff; color: #4285f4; font-size: 19px; font-weight: 800; }
 .hero-review-badge > span:nth-child(2),.hero-review-badge strong,.hero-review-badge small { display: block; }
 .hero-review-badge strong { color: var(--navy-deep); font-size: 13px; line-height: 1.2; }
-.hero-review-badge small { display: flex; align-items: center; gap: 7px; margin-top: 4px; color: var(--ink-soft); font-size: 10px; font-weight: 680; }
+.hero-review-badge small { display: flex; align-items: center; gap: 7px; margin-top: 4px; color: var(--ink-soft); font-size: 13px; font-weight: 680; }
 .hero-review-badge > svg { width: 16px; color: var(--blue); }
 .stars { display: flex; gap: 3px; color: #efb935; }
 .stars svg { width: 12px; height: 12px; fill: currentColor; }
@@ -1808,3 +1808,16 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
   .mobile-call-bar-call svg { display: none; }
 }
 @media print { .mobile-call-bar { display: none; } }
+
+/* "How it works" under the heading of every practice, city, and city + case page (HowItWorks.tsx, 2026-10-20). */
+.how-it-works { display: grid; width: min(calc(100% - clamp(30px,5vw,88px)),1640px); grid-template-columns: minmax(240px,.8fr) minmax(0,2.2fr); gap: clamp(24px,4vw,56px); align-items: start; margin: clamp(26px,3vw,40px) auto 0; border: 1px solid rgba(20,65,129,.12); border-radius: 22px; background: white; box-shadow: 0 18px 44px rgba(5,36,80,.06); padding: clamp(24px,3.4vw,42px); }
+.how-it-works-heading h2 { margin: 10px 0 0; color: var(--ink); font-family: var(--font-serif); font-size: clamp(28px,2.6vw,38px); font-weight: 500; letter-spacing: -.035em; line-height: 1.06; text-wrap: balance; }
+.how-it-works-heading .hero-review-badge { margin-top: 20px; }
+.how-it-works-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(16px,2vw,28px); margin: 0; padding: 0; list-style: none; counter-reset: how; }
+.how-it-works-steps li { counter-increment: how; display: grid; align-content: start; gap: 8px; border-top: 2px solid rgba(11,87,199,.16); padding-top: 18px; }
+.how-it-works-steps li::before { content: counter(how); display: grid; width: 34px; height: 34px; place-items: center; border-radius: 999px; background: var(--navy); color: white; font-size: 15px; font-weight: 780; }
+.how-it-works-steps h3 { margin: 6px 0 0; color: var(--navy-deep); font-size: 18px; font-weight: 720; }
+.how-it-works-steps p { margin: 0; color: var(--ink-soft); font-size: 16px; line-height: 1.6; }
+.how-it-works-steps a { color: var(--blue); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 1180px) { .how-it-works { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .how-it-works-steps { grid-template-columns: 1fr; } .how-it-works-steps li { grid-template-columns: 34px 1fr; column-gap: 14px; } .how-it-works-steps li::before { grid-row: span 2; } .how-it-works-steps h3 { margin-top: 4px; } }

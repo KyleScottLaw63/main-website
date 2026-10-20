@@ -16,11 +16,11 @@ import {
   Phone,
   Scale,
   ShieldCheck,
-  Star,
   UserRoundCheck,
 } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ConsultationForm } from '@/components/marketing/ConsultationForm';
+import { GoogleRatingBadge } from '@/components/marketing/HowItWorks';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { areaRegions, practiceGroups } from '@/lib/marketing/data/areasWeServe';
@@ -127,11 +127,7 @@ export default function Home() {
               <a className="text-link" href="#results">View case results <ArrowRight aria-hidden="true" size={17} /></a>
             </div>
             <p className="no-fee-note">{terms.statement}.</p>
-            <a className="hero-review-badge" href="https://www.google.com/maps/search/?api=1&query=Kyle+Scott+Law+17671+Irvine+Blvd+Tustin+CA">
-              <span className="google-mark" aria-hidden="true">G</span>
-              <span><strong>5.0 Google rating</strong><small><span className="stars" role="img" aria-label="Five stars"><Star /><Star /><Star /><Star /><Star /></span>View client reviews</small></span>
-              <ArrowRight aria-hidden="true" />
-            </a>
+            <GoogleRatingBadge />
           </div>
 
           <div className="hero-media" aria-label="Kyle Scott and the Kyle Scott Law team">

@@ -1,6 +1,7 @@
 import { ArrowRight, Check, ChevronDown, MapPin, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { HeroCallActions } from '@/components/marketing/CallActions';
+import { HowItWorks } from '@/components/marketing/HowItWorks';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { PageSources } from '@/components/marketing/PageSources';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
@@ -197,6 +198,8 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           </ul>
         </aside>
       </section>
+
+      <HowItWorks locale={locale} />
 
       <div className="practice-content-layout">
         <aside className="practice-page-nav" aria-label={text.pageNav}>
