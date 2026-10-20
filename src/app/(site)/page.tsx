@@ -21,10 +21,10 @@ import {
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ConsultationForm } from '@/components/marketing/ConsultationForm';
 import { GoogleRatingBadge } from '@/components/marketing/HowItWorks';
+import { MorePracticeCards } from '@/components/marketing/MorePracticeCards';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
-import { areaRegions, practiceGroups } from '@/lib/marketing/data/areasWeServe';
-import { practiceAreaByKey } from '@/lib/marketing/data/practiceAreas';
+import { areaRegions } from '@/lib/marketing/data/areasWeServe';
 import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 
@@ -34,10 +34,6 @@ const terms = noRecoveryTerms.en;
 export const metadata: Metadata = {
   description: 'Orange County personal injury lawyer in Tustin. Kyle Scott Law has represented injured people since 1991, from crashes to malpractice. Free consultation.',
 };
-
-// "Every type of personal injury case": every practice page, in the order of /areas-we-serve, from the same data,
-// so a new practice page appears here once its record exists. The county-wide hub is linked in the sentence above the list.
-const everyPractice = practiceGroups.flatMap((group) => group.keys).filter((key) => key !== 'personal-injury').flatMap((key) => (practiceAreaByKey[key] ? [practiceAreaByKey[key]] : []));
 
 // "Areas we serve": the Orange County regions of /areas-we-serve, each city linked to its page (a key with no record is left out).
 const countyRegions = areaRegions.filter((region) => region.name !== 'Beyond Orange County');
@@ -262,9 +258,7 @@ export default function Home() {
               return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
           })}
         </div>
-        <h3 className="practice-every-case-title">Every type of personal injury case, in one place.</h3>
-        <p>Kyle Scott Law handles each type of case below. See how each one works on the <Link href="/personal-injury-lawyer-orange-county">Orange County personal injury attorney page</Link>.</p>
-        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path}>{area.shortTitle}</Link></li>)}<li><Link href="/practice-areas">View every practice area</Link></li></ul>
+        <MorePracticeCards shownPaths={practiceAreas.map((area) => area.href)} />
         <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>No pressure. No generic intake line.</strong> Your consultation request goes directly into the firm’s private case-review system.</p></div>
       </section>
 

@@ -780,14 +780,14 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 .legal-contact-details a { display: flex; align-items: flex-start; gap: 10px; color: white; font-size: 14px; font-weight: 680; line-height: 1.45; text-decoration: none; }
 .legal-contact-details svg { width: 18px; height: 18px; flex: 0 0 auto; color: rgba(255,255,255,.82); }
 
-@media (max-width: 1600px) and (min-width: 1181px) {
+@media (max-width: 1600px) and (min-width: 1321px) {
   .site-header { padding-inline: clamp(24px,2.5vw,42px); }
   .site-header-inner { grid-template-columns: auto 1fr auto; gap: 20px; }
   .brand { width: 148px; }
-  .site-header nav { gap: clamp(11px,1.3vw,22px); font-size: clamp(12px,0.95vw,14.5px); }
+  .site-header nav { gap: clamp(13px,1.3vw,22px); font-size: clamp(13px,0.95vw,14.5px); }
   .header-actions { gap: 11px; }
   .site-header .language-switcher { padding-inline: 12px; }
-  .header-cta { padding-inline: 15px; font-size: 12px; }
+  .header-cta { padding-inline: 15px; font-size: 13px; }
 }
 
 @media (max-width: 1180px) {
@@ -827,7 +827,7 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
   .practice-more-grid > a { min-height: 0; }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
   .site-header { padding-inline: 22px; }
   .site-header-inner { min-height: 58px; grid-template-columns: 1fr auto; }
   .site-header nav, .phone-link, .header-cta, .site-header .language-switcher-root:not(.header-language-switcher) { display: none; }
@@ -1815,3 +1815,52 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 .how-it-works-steps a { color: var(--blue); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 @media (max-width: 1180px) { .how-it-works { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .how-it-works-steps { grid-template-columns: 1fr; } .how-it-works-steps li { grid-template-columns: 34px 1fr; column-gap: 14px; } .how-it-works-steps li::before { grid-row: span 2; } .how-it-works-steps h3 { margin-top: 4px; } }
+
+
+
+/* Header "Service Areas" menu (ServiceAreasMenu.tsx, 2026-10-20): hover or focus opens four categories; the chosen
+   category's cities show beside it (the first by default). Desktop only; phones get the same lists in the menu. */
+.nav-menu { position: relative; display: inline-flex; align-items: center; }
+.site-header nav .nav-menu-trigger { display: inline-flex; align-items: center; gap: 5px; }
+.nav-menu-trigger svg { width: 15px; height: 15px; transition: transform 180ms ease; }
+.nav-menu:hover .nav-menu-trigger, .nav-menu:focus-within .nav-menu-trigger { color: var(--blue); }
+.nav-menu:hover .nav-menu-trigger svg, .nav-menu:focus-within .nav-menu-trigger svg { transform: rotate(180deg); }
+.nav-menu-panel { position: absolute; z-index: 45; top: calc(100% + 18px); left: -22px; display: none; width: 640px; min-height: 318px; grid-template-columns: 262px minmax(0,1fr); grid-template-rows: 1fr auto; border: 1px solid rgba(12,57,119,.14); border-radius: 18px; background: white; box-shadow: 0 26px 60px rgba(4,27,59,.16); padding: 12px; font-size: 15px; }
+.nav-menu-panel::before { position: absolute; top: -20px; right: 0; left: 0; height: 20px; content: ''; }
+.nav-menu:hover .nav-menu-panel, .nav-menu:focus-within .nav-menu-panel { display: grid; }
+.nav-menu-regions { display: grid; align-content: start; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.site-header nav .nav-menu-region-link { display: flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 10px; border-radius: 11px; padding: 0 12px 0 14px; color: var(--navy-deep); font-weight: 720; white-space: normal; }
+.nav-menu-region-link svg { width: 16px; height: 16px; flex: none; color: var(--blue); }
+.nav-menu-cities { position: absolute; top: 12px; right: 12px; bottom: 58px; left: 286px; display: none; margin: 0; padding: 6px 4px; list-style: none; column-count: 2; column-gap: 16px; }
+.nav-menu-cities li { break-inside: avoid; }
+.site-header nav .nav-menu-cities a { display: flex; min-height: 34px; align-items: center; color: var(--ink-soft); font-size: 14px; font-weight: 620; }
+.site-header nav .nav-menu-cities a:hover, .site-header nav .nav-menu-cities a:focus-visible { color: var(--blue); }
+.nav-menu-region:hover > .nav-menu-region-link, .nav-menu-region:focus-within > .nav-menu-region-link,
+.nav-menu-regions:not(:has(> .nav-menu-region:hover, > .nav-menu-region:focus-within)) > .nav-menu-region:first-child > .nav-menu-region-link { background: rgba(11,87,199,.07); color: var(--blue); }
+.nav-menu-region:hover > .nav-menu-cities, .nav-menu-region:focus-within > .nav-menu-cities,
+.nav-menu-regions:not(:has(> .nav-menu-region:hover, > .nav-menu-region:focus-within)) > .nav-menu-region:first-child > .nav-menu-cities { display: block; }
+.site-header nav .nav-menu-all { grid-column: 1 / -1; display: flex; min-height: 44px; align-items: center; margin-top: 8px; border-top: 1px solid rgba(12,57,119,.1); padding: 8px 14px 0; color: var(--blue); font-size: 14px; font-weight: 750; }
+.mobile-area-group { border-bottom: 1px solid rgba(16,60,119,.08); }
+.mobile-area-group > summary { display: flex; min-height: 50px; align-items: center; justify-content: space-between; gap: 10px; color: var(--navy-deep); font-weight: 720; cursor: pointer; list-style: none; }
+.mobile-area-group > summary::-webkit-details-marker { display: none; }
+.mobile-area-group > summary svg { width: 17px; height: 17px; color: var(--blue); transition: transform 180ms ease; }
+.mobile-area-group[open] > summary svg { transform: rotate(180deg); }
+.mobile-area-group > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; padding: 0 0 10px; }
+.mobile-areas-dropdown a { display: flex; min-height: 44px; align-items: center; }
+@media (prefers-reduced-motion: reduce) { .nav-menu-trigger svg, .mobile-area-group > summary svg { transition: none; } }
+
+/* Home page: every other practice behind a "View all" button, as the same cards as the featured eight
+   (MorePracticeCards.tsx, 2026-10-20). Native <details>, so it works without script. */
+.practice-more-cards { display: grid; justify-items: center; margin-top: 26px; }
+.practice-more-cards > summary { display: inline-flex; min-height: 52px; align-items: center; gap: 10px; border: 1px solid rgba(12,57,119,.22); border-radius: 999px; background: white; box-shadow: 0 10px 26px rgba(5,36,80,.07); padding: 0 26px; color: var(--navy); font-size: 15px; font-weight: 760; cursor: pointer; list-style: none; }
+.practice-more-cards > summary::-webkit-details-marker { display: none; }
+.practice-more-cards > summary:hover, .practice-more-cards > summary:focus-visible { border-color: rgba(11,87,199,.45); color: var(--blue); }
+.practice-more-cards > summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.practice-more-cards > summary svg { width: 18px; height: 18px; transition: transform .2s ease; }
+.practice-more-cards[open] > summary svg { transform: rotate(180deg); }
+.practice-more-cards .when-open, .practice-more-cards[open] .when-closed { display: none; }
+.practice-more-cards[open] .when-open { display: inline; }
+.practice-more-cards > .practice-grid { width: 100%; margin-top: 26px; }
+.practice-more-all { display: inline-flex; min-height: 44px; align-items: center; gap: 6px; margin-top: 18px; color: var(--blue); font-weight: 750; }
+.practice-more-all svg { width: 16px; height: 16px; }
+@media (prefers-reduced-motion: reduce) { .practice-more-cards > summary svg { transition: none; } }

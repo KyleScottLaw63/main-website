@@ -21,12 +21,11 @@ import {
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { ConsultationForm } from '@/components/marketing/ConsultationForm';
 import { GoogleRatingBadge } from '@/components/marketing/HowItWorks';
+import { MorePracticeCards } from '@/components/marketing/MorePracticeCards';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
-import { areaRegions, practiceGroups } from '@/lib/marketing/data/areasWeServe';
-import { practiceAreaByKey } from '@/lib/marketing/data/practiceAreas';
+import { areaRegions } from '@/lib/marketing/data/areasWeServe';
 import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
-import { spanishPracticeAreaByKey } from '@/lib/marketing/data/spanishPracticeAreas';
 import { spanishServiceAreaByKey } from '@/lib/marketing/data/spanishServiceAreas';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
@@ -38,17 +37,6 @@ export const metadata: Metadata = {
   description: 'Abogado de lesiones personales en el Condado de Orange. Kyle Scott Law representa a personas lesionadas desde 1991, en español o inglés. Consulta gratuita.',
   alternates: localizedAlternates('/es'),
 };
-
-// "Todos los tipos de casos de lesiones personales": every practice page, in the order of /areas-we-serve, from the same data,
-// so a new practice page appears here once its record exists. Each links its Spanish page; a practice with no Spanish record
-// links the English page. The county-wide hub is linked in the sentence above the list.
-const everyPractice = practiceGroups
-  .flatMap((group) => group.keys)
-  .filter((key) => key !== 'personal-injury')
-  .flatMap((key) => {
-    const page = spanishPracticeAreaByKey[key] ?? practiceAreaByKey[key];
-    return page ? [{ key, path: page.path, shortTitle: page.shortTitle, inEnglish: !spanishPracticeAreaByKey[key] }] : [];
-  });
 
 // "Áreas que atendemos": the Orange County regions of /areas-we-serve (which has no Spanish version), each city linked to its
 // Spanish page where there is one and to its English page otherwise (a key with no record is left out).
@@ -206,9 +194,7 @@ export default function SpanishHomePage() {
             return <a className="practice-card" href={area.href} key={area.title}><span className="practice-icon"><Icon aria-hidden="true" /></span><span><strong>{area.title}</strong><small>{area.copy}</small></span><ArrowRight className="card-arrow" aria-hidden="true" /></a>;
           })}
         </div>
-        <h3 className="practice-every-case-title">Todos los tipos de casos de lesiones personales, en un solo lugar.</h3>
-        <p>Kyle Scott Law maneja cada tipo de caso que aparece abajo. Vea cómo funciona cada uno en la <Link href="/es/abogado-de-lesiones-personales-condado-de-orange">página del abogado de lesiones personales del Condado de Orange</Link>.</p>
-        <ul className="practice-every-case">{everyPractice.map((area) => <li key={area.key}><Link href={area.path} {...(area.inEnglish ? { hrefLang: 'en', lang: 'en' } : {})}>{area.shortTitle}</Link></li>)}<li><Link href="/es/areas-de-practica">Ver todas las áreas de práctica</Link></li></ul>
+        <MorePracticeCards locale="es" shownPaths={practiceAreas.map((area) => area.href)} />
         <div className="practice-footer"><ShieldCheck aria-hidden="true" /><p><strong>Sin presión. Sin una línea genérica de recepción.</strong> Su solicitud de consulta entra directamente al sistema privado de revisión del despacho.</p></div>
       </section>
 

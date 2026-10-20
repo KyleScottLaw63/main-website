@@ -3,9 +3,11 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { ChevronDown, Menu, Phone } from 'lucide-react';
+import Link from 'next/link';
 import { Button } from '@/components/marketing/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/marketing/ui/dialog';
 import { LanguageSwitcher } from '@/components/marketing/LanguageSwitcher';
+import type { AreaMenuGroup } from '@/components/marketing/ServiceAreasMenu';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 
 const links = {
@@ -18,19 +20,24 @@ const mobilePracticeLinks = {
   es: [['Lesiones personales', '/es/abogado-de-lesiones-personales-condado-de-orange'], ['Accidentes de auto', '/es/abogado-de-accidentes-de-auto-condado-de-orange'], ['Resbalones y caídas', '/es/abogado-de-resbalones-y-caidas-condado-de-orange'], ['Negligencia médica', '/es/abogado-de-negligencia-medica-condado-de-orange'], ['Abuso de personas mayores', '/es/abogado-de-abuso-de-personas-mayores-condado-de-orange'],['Mordeduras de perro', '/es/abogado-de-mordeduras-de-perro-condado-de-orange'], ['Lesión cerebral', '/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange'], ['Acoso y abuso sexual', '/es/abogado-de-acoso-y-abuso-sexual-condado-de-orange'], ['Muerte injusta', '/es/abogado-de-muerte-injusta-condado-de-orange'], ['Responsabilidad escolar', '/es/abogado-de-responsabilidad-escolar-condado-de-orange'], ['Accidentes de motocicleta', '/es/abogado-de-accidentes-de-motocicleta-condado-de-orange'], ['Accidentes de camión', '/es/abogado-de-accidentes-de-camion-condado-de-orange'], ['Accidentes de peatones', '/es/abogado-de-accidentes-de-peatones-condado-de-orange'], ['Accidentes de Uber y Lyft', '/es/abogado-de-accidentes-de-uber-y-lyft-condado-de-orange']],
 };
 
-export function MobileNav({ locale = 'en' }: { locale?: SiteLocale }) {
+export function MobileNav({ locale = 'en', areas = [], areasLabel = 'Service Areas', areasAll = 'All areas we serve' }: { locale?: SiteLocale; areas?: AreaMenuGroup[]; areasLabel?: string; areasAll?: string }) {
   const [open, setOpen] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
   const spanish = locale === 'es';
 
   const handleOpenChange = (nextOpen: boolean) => {
     setOpen(nextOpen);
-    if (!nextOpen) setPracticeOpen(false);
+    if (!nextOpen) {
+      setPracticeOpen(false);
+      setAreasOpen(false);
+    }
   };
 
   const closeMenu = () => {
     setOpen(false);
     setPracticeOpen(false);
+    setAreasOpen(false);
   };
 
   return (
@@ -80,6 +87,23 @@ export function MobileNav({ locale = 'en' }: { locale?: SiteLocale }) {
                 {mobilePracticeLinks[locale].map(([label, href]) => <a href={href} key={href} onClick={closeMenu}>{label}</a>)}
               </div>
             </div>
+            {areas.length ? (
+              <div className={`mobile-practice-entry mobile-areas-entry${areasOpen ? ' is-open' : ''}`}>
+                <button className="mobile-practice-toggle" type="button" aria-expanded={areasOpen} aria-controls="mobile-areas-menu" onClick={() => setAreasOpen((current) => !current)}>
+                  <span>{areasLabel}</span>
+                  <ChevronDown aria-hidden="true" />
+                </button>
+                <div className="mobile-practice-dropdown mobile-areas-dropdown" id="mobile-areas-menu" hidden={!areasOpen}>
+                  {areas.map((group) => (
+                    <details className="mobile-area-group" key={group.name}>
+                      <summary>{group.name}<ChevronDown aria-hidden="true" /></summary>
+                      <div>{group.cities.map((city) => <a href={city.href} key={city.href} onClick={closeMenu} {...(city.english ? { hrefLang: 'en', lang: 'en' } : {})}>{city.name}</a>)}</div>
+                    </details>
+                  ))}
+                  <Link href="/areas-we-serve" onClick={closeMenu} {...(spanish ? { hrefLang: 'en' } : {})}>{areasAll}</Link>
+                </div>
+              </div>
+            ) : null}
             {links[locale].slice(1).map(([label, href]) => <a href={href} key={href} onClick={closeMenu}>{label}</a>)}
           </nav>
         </div>

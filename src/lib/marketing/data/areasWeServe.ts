@@ -16,6 +16,19 @@ export const areaRegions: { name: string; note?: string; keys: string[] }[] = [
   { name: 'Beyond Orange County', note: 'The firm also represents people hurt elsewhere in Southern California.', keys: ['long-beach', 'inland-empire', 'southern-california'] },
 ];
 
+const regionKeys = (...names: string[]) => names.flatMap((name) => areaRegions.find((region) => region.name === name)?.keys ?? []);
+
+/**
+ * The header's "Service Areas" menu (the firm, 2026-10-20): four categories built from the regions above, so a new
+ * city in a region appears in the menu too. Cities are sorted by name where the menu is built (SiteHeader).
+ */
+export const menuRegions: { en: string; es: string; keys: string[] }[] = [
+  { en: 'Central & West Orange County', es: 'Centro y oeste del Condado de Orange', keys: regionKeys('Central Orange County', 'West Orange County') },
+  { en: 'North Orange County', es: 'Norte del Condado de Orange', keys: regionKeys('North Orange County') },
+  { en: 'South Orange County & the Coast', es: 'Sur del Condado de Orange y la costa', keys: regionKeys('Coastal Orange County', 'South Orange County') },
+  { en: 'Beyond Orange County', es: 'Fuera del Condado de Orange', keys: regionKeys('Beyond Orange County') },
+];
+
 export const practiceGroups: { name: string; keys: string[] }[] = [
   { name: 'Vehicle crashes', keys: ['car-accidents', 'truck-accidents', 'motorcycle-accidents', 'rideshare-accidents', 'pedestrian-accidents', 'bicycle-accidents', 'bus-accidents', 'hit-and-run-accidents', 'drunk-driver-accidents'] },
   { name: 'Unsafe property and places', keys: ['slip-and-fall', 'premises-liability', 'dog-bites', 'school-liability', 'sports-injuries', 'government-claims'] },
