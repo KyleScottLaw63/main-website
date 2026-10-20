@@ -9,7 +9,6 @@ import { StructuredData } from '@/components/marketing/StructuredData';
 import { areaRegions, areasWeServe, practiceGroups } from '@/lib/marketing/data/areasWeServe';
 import { practiceAreaByKey } from '@/lib/marketing/data/practiceAreas';
 import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
-import { spanishServiceAreas } from '@/lib/marketing/data/spanishServiceAreas';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 import { SITE_URL } from '@/lib/marketing/site';
@@ -44,11 +43,9 @@ const slug = (name: string) => name.toLowerCase().replace(/[^a-z]+/g, '-');
 function CityEntry({ cityKey }: { cityKey: string }) {
   const area = serviceAreaByKey[cityKey];
   if (!area) return null;
-  const spanish = spanishServiceAreas.find((page) => page.englishKey === area.key);
   return (
     <li>
       <Link href={area.path}>{area.city}</Link>
-      {spanish ? <Link className="areas-city-es" href={spanish.path} hrefLang="es" lang="es" aria-label={`${area.city} en español`}>ES</Link> : null}
     </li>
   );
 }

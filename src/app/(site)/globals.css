@@ -1764,8 +1764,6 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 .areas-region-grid li > a:first-child { display: flex; flex: 1; min-height: 44px; align-items: center; font-weight: 650; }
 .areas-region-grid a { color: var(--navy-deep); }
 .areas-region-grid a:hover,.areas-region-grid a:focus-visible { color: var(--blue); }
-.areas-region-grid a.areas-city-es { display: inline-flex; min-height: 28px; align-items: center; border: 1px solid rgba(20,65,129,.18); border-radius: 999px; padding: 0 10px; color: var(--ink-soft); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
-.areas-region-grid a.areas-city-es:hover,.areas-region-grid a.areas-city-es:focus-visible { border-color: rgba(11,87,199,.36); color: var(--blue); }
 .areas-unincorporated { font-size: 15px !important; }
 .areas-more-links { display: flex; flex-wrap: wrap; gap: 12px 28px; }
 .areas-more-links a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--blue); font-weight: 700; }
@@ -1864,3 +1862,6 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 .practice-more-all { display: inline-flex; min-height: 44px; align-items: center; gap: 6px; margin-top: 18px; color: var(--blue); font-weight: 750; }
 .practice-more-all svg { width: 16px; height: 16px; }
 @media (prefers-reduced-motion: reduce) { .practice-more-cards > summary svg { transition: none; } }
+
+/* Phones show four featured practice cards until "View more" opens the rest (the designer, 2026-10-20). */
+@media (max-width: 640px) { .practice-section:has(> .practice-more-cards:not([open])) > .practice-grid > .practice-card:nth-child(n+5) { display: none; } }

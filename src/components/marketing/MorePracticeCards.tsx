@@ -51,12 +51,12 @@ const cardCopy: Record<SiteLocale, Record<string, string>> = {
 };
 
 const copy = {
-  en: { more: (count: number) => `View all ${count} types of cases`, fewer: 'Show fewer', all: 'View every practice area', allPath: '/practice-areas' },
-  es: { more: (count: number) => `Ver los ${count} tipos de casos`, fewer: 'Mostrar menos', all: 'Ver todas las áreas de práctica', allPath: '/es/areas-de-practica' },
+  en: { more: 'View more', fewer: 'Show fewer', all: 'View every practice area', allPath: '/practice-areas' },
+  es: { more: 'Ver más', fewer: 'Mostrar menos', all: 'Ver todas las áreas de práctica', allPath: '/es/areas-de-practica' },
 } satisfies Record<SiteLocale, unknown>;
 
 /**
- * Under the home page's eight featured practice cards: a "View all" button that opens every other practice as the
+ * Under the home page's featured practice cards (eight, or four on a phone): a "View more" button that opens every other practice as the
  * same card (icon, name, one line, arrow), in the order of /areas-we-serve, from the practice data, so a new
  * practice page appears here once its record exists. Native <details>: no script, and the links stay in the page.
  */
@@ -71,7 +71,7 @@ export function MorePracticeCards({ locale = 'en', shownPaths }: { locale?: Site
     });
   return (
     <details className="practice-more-cards">
-      <summary><span className="when-closed">{text.more(shown.size + cards.length)}</span><span className="when-open">{text.fewer}</span><ChevronDown aria-hidden="true" /></summary>
+      <summary><span className="when-closed">{text.more}</span><span className="when-open">{text.fewer}</span><ChevronDown aria-hidden="true" /></summary>
       <div className="practice-grid">
         {cards.map(({ key, page, inEnglish }) => {
           const Icon = practiceIcons[page.icon];
