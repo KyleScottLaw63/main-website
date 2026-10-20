@@ -69,7 +69,7 @@ export default function MeetTheTeamPage() {
       </section>
 
       <section className="lead-attorney" aria-labelledby="kyle-title">
-        <div className="lead-attorney-photo"><Image src="/kyle-scott-headshot.jpg" alt="Trial attorney Kyle J. Scott" width={573} height={803} loading="lazy" /><span>California attorney no. 155434</span></div>
+        <div className="lead-attorney-photo"><Image src="/kyle-scott-headshot.jpg" alt="Trial attorney Kyle J. Scott" width={573} height={803} loading="lazy" /></div>
         <div className="lead-attorney-copy">
           <p className="eyebrow light-eyebrow">Founder and trial attorney</p>
           <h2 id="kyle-title">Kyle J. Scott</h2>
