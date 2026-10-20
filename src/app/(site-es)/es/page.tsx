@@ -147,7 +147,7 @@ export default function SpanishHomePage() {
 
       <section className="firm-section" id="equipo" aria-labelledby="firm-title">
         <div className="firm-intro">
-          <div className="firm-photo"><Image src="/kyle-scott-headshot.jpg" alt="Abogado litigante Kyle Scott" width={573} height={803} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /><span>Abogado litigante Kyle J. Scott</span></div>
+          <div className="firm-photo"><Image src="/kyle-scott-headshot.jpg" alt="Abogado litigante Kyle Scott" width={573} height={803} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /></div>
           <div className="firm-copy">
             <h2 id="firm-title" className="firm-heading">Sobre Nosotros</h2>
             <p className="firm-lead">Soy Kyle Scott. Fui admitido en el Colegio de Abogados de California (State Bar of California) en 1991 y fundé este despacho en 2003. Represento a personas que sufrieron lesiones graves, y a las familias que las cuidan, en todo el Condado de Orange y el sur de California. Una lesión puede trastocarlo todo a la vez: su salud, su trabajo, los planes de su familia. Mi trabajo es encargarme de la batalla legal para que usted pueda concentrarse en recuperarse.</p>
