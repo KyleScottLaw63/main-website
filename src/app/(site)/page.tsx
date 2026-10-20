@@ -179,7 +179,7 @@ export default function Home() {
 
       <section className="firm-section" id="meet-the-team" aria-labelledby="firm-title">
         <div className="firm-intro">
-          <div className="firm-photo"><Image src="/kyle-scott.jpg" alt="Trial attorney Kyle Scott" width={600} height={900} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /><span>Trial attorney Kyle J. Scott</span></div>
+          <div className="firm-photo"><Image src="/kyle-scott-headshot.jpg" alt="Trial attorney Kyle Scott" width={573} height={803} loading="lazy" sizes="(max-width: 1023px) 94vw, 520px" /><span>Trial attorney Kyle J. Scott</span></div>
           <div className="firm-copy">
             <h2 id="firm-title" className="firm-heading">About Us</h2>
             <p className="firm-lead">I’m Kyle Scott. I was admitted to the State Bar of California in 1991 and founded this firm in 2003. I represent people who were seriously hurt, and the families who care for them, throughout Orange County and Southern California. An injury can upend everything at once: your health, your work, your family’s plans. My job is to take the legal fight off your shoulders so you can focus on getting better.</p>

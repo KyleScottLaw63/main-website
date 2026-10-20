@@ -79,7 +79,7 @@ function legalServiceSchema(language: SiteLanguage) {
     foundingDate: '2003',
     url: spanish ? `${SITE_URL}/es` : SITE_URL,
     logo: `${SITE_URL}/kjs-logo.jpeg`,
-    image: `${SITE_URL}/kyle-scott-original.webp`,
+    image: `${SITE_URL}/kyle-scott-headshot.jpg`,
     telephone: firmIdentity.telephone,
     email: firmIdentity.email,
     inLanguage: language,

@@ -73,7 +73,7 @@ export function attorneyProfileStructuredData(locale: SiteLocale) {
           ? 'Kyle J. Scott ejerce la abogacía en California desde 1991 y representa a clientes lesionados en asuntos de lesiones personales.'
           : 'Kyle J. Scott has practiced law in California since 1991 and represents injured clients in personal injury matters.',
         url: pageUrl,
-        image: `${SITE_URL}/kyle-scott-original.webp`,
+        image: `${SITE_URL}/kyle-scott-headshot.jpg`,
         worksFor: { '@id': `${SITE_URL}/#legal-service` },
         alumniOf: [
           { '@type': 'CollegeOrUniversity', name: 'UCLA' },
