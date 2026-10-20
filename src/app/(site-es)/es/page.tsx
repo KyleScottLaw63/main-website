@@ -24,9 +24,6 @@ import { GoogleRatingBadge } from '@/components/marketing/HowItWorks';
 import { MorePracticeCards } from '@/components/marketing/MorePracticeCards';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
-import { areaRegions } from '@/lib/marketing/data/areasWeServe';
-import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
-import { spanishServiceAreaByKey } from '@/lib/marketing/data/spanishServiceAreas';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 
@@ -37,17 +34,6 @@ export const metadata: Metadata = {
   description: 'Abogado de lesiones personales en el Condado de Orange. Kyle Scott Law representa a personas lesionadas desde 1991, en español o inglés. Consulta gratuita.',
   alternates: localizedAlternates('/es'),
 };
-
-// "Áreas que atendemos": the Orange County regions of /areas-we-serve (which has no Spanish version), each city linked to its
-// Spanish page where there is one and to its English page otherwise (a key with no record is left out).
-const regionNames: Record<string, string> = {
-  'Central Orange County': 'Centro del Condado de Orange',
-  'North Orange County': 'Norte del Condado de Orange',
-  'West Orange County': 'Oeste del Condado de Orange',
-  'Coastal Orange County': 'Costa del Condado de Orange',
-  'South Orange County': 'Sur del Condado de Orange',
-};
-const countyRegions = areaRegions.filter((region) => region.name !== 'Beyond Orange County');
 
 const practiceAreas = [
   { title: 'Lesiones personales', copy: 'Reclamos por lesiones graves y negligencia', icon: ShieldCheck, href: '/es/abogado-de-lesiones-personales-condado-de-orange' },
@@ -165,25 +151,6 @@ export default function SpanishHomePage() {
             <li><span className="case-path-number">04</span><span className="case-path-icon"><Scale aria-hidden="true" /></span><div><h3>Negociación o juicio</h3><p>Cada reclamo se prepara como si fuera a juicio—las aseguradoras tratan distinto un caso cuando el despacho está listo para la corte. Si no se ofrece un acuerdo justo, el despacho está preparado para llevar su caso a juicio.</p></div></li>
           </ol>
         </div>
-      </section>
-
-      <section className="section areas-home-section" id="areas-que-atendemos" aria-labelledby="areas-home-title">
-        <div className="news-heading">
-          <div><p className="eyebrow">Áreas que atendemos</p><h2 id="areas-home-title">Casos de lesiones de todas las ciudades del Condado de Orange, y de todo el sur de California.</h2></div>
-          <p>La oficina del despacho está en Tustin, y el despacho representa a personas lesionadas en todas las ciudades del Condado de Orange y en las comunidades no incorporadas del condado. También representa a personas lesionadas en otras partes del sur de California: sus resultados publicados incluyen casos en los tribunales superiores de San Bernardino, del Condado de Riverside y de Los Ángeles.</p>
-        </div>
-        <div className="areas-region-grid">
-          {countyRegions.map((region) => {
-            const name = regionNames[region.name] ?? region.name;
-            return (
-              <section key={region.name} aria-label={name}>
-                <h3>{name}</h3>
-                <ul>{region.keys.map((key) => { const spanish = spanishServiceAreaByKey[key]; const area = spanish ?? serviceAreaByKey[key]; return area ? <li key={key}><Link href={area.path} hrefLang={spanish ? undefined : 'en'}>{area.city}</Link></li> : null; })}</ul>
-              </section>
-            );
-          })}
-        </div>
-        <Link className="news-archive-link" href="/areas-we-serve" hrefLang="en">Ver todas las áreas que atendemos (en inglés) <ArrowRight aria-hidden="true" /></Link>
       </section>
 
       <section className="section practice-section" id="areas-de-practica" aria-labelledby="practice-title">

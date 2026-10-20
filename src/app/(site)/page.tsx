@@ -24,8 +24,6 @@ import { GoogleRatingBadge } from '@/components/marketing/HowItWorks';
 import { MorePracticeCards } from '@/components/marketing/MorePracticeCards';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
-import { areaRegions } from '@/lib/marketing/data/areasWeServe';
-import { serviceAreaByKey } from '@/lib/marketing/data/serviceAreas';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
 
 const terms = noRecoveryTerms.en;
@@ -34,9 +32,6 @@ const terms = noRecoveryTerms.en;
 export const metadata: Metadata = {
   description: 'Orange County personal injury lawyer in Tustin. Kyle Scott Law has represented injured people since 1991, from crashes to malpractice. Free consultation.',
 };
-
-// "Areas we serve": the Orange County regions of /areas-we-serve, each city linked to its page (a key with no record is left out).
-const countyRegions = areaRegions.filter((region) => region.name !== 'Beyond Orange County');
 
 const recoveries = [
   {
@@ -230,22 +225,6 @@ export default function Home() {
             </li>
           </ol>
         </div>
-      </section>
-
-      <section className="section areas-home-section" id="areas-we-serve" aria-labelledby="areas-home-title">
-        <div className="news-heading">
-          <div><p className="eyebrow">Areas we serve</p><h2 id="areas-home-title">Injury cases from every Orange County city, and across Southern California.</h2></div>
-          <p>The firm’s office is in Tustin, and it represents people injured in every Orange County city and the county’s unincorporated communities. It also represents people hurt elsewhere in Southern California: its published results include cases in the San Bernardino, Riverside County, and Los Angeles superior courts.</p>
-        </div>
-        <div className="areas-region-grid">
-          {countyRegions.map((region) => (
-            <section key={region.name} aria-label={region.name}>
-              <h3>{region.name}</h3>
-              <ul>{region.keys.map((key) => { const area = serviceAreaByKey[key]; return area ? <li key={key}><Link href={area.path}>{area.city}</Link></li> : null; })}</ul>
-            </section>
-          ))}
-        </div>
-        <Link className="news-archive-link" href="/areas-we-serve">See all areas we serve <ArrowRight aria-hidden="true" /></Link>
       </section>
 
       <section className="section practice-section" id="practice-areas" aria-labelledby="practice-title">

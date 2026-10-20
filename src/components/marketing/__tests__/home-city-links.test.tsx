@@ -13,10 +13,10 @@ afterEach(cleanup);
 globalThis.IntersectionObserver ??= class { observe() {} unobserve() {} disconnect() {} takeRecords() { return []; } root = null; rootMargin = ''; thresholds = []; } as unknown as typeof IntersectionObserver;
 
 /**
- * The footer no longer lists the cities (the firm, 2026-10-20), so each home page's "Areas we serve"
- * section is what links every Orange County city page; the regional pages are linked from /areas-we-serve.
+ * Neither the footer nor the home page body lists the cities (the firm, 2026-10-20): the header's "Service Areas"
+ * menu, on every page, links every city page, so the home page still links each one through it.
  */
-describe('home page "Areas we serve"', () => {
+describe('home page city links (through the header menu)', () => {
   it('links every Orange County city page, in English', () => {
     const { container } = render(<HomePage />);
     const regional = new Set(regionalServiceAreas.map((area) => area.path));
