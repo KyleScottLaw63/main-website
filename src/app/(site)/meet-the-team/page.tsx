@@ -73,9 +73,9 @@ export default function MeetTheTeamPage() {
         <div className="lead-attorney-copy">
           <p className="eyebrow light-eyebrow">Founder and trial attorney</p>
           <h2 id="kyle-title">Kyle J. Scott</h2>
-          <p className="lead-attorney-intro">Kyle Scott has practiced law in California since 1991 and has focused his career on representing injured clients in personal injury matters.</p>
-          <p>He earned a B.A. in Political Science from UCLA in 1986 and a J.D. from Loyola Law School in 1991. He is admitted to practice in California and in the United States District Courts for the Central and Southern Districts of California.</p>
-          <p>Kyle has operated his own firm since 2003. His work includes vehicle crashes, premises liability, dog bites, traumatic brain injuries, medical malpractice, sexual abuse and harassment, institutional liability, and other serious injury claims. He is a member of the Consumer Attorneys of Los Angeles.</p>
+          <p className="lead-attorney-intro">For more than 30 years, Kyle Scott has stood beside people on some of the hardest days of their lives: after a crash, a fall, a dog attack, a medical mistake, or abuse. He has spent his career since 1991 representing injured people and their families, and he has obtained multiple multi-million-dollar settlements and jury verdicts for his clients.</p>
+          <p>When you contact the firm, your first conversation is with Kyle himself. He listens to what happened, tells you honestly where you stand, and explains your options in plain language. He stays personally involved from that first call to the final result, and he makes sure you always know where your case stands, so you can focus on your health and your family while he takes on the insurance companies.</p>
+          <p>Kyle founded Kyle Scott Law in 2003 and handles every type of personal injury case: car, truck, and motorcycle crashes, unsafe property, dog bites, brain and spinal cord injuries, medical malpractice, sexual abuse and harassment, school and institutional liability, and wrongful death. He earned his B.A. in Political Science from UCLA in 1986 and his J.D. from Loyola Law School in 1991, is admitted to practice in California and in the United States District Courts for the Central and Southern Districts of California, and is a member of the Consumer Attorneys of Los Angeles.</p>
           <div className="attorney-credentials" aria-label="Kyle Scott education and professional credentials">
             <article><BookOpen aria-hidden="true" /><span><strong>UCLA</strong><small>B.A., Political Science · 1986</small></span></article>
             <article><BookOpen aria-hidden="true" /><span><strong>Loyola Law School</strong><small>J.D. · 1991</small></span></article>
@@ -86,6 +86,7 @@ export default function MeetTheTeamPage() {
             <a className="light-link" href="https://apps.calbar.ca.gov/attorney/Licensee/Detail/155434">View State Bar profile <ArrowRight aria-hidden="true" /></a>
             <Link className="light-link" href="/results">Review case results <ArrowRight aria-hidden="true" /></Link>
           </div>
+          <p className="lead-attorney-note">Every case is different, and prior results do not guarantee a similar outcome.</p>
         </div>
       </section>
 
