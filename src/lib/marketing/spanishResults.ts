@@ -1,4 +1,5 @@
-import type { CaseResult, ResultCategory } from '@/lib/marketing/data/results';
+import { caseStoryPath, type CaseResult, type ResultCategory } from '@/lib/marketing/data/results';
+import type { SiteLocale } from '@/lib/marketing/i18n';
 
 export const spanishCategoryLabels: Record<ResultCategory, string> = {
   'Abuse & school liability': 'Abuso y responsabilidad escolar',
@@ -148,4 +149,37 @@ export function translateResultToSpanish(result: CaseResult): CaseResult {
 
 export function spanishResultCategory(category: ResultCategory) {
   return spanishCategoryLabels[category];
+}
+
+/**
+ * The Spanish slug of each case story (src/lib/marketing/data/spanishCaseStories.ts), by its English
+ * slug: the Spanish story lives at /es/resultados/<slug>. Kept here, not read from the stories, so the
+ * results explorer (a client component) links the Spanish stories without shipping their text.
+ */
+export const spanishCaseStorySlugs: Record<string, string> = {
+  'student-skull-fracture-verdict': 'veredicto-fractura-craneo-estudiante',
+  'fontana-intersection-crash-settlement': 'acuerdo-choque-interseccion-fontana',
+  'school-counselor-abuse-settlement': 'acuerdo-abuso-consejero-escolar',
+  'crosswalk-pedestrian-settlement': 'acuerdo-atropello-cruce-peatonal',
+  'ballpark-warm-up-throw-settlement': 'acuerdo-lanzamiento-calentamiento-estadio',
+  'octa-bus-crash-verdict': 'veredicto-choque-autobus-transporte-publico',
+  'batting-practice-head-injury-settlement': 'acuerdo-golpe-cabeza-practica-bateo',
+  'nursing-facility-pressure-wound-settlement': 'acuerdo-ulcera-presion-centro-enfermeria',
+  'store-floor-fall-settlement': 'acuerdo-caida-piso-tienda',
+  'freeway-rear-end-settlement': 'acuerdo-choque-alcance-autopista',
+  'waterpark-pool-deck-fall-settlement': 'acuerdo-caida-piscina-parque-acuatico',
+  'chain-reaction-freeway-crash-settlement': 'acuerdo-choque-cadena-autopista',
+};
+
+/** Where a Spanish case story lives: /es/resultados/<slug>. */
+export function spanishCaseStoryPath(slug: string) {
+  return `/es/resultados/${slug}`;
+}
+
+/** A case story's page in the visitor's language, from its English slug (a result card's `story`). */
+export function caseStoryPathForLocale(englishSlug: string, locale: SiteLocale) {
+  if (locale === 'en') return caseStoryPath(englishSlug);
+  const slug = spanishCaseStorySlugs[englishSlug];
+  if (!slug) throw new Error(`The case story "${englishSlug}" has no Spanish version.`);
+  return spanishCaseStoryPath(slug);
 }

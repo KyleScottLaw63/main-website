@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { cityPracticePageByKey } from '@/lib/marketing/data/cityPracticePages';
 import { newsArticleLocalizedRoutes } from '@/lib/marketing/data/newsArticles';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
+import { caseStoryLocalizedRoutes } from '@/lib/marketing/data/spanishCaseStories';
 import { spanishCityPracticePages } from '@/lib/marketing/data/spanishCityPracticePages';
 import { legalGuideLocalizedRoutes } from '@/lib/marketing/data/spanishLegalGuides';
 import { serviceAreaLocalizedRoutes } from '@/lib/marketing/data/spanishServiceAreas';
@@ -132,11 +133,14 @@ export const localizedRoutes = [
     es: '/es/abogado-de-lesiones-deportivas-condado-de-orange',
   },
   { en: '/why-hire-us', es: '/es/por-que-elegirnos' },
+  { en: '/areas-we-serve', es: '/es/areas-que-atendemos' },
   ...newsArticleLocalizedRoutes,
   ...legalGuideLocalizedRoutes,
   ...serviceAreaLocalizedRoutes(Object.fromEntries(serviceAreas.map((area) => [area.key, area.path]))),
   // City + case pages and their Spanish versions (spanishCityPracticePages names each English key).
   ...spanishCityPracticePages.map((page) => ({ en: cityPracticePageByKey[page.englishKey].path, es: page.path })),
+  // Case stories and their Spanish versions (spanishCaseStories names each English slug).
+  ...caseStoryLocalizedRoutes,
 ] as const;
 
 function normalizePath(pathname: string) {

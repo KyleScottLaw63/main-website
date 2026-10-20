@@ -24,8 +24,10 @@ import { GoogleRatingBadge } from '@/components/marketing/HowItWorks';
 import { MorePracticeCards } from '@/components/marketing/MorePracticeCards';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
+import { spanishCaseStoryByEnglishSlug } from '@/lib/marketing/data/spanishCaseStories';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
+import { caseStoryPathForLocale } from '@/lib/marketing/spanishResults';
 
 const terms = noRecoveryTerms.es;
 
@@ -48,13 +50,16 @@ const practiceAreas = [
 
 const recoveries = [
   { amount: '$6.8M', type: 'Negligencia del distrito escolar', title: 'Alumnos de primaria abusados sexualmente por un maestro', meta: 'Confidencial • Acuerdo', date: '2004', href: '/es/resultados', cta: 'Ver en resultados' },
-  { amount: '$5.75M', type: 'Veredicto del jurado', title: 'Estudiante sufre fractura de cráneo y hemorragia cerebral', meta: 'Juicio con jurado de dos semanas • Tribunal Superior de Los Ángeles', date: '2019', href: '/es/resultados#flagship-title', cta: 'Ver en resultados' },
-  { amount: '$2.7M', type: 'Acuerdo', title: 'Madre e hijos lesionados en un choque en una intersección de Fontana', meta: 'Tribunal Superior de San Bernardino • Acuerdo combinado para cinco personas lesionadas', date: '2026', href: '/es/resultados#results-explorer-title', cta: 'Ver en resultados' },
+  { amount: '$5.75M', type: 'Veredicto del jurado', title: 'Estudiante sufre fractura de cráneo y hemorragia cerebral', meta: 'Juicio con jurado de dos semanas • Tribunal Superior de Los Ángeles', date: '2019', href: caseStoryPathForLocale('student-skull-fracture-verdict', 'es'), cta: 'Leer la historia del caso' },
+  { amount: '$2.7M', type: 'Acuerdo', title: 'Madre e hijos lesionados en un choque en una intersección de Fontana', meta: 'Tribunal Superior de San Bernardino • Acuerdo combinado para cinco personas lesionadas', date: '2026', href: caseStoryPathForLocale('fontana-intersection-crash-settlement', 'es'), cta: 'Leer la historia del caso' },
 ];
+
+/** The $5.75M verdict's Spanish case story, as /'s news cards show the English one. */
+const verdictStory = spanishCaseStoryByEnglishSlug('student-skull-fracture-verdict')!;
 
 const newsItems = [
   { category: 'Acuerdo', accent: '$2.2M', title: 'Demanda por abuso sexual resuelta por $2.2 millones', excerpt: 'Kyle Scott Law explica su trabajo de apoyo a sobrevivientes y el camino hacia la recuperación.', date: '26 de diciembre de 2024', href: '/es/noticias/acuerdo-abuso-sexual-2-2-millones' },
-  { category: 'Veredicto del jurado', accent: '$5.75M', title: 'Estudiante sufre fractura de cráneo y hemorragia cerebral', excerpt: 'Un jurado del Tribunal Superior de Los Ángeles emitió este veredicto tras un juicio de dos semanas.', date: '2019', href: '/es/resultados#flagship-title', cta: 'Ver en resultados' },
+  { category: 'Veredicto del jurado', accent: '$5.75M', title: 'Estudiante sufre fractura de cráneo y hemorragia cerebral', excerpt: verdictStory.summary, date: '2019', href: caseStoryPathForLocale(verdictStory.englishSlug, 'es') },
   { category: 'Victoria en apelación', accent: 'Nuevo juicio', title: 'Una victoria en apelación protege el derecho del cliente a presentar pruebas de daños', excerpt: 'Kyle Scott Law y el abogado de apelaciones obtuvieron una revocación y un nuevo juicio después de que se excluyeran pruebas importantes.', date: '9 de junio de 2019', href: '/es/noticias/victoria-apelacion-nuevo-juicio' },
 ];
 
@@ -106,7 +111,7 @@ export default function SpanishHomePage() {
         <div className="news-grid">
           {newsItems.map((item, index) => (
             <article className={index === 0 ? 'news-card news-card-featured' : 'news-card'} key={item.href}>
-              <div className="news-card-meta"><span>{item.category}</span><time>{item.date}</time></div><strong className="news-accent">{item.accent}</strong><h3>{item.title}</h3><p>{item.excerpt}</p><a href={item.href}>{item.cta ?? 'Leer la historia'} <ArrowRight aria-hidden="true" /></a>
+              <div className="news-card-meta"><span>{item.category}</span><time>{item.date}</time></div><strong className="news-accent">{item.accent}</strong><h3>{item.title}</h3><p>{item.excerpt}</p><a href={item.href}>Leer la historia <ArrowRight aria-hidden="true" /></a>
             </article>
           ))}
         </div>

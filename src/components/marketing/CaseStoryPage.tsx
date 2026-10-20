@@ -6,7 +6,79 @@ import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { caseStoryHeadline, caseStoryLinks, type CaseStory, type CaseStoryLink } from '@/lib/marketing/data/caseStories';
 import { caseStoryPath, resultOutcomeLabel } from '@/lib/marketing/data/results';
+import { spanishCaseStoryHeadline, spanishCaseStoryLinks, type SpanishCaseStory } from '@/lib/marketing/data/spanishCaseStories';
+import type { SiteLocale } from '@/lib/marketing/i18n';
 import { SITE_URL } from '@/lib/marketing/site';
+import { spanishCaseStoryPath } from '@/lib/marketing/spanishResults';
+
+/** The page's own words in each language; the story supplies everything else. */
+const copy = {
+  en: {
+    inLanguage: 'en-US',
+    home: 'Home',
+    homePath: '',
+    results: 'Verdicts & Settlements',
+    resultsPath: '/results',
+    breadcrumb: 'Breadcrumb',
+    kicker: 'Case story',
+    atAGlance: 'Case at a glance',
+    outcome: 'Outcome',
+    confidentialOutcome: 'Confidential settlement',
+    year: 'Year',
+    court: 'Court',
+    practiceArea: 'Practice area',
+    disclaimerLabel: 'About case results',
+    disclaimer: 'Every case is different. Prior results do not guarantee a similar outcome. This page describes a past case and is not legal advice.',
+    sidebarLabel: 'Talk to the firm',
+    sidebarEyebrow: 'Free case review',
+    sidebarTitle: 'Questions about a similar injury?',
+    sidebarBody: 'Call the Tustin office or send the basic facts for a confidential review.',
+    callLabel: 'Call the office',
+    reviewButton: 'Request a case review',
+    contactPath: '/contact#case-review',
+    allResults: 'All verdicts and settlements',
+    moreEyebrow: 'More case stories',
+    moreTitle: 'Read another case.',
+    allStories: 'All case stories',
+    readStory: 'Read the story',
+  },
+  es: {
+    inLanguage: 'es-US',
+    home: 'Inicio',
+    homePath: '/es',
+    results: 'Veredictos y acuerdos',
+    resultsPath: '/es/resultados',
+    breadcrumb: 'Ruta de navegación',
+    kicker: 'Historia del caso',
+    atAGlance: 'El caso en resumen',
+    outcome: 'Resultado',
+    confidentialOutcome: 'Acuerdo confidencial',
+    year: 'Año',
+    court: 'Tribunal',
+    practiceArea: 'Área de práctica',
+    disclaimerLabel: 'Sobre los resultados de casos',
+    disclaimer: 'Cada caso es diferente. Los resultados anteriores no garantizan un resultado similar. Esta página describe un caso anterior y no constituye asesoría legal.',
+    sidebarLabel: 'Hable con el despacho',
+    sidebarEyebrow: 'Revisión gratuita del caso',
+    sidebarTitle: '¿Tiene preguntas sobre una lesión similar?',
+    sidebarBody: 'Llame a la oficina de Tustin o envíe los datos básicos para una revisión confidencial.',
+    callLabel: 'Llame a la oficina',
+    reviewButton: 'Solicitar revisión del caso',
+    contactPath: '/es/contacto#revision-del-caso',
+    /** Beside a link to an English-only page. */
+    inEnglish: '(en inglés)',
+    allResults: 'Todos los veredictos y acuerdos',
+    moreEyebrow: 'Más historias de casos',
+    moreTitle: 'Lea otro caso.',
+    allStories: 'Todas las historias de casos',
+    readStory: 'Leer la historia',
+  },
+} satisfies Record<SiteLocale, unknown>;
+
+/** A link label and its arrow. The label and its space stay one text node, so the English markup is unchanged. */
+function Arrowed({ label }: { label: string }) {
+  return <>{`${label} `}<ArrowRight aria-hidden="true" /></>;
+}
 
 /** Figures that are words ("Confidential", "New trial") are set smaller than amounts; long amounts too. */
 function figureClass(base: string, figure: string) {
@@ -15,23 +87,31 @@ function figureClass(base: string, figure: string) {
 }
 
 /** One story behind a result: a case story or a published case announcement (the case stories section of /results, "More case stories"). */
-export function CaseStoryCard({ link }: { link: CaseStoryLink }) {
+export function CaseStoryCard({ link, locale = 'en' }: { link: CaseStoryLink; locale?: SiteLocale }) {
   return (
     <Link className="case-story-card" href={link.href}>
       <span className="case-story-card-kicker">{link.kicker}</span>
       <strong className={figureClass('case-story-card-figure', link.figure)}>{link.figure}</strong>
       <h3>{link.title}</h3>
       <p>{link.summary}</p>
-      <span className="case-story-card-cta">Read the story <ArrowRight aria-hidden="true" /></span>
+      <span className="case-story-card-cta"><Arrowed label={copy[locale].readStory} /></span>
     </Link>
   );
 }
 
-export function CaseStoryPage({ story }: { story: CaseStory }) {
-  const headline = caseStoryHeadline(story);
-  const path = caseStoryPath(story.slug);
+/** An English story at /results/<slug>, or its Spanish version at /es/resultados/<slug>. */
+type CaseStoryPageProps = { story: CaseStory; locale?: 'en' } | { story: SpanishCaseStory; locale: 'es' };
+
+export function CaseStoryPage(props: CaseStoryPageProps) {
+  const { story } = props;
+  const locale: SiteLocale = props.locale ?? 'en';
+  const text = copy[locale];
+  const headline = props.locale === 'es' ? spanishCaseStoryHeadline(props.story) : caseStoryHeadline(props.story);
+  const path = props.locale === 'es' ? spanishCaseStoryPath(props.story.slug) : caseStoryPath(props.story.slug);
+  // A Spanish story's announcement with no Spanish version opens the English post, and says so.
+  const announcementInEnglish = props.locale === 'es' && Boolean(props.story.announcement?.inEnglish);
   const pageUrl = `${SITE_URL}${path}`;
-  const moreStories = caseStoryLinks().filter((link) => link.href !== path).slice(0, 3);
+  const moreStories = (locale === 'es' ? spanishCaseStoryLinks() : caseStoryLinks()).filter((link) => link.href !== path).slice(0, 3);
   const largest = Math.max(...(story.comparison?.figures ?? []).map((figure) => figure.value));
   const schema = {
     '@context': 'https://schema.org',
@@ -44,7 +124,7 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
         description: story.summary,
         datePublished: story.published,
         dateModified: story.published,
-        inLanguage: 'en-US',
+        inLanguage: text.inLanguage,
         mainEntityOfPage: pageUrl,
         author: { '@id': `${SITE_URL}/#legal-service` },
         publisher: { '@id': `${SITE_URL}/#legal-service` },
@@ -53,8 +133,8 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
         '@type': 'BreadcrumbList',
         '@id': `${pageUrl}#breadcrumb`,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-          { '@type': 'ListItem', position: 2, name: 'Verdicts & Settlements', item: `${SITE_URL}/results` },
+          { '@type': 'ListItem', position: 1, name: text.home, item: `${SITE_URL}${text.homePath}` },
+          { '@type': 'ListItem', position: 2, name: text.results, item: `${SITE_URL}${text.resultsPath}` },
           { '@type': 'ListItem', position: 3, name: headline.title, item: pageUrl },
         ],
       },
@@ -64,27 +144,27 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
   return (
     <main className="case-story-page">
       <StructuredData data={schema} />
-      <SiteHeader />
+      <SiteHeader locale={locale} />
 
       <article aria-labelledby="case-story-title">
         <header className="case-story-hero">
           <div className="case-story-hero-inner">
-            <nav className="case-story-breadcrumb" aria-label="Breadcrumb">
-              <Link href="/results"><ArrowLeft aria-hidden="true" />Verdicts &amp; Settlements</Link>
+            <nav className="case-story-breadcrumb" aria-label={text.breadcrumb}>
+              <Link href={text.resultsPath}><ArrowLeft aria-hidden="true" />{text.results}</Link>
             </nav>
             <div className="case-story-hero-grid">
               <div>
-                <p className="case-story-kicker"><span>Case story</span>{resultOutcomeLabel(headline)}</p>
+                <p className="case-story-kicker"><span>{text.kicker}</span>{resultOutcomeLabel(headline)}</p>
                 <strong className={figureClass('case-story-amount', headline.figure)}>{headline.figure}</strong>
                 <h1 id="case-story-title">{headline.title}</h1>
                 <p className="case-story-dek">{story.summary}</p>
               </div>
-              <aside className="case-story-facts" aria-label="Case at a glance">
+              <aside className="case-story-facts" aria-label={text.atAGlance}>
                 <dl>
-                  <div><dt><Gavel aria-hidden="true" />Outcome</dt><dd>{headline.confidential ? 'Confidential settlement' : headline.outcome}</dd></div>
-                  {headline.year ? <div><dt><CalendarDays aria-hidden="true" />Year</dt><dd>{headline.year}</dd></div> : null}
-                  <div><dt><Landmark aria-hidden="true" />Court</dt><dd>{story.court}</dd></div>
-                  <div><dt><Scale aria-hidden="true" />Practice area</dt><dd><Link href={story.practiceArea.href}>{story.practiceArea.label}</Link></dd></div>
+                  <div><dt><Gavel aria-hidden="true" />{text.outcome}</dt><dd>{headline.confidential ? text.confidentialOutcome : headline.outcome}</dd></div>
+                  {headline.year ? <div><dt><CalendarDays aria-hidden="true" />{text.year}</dt><dd>{headline.year}</dd></div> : null}
+                  <div><dt><Landmark aria-hidden="true" />{text.court}</dt><dd>{story.court}</dd></div>
+                  <div><dt><Scale aria-hidden="true" />{text.practiceArea}</dt><dd><Link href={story.practiceArea.href}>{story.practiceArea.label}</Link></dd></div>
                 </dl>
               </aside>
             </div>
@@ -120,23 +200,23 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
               </figure>
             ) : null}
 
-            <aside className="news-detail-disclaimer" aria-label="About case results">
+            <aside className="news-detail-disclaimer" aria-label={text.disclaimerLabel}>
               <Scale aria-hidden="true" />
-              <p>Every case is different. Prior results do not guarantee a similar outcome. This page describes a past case and is not legal advice.</p>
+              <p>{text.disclaimer}</p>
             </aside>
           </div>
 
-          <aside className="news-detail-sidebar case-story-sidebar" aria-label="Talk to the firm">
-            <p className="eyebrow">Free case review</p>
-            <h2>Questions about a similar injury?</h2>
-            <p>Call the Tustin office or send the basic facts for a confidential review.</p>
-            <a className="case-story-call" href="tel:+17145441460"><Phone aria-hidden="true" /><span><small>Call the office</small>714-544-1460</span></a>
-            <Link className="primary-button" href="/contact#case-review">Request a case review <ArrowRight aria-hidden="true" /></Link>
+          <aside className="news-detail-sidebar case-story-sidebar" aria-label={text.sidebarLabel}>
+            <p className="eyebrow">{text.sidebarEyebrow}</p>
+            <h2>{text.sidebarTitle}</h2>
+            <p>{text.sidebarBody}</p>
+            <a className="case-story-call" href="tel:+17145441460"><Phone aria-hidden="true" /><span><small>{text.callLabel}</small>714-544-1460</span></a>
+            <Link className="primary-button" href={text.contactPath}><Arrowed label={text.reviewButton} /></Link>
             <Link className="news-detail-secondary-link" href={story.practiceArea.href}>{story.practiceArea.label} <ArrowRight aria-hidden="true" /></Link>
             {story.announcement ? (
-              <Link className="news-detail-secondary-link" href={story.announcement.href}>{story.announcement.label} <ArrowRight aria-hidden="true" /></Link>
+              <Link className="news-detail-secondary-link" href={story.announcement.href} {...(announcementInEnglish ? { hrefLang: 'en' } : {})}>{announcementInEnglish ? `${story.announcement.label} ${copy.es.inEnglish}` : story.announcement.label} <ArrowRight aria-hidden="true" /></Link>
             ) : null}
-            <Link className="news-detail-secondary-link" href="/results">All verdicts and settlements <ArrowRight aria-hidden="true" /></Link>
+            <Link className="news-detail-secondary-link" href={text.resultsPath}><Arrowed label={text.allResults} /></Link>
           </aside>
         </div>
       </article>
@@ -144,15 +224,15 @@ export function CaseStoryPage({ story }: { story: CaseStory }) {
       {moreStories.length > 0 ? (
         <section className="case-story-more" aria-labelledby="case-story-more-title">
           <div className="case-story-more-heading">
-            <div><p className="eyebrow">More case stories</p><h2 id="case-story-more-title">Read another case.</h2></div>
-            <Link href="/results#case-stories-title">All case stories <ArrowRight aria-hidden="true" /></Link>
+            <div><p className="eyebrow">{text.moreEyebrow}</p><h2 id="case-story-more-title">{text.moreTitle}</h2></div>
+            <Link href={`${text.resultsPath}#case-stories-title`}><Arrowed label={text.allStories} /></Link>
           </div>
-          <div className="case-story-grid is-compact">{moreStories.map((link) => <CaseStoryCard link={link} key={link.href} />)}</div>
+          <div className="case-story-grid is-compact">{moreStories.map((link) => <CaseStoryCard link={link} locale={locale} key={link.href} />)}</div>
         </section>
       ) : null}
 
-      <SiteFooter />
-      <ChatWidget />
+      <SiteFooter locale={locale} />
+      <ChatWidget locale={locale} />
     </main>
   );
 }

@@ -137,6 +137,8 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
   const allResults = [...flagshipResults, ...historicalResults];
   const results = (area.featuredResults ?? []).map((title) => allResults.find((result) => result.title === title)).filter((result) => result !== undefined).map((result) => (spanish ? translateResultToSpanish(result) : result));
   const placeName = area.placeName ?? `${area.city}, California`;
+  // The name in headings and labels; a Spanish region page may give a Spanish one ("California del Sur").
+  const cityName = area.displayCity ?? area.city;
   // A practice with its own page for this city (e.g. Tustin dog bites) links that page instead of the county one,
   // which is how the city + case pages are reached from the rest of the site.
   const localPages = new Map((spanish ? spanishCityPracticePages : cityPracticePages).filter((page) => page.city === area.city && page.parentKey).map((page) => [page.parentKey!, page.path]));
@@ -188,7 +190,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           <p>{area.description}</p>
           <HeroCallActions locale={locale} />
         </div>
-        <aside className="practice-hero-summary" aria-label={text.serviceInfo(area.city)}>
+        <aside className="practice-hero-summary" aria-label={text.serviceInfo(cityName)}>
           <span className="practice-hero-icon"><MapPin aria-hidden="true" /></span>
           <p>{text.serviceArea}</p>
           <strong>{placeName}</strong>
@@ -204,7 +206,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
       <div className="practice-content-layout">
         <aside className="practice-page-nav" aria-label={text.pageNav}>
           <p>{text.onThisPage}</p>
-          <a href="#overview">{text.howHelps(area.city)}</a>
+          <a href="#overview">{text.howHelps(cityName)}</a>
           <a href="#matters">{text.cases}</a>
           <a href="#local">{text.local}</a>
           {results.length ? <a href="#results">{text.results}</a> : null}
@@ -216,7 +218,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
 
         <article className="practice-article">
           <section className="practice-overview" id="overview" aria-labelledby="overview-title">
-            <p className="eyebrow">{text.howHelps(area.city)}</p>
+            <p className="eyebrow">{text.howHelps(cityName)}</p>
             <h2 id="overview-title">{area.introTitle}</h2>
             <div className="practice-intro-copy">{area.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
             <div className="practice-key-points">
@@ -225,12 +227,12 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           </section>
 
           <section className="practice-matters" id="matters" aria-labelledby="matters-title">
-            <div className="practice-section-heading"><p className="eyebrow">{text.cases}</p><h2 id="matters-title">{text.mattersTitle(area.city)}</h2></div>
+            <div className="practice-section-heading"><p className="eyebrow">{text.cases}</p><h2 id="matters-title">{text.mattersTitle(cityName)}</h2></div>
             <div className="practice-matter-grid">{area.matters.map((matter) => <div key={matter}><Check aria-hidden="true" /><span>{matter}</span></div>)}</div>
           </section>
 
           <section className="practice-evidence" id="local" aria-labelledby="local-title">
-            <div><p className="eyebrow light-eyebrow">{text.local}</p><h2 id="local-title">{text.localTitle(area.city)}</h2><p>{text.localBody}</p></div>
+            <div><p className="eyebrow light-eyebrow">{text.local}</p><h2 id="local-title">{text.localTitle(cityName)}</h2><p>{text.localBody}</p></div>
             <div className="practice-evidence-list">
               {area.local.flatMap((group) => group.items.map((item) => <div key={`${group.label}-${item}`}><ShieldCheck aria-hidden="true" /><span><strong>{group.label}:</strong> {item}</span></div>))}
             </div>
@@ -245,12 +247,12 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           </section> : null}
 
           {guides.length ? <section className="practice-guide-links" id="guides" aria-labelledby="guide-title">
-            <div className="practice-results-heading"><div><p className="eyebrow">{text.guides}</p><h2 id="guide-title">{text.guidesTitle(area.city)}</h2></div><Link href={text.guidesPath}>{text.allGuides} <ArrowRight aria-hidden="true" /></Link></div>
+            <div className="practice-results-heading"><div><p className="eyebrow">{text.guides}</p><h2 id="guide-title">{text.guidesTitle(cityName)}</h2></div><Link href={text.guidesPath}>{text.allGuides} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-guide-grid">{guides.map((guide) => <Link href={guide.path} key={guide.path}><span>{guide.category}</span><strong>{guide.title}</strong><small>{guide.readingTime}</small><ArrowRight aria-hidden="true" /></Link>)}</div>
           </section> : null}
 
           <section className="practice-faq" id="questions" aria-labelledby="faq-title">
-            <div className="practice-section-heading"><p className="eyebrow">{text.questions}</p><h2 id="faq-title">{text.faqTitle(area.city)}</h2></div>
+            <div className="practice-section-heading"><p className="eyebrow">{text.questions}</p><h2 id="faq-title">{text.faqTitle(cityName)}</h2></div>
             <div className="practice-faq-list">
               {area.faqs.map((faq) => <details key={faq.question}><summary><span>{faq.question}</span><ChevronDown aria-hidden="true" /></summary><p>{faq.answer}</p></details>)}
             </div>
@@ -260,17 +262,17 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           <PageSources sources={area.sources} locale={locale} />
 
           <section className="practice-more" aria-labelledby="more-practices-title">
-            <div className="practice-results-heading"><div><p className="eyebrow">{text.practicesEyebrow}</p><h2 id="more-practices-title">{text.practicesTitle(area.city)}</h2></div><Link href={text.practicesPath}>{text.allPractices} <ArrowRight aria-hidden="true" /></Link></div>
+            <div className="practice-results-heading"><div><p className="eyebrow">{text.practicesEyebrow}</p><h2 id="more-practices-title">{text.practicesTitle(cityName)}</h2></div><Link href={text.practicesPath}>{text.allPractices} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-more-grid">{related.map((item) => <a href={item.path} key={item.key}><ShieldCheck aria-hidden="true" /><span><strong>{item.shortTitle}</strong><small>{item.description}</small></span><ArrowRight aria-hidden="true" /></a>)}</div>
-            <h3 className="practice-every-case-title">{text.everyCase(area.city)}</h3>
-            <ul className="practice-every-case">{localizedPractices.map((item) => <li key={item.key}><Link href={localPages.get(item.key) ?? item.path}>{item.shortTitle}</Link></li>)}{spanish ? null : <li><Link href="/areas-we-serve">All Orange County areas we serve</Link></li>}</ul>
+            <h3 className="practice-every-case-title">{text.everyCase(cityName)}</h3>
+            <ul className="practice-every-case">{localizedPractices.map((item) => <li key={item.key}><Link href={localPages.get(item.key) ?? item.path}>{item.shortTitle}</Link></li>)}<li><Link href={spanish ? '/es/areas-que-atendemos' : '/areas-we-serve'}>{spanish ? 'Todas las áreas que atendemos en el Condado de Orange' : 'All Orange County areas we serve'}</Link></li></ul>
           </section>
         </article>
       </div>
 
       <section className="practice-trust-strip practice-trust-closing" aria-label={text.trustLabel}>
         <article><strong>{text.years}</strong><span>{text.yearsBody}</span></article>
-        <article><strong>{text.officeTitle}</strong><span>{text.officeBody(area.city)}</span></article>
+        <article><strong>{text.officeTitle}</strong><span>{text.officeBody(cityName)}</span></article>
         <article><strong>{noRecoveryTerms[locale].label}</strong><span>{noRecoveryTerms[locale].condition}</span></article>
       </section>
 

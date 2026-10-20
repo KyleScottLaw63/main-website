@@ -45,8 +45,9 @@ describe('the Spanish city pages', () => {
       // Proper names stay: every hospital and courthouse line of the English page appears in the Spanish one.
       // (The street address after the dash; an English explanation after it may be translated. A line with no
       // address, a plain sentence such as Orange's "Criminal and traffic cases … also go to the Central Justice
-      // Center", is translated whole and has no name to keep.)
-      for (const item of english.local[0].items.filter((entry) => entry.includes(' — '))) expect(area.local[0].items.join(' '), area.key).toContain(item.split(' — ')[1].split(', ')[0]);
+      // Center", or a regional page's explanation after the dash, is translated whole: only a street address, which starts
+      // with its number, must stay as written.)
+      for (const item of english.local[0].items.filter((entry) => /^\d/.test(entry.split(' — ')[1] ?? ''))) expect(area.local[0].items.join(' '), area.key).toContain(item.split(' — ')[1].split(', ')[0]);
     }
   });
 

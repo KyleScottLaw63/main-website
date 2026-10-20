@@ -30,6 +30,7 @@ export default function SpanishPracticeAreasPage() {
           {spanishPracticeAreas.map((area) => { const Icon = iconMap[area.icon]; return <a href={area.path} key={area.key}><span><Icon aria-hidden="true" /></span><div><strong>{area.shortTitle}</strong><p>{area.description}</p><small>Ver esta área de práctica <ArrowRight aria-hidden="true" /></small></div></a>; })}
         </div>
       </section>
+      <p className="practice-hub-areas-link"><Link href="/es/areas-que-atendemos">Busque su ciudad del Condado de Orange <ArrowRight aria-hidden="true" /></Link></p>
       <section className="practice-hub-note"><div><p className="eyebrow light-eyebrow">¿No sabe qué categoría corresponde?</p><h2>Cuéntenos qué ocurrió.</h2><p>Una solicitud breve es suficiente para comenzar. No envíe expedientes médicos, números de Seguro Social ni información de cuentas financieras mediante el formulario general.</p></div><Link className="primary-button" href="/es/contacto#revision-del-caso">Comenzar una consulta gratuita <ArrowRight aria-hidden="true" /></Link></section>
       <SiteFooter locale="es" />
       <ChatWidget locale="es" />

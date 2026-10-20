@@ -43,7 +43,7 @@ A case story tells how a result came about, from what happened to the verdict or
 - **Left out (2026-10-01).** On the firm's instruction, the list (and "More case stories") leaves out the `school-counselor-abuse-settlement` story, which repeats the firm's own $2.2M announcement. Its page stays up, and the $2.2M card in the full list links to it. (The $2.3M Riverside verdict's announcement, once listed here, was deleted with the verdict: [website-content-compliance.md](website-content-compliance.md).)
 - **What shows.** The six most recent appear as compact cards. The rest sit behind a native `<details>` ("Show all 13 case stories"), which needs no script and keeps every link in the HTML.
 - **Card links.** A flagship or ledger card whose result has a story is clickable as a whole ("Read the case story").
-- **Spanish.** The Spanish results page links no stories.
+- **Spanish** (content round 5, 2026-10-20). Every story has a Spanish version at `/es/resultados/<slug>` (`spanishCaseStories.ts`, `englishSlug` naming its original), translated word for word from the approved English, with the same chapters, figures, court and comparison; `CaseStoryPage` takes `locale`. The Spanish results page, home page, news page, and results explorer link the Spanish stories (`caseStoryPathForLocale`). An announcement with no Spanish article keeps its English link, marked "(en inglés)". Each pair is in `localizedRoutes` (`caseStoryLocalizedRoutes`) and the sitemap. `spanish-case-stories.test.ts` holds each translation to its original and fails if a Spanish page links an English story.
 
 ## Stories (added 2026-10-01)
 

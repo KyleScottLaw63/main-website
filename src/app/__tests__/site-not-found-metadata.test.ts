@@ -10,9 +10,10 @@ import { generateMetadata as caseStoryMetadata } from '@/app/(site)/results/[slu
 import { metadata as spanishNotFound } from '@/app/(site-es)/not-found';
 import { generateMetadata as spanishNewsMetadata } from '@/app/(site-es)/es/noticias/[slug]/page';
 import { generateMetadata as spanishGuideMetadata } from '@/app/(site-es)/es/guias/[slug]/page';
+import { generateMetadata as spanishCaseStoryMetadata } from '@/app/(site-es)/es/resultados/[slug]/page';
 
 /**
- * An unknown /news, /guides, /results, /es/noticias, or /es/guias slug is a 404 with the not-found title and one robots
+ * An unknown /news, /guides, /results, /es/noticias, /es/guias, or /es/resultados slug is a 404 with the not-found title and one robots
  * tag, Next's own noindex (docs/public-site-rendering.md). Next builds that page's head from the
  * layouts plus the not-found file, so the not-found files carry the metadata; the pages' own
  * generateMetadata returns the same for an unknown slug.
@@ -34,6 +35,7 @@ describe('a missing article or guide', () => {
     expect(await caseStoryMetadata(params('no-such-story'))).toEqual(ENGLISH);
     expect(await spanishNewsMetadata(params('no-existe'))).toEqual(SPANISH);
     expect(await spanishGuideMetadata(params('no-existe'))).toEqual(SPANISH);
+    expect(await spanishCaseStoryMetadata(params('no-existe'))).toEqual(SPANISH);
   });
 
   it('a real article keeps its own title and, unless withheld, no robots override', async () => {
@@ -48,5 +50,10 @@ describe('a missing article or guide', () => {
     const story = await caseStoryMetadata(params('octa-bus-crash-verdict'));
     expect(story.title).toBe('$928,493.12 jury verdict: Transit bus crashes into minivan; man suffers cognitive problems | Kyle Scott Law');
     expect(story.robots).toBeUndefined();
+    const spanishStory = await spanishCaseStoryMetadata(params('veredicto-choque-autobus-transporte-publico'));
+    expect(spanishStory.title).toBe('Veredicto del jurado de $928,493.12: Autobús de transporte público choca contra una minivan; un hombre sufre problemas cognitivos | Kyle Scott Law');
+    expect(spanishStory.description).toMatch(/^Un autobús de transporte público/);
+    expect(spanishStory.alternates?.canonical).toBe('https://kjslaw.com/es/resultados/veredicto-choque-autobus-transporte-publico');
+    expect(spanishStory.robots).toBeUndefined();
   });
 });

@@ -33,6 +33,8 @@ export type ServiceAreaData = {
   placeType?: 'City' | 'AdministrativeArea' | 'Place';
   /** Shown in the hero and the site's areaServed; defaults to "<city>, California". */
   placeName?: string;
+  /** The place's name in headings and labels when it differs from `city` (a Spanish region page: "California del Sur"). */
+  displayCity?: string;
   /** The larger area the place is in, for its structured data; defaults to Orange County. */
   containedIn?: string;
 };

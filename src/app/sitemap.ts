@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
-import { areasWeServe } from '@/lib/marketing/data/areasWeServe';
+import { areasWeServe, areasWeServeEs } from '@/lib/marketing/data/areasWeServe';
 import { caseStories } from '@/lib/marketing/data/caseStories';
+import { spanishCaseStories } from '@/lib/marketing/data/spanishCaseStories';
 import { cityPracticePages } from '@/lib/marketing/data/cityPracticePages';
 import { legacyPostIsIndexable, legacyPosts } from '@/lib/marketing/data/legacyPosts';
 import { caseStoryPath } from '@/lib/marketing/data/results';
@@ -32,7 +33,7 @@ const roundFourAreaPaths = new Set([...northWestCountyServiceAreas, ...southCoun
 export default function sitemap(): MetadataRoute.Sitemap {
   // The guides and the translated city pages are paired for the language switcher too, but take
   // their entries, with dates, below.
-  const pairedElsewhere = new Set(['/guides', ...serviceAreas.map((area) => area.path), ...cityPracticePages.map((page) => page.path)]);
+  const pairedElsewhere = new Set(['/guides', ...serviceAreas.map((area) => area.path), ...cityPracticePages.map((page) => page.path), areasWeServe.path, ...caseStories.map((story) => caseStoryPath(story.slug))]);
   const localizedEntries = localizedRoutes.filter((route) => !route.en.startsWith('/guides/') && !pairedElsewhere.has(route.en)).flatMap((route) =>
     ([route.en, route.es] as const).map((path, index) => {
       const englishPath = route.en;
@@ -146,12 +147,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // City + case pages pair with their Spanish versions through localizedRoutes, but take their entries here.
-  const cityPracticeEntries = [...cityPracticePages, ...spanishCityPracticePages, areasWeServe].map((page) => ({
+  const cityPracticeEntries = [...cityPracticePages, ...spanishCityPracticePages, areasWeServe, areasWeServeEs].map((page) => ({
     url: `${SITE_URL}${page.path}`,
     lastModified: roundFourDate,
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   }));
 
-  return [...localizedEntries, ...serviceAreaEntries, ...cityPracticeEntries, ...guideEntries, ...caseStoryEntries, ...legacyPostEntries];
+  const spanishCaseStoryEntries = spanishCaseStories.map((story) => ({
+    url: `${SITE_URL}/es/resultados/${story.slug}`,
+    lastModified: '2026-10-20',
+    changeFrequency: 'yearly' as const,
+    priority: 0.7,
+  }));
+
+  return [...localizedEntries, ...serviceAreaEntries, ...cityPracticeEntries, ...guideEntries, ...caseStoryEntries, ...spanishCaseStoryEntries, ...legacyPostEntries];
 }

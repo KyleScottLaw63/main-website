@@ -5,10 +5,10 @@ import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
-import { caseStoryBySlug, caseStoryResult } from '@/lib/marketing/data/caseStories';
 import { newsArticlesForLocale } from '@/lib/marketing/data/newsArticles';
+import { spanishCaseStoryByEnglishSlug, spanishCaseStoryHeadline } from '@/lib/marketing/data/spanishCaseStories';
 import { localizedAlternates } from '@/lib/marketing/i18n';
-import { translateResultToSpanish } from '@/lib/marketing/spanishResults';
+import { spanishCaseStoryPath } from '@/lib/marketing/spanishResults';
 import { newsCollectionStructuredData } from '@/lib/marketing/structured-data';
 
 export const metadata: Metadata = {
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
 const localizedNews = newsArticlesForLocale('es');
 const caseAnnouncements = localizedNews.filter((item) => item.kind === 'case').map((item) => ({ ...item, type: item.label, href: item.path }));
 /**
- * The $5.75M verdict in the place of the Riverside verdict post the firm deleted (the owner's choice,
- * 2026-10-01), as on /es: its case story is English only, so it opens the Spanish results page. Newest first.
+ * The $5.75M verdict's Spanish case story joins the firm's case announcements, in the place of the
+ * Riverside verdict post the firm deleted (the owner's choice, 2026-10-01), as on /news. Newest first.
  */
-const verdictStory = caseStoryBySlug('student-skull-fracture-verdict')!;
-const verdict = translateResultToSpanish(caseStoryResult(verdictStory)!);
+const verdictStory = spanishCaseStoryByEnglishSlug('student-skull-fracture-verdict')!;
+const verdictHeadline = spanishCaseStoryHeadline(verdictStory);
 const caseNews = [
   ...caseAnnouncements.map(({ type, dateTime, date, result, title, excerpt, href }) => ({ type, dateTime, date, result, title, excerpt, href, cta: 'Leer el caso' })),
-  { type: verdict.outcome ?? '', dateTime: verdictStory.resolved, date: String(verdict.year), result: verdict.amount, title: verdict.title, excerpt: 'Un jurado del Tribunal Superior de Los Ángeles emitió este veredicto tras un juicio de dos semanas.', href: '/es/resultados#flagship-title', cta: 'Ver en resultados' },
+  { type: verdictHeadline.outcome, dateTime: verdictStory.resolved, date: String(verdictHeadline.year), result: verdictHeadline.figure, title: verdictHeadline.title, excerpt: verdictStory.summary, href: spanishCaseStoryPath(verdictStory.slug), cta: 'Leer la historia del caso' },
 ].sort((a, b) => b.dateTime.localeCompare(a.dateTime));
 const legalArticles = localizedNews.filter((item) => item.kind === 'article').map((item) => ({ ...item, category: item.label, href: item.path }));
 

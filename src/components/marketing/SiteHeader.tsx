@@ -43,7 +43,7 @@ export function SiteHeader({ locale = 'en' }: { locale?: SiteLocale }) {
           <a className="primary-button header-cta" href="tel:+17145441460"><Phone aria-hidden="true" />{spanish ? 'Llame al 714-544-1460' : 'Call 714-544-1460'}</a>
           <LanguageSwitcher compact />
           <a className="mobile-header-phone" href="tel:+17145441460" aria-label={spanish ? 'Llame a Kyle Scott Law al 714-544-1460' : 'Call Kyle Scott Law at 714-544-1460'}><Phone aria-hidden="true" /></a>
-          <MobileNav locale={locale} areas={areaMenu(locale)} areasLabel={areaMenuCopy[locale].label} areasAll={areaMenuCopy[locale].all} />
+          <MobileNav locale={locale} areas={areaMenu(locale)} areasLabel={areaMenuCopy[locale].label} areasAll={areaMenuCopy[locale].all} areasAllPath={areaMenuCopy[locale].allPath} />
         </div>
       </div>
     </header>

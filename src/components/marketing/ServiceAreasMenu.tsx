@@ -25,8 +25,8 @@ export function areaMenu(locale: SiteLocale): AreaMenuGroup[] {
 }
 
 export const areaMenuCopy = {
-  en: { label: 'Service Areas', all: 'All areas we serve' },
-  es: { label: 'Áreas de servicio', all: 'Todas las áreas que atendemos (en inglés)' },
+  en: { label: 'Service Areas', all: 'All areas we serve', allPath: '/areas-we-serve' },
+  es: { label: 'Áreas de servicio', all: 'Todas las áreas que atendemos', allPath: '/es/areas-que-atendemos' },
 } satisfies Record<SiteLocale, unknown>;
 
 /**
@@ -39,19 +39,19 @@ export function ServiceAreasMenu({ locale = 'en' }: { locale?: SiteLocale }) {
   const groups = areaMenu(locale);
   return (
     <div className="nav-menu">
-      <Link className="nav-menu-trigger" href="/areas-we-serve" aria-haspopup="true" {...(locale === 'es' ? { hrefLang: 'en' } : {})}>{text.label}<ChevronDown aria-hidden="true" /></Link>
+      <Link className="nav-menu-trigger" href={text.allPath} aria-haspopup="true">{text.label}<ChevronDown aria-hidden="true" /></Link>
       <div className="nav-menu-panel">
         <ul className="nav-menu-regions">
           {groups.map((group) => (
             <li className="nav-menu-region" key={group.name}>
-              <Link className="nav-menu-region-link" href="/areas-we-serve" {...(locale === 'es' ? { hrefLang: 'en' } : {})}>{group.name}<ChevronRight aria-hidden="true" /></Link>
+              <Link className="nav-menu-region-link" href={text.allPath}>{group.name}<ChevronRight aria-hidden="true" /></Link>
               <ul className="nav-menu-cities" aria-label={group.name}>
                 {group.cities.map((city) => <li key={city.href}><a href={city.href} {...(city.english ? { hrefLang: 'en', lang: 'en' } : {})}>{city.name}</a></li>)}
               </ul>
             </li>
           ))}
         </ul>
-        <Link className="nav-menu-all" href="/areas-we-serve" {...(locale === 'es' ? { hrefLang: 'en' } : {})}>{text.all}</Link>
+        <Link className="nav-menu-all" href={text.allPath}>{text.all}</Link>
       </div>
     </div>
   );

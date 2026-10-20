@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description: story.summary,
-    // English only: a story has no Spanish page, so hreflang points at itself.
+    // Paired with its Spanish version (/es/resultados/<slug>) for hreflang and the language switcher.
     alternates: localizedAlternates(caseStoryPath(story.slug)),
     openGraph: { title, description: story.summary, type: 'article', images: [image] },
     twitter: { card: 'summary_large_image', title, description: story.summary, images: [image] },

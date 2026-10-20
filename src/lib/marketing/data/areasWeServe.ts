@@ -55,3 +55,39 @@ export const areasWeServe = {
     { label: 'Central Justice Center, Santa Ana — Superior Court of California, County of Orange', url: 'https://www.occourts.org/location/central-justice-center' },
   ] satisfies PageSource[],
 };
+
+/** /es/areas-que-atendemos: the Spanish version of the page above (content round 5, 2026-10-20), saying exactly the same. */
+export const areasWeServeEs = {
+  path: '/es/areas-que-atendemos',
+  title: 'Áreas que atendemos en el Condado de Orange',
+  metaDescription: 'Abogado de lesiones personales en el Condado de Orange para cada ciudad, de Brea a San Clemente, desde una oficina en Tustin. Consulta gratuita.',
+  intro: 'Kyle Scott Law representa a personas lesionadas en cualquier lugar del Condado de Orange, de Brea a San Clemente, desde su oficina en 17671 Irvine Blvd., Suite 210, en Tustin. Busque su ciudad abajo para ver cómo funciona un caso allí, o vaya directamente al tipo de caso que tiene.',
+  citiesBody: 'Cada página de ciudad explica dónde suelen ocurrir las lesiones allí, qué agencias investigan, dónde se presentaría un caso y todos los tipos de casos que el bufete maneja para las personas que viven o se lesionaron allí.',
+  unincorporated: 'También atendemos comunidades no incorporadas como North Tustin, Ladera Ranch, Rancho Mission Viejo, Coto de Caza y Midway City. En esas zonas, normalmente son las agencias del condado, no una ciudad, las que se encargan de los reportes y los reclamos.',
+  faqs: [
+    { question: '¿Kyle Scott Law maneja casos en mi ciudad del Condado de Orange?', answer: 'Sí. El bufete representa a personas lesionadas en todas las ciudades del Condado de Orange y en las comunidades no incorporadas del condado. La oficina está en Tustin, cerca de la 5 y la 55, en el centro de la mayor parte del condado. Busque su ciudad arriba para ver cómo funciona un caso allí, o empiece con una consulta gratuita por teléfono o video.' },
+    { question: '¿Tengo que ir a la oficina de Tustin?', answer: 'No. Su primera conversación con Kyle Scott puede ser en la oficina de Irvine Boulevard, por teléfono o por video, en inglés o en español. Muchos clientes manejan la mayor parte de su caso sin ir con frecuencia a la oficina. Si su caso se presenta ante el tribunal, el abogado se presenta por usted en la mayoría de las audiencias.' },
+    { question: '¿Dónde se presentaría mi caso de lesiones en el Condado de Orange?', answer: 'La mayoría de las demandas por lesiones en el Condado de Orange se presentan ante el Tribunal Superior del Condado de Orange. Los casos civiles ilimitados, los de más de $35,000 (Código de Procedimiento Civil, § 85), se ven en el Central Justice Center de Santa Ana. Muchos reclamos se resuelven con la aseguradora antes de presentar una demanda.' },
+    { question: '¿El bufete maneja casos fuera del Condado de Orange?', answer: 'El bufete se enfoca en el Condado de Orange, y también representa a personas lesionadas en otras partes de California. Algunos de sus resultados publicados provienen de casos fuera del Condado de Orange. El lugar donde ocurrió la lesión determina qué tribunal, qué agencias y qué reglas locales se aplican, y la primera consulta lo aclara.' },
+    { question: '¿Qué pasa si mi ciudad o mi tipo de caso no aparece en la lista?', answer: 'Llame de todos modos. Las listas de arriba cubren las principales áreas de práctica del bufete y todas las ciudades del Condado de Orange. Las lesiones que no encajan en una categoría, o que ocurrieron justo fuera del condado, pueden ser casos que el bufete puede tomar o referir. La consulta es gratuita.' },
+  ],
+  sources: [
+    { label: 'Código de Procedimiento Civil, § 85: casos civiles limitados ($35,000 o menos) — California Legislative Information', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=85' },
+    { label: 'Central Justice Center, Santa Ana — Tribunal Superior de California, Condado de Orange', url: 'https://www.occourts.org/location/central-justice-center' },
+  ] satisfies PageSource[],
+};
+
+/** Spanish names for the regions and practice groups above, by their English name. */
+export const areaNamesEs: Record<string, string> = {
+  'Central Orange County': 'Centro del Condado de Orange',
+  'North Orange County': 'Norte del Condado de Orange',
+  'West Orange County': 'Oeste del Condado de Orange',
+  'Coastal Orange County': 'Costa del Condado de Orange',
+  'South Orange County': 'Sur del Condado de Orange',
+  'Beyond Orange County': 'Fuera del Condado de Orange',
+  'The firm also represents people hurt elsewhere in Southern California.': 'El bufete también representa a personas lesionadas en otras partes del sur de California.',
+  'Vehicle crashes': 'Choques de vehículos',
+  'Unsafe property and places': 'Propiedades y lugares inseguros',
+  'Serious injuries': 'Lesiones graves',
+  'Abuse, neglect, and professional negligence': 'Abuso, negligencia y negligencia profesional',
+};

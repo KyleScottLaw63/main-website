@@ -20,7 +20,7 @@ const mobilePracticeLinks = {
   es: [['Lesiones personales', '/es/abogado-de-lesiones-personales-condado-de-orange'], ['Accidentes de auto', '/es/abogado-de-accidentes-de-auto-condado-de-orange'], ['Resbalones y caídas', '/es/abogado-de-resbalones-y-caidas-condado-de-orange'], ['Negligencia médica', '/es/abogado-de-negligencia-medica-condado-de-orange'], ['Abuso de personas mayores', '/es/abogado-de-abuso-de-personas-mayores-condado-de-orange'],['Mordeduras de perro', '/es/abogado-de-mordeduras-de-perro-condado-de-orange'], ['Lesión cerebral', '/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange'], ['Acoso y abuso sexual', '/es/abogado-de-acoso-y-abuso-sexual-condado-de-orange'], ['Muerte injusta', '/es/abogado-de-muerte-injusta-condado-de-orange'], ['Responsabilidad escolar', '/es/abogado-de-responsabilidad-escolar-condado-de-orange'], ['Accidentes de motocicleta', '/es/abogado-de-accidentes-de-motocicleta-condado-de-orange'], ['Accidentes de camión', '/es/abogado-de-accidentes-de-camion-condado-de-orange'], ['Accidentes de peatones', '/es/abogado-de-accidentes-de-peatones-condado-de-orange'], ['Accidentes de Uber y Lyft', '/es/abogado-de-accidentes-de-uber-y-lyft-condado-de-orange']],
 };
 
-export function MobileNav({ locale = 'en', areas = [], areasLabel = 'Service Areas', areasAll = 'All areas we serve' }: { locale?: SiteLocale; areas?: AreaMenuGroup[]; areasLabel?: string; areasAll?: string }) {
+export function MobileNav({ locale = 'en', areas = [], areasLabel = 'Service Areas', areasAll = 'All areas we serve', areasAllPath = '/areas-we-serve' }: { locale?: SiteLocale; areas?: AreaMenuGroup[]; areasLabel?: string; areasAll?: string; areasAllPath?: string }) {
   const [open, setOpen] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(false);
   const [areasOpen, setAreasOpen] = useState(false);
@@ -100,7 +100,7 @@ export function MobileNav({ locale = 'en', areas = [], areasLabel = 'Service Are
                       <div>{group.cities.map((city) => <a href={city.href} key={city.href} onClick={closeMenu} {...(city.english ? { hrefLang: 'en', lang: 'en' } : {})}>{city.name}</a>)}</div>
                     </details>
                   ))}
-                  <Link href="/areas-we-serve" onClick={closeMenu} {...(spanish ? { hrefLang: 'en' } : {})}>{areasAll}</Link>
+                  <Link href={areasAllPath} onClick={closeMenu}>{areasAll}</Link>
                 </div>
               </div>
             ) : null}
