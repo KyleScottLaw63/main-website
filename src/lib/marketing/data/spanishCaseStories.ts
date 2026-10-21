@@ -1,6 +1,7 @@
 import { caseStoryBySlug, caseStoryResult, type CaseStory, type CaseStoryHeadline, type CaseStoryLink } from '@/lib/marketing/data/caseStories';
 import { newsArticleLocalizedRoutes, newsArticlesForLocale } from '@/lib/marketing/data/newsArticles';
 import { caseStoryPath, resultOutcomeLabel } from '@/lib/marketing/data/results';
+import { spanishLegacyPostLocalizedRoutes } from '@/lib/marketing/data/spanishLegacyPosts';
 import { spanishCaseStoryPath, translateResultToSpanish } from '@/lib/marketing/spanishResults';
 
 /**
@@ -19,10 +20,10 @@ export type SpanishCaseStory = Omit<CaseStory, 'announcement'> & {
 
 /**
  * The firm's announcement of a result, in Spanish when the firm has a Spanish version of it
- * (newsArticles.ts); otherwise the English post, marked as English.
+ * (newsArticles.ts, or an archived post's translation in spanishLegacyPosts.ts); otherwise the English post, marked as English.
  */
 function announcement(label: string, englishHref: string): NonNullable<SpanishCaseStory['announcement']> {
-  const spanish = newsArticleLocalizedRoutes.find((route) => route.en === englishHref);
+  const spanish = [...newsArticleLocalizedRoutes, ...spanishLegacyPostLocalizedRoutes].find((route) => route.en === englishHref);
   return spanish ? { label, href: spanish.es } : { label, href: englishHref, inEnglish: true };
 }
 

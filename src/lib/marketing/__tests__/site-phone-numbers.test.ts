@@ -2,6 +2,7 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { legacyPosts } from '@/lib/marketing/data/legacyPosts';
+import { spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
 import { firmIdentity } from '@/lib/marketing/site';
 
 /**
@@ -30,6 +31,13 @@ const ROOT = process.cwd();
 const SITE_ROOTS = ['src/app/(site)', 'src/app/(site-es)', 'src/app/api', 'src/lib/marketing', 'src/lib/leads', 'src/components/marketing', 'public/data'];
 const SITE_FILES = ['src/app/sitemap.ts', 'src/app/robots.ts', 'src/app/manifest.ts', 'src/app/global-not-found.tsx', 'src/app/global-error.tsx', 'src/lib/site-proxy.ts', 'public/llms.txt'];
 const LEGACY_POSTS_FILE = path.join('src', 'lib', 'marketing', 'data', 'legacyPosts.json');
+const SPANISH_LEGACY_POSTS_FILE = path.join('src', 'lib', 'marketing', 'data', 'spanishLegacyPosts.json');
+/** The archive, English and Spanish, read post by post (a Spanish post carries its English post's slug for the exceptions). */
+const ARCHIVE_FILES = new Set([LEGACY_POSTS_FILE, SPANISH_LEGACY_POSTS_FILE]);
+const archivedPosts = [
+  ...legacyPosts.map((post) => ({ post, slug: post.slug, file: 'legacyPosts.json' })),
+  ...spanishLegacyPosts.map((post) => ({ post, slug: post.englishSlug, file: 'spanishLegacyPosts.json' })),
+];
 
 function walk(dir: string): string[] {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
@@ -97,17 +105,17 @@ function isAllowed(hit: Hit, postSlug?: string) {
 }
 
 /**
- * legacyPosts.json is read field by field. legacyPath (a post's old WordPress address)
- * and sourceUrl (the same address as provenance) are the retired URLs themselves: they
- * exist only so next.config.ts can 301 them, and are never rendered.
+ * legacyPosts.json and spanishLegacyPosts.json are read field by field. legacyPath (a post's
+ * old WordPress address) and sourceUrl (the same address as provenance) are the retired URLs
+ * themselves: they exist only so next.config.ts can 301 them, and are never rendered.
  */
 function legacyPostHits() {
   const hits: { hit: Hit; slug?: string }[] = [];
-  for (const post of legacyPosts) {
+  for (const { post, slug, file } of archivedPosts) {
     for (const [field, value] of Object.entries(post)) {
       if (field === 'legacyPath' || field === 'sourceUrl') continue;
       const text = typeof value === 'string' ? value : JSON.stringify(value);
-      for (const hit of phoneHits(text, `legacyPosts.json ${post.slug}.${field}`)) hits.push({ hit, slug: post.slug });
+      for (const hit of phoneHits(text, `${file} ${post.slug}.${field}`)) hits.push({ hit, slug });
     }
   }
   return hits;
@@ -123,7 +131,7 @@ describe('phone numbers on the public website', () => {
     const offenders: string[] = [];
     for (const file of siteFiles()) {
       const relative = path.relative(ROOT, file);
-      if (relative === LEGACY_POSTS_FILE) continue; // read field by field below
+      if (ARCHIVE_FILES.has(relative)) continue; // read field by field below
       const text = readFileSync(file, 'utf8');
       for (const hit of phoneHits(text, relative)) {
         if (!isAllowed(hit)) offenders.push(`${hit.where}: ${hit.number}`);
@@ -137,15 +145,15 @@ describe('phone numbers on the public website', () => {
 
   it('no retired or mistyped number appears in anything the site renders', () => {
     const renderedData = [
-      ...siteFiles().filter((file) => path.relative(ROOT, file) !== LEGACY_POSTS_FILE).map((file) => readFileSync(file, 'utf8')),
-      ...legacyPosts.map((post) => JSON.stringify({ ...post, legacyPath: '', sourceUrl: '' })),
+      ...siteFiles().filter((file) => !ARCHIVE_FILES.has(path.relative(ROOT, file))).map((file) => readFileSync(file, 'utf8')),
+      ...archivedPosts.map(({ post }) => JSON.stringify({ ...post, legacyPath: '', sourceUrl: '' })),
     ].join('\n');
     for (const number of RETIRED) expect(renderedData, number).not.toContain(number);
   });
 
-  it('every firm number in an archived article body is a tap-to-call link to that number', () => {
+  it('every firm number in an archived article body is a tap-to-call link to that number, in English and Spanish', () => {
     const unlinked: string[] = [];
-    for (const post of legacyPosts) {
+    for (const { post } of archivedPosts) {
       const tokens = post.contentHtml.split(/(<[^>]+>)/);
       let telHref: string | null = null;
       for (const token of tokens) {

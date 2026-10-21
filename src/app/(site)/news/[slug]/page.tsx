@@ -4,6 +4,7 @@ import { NewsArticlePage } from '@/components/marketing/NewsArticlePage';
 import { LegacyNewsArticlePage } from '@/components/marketing/LegacyNewsArticlePage';
 import { legacyPostBySlug, legacyPostDescription, legacyPostIsIndexable, legacyPosts } from '@/lib/marketing/data/legacyPosts';
 import { newsArticleBySlug, newsArticlesForLocale } from '@/lib/marketing/data/newsArticles';
+import { spanishLegacyPostByEnglishSlug } from '@/lib/marketing/data/spanishLegacyPosts';
 import { missingPageMetadata } from '@/lib/marketing/not-found-metadata';
 import { SITE_URL } from '@/lib/marketing/site';
 
@@ -29,6 +30,7 @@ export async function generateMetadata({
       ? `${SITE_URL}${legacyArticle.featuredImage}`
       : undefined;
     const description = legacyPostDescription(legacyArticle);
+    const spanish = spanishLegacyPostByEnglishSlug(legacyArticle.slug);
     return {
       title: `${legacyArticle.title} | Kyle Scott Law`,
       description,
@@ -40,6 +42,7 @@ export async function generateMetadata({
         canonical: `${SITE_URL}${legacyArticle.path}`,
         languages: {
           'en-US': `${SITE_URL}${legacyArticle.path}`,
+          ...(spanish ? { 'es-US': `${SITE_URL}${spanish.path}` } : {}),
           'x-default': `${SITE_URL}${legacyArticle.path}`,
         },
       },

@@ -2,11 +2,15 @@ import Link from "next/link";
 import type { Metadata } from 'next';
 import { ArrowRight, BookOpen, Newspaper, Scale } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
+import { LegacyNewsArchive } from '@/components/marketing/LegacyNewsArchive';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
+import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { newsArticlesForLocale } from '@/lib/marketing/data/newsArticles';
 import { spanishCaseStoryByEnglishSlug, spanishCaseStoryHeadline } from '@/lib/marketing/data/spanishCaseStories';
+import { spanishLegacyPostSummary, spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
+import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
 import { localizedAlternates } from '@/lib/marketing/i18n';
 import { spanishCaseStoryPath } from '@/lib/marketing/spanishResults';
 import { newsCollectionStructuredData } from '@/lib/marketing/structured-data';
@@ -30,6 +34,9 @@ const caseNews = [
   { type: verdictHeadline.outcome, dateTime: verdictStory.resolved, date: String(verdictHeadline.year), result: verdictHeadline.figure, title: verdictHeadline.title, excerpt: verdictStory.summary, href: spanishCaseStoryPath(verdictStory.slug), cta: 'Leer la historia del caso' },
 ].sort((a, b) => b.dateTime.localeCompare(a.dateTime));
 const legalArticles = localizedNews.filter((item) => item.kind === 'article').map((item) => ({ ...item, category: item.label, href: item.path }));
+const legacyArticleSummaries = spanishLegacyPosts.slice(0, 24).map(spanishLegacyPostSummary);
+// The Spanish versions of the three guides /news features.
+const featuredGuides = legalGuides.slice(0, 3).map((guide) => spanishLegalGuides.find((spanish) => spanish.englishSlug === guide.slug)!);
 
 const newsCollectionSchema = newsCollectionStructuredData('es', [
   ...caseAnnouncements.map((item) => ({
@@ -48,6 +55,14 @@ const newsCollectionSchema = newsCollectionStructuredData('es', [
     url: item.href,
     sourceUrl: item.sourceUrl,
   })),
+  ...spanishLegacyPosts.slice(0, 24).map((item) => ({
+    type: 'Article' as const,
+    title: item.title,
+    description: item.excerpt,
+    datePublished: item.dateTime,
+    url: item.path,
+    sourceUrl: item.sourceUrl,
+  })),
 ]);
 
 export default function SpanishNewsPage() {
@@ -64,6 +79,8 @@ export default function SpanishNewsPage() {
           <nav className="news-page-jump-links" aria-label="Secciones de noticias">
             <a href="#case-news">Resultados y Noticias</a>
             <a href="#legal-articles">Artículos Legales</a>
+            <a href="#legal-guides">Guías Legales</a>
+            <a href="#article-archive">Archivo de Artículos</a>
           </nav>
         </div>
       </section>
@@ -105,8 +122,16 @@ export default function SpanishNewsPage() {
             </article>
           ))}
         </div>
-        <p className="news-article-note"><Newspaper aria-hidden="true" />Las publicaciones adicionales del despacho se agregarán cuando sean publicadas.</p>
+        <p className="news-article-note"><Newspaper aria-hidden="true" />Consulte el historial completo de publicaciones más abajo.</p>
       </section>
+
+      <section className="news-guide-feature" id="legal-guides" aria-labelledby="news-guide-title">
+        <header><div><p className="eyebrow">Guías legales</p><h2 id="news-guide-title">Empiece con una respuesta directa.</h2></div><p>Guías detalladas y respaldadas por fuentes sobre los plazos, las pruebas, los seguros y el proceso legal en los casos de lesiones en California.</p></header>
+        <div>{featuredGuides.map((guide) => <article key={guide.slug}><span>{guide.category}</span><h3>{guide.title}</h3><p>{guide.description}</p><Link href={guide.path}>Leer la guía <ArrowRight aria-hidden="true" /></Link></article>)}</div>
+        <Link className="news-guide-all" href="/es/guias">Ver las {spanishLegalGuides.length} guías legales <ArrowRight aria-hidden="true" /></Link>
+      </section>
+
+      <LegacyNewsArchive posts={legacyArticleSummaries} totalCount={spanishLegacyPosts.length} locale="es" />
 
       <SiteFooter locale="es" />
       <ChatWidget locale="es" />

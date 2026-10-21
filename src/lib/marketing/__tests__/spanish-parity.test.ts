@@ -2,11 +2,13 @@ import { describe, expect, it } from 'vitest';
 import { areasWeServe, areasWeServeEs } from '@/lib/marketing/data/areasWeServe';
 import { caseStories } from '@/lib/marketing/data/caseStories';
 import { cityPracticePages } from '@/lib/marketing/data/cityPracticePages';
+import { legacyPosts } from '@/lib/marketing/data/legacyPosts';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
 import { spanishCaseStories } from '@/lib/marketing/data/spanishCaseStories';
 import { spanishCityPracticePages } from '@/lib/marketing/data/spanishCityPracticePages';
+import { spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
 import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import { spanishServiceAreas } from '@/lib/marketing/data/spanishServiceAreas';
@@ -42,6 +44,11 @@ describe('every English page has its Spanish version', () => {
   it('case stories', () => {
     const spanish = new Set(spanishCaseStories.map((story) => story.englishSlug));
     expect(missing(caseStories, (story) => spanish.has(story.slug), (story) => story.slug)).toEqual([]);
+  });
+
+  it('archived news posts (spanish-legacy-posts.test.ts checks each translation)', () => {
+    const spanish = new Set(spanishLegacyPosts.map((post) => post.englishSlug));
+    expect(missing(legacyPosts, (post) => spanish.has(post.slug), (post) => post.path)).toEqual([]);
   });
 
   it('the areas we serve page, paired for the language switcher', () => {

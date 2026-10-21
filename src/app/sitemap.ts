@@ -11,6 +11,7 @@ import { northWestCountyServiceAreas } from '@/lib/marketing/data/serviceAreasNo
 import { regionalServiceAreas } from '@/lib/marketing/data/serviceAreasRegional';
 import { southCountyServiceAreas } from '@/lib/marketing/data/serviceAreasSouthCounty';
 import { spanishCityPracticePages } from '@/lib/marketing/data/spanishCityPracticePages';
+import { spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
 import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
 import { spanishServiceAreas } from '@/lib/marketing/data/spanishServiceAreas';
 import { spanishRoundFourServiceAreas } from '@/lib/marketing/data/spanishServiceAreasRoundFour';
@@ -33,7 +34,7 @@ const roundFourAreaPaths = new Set([...northWestCountyServiceAreas, ...southCoun
 export default function sitemap(): MetadataRoute.Sitemap {
   // The guides and the translated city pages are paired for the language switcher too, but take
   // their entries, with dates, below.
-  const pairedElsewhere = new Set(['/guides', ...serviceAreas.map((area) => area.path), ...cityPracticePages.map((page) => page.path), areasWeServe.path, ...caseStories.map((story) => caseStoryPath(story.slug))]);
+  const pairedElsewhere = new Set(['/guides', ...serviceAreas.map((area) => area.path), ...cityPracticePages.map((page) => page.path), areasWeServe.path, ...caseStories.map((story) => caseStoryPath(story.slug)), ...legacyPosts.map((post) => post.path)]);
   const localizedEntries = localizedRoutes.filter((route) => !route.en.startsWith('/guides/') && !pairedElsewhere.has(route.en)).flatMap((route) =>
     ([route.en, route.es] as const).map((path, index) => {
       const englishPath = route.en;
@@ -111,6 +112,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
           : 0.4,
   }));
 
+  // The Spanish archive (published 2026-10-21, spanishLegacyPostsDate): the same posts as the English one, under the same test.
+  const spanishLegacyPostEntries = spanishLegacyPosts.filter((post) => post.indexable).map((post) => ({
+    url: `${SITE_URL}${post.path}`,
+    lastModified: post.modifiedTime,
+    changeFrequency: 'yearly' as const,
+    priority:
+      post.evergreen === 'high'
+        ? 0.65
+        : post.evergreen === 'medium'
+          ? 0.55
+          : 0.4,
+  }));
+
   const guideEntries = [
     {
       url: `${SITE_URL}/guides`,
@@ -161,5 +175,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...localizedEntries, ...serviceAreaEntries, ...cityPracticeEntries, ...guideEntries, ...caseStoryEntries, ...spanishCaseStoryEntries, ...legacyPostEntries];
+  return [...localizedEntries, ...serviceAreaEntries, ...cityPracticeEntries, ...guideEntries, ...caseStoryEntries, ...spanishCaseStoryEntries, ...legacyPostEntries, ...spanishLegacyPostEntries];
 }

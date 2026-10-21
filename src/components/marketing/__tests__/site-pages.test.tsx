@@ -14,6 +14,7 @@ import SpanishTestimonialsPage from '@/app/(site-es)/es/testimonios/page';
 import { LegacyNewsArticlePage } from '@/components/marketing/LegacyNewsArticlePage';
 import { Dialog, DialogContent, DialogTitle } from '@/components/marketing/ui/dialog';
 import { legacyArchiveNoticeText, legacyPostBySlug, legacyPosts } from '@/lib/marketing/data/legacyPosts';
+import { spanishLegacyArchiveNoticeText, spanishLegacyPostByEnglishSlug, spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
 
 afterEach(cleanup);
 
@@ -83,6 +84,32 @@ describe('archived article page', () => {
     const { container } = render(<LegacyNewsArticlePage article={legacyPostBySlug('tired-insurance-adjuster-telling-no-case-call-kyle-scott')!} />);
     expect(container.innerHTML).not.toContain('949-423-3944');
     expect(container.innerHTML).not.toContain('isBasedOn');
+  });
+});
+
+describe('Spanish archived article page', () => {
+  it('reads in Spanish: the dated notice, Spanish links only, and the Spanish structured data', () => {
+    for (const post of spanishLegacyPosts) {
+      const { container } = render(<LegacyNewsArticlePage article={post} locale="es" />);
+      expect(screen.getAllByRole('heading', { level: 1 }).map((heading) => heading.textContent), post.slug).toEqual([post.title]);
+      const notice = screen.getByRole('complementary', { name: 'Sobre este artículo archivado' });
+      expect(notice.textContent, post.slug).toBe(spanishLegacyArchiveNoticeText(post));
+      expect(container, post.slug).toHaveTextContent('Esta página ofrece información general y no constituye asesoría legal.');
+      // Every link to the firm's own pages stays on the Spanish site.
+      const internal = [...container.querySelectorAll('a[href^="/"]')].map((link) => link.getAttribute('href')!);
+      expect(internal.filter((href) => !href.startsWith('/es')), post.slug).toEqual([]);
+      const jsonLd = JSON.parse(container.querySelector('script[type="application/ld+json"]')!.textContent!);
+      expect(jsonLd['@graph'][0], post.slug).toMatchObject({ inLanguage: 'es-US', url: `https://kjslaw.com${post.path}` });
+      expect(jsonLd['@graph'][1].itemListElement.map((item: { item: string }) => item.item), post.slug).toEqual(['https://kjslaw.com/es', 'https://kjslaw.com/es/noticias', `https://kjslaw.com${post.path}`]);
+      expect(container.innerHTML, post.slug).not.toContain('isBasedOn');
+      cleanup();
+    }
+    // Renders all 194 Spanish posts, as the English test does.
+  }, 30_000);
+
+  it('firm numbers in the Spanish text are tap-to-call too', () => {
+    render(<LegacyNewsArticlePage article={spanishLegacyPostByEnglishSlug('california-personal-injury-verdict-largest-ever')!} locale="es" />);
+    expect(screen.getByRole('link', { name: '714-544-1460' })).toHaveAttribute('href', 'tel:+17145441460');
   });
 });
 

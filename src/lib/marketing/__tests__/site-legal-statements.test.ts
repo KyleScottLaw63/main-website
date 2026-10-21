@@ -3,6 +3,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { legacyPostPlainText, legacyPosts } from '@/lib/marketing/data/legacyPosts';
+import { spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { newsArticleBySlug } from '@/lib/marketing/data/newsArticles';
 import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
@@ -73,7 +74,7 @@ describe('what a client pays without a recovery (the firm’s decision, 2026-09-
     const allowed = path.join(ROOT, 'src/lib/marketing/no-recovery-terms.ts');
     const pages = SITE_SOURCES.flatMap((dir) => sourceFiles(path.join(ROOT, dir))).filter((file) => file !== allowed && RISK_FREE.test(readFileSync(file, 'utf8')));
     expect(pages.map((file) => path.relative(ROOT, file))).toEqual([]);
-    expect(legacyPosts.filter((post) => RISK_FREE.test(`${post.title} ${post.excerpt} ${legacyPostPlainText(post)}`)).map((post) => post.slug)).toEqual([]);
+    expect([...legacyPosts, ...spanishLegacyPosts].filter((post) => RISK_FREE.test(`${post.title} ${post.excerpt} ${legacyPostPlainText(post)}`)).map((post) => post.slug)).toEqual([]);
   }, 30_000);
 });
 

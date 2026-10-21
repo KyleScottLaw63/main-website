@@ -162,7 +162,7 @@ export function legacyPostDescription(post: Pick<LegacyPost, 'contentHtml' | 'ex
 }
 
 /** Google shows about 155 characters of a description; longer text is cut at a word, never mid-word, with "…". */
-function fitDescription(text: string) {
+export function fitDescription(text: string) {
   if (text.length <= 155) return text;
   const cut = text.slice(0, 154);
   return `${cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:\-–—]$/, '')}…`;

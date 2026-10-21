@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { caseStories, caseStoryBySlug, caseStoryHeadline, type CaseStory } from '@/lib/marketing/data/caseStories';
 import { newsArticleLocalizedRoutes } from '@/lib/marketing/data/newsArticles';
+import { spanishLegacyPostLocalizedRoutes } from '@/lib/marketing/data/spanishLegacyPosts';
 import { caseStoryPath } from '@/lib/marketing/data/results';
 import {
   caseStoryLocalizedRoutes,
@@ -76,8 +77,10 @@ describe('Spanish case stories', () => {
       expect(story.confidential?.year, story.slug).toBe(source.confidential?.year);
       expect(Boolean(story.announcement), story.slug).toBe(Boolean(source.announcement));
       if (story.announcement && source.announcement) {
-        // The firm's Spanish announcement when one exists (newsArticles.ts); otherwise the English post, marked "(en inglés)".
-        const spanish = newsArticleLocalizedRoutes.find((route) => route.en === source.announcement!.href);
+        // The firm's Spanish announcement when one exists (newsArticles.ts, or the archived post's Spanish version);
+        // otherwise the English post, marked "(en inglés)". Since the Spanish archive (2026-10-21) every one has one.
+        const spanish = [...newsArticleLocalizedRoutes, ...spanishLegacyPostLocalizedRoutes].find((route) => route.en === source.announcement!.href);
+        expect(spanish, story.slug).toBeDefined();
         expect(story.announcement, story.slug).toEqual(spanish ? { label: story.announcement.label, href: spanish.es } : { label: story.announcement.label, href: source.announcement.href, inEnglish: true });
       }
     }

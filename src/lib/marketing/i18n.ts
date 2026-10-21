@@ -4,6 +4,7 @@ import { newsArticleLocalizedRoutes } from '@/lib/marketing/data/newsArticles';
 import { serviceAreas } from '@/lib/marketing/data/serviceAreas';
 import { caseStoryLocalizedRoutes } from '@/lib/marketing/data/spanishCaseStories';
 import { spanishCityPracticePages } from '@/lib/marketing/data/spanishCityPracticePages';
+import { spanishLegacyPostLocalizedRoutes } from '@/lib/marketing/data/spanishLegacyPosts';
 import { legalGuideLocalizedRoutes } from '@/lib/marketing/data/spanishLegalGuides';
 import { serviceAreaLocalizedRoutes } from '@/lib/marketing/data/spanishServiceAreas';
 import { SITE_URL } from '@/lib/marketing/site';
@@ -141,6 +142,8 @@ export const localizedRoutes = [
   ...spanishCityPracticePages.map((page) => ({ en: cityPracticePageByKey[page.englishKey].path, es: page.path })),
   // Case stories and their Spanish versions (spanishCaseStories names each English slug).
   ...caseStoryLocalizedRoutes,
+  // Archived news posts and their Spanish versions (spanishLegacyPosts names each English slug).
+  ...spanishLegacyPostLocalizedRoutes,
 ] as const;
 
 function normalizePath(pathname: string) {

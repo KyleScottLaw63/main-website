@@ -4,31 +4,88 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Search } from 'lucide-react';
 import type { LegacyPostSummary, LegacyPostTopic } from '@/lib/marketing/data/legacyPosts';
+import type { SiteLocale } from '@/lib/marketing/i18n';
 import { Input } from '@/components/marketing/ui/input';
 import {
   NativeSelect,
   NativeSelectOption,
 } from '@/components/marketing/ui/native-select';
 
-const topicLabels: Record<LegacyPostTopic | 'all', string> = {
-  all: 'All topics',
-  auto: 'Vehicle Accidents',
-  premises: 'Unsafe Property',
-  medical: 'Medical Malpractice',
-  brain: 'Brain Injuries',
-  dog: 'Dog Bites',
-  sexual: 'Abuse & Harassment',
-  wrongful: 'Wrongful Death',
-  general: 'Personal Injury & Firm News',
-};
+const copy = {
+  en: {
+    topics: {
+      all: 'All topics',
+      auto: 'Vehicle Accidents',
+      premises: 'Unsafe Property',
+      medical: 'Medical Malpractice',
+      brain: 'Brain Injuries',
+      dog: 'Dog Bites',
+      sexual: 'Abuse & Harassment',
+      wrongful: 'Wrongful Death',
+      general: 'Personal Injury & Firm News',
+    },
+    index: '/data/legacy-news-index.json',
+    eyebrow: 'Complete publication history',
+    title: 'Legal Article Archive',
+    intro: 'Browse articles originally published by Kyle Scott Law. Older articles are clearly dated and preserved for reference.',
+    search: 'Search articles',
+    searchPlaceholder: 'Search by topic or title',
+    filter: 'Filter by topic',
+    loading: 'Loading archive…',
+    article: 'article',
+    articles: 'articles',
+    archived: 'Archived firm publication.',
+    read: 'Read article',
+    loadingArticles: 'Loading articles…',
+    showAll: (count: number) => `Show all ${count} archived articles`,
+    loadError: 'The complete archive could not be loaded. Please try again.',
+    noMatches: 'No articles match that search.',
+  },
+  es: {
+    topics: {
+      all: 'Todos los temas',
+      auto: 'Accidentes de vehículos',
+      premises: 'Propiedades peligrosas',
+      medical: 'Negligencia médica',
+      brain: 'Lesiones cerebrales',
+      dog: 'Mordeduras de perro',
+      sexual: 'Abuso y acoso',
+      wrongful: 'Muerte injusta',
+      general: 'Lesiones personales y noticias del despacho',
+    },
+    index: '/data/legacy-news-index-es.json',
+    eyebrow: 'Historial completo de publicaciones',
+    title: 'Archivo de artículos legales',
+    intro: 'Consulte los artículos que Kyle Scott Law publicó originalmente. Los artículos anteriores llevan su fecha y se conservan como referencia.',
+    search: 'Buscar artículos',
+    searchPlaceholder: 'Buscar por tema o título',
+    filter: 'Filtrar por tema',
+    loading: 'Cargando el archivo…',
+    article: 'artículo',
+    articles: 'artículos',
+    archived: 'Publicación archivada del despacho.',
+    read: 'Leer el artículo',
+    loadingArticles: 'Cargando artículos…',
+    showAll: (count: number) => `Ver los ${count} artículos archivados`,
+    loadError: 'No se pudo cargar el archivo completo. Inténtelo de nuevo.',
+    noMatches: 'Ningún artículo coincide con esa búsqueda.',
+  },
+} satisfies Record<SiteLocale, { topics: Record<LegacyPostTopic | 'all', string> } & Record<string, unknown>>;
+
+/** Lowercase, without accents, so "lesion" finds "lesión". */
+const searchable = (text: string) => text.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 export function LegacyNewsArchive({
   posts,
   totalCount,
+  locale = 'en',
 }: {
   posts: LegacyPostSummary[];
   totalCount: number;
+  locale?: SiteLocale;
 }) {
+  const text = copy[locale];
+  const topicLabels = text.topics;
   const [archivePosts, setArchivePosts] = useState(posts);
   const [query, setQuery] = useState('');
   const [topic, setTopic] = useState<LegacyPostTopic | 'all'>('all');
@@ -42,7 +99,7 @@ export function LegacyNewsArchive({
     setIsLoading(true);
     setLoadError(false);
     try {
-      const response = await fetch('/data/legacy-news-index.json', {
+      const response = await fetch(text.index, {
         cache: 'force-cache',
       });
       if (!response.ok) throw new Error('Unable to load article archive');
@@ -56,14 +113,12 @@ export function LegacyNewsArchive({
   }
 
   const matches = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
+    const normalizedQuery = searchable(query.trim());
     return archivePosts.filter((post) => {
       const topicMatches = topic === 'all' || post.topic === topic;
       const queryMatches =
         !normalizedQuery ||
-        `${post.title} ${post.excerpt} ${post.category}`
-          .toLowerCase()
-          .includes(normalizedQuery);
+        searchable(`${post.title} ${post.excerpt} ${post.category}`).includes(normalizedQuery);
       return topicMatches && queryMatches;
     });
   }, [archivePosts, query, topic]);
@@ -78,18 +133,15 @@ export function LegacyNewsArchive({
     >
       <header className="legacy-archive-heading">
         <div>
-          <p className="eyebrow">Complete publication history</p>
-          <h2 id="legacy-archive-title">Legal Article Archive</h2>
+          <p className="eyebrow">{text.eyebrow}</p>
+          <h2 id="legacy-archive-title">{text.title}</h2>
         </div>
-        <p>
-          Browse articles originally published by Kyle Scott Law. Older articles
-          are clearly dated and preserved for reference.
-        </p>
+        <p>{text.intro}</p>
       </header>
 
       <div className="legacy-archive-toolbar">
         <label htmlFor="legacy-news-search">
-          <span>Search articles</span>
+          <span>{text.search}</span>
           <span className="legacy-search-field">
             <Search aria-hidden="true" />
             <Input
@@ -102,12 +154,12 @@ export function LegacyNewsArchive({
                 setShowAll(true);
                 void loadCompleteArchive();
               }}
-              placeholder="Search by topic or title"
+              placeholder={text.searchPlaceholder}
             />
           </span>
         </label>
         <label htmlFor="legacy-news-topic">
-          <span>Filter by topic</span>
+          <span>{text.filter}</span>
           <NativeSelect
             id="legacy-news-topic"
             value={topic}
@@ -126,7 +178,7 @@ export function LegacyNewsArchive({
         </label>
         <output>
           {isLoading ? (
-            'Loading archive…'
+            text.loading
           ) : (
             <>
               <strong>
@@ -134,7 +186,7 @@ export function LegacyNewsArchive({
                   ? totalCount
                   : matches.length}
               </strong>{' '}
-              {matches.length === 1 ? 'article' : 'articles'}
+              {matches.length === 1 ? text.article : text.articles}
             </>
           )}
         </output>
@@ -153,10 +205,10 @@ export function LegacyNewsArchive({
             {post.excerpt ? (
               <p>{post.excerpt}</p>
             ) : (
-              <p>Archived firm publication.</p>
+              <p>{text.archived}</p>
             )}
             <Link href={post.path}>
-              Read article <ArrowRight aria-hidden="true" />
+              {text.read} <ArrowRight aria-hidden="true" />
             </Link>
           </article>
         ))}
@@ -172,18 +224,16 @@ export function LegacyNewsArchive({
             setShowAll(true);
           }}
         >
-          {isLoading
-            ? 'Loading articles…'
-            : `Show all ${totalCount} archived articles`}
+          {isLoading ? text.loadingArticles : text.showAll(totalCount)}
         </button>
       ) : null}
       {loadError ? (
         <p className="legacy-archive-empty" role="alert">
-          The complete archive could not be loaded. Please try again.
+          {text.loadError}
         </p>
       ) : null}
       {matches.length === 0 ? (
-        <p className="legacy-archive-empty">No articles match that search.</p>
+        <p className="legacy-archive-empty">{text.noMatches}</p>
       ) : null}
     </section>
   );
