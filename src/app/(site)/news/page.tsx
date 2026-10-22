@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, BookOpen, Newspaper, Scale } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { LegacyNewsArchive } from '@/components/marketing/LegacyNewsArchive';
+import { LegacyNewsYearIndex } from '@/components/marketing/LegacyNewsYearIndex';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
@@ -184,7 +185,9 @@ export default function NewsPage() {
       <LegacyNewsArchive
         posts={legacyArticleSummaries}
         totalCount={legacyPosts.length}
-      />
+      >
+        <LegacyNewsYearIndex posts={legacyPosts.map(legacyPostSummary)} />
+      </LegacyNewsArchive>
 
       <SiteFooter />
       <ChatWidget />

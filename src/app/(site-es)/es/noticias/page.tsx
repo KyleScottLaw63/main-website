@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { ArrowRight, BookOpen, Newspaper, Scale } from 'lucide-react';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { LegacyNewsArchive } from '@/components/marketing/LegacyNewsArchive';
+import { LegacyNewsYearIndex } from '@/components/marketing/LegacyNewsYearIndex';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
@@ -131,7 +132,9 @@ export default function SpanishNewsPage() {
         <Link className="news-guide-all" href="/es/guias">Ver las {spanishLegalGuides.length} guías legales <ArrowRight aria-hidden="true" /></Link>
       </section>
 
-      <LegacyNewsArchive posts={legacyArticleSummaries} totalCount={spanishLegacyPosts.length} locale="es" />
+      <LegacyNewsArchive posts={legacyArticleSummaries} totalCount={spanishLegacyPosts.length} locale="es">
+        <LegacyNewsYearIndex posts={spanishLegacyPosts.map(spanishLegacyPostSummary)} locale="es" />
+      </LegacyNewsArchive>
 
       <SiteFooter locale="es" />
       <ChatWidget locale="es" />

@@ -1250,6 +1250,32 @@ nav.footer-social li a svg { width: 20px; height: 20px; margin: 0; opacity: 1; t
 .legacy-show-all:hover,.legacy-show-all:focus-visible { background: var(--navy-deep); }
 .legacy-show-all:disabled { cursor: wait; opacity: .72; }
 .legacy-archive-empty { margin-top: 28px; border: 1px solid var(--line); border-radius: 16px; background: white; padding: 28px; color: var(--muted); text-align: center; }
+/* Archive by year: a plain link to every post, in one collapsible group per year (LegacyNewsYearIndex). */
+.legacy-year-index { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 48px; }
+.legacy-year-index > header h2 { margin-top: 10px; font-family: var(--font-serif); font-size: clamp(30px,3.2vw,40px); font-weight: 500; letter-spacing: -.04em; line-height: 1.05; }
+.legacy-year-index > header > p:last-child { max-width: 62ch; margin-top: 10px; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.legacy-year-index-years { display: grid; gap: 10px; margin-top: 24px; }
+.legacy-year-group { border: 1px solid var(--line); border-radius: 14px; background: white; }
+.legacy-year-group > summary { display: flex; min-height: 56px; align-items: center; gap: 14px; padding: 0 20px; cursor: pointer; list-style: none; }
+.legacy-year-group > summary::-webkit-details-marker { display: none; }
+.legacy-year-group > summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 14px; }
+.legacy-year { color: var(--ink); font-family: var(--font-serif); font-size: 24px; font-weight: 500; letter-spacing: -.03em; }
+.legacy-year-count { color: var(--muted); font-size: 14px; font-weight: 650; }
+.legacy-year-group > summary svg { width: 18px; height: 18px; margin-left: auto; color: var(--navy); transition: transform .2s ease; }
+.legacy-year-group[open] > summary svg { transform: rotate(180deg); }
+.legacy-year-group ul { display: grid; margin: 0; border-top: 1px solid var(--line); padding: 6px 20px 14px; list-style: none; }
+.legacy-year-group li { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding: 11px 0; }
+.legacy-year-group li:last-child { border-bottom: 0; }
+.legacy-year-group li a { color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.45; text-decoration: none; }
+.legacy-year-group li a:hover, .legacy-year-group li a:focus-visible { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.legacy-year-group li time { flex: 0 0 auto; color: var(--muted); font-size: 13px; white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .legacy-year-group > summary svg { transition: none; } }
+@media (max-width: 640px) {
+  .legacy-year-index { margin-top: 48px; padding-top: 36px; }
+  .legacy-year-group > summary { padding: 0 16px; }
+  .legacy-year-group ul { padding: 4px 16px 12px; }
+  .legacy-year-group li { flex-direction: column; gap: 3px; }
+}
 
 /* Restyled articles preserved from the original KJS publication archive */
 .legacy-news-page { background: var(--page); color: var(--ink); }

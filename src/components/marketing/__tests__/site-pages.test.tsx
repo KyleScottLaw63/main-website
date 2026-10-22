@@ -12,9 +12,10 @@ import TermsPage from '@/app/(site)/terms/page';
 import SpanishTermsPage from '@/app/(site-es)/es/terminos/page';
 import SpanishTestimonialsPage from '@/app/(site-es)/es/testimonios/page';
 import { LegacyNewsArticlePage } from '@/components/marketing/LegacyNewsArticlePage';
+import { LegacyNewsYearIndex } from '@/components/marketing/LegacyNewsYearIndex';
 import { Dialog, DialogContent, DialogTitle } from '@/components/marketing/ui/dialog';
-import { legacyArchiveNoticeText, legacyPostBySlug, legacyPosts } from '@/lib/marketing/data/legacyPosts';
-import { spanishLegacyArchiveNoticeText, spanishLegacyPostByEnglishSlug, spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
+import { legacyArchiveNoticeText, legacyPostBySlug, legacyPostSummary, legacyPosts } from '@/lib/marketing/data/legacyPosts';
+import { spanishLegacyArchiveNoticeText, spanishLegacyPostByEnglishSlug, spanishLegacyPostSummary, spanishLegacyPosts } from '@/lib/marketing/data/spanishLegacyPosts';
 
 afterEach(cleanup);
 
@@ -110,6 +111,22 @@ describe('Spanish archived article page', () => {
   it('firm numbers in the Spanish text are tap-to-call too', () => {
     render(<LegacyNewsArticlePage article={spanishLegacyPostByEnglishSlug('california-personal-injury-verdict-largest-ever')!} locale="es" />);
     expect(screen.getByRole('link', { name: '714-544-1460' })).toHaveAttribute('href', 'tel:+17145441460');
+  });
+});
+
+describe('archive by year', () => {
+  // The archive grid shows 24 posts and loads the rest only on request; this index links every post
+  // in plain HTML, so search engines reach all of them (docs/public-site-rendering.md).
+  it('links every archived post exactly once, by year, in English and in Spanish', () => {
+    for (const [locale, posts, heading] of [['en', legacyPosts.map(legacyPostSummary), 'Archive by year'], ['es', spanishLegacyPosts.map(spanishLegacyPostSummary), 'Archivo por año']] as const) {
+      const { container } = render(<LegacyNewsYearIndex posts={posts} locale={locale} />);
+      expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(heading);
+      const links = [...container.querySelectorAll('details li a')].map((link) => link.getAttribute('href'));
+      expect(links.toSorted(), locale).toEqual(posts.map((post) => post.path).toSorted());
+      const years = [...container.querySelectorAll('.legacy-year')].map((node) => node.textContent);
+      expect(years, locale).toEqual([...new Set(posts.map((post) => post.dateTime.slice(0, 4)))].sort().reverse());
+      cleanup();
+    }
   });
 });
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Search } from 'lucide-react';
 import type { LegacyPostSummary, LegacyPostTopic } from '@/lib/marketing/data/legacyPosts';
@@ -79,10 +79,13 @@ export function LegacyNewsArchive({
   posts,
   totalCount,
   locale = 'en',
+  children,
 }: {
   posts: LegacyPostSummary[];
   totalCount: number;
   locale?: SiteLocale;
+  /** Rendered at the end of the section: the server-built index of every post (LegacyNewsYearIndex). */
+  children?: ReactNode;
 }) {
   const text = copy[locale];
   const topicLabels = text.topics;
@@ -235,6 +238,7 @@ export function LegacyNewsArchive({
       {matches.length === 0 ? (
         <p className="legacy-archive-empty">{text.noMatches}</p>
       ) : null}
+      {children}
     </section>
   );
 }
