@@ -267,7 +267,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
       'Falls and unsafe-property injuries at stores, restaurants, medical offices, and apartment communities',
       'Injuries at Mile Square Park, the Sports Park, schools, and other public property',
       'Dog bites and animal attacks in Fountain Valley neighborhoods and parks',
-      'Medical negligence claims, and traumatic brain and spinal injuries after any of the above',
+      'Traumatic brain and spinal injuries after any of the above',
     ],
     local: [
       { label: 'Where cases are filed', items: ['Orange County Superior Court, Central Justice Center — 700 Civic Center Drive West, Santa Ana (civil cases)', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana (cases designated complex)', 'West Justice Center — 8141 13th Street, Westminster, where Fountain Valley’s criminal and traffic cases are filed (a charge against the other driver, for example)'] },
@@ -284,7 +284,7 @@ export const northWestCountyServiceAreas: ServiceAreaData[] = [
       { question: 'Do I need to come to the Tustin office?', answer: 'No. Kyle Scott Law does not have an office in Fountain Valley; it represents Fountain Valley clients from 17671 Irvine Blvd. in Tustin. The first consultation is free and can be by phone or video, in English or Spanish, and in-person meetings are arranged whenever a case calls for it.' },
     ],
     guideSlugs: ['what-to-do-after-car-accident-orange-county', 'government-injury-claim-orange-county', 'what-to-do-after-dog-bite-orange-county', 'partly-at-fault-california-personal-injury'],
-    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county', '/orange-county-medical-malpractice-attorney'],
+    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county', '/orange-county-traumatic-brain-injury-attorney'],
     featuredResults: ['Driver hurt in a chain-reaction freeway crash caused by a distracted truck driver', 'Shopper twists her ankle on an object left on a store floor', 'Woman suffers wrist nerve damage from dog bite'],
     sources: [
       law.twoYears,

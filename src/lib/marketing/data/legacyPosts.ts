@@ -3,7 +3,6 @@ import legacyPostData from '@/lib/marketing/data/legacyPosts.json';
 export type LegacyPostTopic =
   | 'auto'
   | 'premises'
-  | 'medical'
   | 'brain'
   | 'dog'
   | 'sexual'

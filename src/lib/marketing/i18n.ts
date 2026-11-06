@@ -41,10 +41,6 @@ export const localizedRoutes = [
     es: '/es/abogado-de-resbalones-y-caidas-condado-de-orange',
   },
   {
-    en: '/orange-county-medical-malpractice-attorney',
-    es: '/es/abogado-de-negligencia-medica-condado-de-orange',
-  },
-  {
     en: '/orange-county-elder-abuse-attorney',
     es: '/es/abogado-de-abuso-de-personas-mayores-condado-de-orange',
   },

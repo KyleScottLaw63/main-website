@@ -50,6 +50,14 @@ const GONE = [
   /^\/2021\/08\/12\/kyle-scott-law-delivers-justice-475000-slip-fall-settlement\/?$/,
   /^\/news\/riverside-jury-verdict-2-3-million\/?$/, /^\/es\/noticias\/veredicto-jurado-riverside-2-3-millones\/?$/,
   /^\/news\/kyle-scott-law-delivers-justice-475000-slip-fall-settlement\/?$/,
+  // Medical malpractice, taken off the site by the firm (2026-11-05): its practice, city, and guide
+  // pages, the old Tustin page, and its archived articles at their old and new addresses, EN and ES.
+  /^\/(?:orange-county-medical-malpractice-attorney|irvine-medical-malpractice-lawyer|santa-ana-medical-malpractice-lawyer|tustin-medical-malpractice-lawyer|medical-malpractice-attorney-tustin-ca)\/?$/,
+  /^\/es\/abogado-de-negligencia-medica-(?:condado-de-orange|irvine|santa-ana|tustin)\/?$/,
+  /^\/guides\/(?:medical-malpractice-statute-of-limitations-california|california-medical-malpractice-damages-cap)\/?$/,
+  /^\/es\/guias\/(?:plazo-para-demandar-por-negligencia-medica-california|limite-de-danos-negligencia-medica-california)\/?$/,
+  /^\/(?:news|\d{4}\/\d{2}\/\d{2})\/(?:medical-malpractice-damages-looking-back-at-prop-46|orange-county-attorney-on-medical-malpractice|medical-malpractice-verdicts-and-awards|medical-malpractice-law-in-orange-county|prop-46-increase-malpractice-insurance-rates|increasing-pain-suffering-victims-medical-malpractice-increase-healthcare-costs|california-medical-malpractice-statute-limitation-year-plaintiff-discovers-injury|california-law-limits-pain-suffering-medical-malpractice-cases)\/?$/,
+  /^\/es\/noticias\/(?:danos-por-negligencia-medica-mirada-atras-a-la-prop-46|abogado-del-condado-de-orange-habla-sobre-negligencia-medica|veredictos-e-indemnizaciones-por-negligencia-medica|ley-de-negligencia-medica-en-el-condado-de-orange|prop-46-no-aumentara-las-tarifas-de-seguros-por-negligencia-medica|aumentar-dolor-y-sufrimiento-por-negligencia-medica-no-subira-costos-de-salud|plazo-de-prescripcion-negligencia-medica-california-tras-descubrir-la-lesion|ley-de-california-limita-dolor-y-sufrimiento-en-negligencia-medica)\/?$/,
 ];
 
 function parseCsv(text) {

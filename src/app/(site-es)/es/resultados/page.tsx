@@ -13,7 +13,7 @@ import { caseStoryPathForLocale, translateResultToSpanish } from '@/lib/marketin
 
 export const metadata: Metadata = {
   title: 'Veredictos y acuerdos | Kyle Scott Law',
-  description: 'Veredictos y acuerdos publicados por Kyle Scott Law en casos de abuso, escuelas, accidentes, mordeduras y negligencia profesional. Consulta gratuita.',
+  description: 'Veredictos y acuerdos publicados por Kyle Scott Law en casos de abuso, escuelas, accidentes, caídas y mordeduras de perro. Consulta gratuita.',
   alternates: localizedAlternates('/es/resultados'),
 };
 
@@ -28,7 +28,7 @@ export default function SpanishResultsPage() {
     <main className="results-page">
       <SiteHeader locale="es" />
       <section className="results-hero" aria-labelledby="results-title">
-        <div className="results-hero-copy"><p className="eyebrow">Resultados de casos</p><h1 id="results-title">Veredictos y acuerdos</h1><p>Recuperaciones publicadas seleccionadas en asuntos de responsabilidad escolar e institucional, abuso, accidentes, propiedades peligrosas, mordeduras, negligencia profesional y otras lesiones graves.</p><Link className="primary-button" href="/es/contacto#revision-del-caso">Comenzar una consulta gratuita <ArrowRight aria-hidden="true" /></Link></div>
+        <div className="results-hero-copy"><p className="eyebrow">Resultados de casos</p><h1 id="results-title">Veredictos y acuerdos</h1><p>Recuperaciones publicadas seleccionadas en asuntos de responsabilidad escolar e institucional, abuso, accidentes, propiedades peligrosas, mordeduras y otras lesiones graves.</p><Link className="primary-button" href="/es/contacto#revision-del-caso">Comenzar una consulta gratuita <ArrowRight aria-hidden="true" /></Link></div>
         <aside className="results-hero-note"><Scale aria-hidden="true" /><div><strong>Cada reclamo es único.</strong><p>Una recuperación depende de la evidencia, los daños, el seguro, las partes y la ley aplicable al asunto específico.</p></div></aside>
       </section>
       <section className="flagship-results" aria-labelledby="flagship-title"><div className="flagship-heading"><p className="eyebrow" id="flagship-title">Recuperaciones destacadas</p><p>Asuntos seleccionados de más de tres décadas de representación.</p></div><div className="flagship-grid">{translatedFlagship.map((result) => <article className={result.story ? 'has-story' : undefined} key={result.amount}><span>{resultOutcomeLabel(result)}</span><strong>{result.amount}</strong><h2>{result.story ? <Link className="flagship-story-link" href={caseStoryPathForLocale(result.story, 'es')}>{result.title}</Link> : result.title}</h2><p>{result.detail}</p>{result.story ? <p className="flagship-story-cue">Leer la historia del caso <ArrowRight aria-hidden="true" /></p> : null}</article>)}</div><p className="results-disclaimer">Los resultados anteriores no garantizan un resultado similar.</p></section>

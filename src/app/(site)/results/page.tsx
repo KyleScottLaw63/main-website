@@ -12,7 +12,7 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Verdicts & Settlements | Kyle Scott Law',
-  description: 'Orange County injury verdicts and settlements published by Kyle Scott Law, from abuse and school cases to crashes and malpractice. Free consultation.',
+  description: 'Orange County injury verdicts and settlements published by Kyle Scott Law, from abuse and school cases to crashes and dog bites. Free consultation.',
   alternates: localizedAlternates('/results'),
 };
 
@@ -29,7 +29,7 @@ export default function ResultsPage() {
         <div className="results-hero-copy">
           <p className="eyebrow">Case results</p>
           <h1 id="results-title">Verdicts &amp; Settlements</h1>
-          <p>Selected published recoveries involving school and institutional liability, abuse, vehicle crashes, premises liability, dog bites, malpractice, and other serious injury matters.</p>
+          <p>Selected published recoveries involving school and institutional liability, abuse, vehicle crashes, premises liability, dog bites, and other serious injury matters.</p>
           <Link className="primary-button" href="/contact#case-review">Start a free consultation <ArrowRight aria-hidden="true" /></Link>
         </div>
         <aside className="results-hero-note"><Scale aria-hidden="true" /><div><strong>Every claim is unique.</strong><p>A recovery depends on the evidence, damages, insurance, parties, and law that apply to that specific matter.</p></div></aside>

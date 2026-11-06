@@ -15,7 +15,6 @@ const leginfo = (code: string, section: string) => `https://leginfo.legislature.
 /** Official sources shared by several city and regional pages (also imported by serviceAreasRegional.ts). */
 export const officialSources = {
   civ1714: { label: 'California Civil Code § 1714 (responsibility for the condition of property)', url: leginfo('CIV', '1714') },
-  civ3333_2: { label: 'California Civil Code § 3333.2 (limits on damages in medical negligence cases)', url: leginfo('CIV', '3333.2') },
   civ3333_4: { label: 'California Civil Code § 3333.4 (Proposition 213)', url: leginfo('CIV', '3333.4') },
   civ3342: { label: 'California Civil Code § 3342 (dog bites)', url: leginfo('CIV', '3342') },
   ccp335_1: { label: 'California Code of Civil Procedure § 335.1', url: leginfo('CCP', '335.1') },
@@ -281,25 +280,24 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     title: 'Laguna Hills Personal Injury Attorney',
     eyebrow: 'Serving Laguna Hills from the Tustin office',
     description:
-      'Representation for people injured in Laguna Hills crashes on the 5 and on El Toro Road, La Paz Road, Alicia Parkway, and Moulton Parkway, falls at stores and medical office buildings, and medical negligence.',
+      'Representation for people injured in Laguna Hills crashes on the 5 and on El Toro Road, La Paz Road, Alicia Parkway, and Moulton Parkway, falls at stores and medical office buildings, and dog bites.',
     metaDescription:
-      'Laguna Hills personal injury attorney for crashes on El Toro Road and Moulton Parkway, falls and medical negligence. Free consultation.',
+      'Laguna Hills personal injury attorney for crashes on El Toro Road and Moulton Parkway, falls and dog bites. Free consultation.',
     introTitle: 'Laguna Hills injuries happen at busy freeway interchanges, on the parkways between them, and around the city’s medical center.',
     intro: [
-      'The 5 runs along Laguna Hills’ eastern edge, and El Toro Road, La Paz Road, Alicia Parkway, Moulton Parkway, and Paseo de Valencia carry traffic between the freeway, the city’s shopping centers, and neighboring Laguna Woods, Aliso Viejo, and Laguna Niguel. MemorialCare Saddleback Medical Center and its medical office buildings are in the city. The claims that follow are freeway and interchange crashes, intersection and pedestrian collisions, falls at stores, restaurants, and medical buildings, dog bites, and medical negligence.',
-      'Kyle Scott Law represents Laguna Hills clients from its office in Tustin, up the 5; the firm has no Laguna Hills office. Every claim starts with a free, confidential review of what happened, who is responsible (a driver, a business, a health care provider, the City of Laguna Hills, the County of Orange, or Saddleback Valley Unified), which insurance applies, and which deadlines are already running.',
+      'The 5 runs along Laguna Hills’ eastern edge, and El Toro Road, La Paz Road, Alicia Parkway, Moulton Parkway, and Paseo de Valencia carry traffic between the freeway, the city’s shopping centers, and neighboring Laguna Woods, Aliso Viejo, and Laguna Niguel. MemorialCare Saddleback Medical Center and its medical office buildings are in the city. The claims that follow are freeway and interchange crashes, intersection and pedestrian collisions, falls at stores, restaurants, and medical buildings, and dog bites.',
+      'Kyle Scott Law represents Laguna Hills clients from its office in Tustin, up the 5; the firm has no Laguna Hills office. Every claim starts with a free, confidential review of what happened, who is responsible (a driver, a business, the City of Laguna Hills, the County of Orange, or Saddleback Valley Unified), which insurance applies, and which deadlines are already running.',
     ],
     keyPoints: [
       { title: 'The 5 and its south county interchanges', body: 'The 5 between the 73 and El Toro Road was widened and rebuilt through Laguna Hills, Mission Viejo, Lake Forest, and Laguna Niguel, with an added lane in each direction and reconstructed ramps at La Paz Road. Crashes on the freeway are handled by the California Highway Patrol. Freeway claims usually turn on lane changes, merges, and following distance, so the report, dash-cam video, and vehicle data are preserved early.' },
       { title: 'El Toro, La Paz, Alicia, and Moulton', body: 'Collisions on city streets go to Laguna Hills Police Services, the Orange County Sheriff’s Department team the city contracts with. Left turns across the parkways, red-light collisions near the shopping centers on El Toro Road and Moulton Parkway, and pedestrians hit while crossing are the kinds of street crashes the firm reviews. When an insurer argues the injured person shares the blame, California’s comparative-fault rule (CACI No. 405) cuts the recovery by that share rather than eliminating it.' },
       { title: 'The courthouse that once operated here', body: 'The Orange County Superior Court once had a courthouse in Laguna Hills, at 23141 Moulton Parkway. The court closed it on July 1, 2013, citing state court funding cuts. Today, under the court’s designation list, a Laguna Hills injury lawsuit is heard at the Central Justice Center in Santa Ana, or at the Civil Complex Center if it is designated complex, and criminal and traffic cases from Laguna Hills are filed at the Harbor Justice Center in Newport Beach. Many injury claims resolve with the insurer before any lawsuit is filed.' },
-      { title: 'Hospitals, and when medical care causes the harm', body: 'MemorialCare Saddleback Medical Center is in Laguna Hills; Orange County EMS lists it for cardiovascular and stroke care and lists Providence Mission Hospital in Mission Viejo as a trauma center. When an injury comes from medical care itself, the claim follows its own rules: a separate deadline (generally three years from the injury or one year from discovering it, whichever comes first, Code of Civil Procedure § 340.5), 90 days’ notice before a lawsuit (§ 364), limits on some damages (Civil Code § 3333.2), and caps on attorney’s fees (Business and Professions Code § 6146).' },
+      { title: 'Hospitals and medical records', body: 'MemorialCare Saddleback Medical Center is in Laguna Hills; Orange County EMS lists it for cardiovascular and stroke care and lists Providence Mission Hospital in Mission Viejo as a trauma center. After a serious crash or fall, the firm requests the emergency, imaging, and follow-up records early and builds the claim from what the doctors documented, not from an insurer’s summary.' },
     ],
     matters: [
       'Car, truck, motorcycle, and rideshare collisions on the 5 and on El Toro Road, La Paz Road, Alicia Parkway, Moulton Parkway, and Paseo de Valencia',
       'Pedestrian injuries and bicycle crashes at intersections, crosswalks, and driveways',
       'Falls and other unsafe-property injuries at stores, restaurants, medical office buildings, and apartment communities',
-      'Medical negligence, including missed diagnoses and surgical and medication errors',
       'Dog bites; bite investigations in Laguna Hills are handled by Mission Viejo Animal Services under a city agreement',
       'Injuries in city parks, at the Community Center & Sports Complex on Alicia Parkway, and at schools, which follow the government claim rules',
     ],
@@ -314,18 +312,13 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
       { question: 'Who handles a crash on the 5 or on El Toro Road in Laguna Hills?', answer: 'On the freeway, the California Highway Patrol. On El Toro Road and other city streets, Laguna Hills Police Services, the Orange County Sheriff’s Department team the city contracts with, and Sheriff’s reports come from its Records unit. The report number you were given at the scene tells you which agency to ask.' },
       { question: 'How do I file a claim against the City of Laguna Hills?', answer: 'The city accepts claims electronically through a form on its website, or on a paper form delivered or mailed to the city; claims then go to the city’s claims administrator. A claim for personal injury generally must be presented within six months (Government Code section 911.2), and it has to describe the date, place, and injury accurately, so it is worth getting help before filing.' },
       { question: 'A dog bit me in Laguna Hills. Who takes the report, and is the owner responsible?', answer: 'Mission Viejo Animal Services handles bite investigations for Laguna Hills under an agreement with the city. Under California Civil Code section 3342, a dog’s owner is generally liable for bite injuries suffered in a public place or while lawfully on private property, even if the dog never bit anyone before. Get medical care, report the bite, photograph the wounds, and get the owner’s name, address, and insurance information.' },
-      { question: 'Does a medical malpractice claim work differently?', answer: 'Yes. A claim against a doctor, hospital, or other health care provider generally must be filed within three years of the injury or one year after it is discovered, whichever comes first (Code of Civil Procedure section 340.5), and the provider must get 90 days’ notice before a lawsuit is filed (section 364). California also limits some damages and caps attorney’s fees in these cases (Business and Professions Code section 6146).' },
       { question: 'Do I have to travel to Tustin?', answer: 'No. Kyle Scott Law’s only office is in Tustin, at 17671 Irvine Blvd., and it represents Laguna Hills clients from there. The first consultation is free and can be by phone or video, in English or Spanish; in-person meetings are arranged whenever a case calls for it.' },
     ],
-    guideSlugs: ['what-to-do-after-car-accident-orange-county', 'who-pays-medical-bills-after-car-accident-california', 'prove-slip-and-fall-california', 'medical-malpractice-statute-of-limitations-california'],
-    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/orange-county-medical-malpractice-attorney', '/orange-county-pedestrian-accident-attorney'],
-    featuredResults: ['Mother and her children hurt in a Fontana intersection crash', 'Shopper twists her ankle on an object left on a store floor', 'Medical malpractice involving failure to diagnose'],
+    guideSlugs: ['what-to-do-after-car-accident-orange-county', 'who-pays-medical-bills-after-car-accident-california', 'prove-slip-and-fall-california', 'government-injury-claim-orange-county'],
+    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/orange-county-slip-and-fall-attorney', '/dog-bite-attorney-in-orange-county', '/orange-county-pedestrian-accident-attorney'],
+    featuredResults: ['Mother and her children hurt in a Fontana intersection crash', 'Shopper twists her ankle on an object left on a store floor', 'Pedestrian struck in a marked crosswalk'],
     sources: [
       src.civ3342,
-      src.ccp340_5,
-      { label: 'California Code of Civil Procedure § 364 (notice before a medical negligence suit)', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=364' },
-      { label: 'California Business and Professions Code § 6146 (attorney’s fees in medical negligence cases)', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=6146' },
-      src.civ3333_2,
       src.gov911_2,
       src.gov915,
       src.caci405,
@@ -428,25 +421,24 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
     title: 'Laguna Woods Personal Injury Attorney',
     eyebrow: 'Serving Laguna Woods from the Tustin office',
     description:
-      'Representation for Laguna Woods residents and their families after elder abuse and neglect, falls, pedestrian and car crashes, and medical errors.',
+      'Representation for Laguna Woods residents and their families after elder abuse and neglect, falls, and pedestrian and car crashes.',
     metaDescription:
-      'Laguna Woods personal injury attorney for elder abuse and neglect, falls, golf cart and pedestrian injuries, and medical errors. Free consultation.',
+      'Laguna Woods personal injury attorney for elder abuse and neglect, falls, and golf cart and pedestrian injuries. Free consultation.',
     introTitle: 'In Laguna Woods, injury claims often involve older adults, so the law and the evidence work a little differently.',
     intro: [
-      'Laguna Woods is home to five private communities, the largest of which is Laguna Woods Village, and the city says the median age of its residents is approximately 75. That shapes the claims: elder abuse and neglect at home and in care facilities, falls that cause head injuries, pedestrian and golf cart collisions on the city’s streets, and harm from medical care.',
+      'Laguna Woods is home to five private communities, the largest of which is Laguna Woods Village, and the city says the median age of its residents is approximately 75. That shapes the claims: elder abuse and neglect at home and in care facilities, falls that cause head injuries, and pedestrian and golf cart collisions on the city’s streets.',
       'Kyle Scott Law represents Laguna Woods clients from its office in Tustin; the firm has no Laguna Woods office. A son, daughter, or spouse is welcome to make the first call, and the free consultation can be by phone or video, in English or Spanish. The firm also represents people hurt in neighboring Laguna Hills and Aliso Viejo.',
     ],
     keyPoints: [
       { title: 'Elder abuse and neglect', body: 'California’s Elder Abuse and Dependent Adult Civil Protection Act (Welfare and Institutions Code § 15600 and following) protects people 65 and older. Neglect includes the failure of someone responsible for an elder’s care to help with hygiene, food, or medical care, or to protect against health and safety hazards (§ 15610.57). When physical abuse or neglect is proven and the caregiver acted with recklessness, oppression, fraud, or malice, § 15657 adds remedies beyond an ordinary injury claim, including reasonable attorney’s fees and costs.' },
       { title: 'Falls', body: 'More than one in four older people falls each year, and falls are the most common cause of traumatic brain injuries in older adults (CDC). A fall becomes a legal claim when someone responsible for the property, or for the person’s care, failed to use reasonable care: a slick floor at a business, a broken walkway, or a care facility that did not follow a resident’s fall-prevention plan. Inside a private community, the first question is who owns and maintains the exact spot.' },
       { title: 'El Toro Road, Moulton Parkway, and the golf cart crossings', body: 'The city’s main streets are El Toro Road, Moulton Parkway, and Santa Maria Avenue. Golf carts and low-speed vehicles may cross them at designated signalized intersections, several of them between Village gates. Crashes are handled by Laguna Woods Police Services, the Sheriff’s Department team the city contracts with. A pedestrian or golf cart claim may involve the driver’s policy and the injured person’s own uninsured- or underinsured-motorist coverage (Insurance Code § 11580.2).' },
-      { title: 'Medical errors and care facilities', body: 'When harm comes from professional medical care, such as a missed diagnosis or a medication error, the claim is generally governed by California’s medical malpractice rules (Welfare and Institutions Code § 15657.2), including a separate deadline (Code of Civil Procedure § 340.5). When it comes from a failure to provide basic care, such as turning a bedbound resident, food, water, or hygiene, it may be elder neglect. The difference changes the deadlines and damages, so it is sorted out early.' },
+      { title: 'Neglect in care facilities', body: 'When harm in a nursing home or assisted-living facility comes from a failure to provide basic care, such as turning a bedbound resident, food, water, or hygiene, it may be elder neglect. A claim based on a health care provider’s professional negligence is different: it follows separate rules (Welfare and Institutions Code § 15657.2). The difference changes the deadlines and damages, so it is sorted out early.' },
     ],
     matters: [
       'Elder abuse and neglect at home, in assisted living, and in nursing facilities, including pressure injuries, falls, and dehydration',
       'Falls at stores, medical offices, and community facilities',
       'Pedestrian and golf cart injuries on El Toro Road, Moulton Parkway, and Santa Maria Avenue, and car crashes',
-      'Medical malpractice, including missed diagnoses and medication errors',
       'Wrongful death claims brought by family members',
     ],
     local: [
@@ -462,8 +454,8 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
       { question: 'My parent fell. Is someone responsible?', answer: 'Only if someone failed to use reasonable care, such as a business that left a hazard on the floor or a care facility that did not follow a fall-prevention plan. In a private community, the owner of the exact spot matters. Take photos, ask for any incident report, and get medical care, since a fall can cause a head injury that is not obvious at first.' },
       { question: 'Can I call for my parent, and do we need to come to Tustin?', answer: 'Yes, a family member can make the first call. Kyle Scott Law’s only office is in Tustin, but the free consultation can be by phone or video, in English or Spanish, and in-person meetings are arranged whenever a case calls for it. Deadlines can be short, including six months for a claim against a public entity, so it helps to call early.' },
     ],
-    guideSlugs: ['nursing-home-bedsores-neglect-california', 'pedestrian-accident-claims-california', 'prove-slip-and-fall-california', 'medical-malpractice-statute-of-limitations-california'],
-    relatedPracticePaths: ['/orange-county-elder-abuse-attorney', '/orange-county-slip-and-fall-attorney', '/orange-county-pedestrian-accident-attorney', '/orange-county-medical-malpractice-attorney'],
+    guideSlugs: ['nursing-home-bedsores-neglect-california', 'pedestrian-accident-claims-california', 'prove-slip-and-fall-california', 'who-can-file-wrongful-death-california'],
+    relatedPracticePaths: ['/orange-county-elder-abuse-attorney', '/orange-county-slip-and-fall-attorney', '/orange-county-pedestrian-accident-attorney', '/orange-county-wrongful-death-attorney'],
     featuredResults: ['Nursing-home neglect settlement', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Pedestrian struck in a marked crosswalk'],
     sources: [
       { label: 'California Welfare and Institutions Code § 15600 (Elder Abuse and Dependent Adult Civil Protection Act)', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=15600' },
@@ -472,7 +464,6 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
       { label: 'California Welfare and Institutions Code § 15610.57 (definition of neglect)', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=15610.57' },
       { label: 'California Welfare and Institutions Code § 15657 (remedies)', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=15657' },
       { label: 'California Welfare and Institutions Code § 15657.2 (professional negligence)', url: 'https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=15657.2' },
-      src.ccp340_5,
       src.ins11580,
       src.gov911_2,
       src.gov915,
@@ -518,7 +509,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
       'Falls and unsafe-property injuries at stores, restaurants, business parks, apartment communities, and homeowners-association property',
       'Skatepark, sports-field, and trail injuries on city and County property, and injuries at schools',
       'Dog bites and animal attacks in Lake Forest neighborhoods and parks',
-      'Traumatic brain and spinal injuries after any of the above, and medical negligence claims',
+      'Traumatic brain and spinal injuries after any of the above',
     ],
     local: [
       { label: 'Where cases are filed', items: ['Orange County Superior Court, Central Justice Center — 700 Civic Center Drive West, Santa Ana, for civil cases from across the county', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana, for cases designated complex', 'Harbor Justice Center — 4601 Jamboree Road, Newport Beach, where criminal and traffic cases from Lake Forest are filed (a charge against the other driver, for example)'] },
@@ -594,7 +585,7 @@ export const southCountyServiceAreas: ServiceAreaData[] = [
       'Falls and unsafe-property injuries at stores, restaurants, offices, apartment communities, and homeowners-association property',
       'Injuries on city property, at schools and Saddleback College, and at private recreation facilities',
       'Dog bites and animal attacks in Mission Viejo neighborhoods and parks',
-      'Medical negligence claims, and traumatic brain and spinal injuries after any of the above',
+      'Traumatic brain and spinal injuries after any of the above',
     ],
     local: [
       { label: 'Where cases are filed', items: ['Orange County Superior Court, Central Justice Center — 700 Civic Center Drive West, Santa Ana, for civil cases from across the county', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana, for cases designated complex', 'Harbor Justice Center — 4601 Jamboree Road, Newport Beach, where criminal and traffic cases from Mission Viejo are filed (a charge against the other driver, for example)'] },

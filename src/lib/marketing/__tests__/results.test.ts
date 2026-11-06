@@ -49,7 +49,8 @@ describe('the year on a published result', () => {
     expect(translateResultToSpanish(historicalResults.find((result) => result.amount === '$1,450,000')!).title).toBe('Mujer atropellada en un cruce peatonal marcado');
     expect(historicalResults.map((result) => result.amount)).toContain('$697,500');
     expect(historicalResults.map((result) => result.amount)).not.toContain('$697,000');
-    expect(allResults).toHaveLength(145);
+    // 145, less the two medical malpractice results taken off the site (2026-11-05).
+    expect(allResults).toHaveLength(143);
   });
 
   it('publishes only results over $60,000 (the owner’s cutoff, 2026-10-01)', () => {

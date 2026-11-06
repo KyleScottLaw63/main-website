@@ -6,7 +6,6 @@ export const spanishCategoryLabels: Record<ResultCategory, string> = {
   'Auto & transportation': 'Autos y transporte',
   'Premises liability': 'Responsabilidad de propiedades',
   'Dog bites': 'Mordeduras de perro',
-  'Malpractice': 'Negligencia profesional',
   'Assault & civil rights': 'Agresión y derechos civiles',
   'Other injury claims': 'Otros reclamos por lesiones',
 };
@@ -43,7 +42,6 @@ const titles: Record<string, string> = {
   'Nursing-home neglect settlement': 'Acuerdo por negligencia en un hogar de ancianos',
   'Wrongful death settlement': 'Acuerdo por muerte injusta',
   'Sexual abuse settlement': 'Acuerdo por abuso sexual',
-  'Medical malpractice settlement': 'Acuerdo por negligencia médica',
   'Underinsured-motorist claim': 'Reclamo de conductor con seguro insuficiente',
   'Teenage boy molested by church employee': 'Adolescente abusado sexualmente por un empleado de una iglesia',
   'Transit bus crashes into minivan; man suffers cognitive problems': 'Autobús de transporte público choca contra una minivan; un hombre sufre problemas cognitivos',
@@ -103,7 +101,6 @@ const titles: Record<string, string> = {
   'Back injury after slip and fall': 'Lesión de espalda después de un resbalón y caída',
   'Pedestrian struck by pickup suffers back injury': 'Peatón atropellado por una camioneta sufre lesión de espalda',
   'Woman molested by hospital employee': 'Mujer abusada sexualmente por un empleado de hospital',
-  'Medical malpractice involving failure to diagnose': 'Negligencia médica por falta de diagnóstico',
   'Neck injury after auto crash in San Bernardino': 'Lesión de cuello después de un choque en San Bernardino',
   'Woman suffers wrist fracture on theme park escalator': 'Mujer sufre fractura de muñeca en una escalera eléctrica de un parque temático',
 };

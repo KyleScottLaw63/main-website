@@ -12,7 +12,7 @@ The previous kjslaw.com (WordPress) published 450 URLs that Google, directories,
 | The dated blog permalinks (`/2019/03/12/slug/`): 201, less the two withdrawn below | 301 in `next.config.ts`, generated from the migration data | `src/lib/marketing/data/legacyPosts.json` → `redirects[]` (`legacyPath` → `/news/<slug>`). The `[year]/[month]/[day]/[slug]` route remains as a fallback |
 | Gone for good (WordPress internals, filler pages, withdrawn posts) | 410 from the proxy, directly, with or without the trailing slash | `GONE` list in `src/lib/site-proxy.ts` |
 
-URLs that kept their exact path need nothing: the homepage, `/practice-areas`, `/meet-the-team`, `/testimonials`, `/contact`, the seven practice-area pages, and the three city pages (`/anaheim-personal-injury-attorney`, `/irvine-personal-injury-attorneys`, `/santa-ana-personal-injury-attorney`, rebuilt at their old URLs as service-area pages in `src/lib/marketing/data/serviceAreas.ts`). The old city guides `/about-orange-california` and `/about-costa-mesa-california` redirect to the Orange and Costa Mesa city pages added in content round 1 (2026-10-06). Before that they went to `/personal-injury-lawyer-orange-county`.
+URLs that kept their exact path need nothing: the homepage, `/practice-areas`, `/meet-the-team`, `/testimonials`, `/contact`, the six practice-area pages left of the seven, and the three city pages (`/anaheim-personal-injury-attorney`, `/irvine-personal-injury-attorneys`, `/santa-ana-personal-injury-attorney`, rebuilt at their old URLs as service-area pages in `src/lib/marketing/data/serviceAreas.ts`). The old city guides `/about-orange-california` and `/about-costa-mesa-california` redirect to the Orange and Costa Mesa city pages added in content round 1 (2026-10-06). Before that they went to `/personal-injury-lawyer-orange-county`.
 
 The motorcycle page the old site's doorway pointed at exists since content round 3 (2026-10-09): `/orange-county-motorcycle-accident-attorney` is a practice page, so its redirect to the vehicle-collision page is gone, and `/motorcycle-accident-attorney-tustin-ca` leads to it, as `redirect-map.csv` planned.
 
@@ -47,12 +47,21 @@ Two posts withdrawn on 2026-10-01, on the firm's instruction: the $2.3M Riversid
 
 Six more old URLs that Search Console still reported in October 2026 answered 404, because the 2026-08-31 crawl never saw them: five undated WordPress posts that sat at the site root (`/recover-damages-from-car-crash-caused-by-drunk-driver`, `/auto-accident-attorney-on-california-fatal-crashes`, `/tales-of-an-orange-county-car-accident-lawyer`, `/why-are-there-so-many-dog-bite-cases`, `/in-person-court-appearances-now-the-norm`), and a second 2017 permalink for the State Farm post (`/2017/05/13/state-farm-insurance-company-s-law-firm-michael-maguire`). Each now has a rule in `redirect-rules.json` to its `/news` page, in one hop.
 
+**Medical malpractice taken off the site (2026-11-05), on the firm's instruction.** Every address it had answers 410 from the `GONE` list, directly, slash or not, so search engines drop them rather than follow a redirect to a page that does not offer the practice:
+- the practice page `/orange-county-medical-malpractice-attorney` (one of the old site's own URLs, kept until then) and its Spanish page `/es/abogado-de-negligencia-medica-condado-de-orange`;
+- the Irvine, Santa Ana, and Tustin city + case pages (`/irvine-medical-malpractice-lawyer`, `/santa-ana-medical-malpractice-lawyer`, `/tustin-medical-malpractice-lawyer`) and their Spanish pages (`/es/abogado-de-negligencia-medica-irvine`, `-santa-ana`, `-tustin`);
+- the old Tustin page `/medical-malpractice-attorney-tustin-ca`, whose rule to the Tustin page left `redirect-rules.json`;
+- the two guides (`/guides/medical-malpractice-statute-of-limitations-california`, `/guides/california-medical-malpractice-damages-cap`) and their Spanish guides;
+- the eight archived medical malpractice posts, at their `/news` and `/es/noticias` pages and their WordPress permalinks (from 2012/07/24 to 2021/05/26), whose entries left `legacyPosts.json` → `redirects[]`.
+
+`redirect-map.csv` keeps its audit rows; the `GONE` check takes precedence over them. The WordPress tag pages (`/tag/medical-malpractice/` and the like) still go to `/news` with the other tags. Tests: `site-proxy.test.ts` (every address answers 410), `site-withdrawn-practice.test.ts` (nothing on the site links to them).
+
 **Content round 4 (2026-10-19).**
 - The old WordPress city guides (`/about-<city>-california`) now lead to their city pages, for every city that has one.
   - 24 new rules were added.
   - Fountain Valley and Laguna Beach used to go to the county page.
   - Tustin and Anaheim had none and fell through to a 404.
-- The old Tustin practice pages lead to the Tustin city + case pages: `/car-accident-attorney-tustin-ca`, `/dog-bite-lawyer-tustin-ca`, `/motorcycle-accident-attorney-tustin-ca`, `/slip-and-fall-attorney-tustin-ca`, and `/medical-malpractice-attorney-tustin-ca`. `/sexual-molestation-attorney-tustin-ca` leads to the child sexual abuse page.
+- The old Tustin practice pages lead to the Tustin city + case pages: `/car-accident-attorney-tustin-ca`, `/dog-bite-lawyer-tustin-ca`, `/motorcycle-accident-attorney-tustin-ca`, `/slip-and-fall-attorney-tustin-ca`, and `/medical-malpractice-attorney-tustin-ca` (410 since 2026-11-05, below). `/sexual-molestation-attorney-tustin-ca` leads to the child sexual abuse page.
 - `/fiery-crash-that-took-5-lives-in-irvine` leads to its archived post.
 - Archived posts were not redirected to the new pages, because the firm keeps them at their own URLs. The withdrawn Riverside verdict posts stay 410.
 
