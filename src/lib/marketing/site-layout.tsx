@@ -48,8 +48,8 @@ export function siteMetadata(language: SiteLanguage): Metadata {
       ? 'Abogado de Lesiones Personales en el Condado de Orange | Kyle Scott Law'
       : 'Orange County Personal Injury Lawyer | Kyle Scott Law',
     description: spanish
-      ? 'El abogado de lesiones personales Kyle Scott, en Tustin, representa a clientes del Condado de Orange en accidentes de auto, caídas, mordeduras de perro, negligencia médica, lesiones cerebrales, abuso y muerte injusta.'
-      : 'Tustin personal injury lawyer Kyle Scott represents Orange County clients in auto accidents, falls, dog bites, malpractice, brain injury, abuse and wrongful death claims.',
+      ? 'El abogado de lesiones personales Kyle Scott, en Tustin, representa a clientes del Condado de Orange en accidentes de auto, caídas, mordeduras de perro, lesiones cerebrales, abuso y muerte injusta.'
+      : 'Tustin personal injury lawyer Kyle Scott represents Orange County clients in auto accidents, falls, dog bites, brain injury, abuse and wrongful death claims.',
     applicationName: 'Kyle Scott Law',
     referrer: 'origin-when-cross-origin',
     robots: { index: true, follow: true },
@@ -74,8 +74,8 @@ function legalServiceSchema(language: SiteLanguage) {
     alternateName: 'KJS Law',
     // The plain-language facts an answer engine quotes: what the firm is, who leads it, what it handles, where.
     description: spanish
-      ? 'Bufete de lesiones personales en Tustin, California, fundado por el abogado litigante Kyle J. Scott (Colegio de Abogados de California, 1991). Representa a personas lesionadas en accidentes de auto, motocicleta, camión, Uber y Lyft y atropellos, caídas, mordeduras de perro, negligencia médica, abuso de personas mayores, lesiones cerebrales, abuso sexual, negligencia escolar y muerte injusta, en el Condado de Orange y en toda California. Consulta gratuita en español o inglés.'
-      : 'Personal injury law firm in Tustin, California, founded by trial attorney Kyle J. Scott (State Bar of California, 1991). Represents people injured in car, motorcycle, truck, rideshare, and pedestrian accidents, falls, dog bites, medical malpractice, elder abuse, brain injury, sexual abuse, school negligence, and wrongful death, in Orange County and throughout California. Free consultation in English or Spanish.',
+      ? 'Bufete de lesiones personales en Tustin, California, fundado por el abogado litigante Kyle J. Scott (Colegio de Abogados de California, 1991). Representa a personas lesionadas en accidentes de auto, motocicleta, camión, Uber y Lyft y atropellos, caídas, mordeduras de perro, abuso de personas mayores, lesiones cerebrales, abuso sexual, negligencia escolar y muerte injusta, en el Condado de Orange y en toda California. Consulta gratuita en español o inglés.'
+      : 'Personal injury law firm in Tustin, California, founded by trial attorney Kyle J. Scott (State Bar of California, 1991). Represents people injured in car, motorcycle, truck, rideshare, and pedestrian accidents, falls, dog bites, elder abuse, brain injury, sexual abuse, school negligence, and wrongful death, in Orange County and throughout California. Free consultation in English or Spanish.',
     foundingDate: '2003',
     url: spanish ? `${SITE_URL}/es` : SITE_URL,
     logo: `${SITE_URL}/kjs-logo.jpeg`,

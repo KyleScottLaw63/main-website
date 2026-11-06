@@ -18,7 +18,6 @@ import type { SiteLocale } from '@/lib/marketing/i18n';
 const matters = [
   ['auto', 'Car or truck crash', 'Accidente de auto o camión'],
   ['premises', 'Slip, fall, or unsafe property', 'Resbalón, caída o propiedad peligrosa'],
-  ['med_mal', 'Medical malpractice', 'Negligencia médica'],
   ['wrongful_death', 'Wrongful death', 'Muerte injusta'],
   ['other_pi', 'Another injury matter', 'Otro asunto de lesiones'],
 ] as const;

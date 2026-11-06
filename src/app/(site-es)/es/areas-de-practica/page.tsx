@@ -10,7 +10,7 @@ import { localizedAlternates } from '@/lib/marketing/i18n';
 
 export const metadata: Metadata = {
   title: 'Áreas de práctica de lesiones personales | Kyle Scott Law',
-  description: 'Áreas de práctica de lesiones personales en el Condado de Orange: choques, caídas, mordeduras de perro, negligencia médica y más. Consulta gratuita.',
+  description: 'Áreas de práctica de lesiones personales en el Condado de Orange: choques, caídas, mordeduras de perro, lesiones cerebrales y más. Consulta gratuita.',
   alternates: localizedAlternates('/es/areas-de-practica'),
 };
 

@@ -355,7 +355,8 @@ describe('archived posts state the law in their own text (docs/website-content-c
     expect(figures, 'guide bullet with the current caps').not.toBeNull();
     const [, injuryCap, deathCap] = figures!;
     const micraPosts = legacyPosts.filter((post) => /MICRA|3333\.2|Proposition 46|Prop 46|non-?economic damages/i.test(fullText(post)));
-    expect(micraPosts.length).toBeGreaterThan(5);
+    // The medical malpractice posts left the site on 2026-11-05; the Elder Abuse Act post still states the cap.
+    expect(micraPosts.map((post) => post.slug)).toContain('elder-abuse-act-information-protecting-those-at-risk');
     for (const post of micraPosts) {
       const text = fullText(post);
       const stated = [...text.matchAll(/(\$[\d,]+) in an injury case and (\$[\d,]+) in a wrongful death case/g)];

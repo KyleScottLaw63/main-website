@@ -6,13 +6,13 @@ import {
   Award,
   BadgeDollarSign,
   Brain,
-  BriefcaseMedical,
   CarFront,
   Dog,
   HeartHandshake,
   FileSearch,
   MapPin,
   MessageSquareText,
+  Motorbike,
   Phone,
   Scale,
   ShieldCheck,
@@ -30,7 +30,7 @@ const terms = noRecoveryTerms.en;
 
 // The home page's own description; the layout's stays the default for pages that set none (content round 4, 2026-10-19).
 export const metadata: Metadata = {
-  description: 'Orange County personal injury lawyer in Tustin. Kyle Scott Law has represented injured people since 1991, from crashes to malpractice. Free consultation.',
+  description: 'Orange County personal injury lawyer in Tustin. Kyle Scott Law has represented injured people since 1991, from crashes to dog bites. Free consultation.',
 };
 
 const recoveries = [
@@ -67,7 +67,7 @@ const practiceAreas = [
   { title: 'Personal Injury', copy: 'Serious injury and negligence claims', icon: ShieldCheck, href: '/personal-injury-lawyer-orange-county' },
   { title: 'Car Accidents', copy: 'Auto, truck, and rideshare crashes', icon: CarFront, href: '/orange-county-auto-accidents-lawyer' },
   { title: 'Slip & Fall', copy: 'Unsafe property and premises claims', icon: UserRoundCheck, href: '/orange-county-slip-and-fall-attorney' },
-  { title: 'Medical Malpractice', copy: 'Injury caused by negligent care', icon: BriefcaseMedical, href: '/orange-county-medical-malpractice-attorney' },
+  { title: 'Motorcycle Accidents', copy: 'Crashes on streets and freeways', icon: Motorbike, href: '/orange-county-motorcycle-accident-attorney' },
   { title: 'Dog Bites', copy: 'Attacks and preventable animal injuries', icon: Dog, href: '/dog-bite-attorney-in-orange-county' },
   { title: 'Traumatic Brain Injury', copy: 'Concussion and life-changing trauma', icon: Brain, href: '/orange-county-traumatic-brain-injury-attorney' },
   { title: 'Sexual Harassment', copy: 'Abuse, assault, and workplace claims', icon: HeartHandshake, href: '/sexual-harassment-lawyer-in-orange-county' },
@@ -112,7 +112,7 @@ export default function Home() {
             <h1 id="home-title">Orange County Personal Injury Lawyer</h1>
             <span className="headline-rule" aria-hidden="true" />
             <p className="hero-thesis">Kyle Scott Law handles every type of personal injury case for people across Orange County and Southern California.</p>
-            <p className="hero-description">From its Tustin office, attorney Kyle J. Scott, admitted in 1991, represents people hurt in car and truck crashes, falls, dog bites, medical malpractice, brain injuries, abuse, and wrongful death.</p>
+            <p className="hero-description">From its Tustin office, attorney Kyle J. Scott, admitted in 1991, represents people hurt in car and truck crashes, falls, dog bites, brain injuries, abuse, and wrongful death.</p>
             <div className="hero-actions">
               <a className="primary-button" href="#consultation">Start a free consultation <ArrowRight aria-hidden="true" size={17} /></a>
               <a className="text-link" href="#results">View case results <ArrowRight aria-hidden="true" size={17} /></a>
@@ -173,7 +173,7 @@ export default function Home() {
           <div className="firm-copy">
             <h2 id="firm-title" className="firm-heading">About Us</h2>
             <p className="firm-lead">I’m Kyle Scott. I was admitted to the State Bar of California in 1991 and founded this firm in 2003. I represent people who were seriously hurt, and the families who care for them, throughout Orange County and Southern California. An injury can upend everything at once: your health, your work, your family’s plans. My job is to take the legal fight off your shoulders so you can focus on getting better.</p>
-            <p className="firm-experience">I handle every type of personal injury case: <Link href="/orange-county-auto-accidents-lawyer">car, truck, motorcycle, rideshare, pedestrian, and bicycle crashes</Link>; <Link href="/orange-county-slip-and-fall-attorney">slip-and-fall and other unsafe-property injuries</Link>; <Link href="/dog-bite-attorney-in-orange-county">dog bites</Link>; product-liability matters; <Link href="/orange-county-school-liability-attorney">school, institutional, and government claims</Link>; <Link href="/orange-county-traumatic-brain-injury-attorney">brain, spinal cord, burn, and other catastrophic injuries</Link>; and <Link href="/orange-county-wrongful-death-attorney">wrongful death</Link>. I also represent people in <Link href="/orange-county-medical-malpractice-attorney">medical malpractice</Link>, legal malpractice, <Link href="/orange-county-elder-abuse-attorney">elder abuse and neglect</Link>, <Link href="/sexual-harassment-lawyer-in-orange-county">sexual abuse (including abuse by clergy), assault and battery, and workplace sexual harassment</Link>, <Link href="/orange-county-insurance-bad-faith-attorney">insurance bad faith</Link>, wrongful termination, and employment discrimination cases.</p>
+            <p className="firm-experience">I handle every type of personal injury case: <Link href="/orange-county-auto-accidents-lawyer">car, truck, motorcycle, rideshare, pedestrian, and bicycle crashes</Link>; <Link href="/orange-county-slip-and-fall-attorney">slip-and-fall and other unsafe-property injuries</Link>; <Link href="/dog-bite-attorney-in-orange-county">dog bites</Link>; product-liability matters; <Link href="/orange-county-school-liability-attorney">school, institutional, and government claims</Link>; <Link href="/orange-county-traumatic-brain-injury-attorney">brain, spinal cord, burn, and other catastrophic injuries</Link>; and <Link href="/orange-county-wrongful-death-attorney">wrongful death</Link>. I also represent people in legal malpractice, <Link href="/orange-county-elder-abuse-attorney">elder abuse and neglect</Link>, <Link href="/sexual-harassment-lawyer-in-orange-county">sexual abuse (including abuse by clergy), assault and battery, and workplace sexual harassment</Link>, <Link href="/orange-county-insurance-bad-faith-attorney">insurance bad faith</Link>, wrongful termination, and employment discrimination cases.</p>
             <p className="firm-experience">From our office in Tustin, my team and I dig into what happened, find everyone who may be responsible, document what the injury has cost you, and explain your options in plain language, so you can make each decision with the full picture.</p>
             <div className="firm-actions">
               <Link className="primary-button firm-team-button" href="/meet-the-team">Meet the full team <ArrowRight aria-hidden="true" /></Link>

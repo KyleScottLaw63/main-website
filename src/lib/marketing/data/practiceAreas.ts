@@ -4,7 +4,6 @@ export type PracticeAreaIcon =
   | 'shield'
   | 'car'
   | 'fall'
-  | 'medical'
   | 'dog'
   | 'brain'
   | 'support'
@@ -80,8 +79,8 @@ export const practiceAreas: PracticeAreaData[] = [
     shortTitle: 'Personal Injury',
     title: 'Orange County Personal Injury Attorney',
     eyebrow: 'Personal injury · Orange County and Southern California',
-    description: 'Kyle Scott Law handles every type of personal injury case for people hurt in Orange County, from car and truck crashes and falls to dog bites, medical malpractice, abuse, and wrongful death.',
-    metaDescription: 'Orange County personal injury attorney Kyle J. Scott: crashes, falls, dog bites and malpractice, with no fee unless there is a recovery. Free consultation.',
+    description: 'Kyle Scott Law handles every type of personal injury case for people hurt in Orange County, from car and truck crashes and falls to dog bites, abuse, and wrongful death.',
+    metaDescription: 'Orange County personal injury attorney Kyle J. Scott: crashes, falls, dog bites and abuse, with no fee unless there is a recovery. Free consultation.',
     icon: 'shield',
     introTitle: 'A Tustin injury firm, founded in 2003.',
     intro: [
@@ -100,7 +99,7 @@ export const practiceAreas: PracticeAreaData[] = [
       'Slip and fall, unsafe property, dog bites, and sports and recreation injuries',
       'School liability and claims against cities, the County, transit agencies, and the State',
       'Brain, spinal cord, burn, and other catastrophic injuries, and wrongful death',
-      'Medical malpractice, elder abuse and neglect, sexual harassment and abuse, child sexual abuse, and insurance bad faith',
+      'Elder abuse and neglect, sexual harassment and abuse, child sexual abuse, and insurance bad faith',
     ],
     evidence: [
       'Incident and collision reports, photographs, and witness information',
@@ -111,9 +110,9 @@ export const practiceAreas: PracticeAreaData[] = [
       'The date of the injury and of any claim already made, which control the deadlines',
     ],
     faqs: [
-      { question: 'What types of personal injury cases does Kyle Scott Law handle?', answer: 'Every type of personal injury case: vehicle crashes of all kinds, falls and unsafe property, dog bites, school and government claims, brain, spinal cord, and other catastrophic injuries, wrongful death, medical malpractice, elder abuse, sexual abuse, and insurance bad faith. If your injury doesn’t fit a category, call anyway. The consultation is free.' },
+      { question: 'What types of personal injury cases does Kyle Scott Law handle?', answer: 'Every type of personal injury case: vehicle crashes of all kinds, falls and unsafe property, dog bites, school and government claims, brain, spinal cord, and other catastrophic injuries, wrongful death, elder abuse, sexual abuse, and insurance bad faith. If your injury doesn’t fit a category, call anyway. The consultation is free.' },
       { question: 'Does the firm handle cases outside Orange County?', answer: 'Yes. The office is in Tustin, and the firm also represents people injured elsewhere in Southern California. Its published results include cases in the San Bernardino, Riverside County, and Los Angeles superior courts, among them a Fontana crash settlement and a jury verdict against a school district. A lawsuit can generally be filed in the county where the injury happened or where a defendant lives (Code of Civil Procedure § 395(a)).' },
-      { question: 'Does the firm work on a “no win, no fee” basis?', answer: `The firm works on a contingency fee, and the consultation is free. ${noRecoveryTerms.en.statement}. The fee and costs are explained in a written agreement before you sign, as Business and Professions Code § 6147 requires. In medical malpractice cases, § 6146 also caps the fee at 25% of the amount recovered if the claim settles before a lawsuit or arbitration demand is filed, or 33% after.` },
+      { question: 'Does the firm work on a “no win, no fee” basis?', answer: `The firm works on a contingency fee, and the consultation is free. ${noRecoveryTerms.en.statement}. The fee and costs are explained in a written agreement before you sign, as Business and Professions Code § 6147 requires.` },
       { question: 'How long do I have to file a personal injury claim in California?', answer: 'Most injury lawsuits must be filed within two years under Code of Civil Procedure § 335.1. If a public entity may be responsible, a written claim is generally due within six months under Government Code § 911.2. Medical malpractice has its own limits under § 340.5, and children’s claims follow separate rules. Confirm your dates early.' },
       { question: 'My child was hurt. Do different rules apply?', answer: 'Often, yes. Code of Civil Procedure § 352 generally pauses the two-year deadline while the injured person is under 18. That pause does not apply to the six-month claim against a public entity, such as a school district, although the entity must generally grant a timely late-claim application for a child who was a minor for the whole six months (Government Code § 911.6). A child’s settlement generally needs court approval under Probate Code § 3500.' },
       { question: 'Can I still recover if I was partly at fault?', answer: 'Yes. California follows pure comparative fault: your damages are reduced by your percentage of fault, not eliminated (CACI No. 405). A separate rule, Civil Code § 3333.4 (Proposition 213), generally bars pain-and-suffering damages for an injured person who drove uninsured or was convicted of DUI for the crash.' },
@@ -140,7 +139,6 @@ export const practiceAreas: PracticeAreaData[] = [
       { label: 'California Civil Code § 3333.4 (Proposition 213)', url: leginfo('CIV', '3333.4') },
       { label: 'California Vehicle Code § 16056 (minimum auto liability coverage)', url: leginfo('VEH', '16056') },
       { label: 'California Insurance Code § 11580.2 (uninsured and underinsured motorist coverage)', url: leginfo('INS', '11580.2') },
-      { label: 'California Business and Professions Code § 6146 (malpractice fee limits)', url: leginfo('BPC', '6146') },
       { label: 'California Business and Professions Code § 6147 (written contingency fee agreements)', url: leginfo('BPC', '6147') },
       caci('405'),
     ],
@@ -270,70 +268,6 @@ export const practiceAreas: PracticeAreaData[] = [
       { label: 'California Code of Civil Procedure § 335.1 (two years for most injury lawsuits)', url: leginfo('CCP', '335.1') },
       { label: 'California Labor Code § 3852 (claims against third parties after a work injury)', url: leginfo('LAB', '3852') },
       { label: 'OC Public Works — sidewalk, curb, and gutter repairs in the county right-of-way', url: 'https://pwom.oc.gov/service-areas/oc-operations-maintenance/service-requests/sidewalk-curb-and-gutter' },
-    ],
-  },
-  {
-    key: 'medical-malpractice',
-    path: '/orange-county-medical-malpractice-attorney',
-    shortTitle: 'Medical Malpractice',
-    title: 'Orange County Medical Malpractice Lawyer',
-    eyebrow: 'Medical errors that cause serious harm',
-    description: 'Kyle Scott Law represents patients and families across Orange County who were harmed by medical malpractice, from a missed cancer diagnosis or an anesthesia error to surgical, medication, hospital, and birth injuries.',
-    metaDescription: 'Orange County medical malpractice lawyer reviewing missed diagnoses, surgical and anesthesia errors, and birth injuries. Free consultation.',
-    icon: 'medical',
-    introTitle: 'A poor medical outcome is not automatically malpractice.',
-    intro: [
-      'In California, a malpractice lawsuit generally must be filed within one year of discovering the injury and no more than three years after it (Code of Civil Procedure § 340.5), after 90 days’ written notice (§ 364), and pain-and-suffering damages are limited by statute (Civil Code § 3333.2). A claim needs more than an unexpected result. The evidence must show that a provider fell below the standard of care and that the lapse caused harm the patient would not otherwise have suffered, and both questions usually turn on review by qualified medical experts.',
-      'Kyle Scott Law handles every type of personal injury case for people across Orange County and Southern California, from its office in Tustin. Kyle Scott has practiced law since 1991 and has run his own firm since 2003. He reviews the chart and the timeline, identifies who employed each provider, and arranges review by qualified medical experts when the records support it. If you are comparing medical malpractice lawyers in Orange County, California, your first conversation is with Kyle Scott himself, in English or Spanish, and a family member can make the first call.',
-    ],
-    keyPoints: [
-      { title: 'Standard of care', body: 'What reasonably careful providers in the same field would have done, usually proven through expert testimony. The malpractice statutes define a health care provider by its California license, so dentists, oral surgeons, and pharmacists are covered too, and the same deadline, notice rule, damages limit, and fee cap generally apply to their errors (Code of Civil Procedure § 340.5; Civil Code § 3333.2).' },
-      { title: 'Causation', body: 'Separating harm caused by the error from the illness itself, or from a complication that happens even with good care. In a missed or delayed diagnosis, the question is what difference an earlier diagnosis would have made: whether treatment would have started sooner, with a better likely outcome.' },
-      { title: 'Damages and the limit', body: 'Added treatment, disability, lost earnings, and future care. California limits only the non-economic part: under Civil Code § 3333.2, damages for pain, suffering, and other non-economic losses are limited, through December 31, 2026, to $470,000 in an injury case and $650,000 in a wrongful death case, and in 2027 to $510,000 and $700,000, rising each January 1 after that. The amount in effect at the time of judgment, arbitration award, or settlement applies, and up to three separate limits can apply in one case, for providers, for institutions, and for certain unaffiliated providers and institutions.' },
-      { title: 'Public providers, arbitration, and the fee cap', body: 'UCI Health’s hospitals in Orange and Irvine are run by the Regents of the University of California, which Government Code § 811.2 lists as a public entity, and county clinics are public too: a written government claim is generally due within six months (§ 911.2), in addition to the usual malpractice rules. A medical services contract may require arbitration (Code of Civil Procedure § 1295); Kaiser Foundation Health Plan’s California members generally arbitrate through the Office of the Independent Administrator, which is not part of Kaiser. Business and Professions Code § 6146 caps the lawyer’s contingency fee at 25% of the amount recovered if the claim settles before a lawsuit or arbitration demand is filed, and 33% after.' },
-    ],
-    matters: [
-      'Misdiagnosis and delayed diagnosis of cancer, stroke, heart attack, or infection',
-      'Surgical errors, including the wrong body part or procedure, an object left inside, and missed bleeding or infection afterward',
-      'Anesthesia errors, from the wrong drug or dose to breathing-tube problems and poor monitoring during sedation',
-      'Medication errors at the prescription, the pharmacy, or the bedside',
-      'Hospital and nursing errors, such as a decline that isn’t escalated or an emergency-room discharge before a serious condition is ruled out',
-      'Birth injuries, including brachial plexus injuries, oxygen deprivation, and a delayed response to signs of fetal distress',
-      'Dental malpractice, such as nerve injury during an extraction or implant, an untreated infection, or a sedation error',
-    ],
-    evidence: [
-      'The complete chart, including nursing notes and medication records',
-      'Operative, anesthesia, and consent records',
-      'Imaging, pathology, and lab results, with the dates they were reported',
-      'Labor and delivery records, including fetal monitoring strips, in a birth injury case',
-      'Records from the next provider, showing how your condition changed; a provider must let you inspect your records within five working days of a request and send copies within 15 days (Health and Safety Code § 123110)',
-      'Any adverse-event disclosure: a hospital must report the most serious events, such as surgery on the wrong body part or an object left inside, to the Department of Public Health and tell the patient (Health and Safety Code § 1279.1)',
-      'Your own timeline, plan documents, and any arbitration agreement',
-    ],
-    faqs: [
-      { question: 'How do I know if I have a medical malpractice case in California?', answer: 'You generally need evidence that a provider fell below the standard of care and that the lapse caused harm you would not otherwise have suffered, such as added treatment, disability, or lost earnings. A bad outcome alone is not enough, because complications can happen even with good care. Review of the records by qualified medical experts usually answers the question.' },
-      { question: 'How long do I have to file a medical malpractice lawsuit in California?', answer: 'Under Code of Civil Procedure § 340.5, the deadline is three years from the injury or one year from when you discovered it or should have, whichever comes first. You must also give the provider 90 days’ written notice before suing (§ 364). If the provider is public, such as UCI Health, a government claim is generally due within six months. Children’s claims follow separate rules.' },
-      { question: 'What is the medical malpractice cap in California?', answer: 'The cap applies only to non-economic damages, such as pain and suffering. Under Civil Code § 3333.2, it is $470,000 in an injury case and $650,000 in a wrongful death case through December 31, 2026, and $510,000 and $700,000 in 2027, rising each January 1 after that. Up to three separate limits can apply in one case. Medical bills, lost earnings, and future care costs are not capped.' },
-      { question: 'How much does a medical malpractice lawyer cost in Orange County?', answer: 'The consultation is free, and the firm works on a contingency fee. California caps that fee in malpractice cases: under Business and Professions Code § 6146, it cannot exceed 25% of the amount recovered if the claim settles before a lawsuit or arbitration demand is filed, or 33% after, unless a court or arbitrator approves more after trial or arbitration. The written agreement must state these limits and that a lower rate can be negotiated (§ 6147).' },
-      { question: 'Can I sue for a misdiagnosis or a delayed cancer diagnosis?', answer: 'Sometimes. A missed or late diagnosis supports a claim when a reasonably careful provider would have caught it and the delay changed the outcome, for example because the illness progressed before treatment started. Expert review of the imaging, pathology, and test results usually decides both questions. The one-year deadline generally runs from when you discovered, or should have discovered, the injury.' },
-      { question: 'I was treated at UCI Health. Is my claim different?', answer: 'It can be. UCI Health’s hospitals are run by the Regents of the University of California, which Government Code § 811.2 lists as a public entity. A written government claim is generally due within six months of the injury under Government Code § 911.2, before any lawsuit, and the usual malpractice rules also apply. A missed claim deadline can end the case, so confirm it early.' },
-      { question: 'My health plan requires arbitration. Can I still bring a claim?', answer: 'Yes. An arbitration agreement changes where the claim is decided, not whether you can bring it. A neutral arbitrator decides the case instead of a jury, and California’s malpractice rules still apply, including the damages limit. Claims by Kaiser Foundation Health Plan members in California are generally arbitrated through the Office of the Independent Administrator, which is not part of Kaiser.' },
-      { question: 'Is a bed sore in a nursing home medical malpractice?', answer: 'It can be either, and the difference matters. When a nursing facility neglects an older or dependent adult’s basic care, such as turning and repositioning, the claim may fall under California’s Elder Abuse Act, which allows attorney’s fees and costs if recklessness or worse is proven (Welfare and Institutions Code § 15657). Claims based on a provider’s professional negligence stay under the malpractice rules.' },
-    ],
-    featuredResults: ['Medical malpractice involving failure to diagnose', 'Medical malpractice settlement'],
-    sourceUrl: 'https://kjslaw.com/orange-county-medical-malpractice-attorney/',
-    sources: [
-      { label: 'California Code of Civil Procedure § 340.5 (medical malpractice deadline; who is a health care provider)', url: leginfo('CCP', '340.5') },
-      { label: 'California Code of Civil Procedure § 364 (90 days’ notice before a malpractice suit)', url: leginfo('CCP', '364') },
-      { label: 'California Civil Code § 3333.2 (medical malpractice non-economic damages limits)', url: leginfo('CIV', '3333.2') },
-      { label: 'California Business and Professions Code § 6146 (malpractice fee limits)', url: leginfo('BPC', '6146') },
-      { label: 'California Business and Professions Code § 6147 (written contingency fee agreements)', url: leginfo('BPC', '6147') },
-      { label: 'California Government Code § 811.2 (the Regents of the University of California are a public entity)', url: leginfo('GOV', '811.2') },
-      { label: 'California Government Code § 911.2 (six months for a claim against a public entity)', url: leginfo('GOV', '911.2') },
-      { label: 'California Code of Civil Procedure § 1295 (arbitration clauses in medical services contracts)', url: leginfo('CCP', '1295') },
-      { label: 'California Health and Safety Code § 123110 (a patient’s access to medical records)', url: leginfo('HSC', '123110') },
-      { label: 'California Health and Safety Code § 1279.1 (hospital adverse-event reports and disclosure)', url: leginfo('HSC', '1279.1') },
-      { label: 'California Welfare and Institutions Code § 15657 (Elder Abuse Act remedies)', url: leginfo('WIC', '15657') },
     ],
   },
   {
@@ -499,7 +433,6 @@ export const practiceAreas: PracticeAreaData[] = [
       { question: 'Can I recover compensation for a mild TBI or concussion?', answer: 'Yes, if the evidence connects the injury to the event and shows how it affected you. “Mild” describes the initial injury, not necessarily its effects. Claims often rest on medical and therapy records, neuropsychological testing when ordered, and accounts from family and coworkers who saw the changes. Damages cover the harm the injury caused, including harm certain to result in the future (Civil Code §§ 3333, 3283), and shared fault reduces the recovery but does not bar it.' },
       { question: 'What is the difference between a head injury and a brain injury?', answer: 'A head injury can be a scalp wound or a skull fracture without lasting harm to the brain. A brain injury is harm to the brain itself, and it can happen without any visible head wound, for example when a crash jolts the head back and forth. The medical records, not the label, decide what a claim can include.' },
       { question: 'Can I still recover if I was partly at fault?', answer: 'Yes. California follows pure comparative fault: your damages are reduced by your share of fault, not eliminated (CACI No. 405). In sports cases, participants generally accept a sport’s inherent risks, but a coach, league, or facility that increases those risks can still be responsible.' },
-      { question: 'What if the brain injury was caused by a medical error?', answer: 'Then California’s medical malpractice rules generally apply instead of the ordinary injury rules. The deadline is the earlier of one year from discovery or three years from the injury (Code of Civil Procedure § 340.5), the provider must get 90 days’ written notice before a lawsuit (§ 364), and pain-and-suffering damages in an injury case are limited to $470,000 through December 31, 2026, and $510,000 in 2027, rising each January 1 after that (Civil Code § 3333.2). Medical bills, lost earnings, and future care are not capped.' },
     ],
     featuredResults: ['Student suffers skull fracture and brain bleed', 'Six-year-old struck in the head by a warm-up throw at a ballpark', 'Driver hurt in a chain-reaction freeway crash caused by a distracted truck driver'],
     sourceUrl: 'https://kjslaw.com/orange-county-traumatic-brain-injury-attorney/',
@@ -515,9 +448,6 @@ export const practiceAreas: PracticeAreaData[] = [
       { label: 'California Civil Code § 3333 (damages for all the detriment caused)', url: leginfo('CIV', '3333') },
       { label: 'California Civil Code § 3283 (future damages)', url: leginfo('CIV', '3283') },
       { label: 'California Probate Code § 3500 (court approval of a minor’s settlement)', url: leginfo('PROB', '3500') },
-      { label: 'California Code of Civil Procedure § 340.5 (medical malpractice deadline)', url: leginfo('CCP', '340.5') },
-      { label: 'California Code of Civil Procedure § 364 (90 days’ notice before a malpractice suit)', url: leginfo('CCP', '364') },
-      { label: 'California Civil Code § 3333.2 (medical malpractice non-economic damages limits)', url: leginfo('CIV', '3333.2') },
     ],
   },
   {

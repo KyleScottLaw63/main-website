@@ -78,7 +78,7 @@ export const regionalServiceAreas: ServiceAreaData[] = [
     title: 'Inland Empire Personal Injury Attorney',
     eyebrow: 'Serving Riverside and San Bernardino counties from the Tustin office',
     description:
-      'Representation for people injured in Riverside and San Bernardino counties, in crashes on the 91, the 15, the 10, and the 215, in falls, in dog attacks, and in medical malpractice cases. The firm’s only office is in Tustin, in Orange County.',
+      'Representation for people injured in Riverside and San Bernardino counties, in crashes on the 91, the 15, the 10, and the 215, in falls, and in dog attacks. The firm’s only office is in Tustin, in Orange County.',
     metaDescription:
       'Inland Empire personal injury attorney for crashes in Riverside and San Bernardino counties, by phone or video from Tustin. Free consultation.',
     placeType: 'Place',
@@ -93,14 +93,13 @@ export const regionalServiceAreas: ServiceAreaData[] = [
       { title: 'The 91 between Orange and Riverside counties', body: 'The 91 is a main link between Orange County and Riverside County. In western Riverside County, the California Highway Patrol’s Riverside Area patrols the 91, the 15, the 215, the 60, the 71, and the 74. A crash near the county line may fall in either county, which decides the court, the agencies, and any government claim.' },
       { title: 'The 15, the 10, and the High Desert', body: 'In San Bernardino County, the CHP’s Rancho Cucamonga Area covers freeways and unincorporated roads across Chino, Chino Hills, Fontana, Montclair, Ontario, Rancho Cucamonga, and Upland. North of the Cajon Pass, the Victorville Area serves High Desert communities including Apple Valley, Victorville, Hesperia, and Adelanto and patrols parts of the 15 and US 395. The Morongo Basin Area covers Highway 62 through Joshua Tree. City police handle crashes on their own city streets.' },
       { title: 'Dog bites in Riverside County and the High Desert', body: 'Who takes a bite report depends on the city. Riverside County Animal Services covers unincorporated areas and contract cities including Riverside, Hemet, Jurupa Valley, Eastvale, and Indio; cities such as Corona and Moreno Valley run their own, and Animal Friends of the Valley serves Temecula, Murrieta, Menifee, and Lake Elsinore. San Bernardino County Animal Care serves all unincorporated areas, including Joshua Tree, plus Big Bear Lake, Highland, and Yucaipa; Victorville runs its own Animal Services Division. Civil Code § 3342 makes the owner liable for bites in a public place or to someone lawfully on private property.' },
-      { title: 'Public entities and county-run hospitals', body: 'When a county, city, school district, or county-run hospital may be responsible, a written government claim is generally due within six months (Government Code § 911.2). For care at a public hospital, that is in addition to the separate medical malpractice time limits (Code of Civil Procedure § 340.5).' },
+      { title: 'Claims against public entities', body: 'When a county, city, or school district may be responsible, a written government claim is generally due within six months (Government Code § 911.2). It goes to the clerk or claims office of the entity that may be responsible, which depends on exactly where the injury happened.' },
     ],
     matters: [
       'Car, truck, and motorcycle collisions on the 91, the 15, the 10, the 215, and Inland Empire streets, including uninsured drivers',
       'Dog bites in Riverside County cities and in High Desert communities such as Victorville and Joshua Tree',
       'Pedestrian and bicycle injuries in crosswalks and along arterial roads',
       'Falls and other unsafe-property injuries',
-      'Medical malpractice, including missed diagnoses and treatment errors and care at county-run hospitals',
     ],
     local: [
       { label: 'Where cases are filed (Riverside County)', items: ['Riverside Superior Court — civil cases are heard at the Historic Courthouse, 4050 Main Street, Riverside, and at other courthouses in the county, and the court has adjusted where civil cases from some communities are filed, so the firm confirms the current location for each case'] },
@@ -113,18 +112,16 @@ export const regionalServiceAreas: ServiceAreaData[] = [
       { question: 'Where would an Inland Empire injury case be filed?', answer: 'Usually in the superior court of the county where the injury happened, or where a defendant lives (Code of Civil Procedure section 395). Riverside Superior Court hears civil cases at the Historic Courthouse in Riverside and other courthouses in the county. San Bernardino Superior Court hears civil cases at the San Bernardino Justice Center and the Rancho Cucamonga and Victorville courthouses, depending on the community.' },
       { question: 'A dog bit me in Victorville, Joshua Tree or elsewhere in the High Desert. Who takes the report?', answer: 'It depends on the community. Victorville runs its own Animal Services Division, and Joshua Tree and other unincorporated areas are served by San Bernardino County Animal Care. Contact the agency for the community where the bite happened. Get medical care, photograph the wounds, and get the owner’s name, address and insurance. Under Civil Code section 3342, the owner is generally liable even if the dog never bit anyone before.' },
       { question: 'I was hurt in a crash on the 91 near the county line. Which county handles it?', answer: 'The county where the crash happened, which can be Orange or Riverside on the 91. That decides which superior court is proper, which agencies hold the reports, and where any government claim goes. The California Highway Patrol’s Riverside Area patrols the 91 in western Riverside County. Keep the report number you were given at the scene.' },
-      { question: 'I was treated at a county hospital. Does that change my claim?', answer: 'It can. A county is a public entity, so a claim involving care at a county-run hospital generally requires a written government claim within six months (Government Code section 911.2), along with the medical malpractice time limits. Ask about deadlines early.' },
       { question: 'Do I have to come to Tustin?', answer: 'No. Kyle Scott Law has no office in Riverside or San Bernardino County; it represents Inland Empire clients from 17671 Irvine Blvd. in Tustin. The first consultation is free and can be by phone or video, in English or Spanish, and in-person meetings are arranged when a case calls for one.' },
     ],
-    guideSlugs: ['california-personal-injury-statute-of-limitations', 'medical-malpractice-statute-of-limitations-california', 'what-to-do-after-dog-bite-orange-county', 'government-injury-claim-orange-county'],
-    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/dog-bite-attorney-in-orange-county', '/orange-county-pedestrian-accident-attorney', '/orange-county-medical-malpractice-attorney'],
+    guideSlugs: ['california-personal-injury-statute-of-limitations', 'uninsured-driver-accident-california', 'what-to-do-after-dog-bite-orange-county', 'government-injury-claim-orange-county'],
+    relatedPracticePaths: ['/orange-county-auto-accidents-lawyer', '/dog-bite-attorney-in-orange-county', '/orange-county-pedestrian-accident-attorney', '/orange-county-slip-and-fall-attorney'],
     featuredResults: ['Mother and her children hurt in a Fontana intersection crash', 'Pedestrian struck in a marked crosswalk', 'Child suffers dog bites to abdomen'],
     sources: [
       src.ccp395,
       src.civ3342,
       src.gov911_2,
       src.gov811_2,
-      src.ccp340_5,
       { label: 'California Highway Patrol — Riverside Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/840-riverside/' },
       { label: 'California Highway Patrol — Rancho Cucamonga Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/855-rancho-cucamonga/' },
       { label: 'California Highway Patrol — San Bernardino Area', url: 'https://www.chp.ca.gov/find-an-office/inland-division/860-san-bernardino/' },
@@ -152,7 +149,7 @@ export const regionalServiceAreas: ServiceAreaData[] = [
     containedIn: 'California',
     introTitle: 'One office in Tustin, and results from four county courts.',
     intro: [
-      'Kyle Scott Law represents people injured in Orange, Los Angeles, Riverside, and San Bernardino counties, and it handles every type of personal injury case listed on this page, from car crashes and dog bites to medical malpractice and wrongful death. The firm’s only office is at 17671 Irvine Blvd., Suite 210, in Tustin. It has no office in Los Angeles, Riverside, or San Bernardino County, so if you were hurt somewhere else you can start with a free consultation by phone or video, in English or Spanish.',
+      'Kyle Scott Law represents people injured in Orange, Los Angeles, Riverside, and San Bernardino counties, and it handles every type of personal injury case listed on this page, from car crashes and dog bites to elder abuse and wrongful death. The firm’s only office is at 17671 Irvine Blvd., Suite 210, in Tustin. It has no office in Los Angeles, Riverside, or San Bernardino County, so if you were hurt somewhere else you can start with a free consultation by phone or video, in English or Spanish.',
       'The firm’s published verdicts and settlements include cases from the superior courts of Orange, Los Angeles, Riverside, and San Bernardino counties. Each county has its own courthouses, filing rules, police agencies, and animal control departments. This page explains what changes when your injury happened outside Orange County, and what stays the same.',
     ],
     keyPoints: [
@@ -165,7 +162,7 @@ export const regionalServiceAreas: ServiceAreaData[] = [
       'Vehicle crashes: car, truck, motorcycle, rideshare, pedestrian, bicycle, bus, hit-and-run, and drunk-driver crashes',
       'Unsafe property and places: falls, premises liability, dog bites, school liability, sports and recreation injuries, and claims against government entities',
       'Serious injuries: traumatic brain, spinal cord, catastrophic, and burn injuries, and wrongful death',
-      'Abuse, neglect, and professional negligence: medical malpractice, elder abuse and neglect, sexual harassment and abuse, child sexual abuse, and insurance bad faith',
+      'Abuse, neglect, and bad faith: elder abuse and neglect, sexual harassment and abuse, child sexual abuse, and insurance bad faith',
     ],
     local: [
       { label: 'Where cases are filed', items: ['Orange County — the Orange County Superior Court hears unlimited civil cases at the Central Justice Center, 700 Civic Center Drive West, Santa Ana', 'Los Angeles County — every new civil case in the Los Angeles Superior Court must include a Statement of Location (form LASC CIV 109) giving the reason for the courthouse chosen; for injury cases the reason listed is generally the place where the injury happened', 'Riverside County — Riverside Superior Court hears civil cases at the Historic Courthouse, 4050 Main Street, Riverside, and at other courthouses in the county, and the court has adjusted where civil cases from some communities are filed', 'San Bernardino County — San Bernardino Superior Court accepts limited and unlimited civil filings at the San Bernardino Justice Center, the Rancho Cucamonga Courthouse, and the Victorville Courthouse, each serving listed communities'] },

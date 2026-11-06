@@ -67,8 +67,41 @@ describe("gone WordPress paths", () => {
     }
   });
 
+  it("answer 410 for every medical malpractice page the firm took off the site (2026-11-05)", () => {
+    for (const path of [
+      "/orange-county-medical-malpractice-attorney/",
+      "/orange-county-medical-malpractice-attorney",
+      "/irvine-medical-malpractice-lawyer",
+      "/santa-ana-medical-malpractice-lawyer",
+      "/tustin-medical-malpractice-lawyer",
+      "/medical-malpractice-attorney-tustin-ca/",
+      "/es/abogado-de-negligencia-medica-condado-de-orange",
+      "/es/abogado-de-negligencia-medica-irvine",
+      "/es/abogado-de-negligencia-medica-santa-ana",
+      "/es/abogado-de-negligencia-medica-tustin",
+      "/guides/medical-malpractice-statute-of-limitations-california",
+      "/guides/california-medical-malpractice-damages-cap",
+      "/es/guias/plazo-para-demandar-por-negligencia-medica-california",
+      "/es/guias/limite-de-danos-negligencia-medica-california",
+      ...["medical-malpractice-damages-looking-back-at-prop-46","orange-county-attorney-on-medical-malpractice","medical-malpractice-verdicts-and-awards","medical-malpractice-law-in-orange-county","prop-46-increase-malpractice-insurance-rates","increasing-pain-suffering-victims-medical-malpractice-increase-healthcare-costs","california-medical-malpractice-statute-limitation-year-plaintiff-discovers-injury","california-law-limits-pain-suffering-medical-malpractice-cases"].map((slug) => `/news/${slug}`),
+      ...["danos-por-negligencia-medica-mirada-atras-a-la-prop-46","abogado-del-condado-de-orange-habla-sobre-negligencia-medica","veredictos-e-indemnizaciones-por-negligencia-medica","ley-de-negligencia-medica-en-el-condado-de-orange","prop-46-no-aumentara-las-tarifas-de-seguros-por-negligencia-medica","aumentar-dolor-y-sufrimiento-por-negligencia-medica-no-subira-costos-de-salud","plazo-de-prescripcion-negligencia-medica-california-tras-descubrir-la-lesion","ley-de-california-limita-dolor-y-sufrimiento-en-negligencia-medica"].map((slug) => `/es/noticias/${slug}`),
+      "/2021/05/26/medical-malpractice-damages-looking-back-at-prop-46/",
+      "/2020/12/10/orange-county-attorney-on-medical-malpractice/",
+      "/2020/12/02/medical-malpractice-verdicts-and-awards/",
+      "/2020/09/25/medical-malpractice-law-in-orange-county/",
+      "/2014/11/03/prop-46-increase-malpractice-insurance-rates/",
+      "/2014/11/03/increasing-pain-suffering-victims-medical-malpractice-increase-healthcare-costs/",
+      "/2013/10/16/california-medical-malpractice-statute-limitation-year-plaintiff-discovers-injury/",
+      "/2012/07/24/california-law-limits-pain-suffering-medical-malpractice-cases/",
+    ]) {
+      const { response } = visit(path);
+      expect(response.status, path).toBe(410);
+      expect(response.headers.get("location"), path).toBeNull();
+    }
+  });
+
   it("does not catch live pages that merely start the same way", () => {
-    for (const path of ["/sample-pages-fictional", "/wp-adminfictional", "/news/orange-county-history-fictional", "/news/riverside-jury-verdict-2-3-million-fictional"]) {
+    for (const path of ["/sample-pages-fictional", "/wp-adminfictional", "/news/orange-county-history-fictional", "/news/riverside-jury-verdict-2-3-million-fictional", "/orange-county-medical-malpractice-attorney-fictional", "/news/medical-malpractice-law-in-orange-county-fictional"]) {
       expect(visit(path).response.status, path).toBe(200);
     }
   });

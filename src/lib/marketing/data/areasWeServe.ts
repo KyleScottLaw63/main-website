@@ -33,7 +33,7 @@ export const practiceGroups: { name: string; keys: string[] }[] = [
   { name: 'Vehicle crashes', keys: ['car-accidents', 'truck-accidents', 'motorcycle-accidents', 'rideshare-accidents', 'pedestrian-accidents', 'bicycle-accidents', 'bus-accidents', 'hit-and-run-accidents', 'drunk-driver-accidents'] },
   { name: 'Unsafe property and places', keys: ['slip-and-fall', 'premises-liability', 'dog-bites', 'school-liability', 'sports-injuries', 'government-claims'] },
   { name: 'Serious injuries', keys: ['personal-injury', 'traumatic-brain-injury', 'spinal-cord-injuries', 'catastrophic-injuries', 'burn-injuries', 'wrongful-death'] },
-  { name: 'Abuse, neglect, and professional negligence', keys: ['medical-malpractice', 'elder-abuse', 'sexual-harassment-abuse', 'child-sexual-abuse', 'insurance-bad-faith'] },
+  { name: 'Abuse, neglect, and bad faith', keys: ['elder-abuse', 'sexual-harassment-abuse', 'child-sexual-abuse', 'insurance-bad-faith'] },
 ];
 
 export const areasWeServe = {
@@ -89,5 +89,5 @@ export const areaNamesEs: Record<string, string> = {
   'Vehicle crashes': 'Choques de vehículos',
   'Unsafe property and places': 'Propiedades y lugares inseguros',
   'Serious injuries': 'Lesiones graves',
-  'Abuse, neglect, and professional negligence': 'Abuso, negligencia y negligencia profesional',
+  'Abuse, neglect, and bad faith': 'Abuso, negligencia y mala fe',
 };

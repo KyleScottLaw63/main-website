@@ -13,7 +13,6 @@ const categories: Array<'All results' | ResultCategory> = [
   'Auto & transportation',
   'Premises liability',
   'Dog bites',
-  'Malpractice',
   'Assault & civil rights',
   'Other injury claims',
 ];

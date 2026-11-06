@@ -84,7 +84,7 @@ export const spanishRoundFourServiceAreas: SpanishServiceAreaData[] = [
       'Caídas y lesiones por propiedades inseguras en tiendas, restaurantes, consultorios médicos y comunidades de apartamentos',
       'Lesiones en Mile Square Park, en el Sports Park, en escuelas y en otras propiedades públicas',
       'Mordeduras de perro y ataques de animales en vecindarios y parques de Fountain Valley',
-      'Reclamos por negligencia médica, y lesiones cerebrales traumáticas y de columna después de cualquiera de los casos anteriores',
+      'Lesiones cerebrales traumáticas y de columna después de cualquiera de los casos anteriores',
     ],
     local: [
       { label: 'Dónde se presentan los casos', items: ['Tribunal Superior del Condado de Orange, Central Justice Center — 700 Civic Center Drive West, Santa Ana (casos civiles)', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana (casos designados como complejos)', 'West Justice Center — 8141 13th Street, Westminster, donde se presentan los casos penales y de tránsito de Fountain Valley (por ejemplo, un cargo contra el otro conductor)'] },
@@ -101,7 +101,7 @@ export const spanishRoundFourServiceAreas: SpanishServiceAreaData[] = [
       { question: '¿Tengo que ir a la oficina de Tustin?', answer: 'No. Kyle Scott Law no tiene una oficina en Fountain Valley; representa a sus clientes de Fountain Valley desde 17671 Irvine Blvd. en Tustin. La primera consulta es gratuita y puede ser por teléfono o por videollamada, en español o en inglés, y las reuniones en persona se organizan siempre que un caso las requiere.' },
     ],
     guideSlugs: ['que-hacer-despues-de-un-accidente-de-auto-condado-de-orange', 'reclamo-gubernamental-por-lesiones-condado-de-orange', 'que-hacer-despues-de-una-mordedura-de-perro-condado-de-orange', 'compensacion-si-tuvo-parte-de-la-culpa-california'],
-    relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-negligencia-medica-condado-de-orange'],
+    relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange'],
     featuredResults: ['Driver hurt in a chain-reaction freeway crash caused by a distracted truck driver', 'Shopper twists her ankle on an object left on a store floor', 'Woman suffers wrist nerve damage from dog bite'],
     sources: [
       ley('CCP', '335.1', 'dos años para demandar por lesiones personales'),

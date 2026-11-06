@@ -6,13 +6,13 @@ import {
   Award,
   BadgeDollarSign,
   Brain,
-  BriefcaseMedical,
   CarFront,
   Dog,
   FileSearch,
   HeartHandshake,
   MapPin,
   MessageSquareText,
+  Motorbike,
   Phone,
   Scale,
   ShieldCheck,
@@ -41,7 +41,7 @@ const practiceAreas = [
   { title: 'Lesiones personales', copy: 'Reclamos por lesiones graves y negligencia', icon: ShieldCheck, href: '/es/abogado-de-lesiones-personales-condado-de-orange' },
   { title: 'Accidentes de auto', copy: 'Choques de auto, camión y transporte compartido', icon: CarFront, href: '/es/abogado-de-accidentes-de-auto-condado-de-orange' },
   { title: 'Resbalones y caídas', copy: 'Propiedades inseguras y responsabilidad de predios', icon: UserRoundCheck, href: '/es/abogado-de-resbalones-y-caidas-condado-de-orange' },
-  { title: 'Negligencia médica', copy: 'Lesiones causadas por atención negligente', icon: BriefcaseMedical, href: '/es/abogado-de-negligencia-medica-condado-de-orange' },
+  { title: 'Accidentes de motocicleta', copy: 'Choques en calles y autopistas', icon: Motorbike, href: '/es/abogado-de-accidentes-de-motocicleta-condado-de-orange' },
   { title: 'Mordeduras de perro', copy: 'Ataques y lesiones prevenibles causadas por animales', icon: Dog, href: '/es/abogado-de-mordeduras-de-perro-condado-de-orange' },
   { title: 'Lesión cerebral traumática', copy: 'Conmociones y traumatismos que cambian la vida', icon: Brain, href: '/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange' },
   { title: 'Acoso y abuso sexual', copy: 'Abuso, agresión y reclamos laborales', icon: HeartHandshake, href: '/es/abogado-de-acoso-y-abuso-sexual-condado-de-orange' },
@@ -73,7 +73,7 @@ export default function SpanishHomePage() {
             <h1 id="home-title">Abogado de lesiones personales en el Condado de Orange</h1>
             <span className="headline-rule" aria-hidden="true" />
             <p className="hero-thesis">Kyle Scott Law maneja todo tipo de casos de lesiones personales de personas en todo el Condado de Orange y el sur de California.</p>
-            <p className="hero-description">Desde su oficina en Tustin, el abogado Kyle J. Scott, admitido en 1991, representa a personas lesionadas en choques de auto y de camión, caídas, mordeduras de perro, negligencia médica, lesiones cerebrales, abuso y muerte injusta.</p>
+            <p className="hero-description">Desde su oficina en Tustin, el abogado Kyle J. Scott, admitido en 1991, representa a personas lesionadas en choques de auto y de camión, caídas, mordeduras de perro, lesiones cerebrales, abuso y muerte injusta.</p>
             <div className="hero-actions">
               <a className="primary-button" href="#consulta">Comenzar una consulta gratuita <ArrowRight aria-hidden="true" size={17} /></a>
               <a className="text-link" href="#resultados">Ver resultados de casos <ArrowRight aria-hidden="true" size={17} /></a>
@@ -124,7 +124,7 @@ export default function SpanishHomePage() {
           <div className="firm-copy">
             <h2 id="firm-title" className="firm-heading">Sobre Nosotros</h2>
             <p className="firm-lead">Soy Kyle Scott. Fui admitido en el Colegio de Abogados de California (State Bar of California) en 1991 y fundé este despacho en 2003. Represento a personas que sufrieron lesiones graves, y a las familias que las cuidan, en todo el Condado de Orange y el sur de California. Una lesión puede trastocarlo todo a la vez: su salud, su trabajo, los planes de su familia. Mi trabajo es encargarme de la batalla legal para que usted pueda concentrarse en recuperarse.</p>
-            <p className="firm-experience">Atiendo todo tipo de casos de lesiones personales: <Link href="/es/abogado-de-accidentes-de-auto-condado-de-orange">choques de auto, camión, motocicleta, viaje compartido, peatones y bicicleta</Link>; <Link href="/es/abogado-de-resbalones-y-caidas-condado-de-orange">resbalones, caídas y otras lesiones por propiedades inseguras</Link>; <Link href="/es/abogado-de-mordeduras-de-perro-condado-de-orange">mordeduras de perro</Link>; asuntos de responsabilidad por productos; <Link href="/es/abogado-de-responsabilidad-escolar-condado-de-orange">reclamos contra escuelas, instituciones y el gobierno</Link>; <Link href="/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange">lesiones cerebrales, de la médula espinal, quemaduras y otras lesiones catastróficas</Link>; y <Link href="/es/abogado-de-muerte-injusta-condado-de-orange">muerte injusta</Link>. También represento a personas en casos de <Link href="/es/abogado-de-negligencia-medica-condado-de-orange">negligencia médica</Link>, negligencia legal (legal malpractice), <Link href="/es/abogado-de-abuso-de-personas-mayores-condado-de-orange">abuso y negligencia de personas mayores</Link>, <Link href="/es/abogado-de-acoso-y-abuso-sexual-condado-de-orange">abuso sexual (incluido el abuso por parte del clero), agresión (assault and battery) y acoso sexual en el trabajo</Link>, <Link href="/es/abogado-de-mala-fe-de-seguros-condado-de-orange">mala fe de seguros</Link>, despido injustificado y discriminación laboral.</p>
+            <p className="firm-experience">Atiendo todo tipo de casos de lesiones personales: <Link href="/es/abogado-de-accidentes-de-auto-condado-de-orange">choques de auto, camión, motocicleta, viaje compartido, peatones y bicicleta</Link>; <Link href="/es/abogado-de-resbalones-y-caidas-condado-de-orange">resbalones, caídas y otras lesiones por propiedades inseguras</Link>; <Link href="/es/abogado-de-mordeduras-de-perro-condado-de-orange">mordeduras de perro</Link>; asuntos de responsabilidad por productos; <Link href="/es/abogado-de-responsabilidad-escolar-condado-de-orange">reclamos contra escuelas, instituciones y el gobierno</Link>; <Link href="/es/abogado-de-lesion-cerebral-traumatica-condado-de-orange">lesiones cerebrales, de la médula espinal, quemaduras y otras lesiones catastróficas</Link>; y <Link href="/es/abogado-de-muerte-injusta-condado-de-orange">muerte injusta</Link>. También represento a personas en casos de negligencia legal (legal malpractice), <Link href="/es/abogado-de-abuso-de-personas-mayores-condado-de-orange">abuso y negligencia de personas mayores</Link>, <Link href="/es/abogado-de-acoso-y-abuso-sexual-condado-de-orange">abuso sexual (incluido el abuso por parte del clero), agresión (assault and battery) y acoso sexual en el trabajo</Link>, <Link href="/es/abogado-de-mala-fe-de-seguros-condado-de-orange">mala fe de seguros</Link>, despido injustificado y discriminación laboral.</p>
             <p className="firm-experience">Desde nuestra oficina en Tustin, mi equipo y yo investigamos lo que pasó, identificamos a todos los que podrían ser responsables, documentamos lo que la lesión le ha costado y le explicamos sus opciones con palabras claras, para que pueda tomar cada decisión con toda la información.</p>
             <div className="firm-actions"><Link className="primary-button firm-team-button" href="/es/equipo">Conozca al equipo <ArrowRight aria-hidden="true" /></Link></div>
           </div>

@@ -41,8 +41,9 @@ describe("legacy URL redirects: one hop", () => {
   });
 
   it("sends each dated blog permalink straight to its /news post, slash or not", () => {
-    // 201 permalinks, less the two Riverside verdict posts the firm withdrew (2026-10-01; they answer 410).
-    expect(legacyRedirects).toHaveLength(199);
+    // 201 permalinks, less the two Riverside verdict posts the firm withdrew (2026-10-01) and the eight
+    // medical malpractice posts it took off the site (2026-11-05); those answer 410.
+    expect(legacyRedirects).toHaveLength(191);
     for (const { legacyPath, canonicalPath } of legacyRedirects) {
       const bare = legacyPath.replace(/\/+$/, "");
       expect(firstRule(legacyPath)?.destination, legacyPath).toBe(canonicalPath);

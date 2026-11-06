@@ -3,7 +3,6 @@ export type ResultCategory =
   | 'Auto & transportation'
   | 'Premises liability'
   | 'Dog bites'
-  | 'Malpractice'
   | 'Assault & civil rights'
   | 'Other injury claims';
 
@@ -821,7 +820,7 @@ export const historicalResults: CaseResult[] = [
     amount: '$100,000',
     title: 'Attorney malpractice while handling personal-injury claim',
     detail: 'Confidential · San Bernardino Superior Court',
-    category: 'Malpractice',
+    category: 'Other injury claims',
     outcome: 'Recovery',
   },
   {
@@ -1010,14 +1009,6 @@ export const historicalResults: CaseResult[] = [
     year: 2005,
   },
   {
-    // The firm's settlement records, over $60,000 (added 2026-10-01).
-    amount: '$100,000',
-    title: 'Medical malpractice settlement',
-    detail: 'Details not published',
-    category: 'Malpractice',
-    outcome: 'Settlement',
-  },
-  {
     amount: '$97,383.89',
     title: 'Hip injury after car crash',
     detail: 'Riverside Superior Court',
@@ -1145,13 +1136,6 @@ export const historicalResults: CaseResult[] = [
     category: 'Dog bites',
     outcome: 'Settlement',
     year: 2020,
-  },
-  {
-    amount: '$75,000',
-    title: 'Medical malpractice involving failure to diagnose',
-    detail: 'San Bernardino Superior Court',
-    category: 'Malpractice',
-    outcome: 'Recovery',
   },
   {
     amount: '$75,000',

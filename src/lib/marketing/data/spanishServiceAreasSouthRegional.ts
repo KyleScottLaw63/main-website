@@ -11,7 +11,6 @@ import type { SpanishServiceAreaData } from '@/lib/marketing/data/spanishService
  */
 
 const CODE_NAMES = {
-  BPC: 'Código de Negocios y Profesiones',
   CCP: 'Código de Procedimiento Civil',
   CIV: 'Código Civil',
   EVID: 'Código de Evidencia',
@@ -38,7 +37,6 @@ const ley = (lawCode: keyof typeof CODE_NAMES, sectionNum: string, note?: string
  * point at the same official page.
  */
 const fuentes = {
-  civ3333_2: { label: ley('CIV', '3333.2', 'límites a los daños en casos de negligencia médica').label, url: officialSources.civ3333_2.url },
   civ3333_4: { label: ley('CIV', '3333.4', 'Proposición 213').label, url: officialSources.civ3333_4.url },
   civ3342: { label: ley('CIV', '3342', 'mordeduras de perro').label, url: officialSources.civ3342.url },
   ccp335_1: { label: ley('CCP', '335.1').label, url: officialSources.ccp335_1.url },
@@ -81,25 +79,24 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
     title: 'Abogado de lesiones personales en Laguna Hills',
     eyebrow: 'Atendemos Laguna Hills desde la oficina de Tustin',
     description:
-      'Representación para personas lesionadas en Laguna Hills — en choques en la 5 y en El Toro Road, La Paz Road, Alicia Parkway y Moulton Parkway, en caídas en tiendas y edificios de consultorios médicos, y por negligencia médica.',
+      'Representación para personas lesionadas en Laguna Hills — en choques en la 5 y en El Toro Road, La Paz Road, Alicia Parkway y Moulton Parkway, en caídas en tiendas y edificios de consultorios médicos, y por mordeduras de perro.',
     metaDescription:
-      'Abogado de lesiones personales en Laguna Hills: choques en El Toro Road y Moulton Parkway, caídas y negligencia médica. Consulta gratuita.',
+      'Abogado de lesiones personales en Laguna Hills: choques en El Toro Road y Moulton Parkway, caídas y mordeduras de perro. Consulta gratuita.',
     introTitle: 'Las lesiones en Laguna Hills ocurren en los concurridos enlaces con la autopista, en las avenidas que los unen y alrededor del centro médico de la ciudad.',
     intro: [
-      'La 5 recorre el borde este de Laguna Hills, y El Toro Road, La Paz Road, Alicia Parkway, Moulton Parkway y Paseo de Valencia llevan el tráfico entre la autopista, los centros comerciales de la ciudad y las vecinas Laguna Woods, Aliso Viejo y Laguna Niguel. MemorialCare Saddleback Medical Center y sus edificios de consultorios médicos están en la ciudad. Los reclamos que resultan son choques en la autopista y en los enlaces, choques en intersecciones y con peatones, caídas en tiendas, restaurantes y edificios médicos, mordeduras de perro y negligencia médica.',
-      'Kyle Scott Law representa a clientes de Laguna Hills desde su oficina en Tustin, hacia el norte por la 5; el despacho no tiene oficina en Laguna Hills. Cada reclamo empieza con una revisión gratuita y confidencial de lo que ocurrió, quién es responsable (un conductor, un negocio, un proveedor de atención médica, la Ciudad de Laguna Hills, el Condado de Orange o Saddleback Valley Unified), qué seguro aplica y qué plazos ya están corriendo.',
+      'La 5 recorre el borde este de Laguna Hills, y El Toro Road, La Paz Road, Alicia Parkway, Moulton Parkway y Paseo de Valencia llevan el tráfico entre la autopista, los centros comerciales de la ciudad y las vecinas Laguna Woods, Aliso Viejo y Laguna Niguel. MemorialCare Saddleback Medical Center y sus edificios de consultorios médicos están en la ciudad. Los reclamos que resultan son choques en la autopista y en los enlaces, choques en intersecciones y con peatones, caídas en tiendas, restaurantes y edificios médicos, y mordeduras de perro.',
+      'Kyle Scott Law representa a clientes de Laguna Hills desde su oficina en Tustin, hacia el norte por la 5; el despacho no tiene oficina en Laguna Hills. Cada reclamo empieza con una revisión gratuita y confidencial de lo que ocurrió, quién es responsable (un conductor, un negocio, la Ciudad de Laguna Hills, el Condado de Orange o Saddleback Valley Unified), qué seguro aplica y qué plazos ya están corriendo.',
     ],
     keyPoints: [
       { title: 'La 5 y sus enlaces del sur del condado', body: 'La 5 entre la 73 y El Toro Road fue ampliada y reconstruida a su paso por Laguna Hills, Mission Viejo, Lake Forest y Laguna Niguel, con un carril adicional en cada sentido y rampas reconstruidas en La Paz Road. La Patrulla de Caminos de California atiende los choques en la autopista. Los reclamos por choques en la autopista por lo general dependen de los cambios de carril, las incorporaciones y la distancia entre vehículos, por eso el informe, el video de las cámaras de tablero y los datos del vehículo se preservan cuanto antes.' },
       { title: 'El Toro, La Paz, Alicia y Moulton', body: 'Los choques en calles de la ciudad los atiende Laguna Hills Police Services, el equipo del Departamento del Sheriff del Condado de Orange con el que la ciudad tiene contrato. Los giros a la izquierda a través de las avenidas, los choques por pasarse un semáforo en rojo cerca de los centros comerciales de El Toro Road y Moulton Parkway, y los peatones atropellados al cruzar son los tipos de choques en calles que el despacho revisa. Cuando una aseguradora alega que la persona lesionada comparte la culpa, la regla de responsabilidad comparativa de California (CACI No. 405) reduce la recuperación en ese porcentaje en lugar de eliminarla.' },
       { title: 'El tribunal que antes funcionó aquí', body: 'El Tribunal Superior del Condado de Orange tuvo antes un tribunal en Laguna Hills, en 23141 Moulton Parkway. El tribunal lo cerró el 1 de julio de 2013, citando los recortes estatales al financiamiento de los tribunales. Hoy, conforme a la lista de designación del tribunal, una demanda por lesiones de Laguna Hills se atiende en el Central Justice Center en Santa Ana, o en el Civil Complex Center si se designa como compleja, y los casos penales y de tránsito de Laguna Hills se presentan en el Harbor Justice Center en Newport Beach. Muchos reclamos por lesiones se resuelven con la aseguradora antes de que se presente una demanda.' },
-      { title: 'Hospitales, y cuando la atención médica causa el daño', body: 'MemorialCare Saddleback Medical Center está en Laguna Hills; los Servicios Médicos de Emergencia del Condado de Orange (Orange County EMS) lo incluyen para atención cardiovascular y de accidentes cerebrovasculares, e incluyen a Providence Mission Hospital en Mission Viejo como centro de trauma. Cuando una lesión proviene de la atención médica misma, el reclamo sigue sus propias reglas: un plazo aparte (por lo general tres años desde la lesión o un año desde que se descubre, lo que ocurra primero, Código de Procedimiento Civil, § 340.5), aviso con 90 días de anticipación antes de una demanda (§ 364), límites a algunos daños (Código Civil, § 3333.2) y topes a los honorarios de los abogados (Código de Negocios y Profesiones, § 6146).' },
+      { title: 'Hospitales y expedientes médicos', body: 'MemorialCare Saddleback Medical Center está en Laguna Hills; los Servicios Médicos de Emergencia del Condado de Orange (Orange County EMS) lo incluyen para atención cardiovascular y de accidentes cerebrovasculares, e incluyen a Providence Mission Hospital en Mission Viejo como centro de trauma. Después de un choque o una caída graves, el despacho pide temprano los expedientes de emergencias, de estudios de imagen y de seguimiento, y arma el reclamo con lo que los médicos documentaron, no con el resumen de una aseguradora.' },
     ],
     matters: [
       'Choques de auto, camión, motocicleta y viajes compartidos en la 5 y en El Toro Road, La Paz Road, Alicia Parkway, Moulton Parkway y Paseo de Valencia',
       'Lesiones de peatones y choques de bicicleta en intersecciones, cruces peatonales y entradas de vehículos',
       'Caídas y otras lesiones por propiedades inseguras en tiendas, restaurantes, edificios de consultorios médicos y comunidades de apartamentos',
-      'Negligencia médica, incluidos diagnósticos omitidos y errores quirúrgicos y de medicamentos',
       'Mordeduras de perro; las investigaciones de mordeduras en Laguna Hills las atiende Mission Viejo Animal Services bajo un convenio con la ciudad',
       'Lesiones en parques de la ciudad, en el Community Center & Sports Complex en Alicia Parkway y en escuelas, que siguen las reglas de reclamos gubernamentales',
     ],
@@ -114,18 +111,13 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       { question: '¿Quién atiende un choque en la 5 o en El Toro Road en Laguna Hills?', answer: 'En la autopista, la Patrulla de Caminos de California. En El Toro Road y otras calles de la ciudad, Laguna Hills Police Services, el equipo del Departamento del Sheriff del Condado de Orange con el que la ciudad tiene contrato; los informes del Sheriff se obtienen en su unidad de Registros (Records). El número de informe que le dieron en el lugar indica a qué agencia pedírselo.' },
       { question: '¿Cómo presento un reclamo contra la Ciudad de Laguna Hills?', answer: 'La ciudad acepta reclamos por vía electrónica mediante un formulario en su sitio web, o en un formulario en papel entregado o enviado por correo a la ciudad; luego los reclamos pasan al administrador de reclamos de la ciudad. Un reclamo por lesiones personales por lo general debe presentarse dentro de seis meses (Código de Gobierno, sección 911.2), y tiene que describir con exactitud la fecha, el lugar y la lesión, por eso conviene recibir ayuda antes de presentarlo.' },
       { question: 'Un perro me mordió en Laguna Hills. ¿Quién toma el reporte y el dueño es responsable?', answer: 'Mission Viejo Animal Services atiende las investigaciones de mordeduras de Laguna Hills conforme a un convenio con la ciudad. Conforme a la sección 3342 del Código Civil de California, el dueño de un perro por lo general es responsable de las lesiones de una mordedura sufridas en un lugar público o mientras la persona estaba legalmente en una propiedad privada, aunque el perro nunca hubiera mordido a nadie antes. Reciba atención médica, reporte la mordedura, fotografíe las heridas y obtenga el nombre y la dirección del dueño y los datos de su seguro.' },
-      { question: '¿Un reclamo por negligencia médica funciona de manera distinta?', answer: 'Sí. Un reclamo contra un médico, un hospital u otro proveedor de atención médica por lo general debe presentarse dentro de tres años de la lesión o de un año después de que se descubre, lo que ocurra primero (Código de Procedimiento Civil, sección 340.5), y el proveedor debe recibir un aviso con 90 días de anticipación antes de que se presente una demanda (sección 364). California también limita algunos daños y pone topes a los honorarios de los abogados en estos casos (Código de Negocios y Profesiones, sección 6146).' },
       { question: '¿Tengo que viajar a Tustin?', answer: 'No. La única oficina de Kyle Scott Law está en Tustin, en 17671 Irvine Blvd., y el despacho representa a sus clientes de Laguna Hills desde allí. La primera consulta es gratuita y puede ser por teléfono o por videollamada, en inglés o en español; las reuniones en persona se organizan siempre que un caso las requiere.' },
     ],
-    guideSlugs: ['que-hacer-despues-de-un-accidente-de-auto-condado-de-orange', 'quien-paga-las-facturas-medicas-accidente-de-auto-california', 'como-probar-un-reclamo-por-resbalon-y-caida-california', 'plazo-para-demandar-por-negligencia-medica-california'],
-    relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-negligencia-medica-condado-de-orange', '/es/abogado-de-accidentes-de-peatones-condado-de-orange'],
-    featuredResults: ['Mother and her children hurt in a Fontana intersection crash', 'Shopper twists her ankle on an object left on a store floor', 'Medical malpractice involving failure to diagnose'],
+    guideSlugs: ['que-hacer-despues-de-un-accidente-de-auto-condado-de-orange', 'quien-paga-las-facturas-medicas-accidente-de-auto-california', 'como-probar-un-reclamo-por-resbalon-y-caida-california', 'reclamo-gubernamental-por-lesiones-condado-de-orange'],
+    relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-accidentes-de-peatones-condado-de-orange'],
+    featuredResults: ['Mother and her children hurt in a Fontana intersection crash', 'Shopper twists her ankle on an object left on a store floor', 'Pedestrian struck in a marked crosswalk'],
     sources: [
       fuentes.civ3342,
-      fuentes.ccp340_5,
-      ley('CCP', '364', 'aviso antes de una demanda por negligencia médica'),
-      ley('BPC', '6146', 'honorarios de abogado en casos de negligencia médica'),
-      fuentes.civ3333_2,
       fuentes.gov911_2,
       fuentes.gov915,
       fuentes.caci405,
@@ -230,25 +222,24 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
     title: 'Abogado de lesiones personales en Laguna Woods',
     eyebrow: 'Atendemos Laguna Woods desde la oficina de Tustin',
     description:
-      'Representación para residentes de Laguna Woods y sus familias después de abuso y negligencia contra personas mayores, caídas, choques de peatones y de auto, y errores médicos.',
+      'Representación para residentes de Laguna Woods y sus familias después de abuso y negligencia contra personas mayores, caídas y choques de peatones y de auto.',
     metaDescription:
-      'Abogado de lesiones personales en Laguna Woods: abuso y negligencia contra personas mayores, caídas, carritos de golf y errores médicos. Consulta gratuita.',
+      'Abogado de lesiones personales en Laguna Woods: abuso y negligencia contra personas mayores, caídas, carritos de golf y peatones. Consulta gratuita.',
     introTitle: 'En Laguna Woods, los reclamos por lesiones con frecuencia involucran a personas mayores, así que la ley y las pruebas funcionan de manera un poco distinta.',
     intro: [
-      'Laguna Woods alberga cinco comunidades privadas, la más grande de las cuales es Laguna Woods Village, y la ciudad dice que la edad mediana de sus residentes es de aproximadamente 75 años. Eso moldea los reclamos: abuso y negligencia contra personas mayores en el hogar y en centros de cuidado, caídas que causan lesiones en la cabeza, choques de peatones y de carritos de golf en las calles de la ciudad, y daños causados por la atención médica.',
+      'Laguna Woods alberga cinco comunidades privadas, la más grande de las cuales es Laguna Woods Village, y la ciudad dice que la edad mediana de sus residentes es de aproximadamente 75 años. Eso moldea los reclamos: abuso y negligencia contra personas mayores en el hogar y en centros de cuidado, caídas que causan lesiones en la cabeza, y choques de peatones y de carritos de golf en las calles de la ciudad.',
       'Kyle Scott Law representa a clientes de Laguna Woods desde su oficina en Tustin; el despacho no tiene oficina en Laguna Woods. Un hijo, una hija o un cónyuge puede hacer la primera llamada, y la consulta gratuita puede ser por teléfono o por videollamada, en inglés o en español. El despacho también representa a personas lesionadas en las vecinas Laguna Hills y Aliso Viejo.',
     ],
     keyPoints: [
       { title: 'Abuso y negligencia contra personas mayores', body: 'La Ley de Protección Civil de Personas Mayores y Adultos Dependientes de California (Elder Abuse and Dependent Adult Civil Protection Act, Código de Bienestar e Instituciones, § 15600 y siguientes) protege a las personas de 65 años o más. La negligencia incluye que quien es responsable del cuidado de una persona mayor no la ayude con la higiene, la comida o la atención médica, o no la proteja de peligros para su salud y su seguridad (§ 15610.57). Cuando se prueba el abuso físico o la negligencia y el cuidador actuó con imprudencia temeraria, opresión, fraude o malicia, el § 15657 añade remedios más allá de un reclamo ordinario por lesiones, incluidos los honorarios razonables de abogado y los costos.' },
       { title: 'Caídas', body: 'Más de una de cada cuatro personas mayores sufre una caída cada año, y las caídas son la causa más común de lesiones cerebrales traumáticas en adultos mayores (Centros para el Control y la Prevención de Enfermedades, CDC). Una caída se convierte en un reclamo legal cuando alguien responsable de la propiedad, o del cuidado de la persona, no usó un cuidado razonable: un piso resbaloso en un negocio, una acera rota o un centro de cuidado que no siguió el plan de prevención de caídas de un residente. Dentro de una comunidad privada, la primera pregunta es quién es dueño del lugar exacto y lo mantiene.' },
       { title: 'El Toro Road, Moulton Parkway y los cruces de carritos de golf', body: 'Las calles principales de la ciudad son El Toro Road, Moulton Parkway y Santa Maria Avenue. Los carritos de golf y los vehículos de baja velocidad pueden cruzarlas en intersecciones con semáforo designadas, varias de ellas entre las puertas de acceso de Village. Los choques los atiende Laguna Woods Police Services, el equipo del Departamento del Sheriff con el que la ciudad tiene contrato. Un reclamo de un peatón o de un carrito de golf puede involucrar la póliza del conductor y la propia cobertura para conductores sin seguro o con seguro insuficiente de la persona lesionada (Código de Seguros, § 11580.2).' },
-      { title: 'Errores médicos y centros de cuidado', body: 'Cuando el daño proviene de la atención médica profesional, como un diagnóstico omitido o un error con un medicamento, el reclamo por lo general se rige por las reglas de negligencia médica de California (Código de Bienestar e Instituciones, § 15657.2), incluido un plazo aparte (Código de Procedimiento Civil, § 340.5). Cuando proviene de no brindar el cuidado básico, como cambiar de posición a un residente postrado en cama, o darle comida, agua o higiene, puede ser negligencia contra una persona mayor. La diferencia cambia los plazos y los daños, por eso se aclara desde el principio.' },
+      { title: 'Negligencia en centros de cuidado', body: 'Cuando el daño en un asilo de ancianos o en un centro de vida asistida proviene de no brindar el cuidado básico, como cambiar de posición a un residente postrado en cama, o darle comida, agua o higiene, puede ser negligencia contra una persona mayor. Un reclamo basado en la negligencia profesional de un proveedor de atención médica es distinto: sigue reglas aparte (Código de Bienestar e Instituciones, § 15657.2). La diferencia cambia los plazos y los daños, por eso se aclara desde el principio.' },
     ],
     matters: [
       'Abuso y negligencia contra personas mayores en el hogar, en centros de vida asistida y en centros de enfermería, incluidas úlceras por presión, caídas y deshidratación',
       'Caídas en tiendas, consultorios médicos e instalaciones comunitarias',
       'Lesiones de peatones y de carritos de golf en El Toro Road, Moulton Parkway y Santa Maria Avenue, y choques de auto',
-      'Negligencia médica, incluidos diagnósticos omitidos y errores con medicamentos',
       'Reclamos por muerte injusta presentados por familiares',
     ],
     local: [
@@ -264,8 +255,8 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       { question: 'Mi madre o mi padre se cayó. ¿Alguien es responsable?', answer: 'Solo si alguien no usó un cuidado razonable, como un negocio que dejó un peligro en el piso o un centro de cuidado que no siguió un plan de prevención de caídas. En una comunidad privada, importa quién es dueño del lugar exacto. Tome fotografías, pida cualquier informe del incidente y reciba atención médica, ya que una caída puede causar una lesión en la cabeza que al principio no es evidente.' },
       { question: '¿Puedo llamar por mi madre o mi padre, y tenemos que ir a Tustin?', answer: 'Sí, un familiar puede hacer la primera llamada. La única oficina de Kyle Scott Law está en Tustin, pero la consulta gratuita puede ser por teléfono o por videollamada, en inglés o en español, y las reuniones en persona se organizan siempre que un caso las requiere. Los plazos pueden ser cortos, incluidos seis meses para un reclamo contra una entidad pública, por eso conviene llamar pronto.' },
     ],
-    guideSlugs: ['ulceras-por-presion-en-asilos-de-ancianos-california', 'accidentes-de-peatones-california', 'como-probar-un-reclamo-por-resbalon-y-caida-california', 'plazo-para-demandar-por-negligencia-medica-california'],
-    relatedPracticePaths: ['/es/abogado-de-abuso-de-personas-mayores-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-accidentes-de-peatones-condado-de-orange', '/es/abogado-de-negligencia-medica-condado-de-orange'],
+    guideSlugs: ['ulceras-por-presion-en-asilos-de-ancianos-california', 'accidentes-de-peatones-california', 'como-probar-un-reclamo-por-resbalon-y-caida-california', 'quien-puede-demandar-por-muerte-injusta-california'],
+    relatedPracticePaths: ['/es/abogado-de-abuso-de-personas-mayores-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange', '/es/abogado-de-accidentes-de-peatones-condado-de-orange', '/es/abogado-de-muerte-injusta-condado-de-orange'],
     featuredResults: ['Nursing-home neglect settlement', 'Transit bus crashes into minivan; man suffers cognitive problems', 'Pedestrian struck in a marked crosswalk'],
     sources: [
       ley('WIC', '15600', 'Ley de Protección Civil de Personas Mayores y Adultos Dependientes, Elder Abuse and Dependent Adult Civil Protection Act'),
@@ -274,7 +265,6 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       ley('WIC', '15610.57', 'definición de negligencia'),
       ley('WIC', '15657', 'remedios'),
       ley('WIC', '15657.2', 'negligencia profesional'),
-      fuentes.ccp340_5,
       fuentes.ins11580,
       fuentes.gov911_2,
       fuentes.gov915,
@@ -321,7 +311,7 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       'Caídas y lesiones por propiedades inseguras en tiendas, restaurantes, parques empresariales, complejos de apartamentos y propiedades de asociaciones de propietarios',
       'Lesiones en el skatepark, en campos deportivos y en senderos en propiedades de la ciudad y del Condado, y lesiones en escuelas',
       'Mordeduras de perro y ataques de animales en vecindarios y parques de Lake Forest',
-      'Lesiones cerebrales traumáticas y de columna después de cualquiera de los casos anteriores, y reclamos por negligencia médica',
+      'Lesiones cerebrales traumáticas y de columna después de cualquiera de los casos anteriores',
     ],
     local: [
       { label: 'Dónde se presentan los casos', items: ['Tribunal Superior del Condado de Orange, Central Justice Center — 700 Civic Center Drive West, Santa Ana, para casos civiles de todo el condado', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana, para los casos designados como complejos', 'Harbor Justice Center — 4601 Jamboree Road, Newport Beach, donde se presentan los casos penales y de tránsito de Lake Forest (por ejemplo, un cargo contra el otro conductor)'] },
@@ -398,7 +388,7 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       'Caídas y lesiones por propiedades inseguras en tiendas, restaurantes, oficinas, complejos de apartamentos y propiedades de asociaciones de propietarios',
       'Lesiones en propiedades de la ciudad, en escuelas y en Saddleback College, y en instalaciones recreativas privadas',
       'Mordeduras de perro y ataques de animales en vecindarios y parques de Mission Viejo',
-      'Reclamos por negligencia médica, y lesiones cerebrales traumáticas y de columna después de cualquiera de los casos anteriores',
+      'Lesiones cerebrales traumáticas y de columna después de cualquiera de los casos anteriores',
     ],
     local: [
       { label: 'Dónde se presentan los casos', items: ['Tribunal Superior del Condado de Orange, Central Justice Center — 700 Civic Center Drive West, Santa Ana, para casos civiles de todo el condado', 'Civil Complex Center — 751 West Santa Ana Boulevard, Santa Ana, para los casos designados como complejos', 'Harbor Justice Center — 4601 Jamboree Road, Newport Beach, donde se presentan los casos penales y de tránsito de Mission Viejo (por ejemplo, un cargo contra el otro conductor)'] },
@@ -738,7 +728,7 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
     title: 'Abogado de lesiones personales en el Inland Empire',
     eyebrow: 'Atendemos los condados de Riverside y San Bernardino desde la oficina de Tustin',
     description:
-      'Representación para personas lesionadas en los condados de Riverside y San Bernardino — en choques en la 91, la 15, la 10 y la 215, en caídas, en ataques de perros y en casos de negligencia médica. La única oficina del despacho está en Tustin, en el Condado de Orange.',
+      'Representación para personas lesionadas en los condados de Riverside y San Bernardino — en choques en la 91, la 15, la 10 y la 215, en caídas y en ataques de perros. La única oficina del despacho está en Tustin, en el Condado de Orange.',
     metaDescription:
       'Abogado de lesiones personales en el Inland Empire: choques en los condados de Riverside y San Bernardino, por teléfono o videollamada. Consulta gratuita.',
     placeType: 'Place',
@@ -753,14 +743,13 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       { title: 'La 91 entre los condados de Orange y Riverside', body: 'La 91 es una conexión principal entre el Condado de Orange y el Condado de Riverside. En el oeste del Condado de Riverside, el Área de Riverside de la Patrulla de Caminos de California patrulla la 91, la 15, la 215, la 60, la 71 y la 74. Un choque cerca de la línea del condado puede caer en cualquiera de los dos condados, lo que decide el tribunal, las agencias y cualquier reclamo gubernamental.' },
       { title: 'La 15, la 10 y el High Desert', body: 'En el Condado de San Bernardino, el Área de Rancho Cucamonga de la CHP cubre las autopistas y los caminos en áreas no incorporadas de Chino, Chino Hills, Fontana, Montclair, Ontario, Rancho Cucamonga y Upland. Al norte del Cajon Pass, el Área de Victorville atiende las comunidades del High Desert, incluidas Apple Valley, Victorville, Hesperia y Adelanto, y patrulla partes de la 15 y de la US 395. El Área de Morongo Basin cubre la Highway 62 hasta Joshua Tree. La policía de cada ciudad atiende los choques en las calles de su propia ciudad.' },
       { title: 'Mordeduras de perro en el Condado de Riverside y el High Desert', body: 'Quién toma un reporte de mordedura depende de la ciudad. Riverside County Animal Services atiende las áreas no incorporadas y las ciudades con contrato, incluidas Riverside, Hemet, Jurupa Valley, Eastvale e Indio; ciudades como Corona y Moreno Valley tienen sus propios servicios, y Animal Friends of the Valley atiende a Temecula, Murrieta, Menifee y Lake Elsinore. San Bernardino County Animal Care atiende todas las áreas no incorporadas, incluida Joshua Tree, además de Big Bear Lake, Highland y Yucaipa; Victorville tiene su propia Animal Services Division. El Código Civil, § 3342, hace responsable al dueño por las mordeduras sufridas en un lugar público o por alguien que estaba legalmente en una propiedad privada.' },
-      { title: 'Entidades públicas y hospitales administrados por el condado', body: 'Cuando un condado, una ciudad, un distrito escolar o un hospital administrado por el condado puede ser responsable, por lo general debe presentarse un reclamo gubernamental por escrito dentro de seis meses (Código de Gobierno, § 911.2). Para la atención en un hospital público, eso es además de los plazos aparte de negligencia médica (Código de Procedimiento Civil, § 340.5).' },
+      { title: 'Reclamos contra entidades públicas', body: 'Cuando un condado, una ciudad o un distrito escolar puede ser responsable, por lo general debe presentarse un reclamo gubernamental por escrito dentro de seis meses (Código de Gobierno, § 911.2). Se presenta ante la secretaría o la oficina de reclamos de la entidad que puede ser responsable, lo que depende de exactamente dónde ocurrió la lesión.' },
     ],
     matters: [
       'Choques de auto, camión y motocicleta en la 91, la 15, la 10, la 215 y las calles del Inland Empire, incluidos los conductores sin seguro',
       'Mordeduras de perro en ciudades del Condado de Riverside y en comunidades del High Desert como Victorville y Joshua Tree',
       'Lesiones de peatones y ciclistas en cruces peatonales y a lo largo de vías arteriales',
       'Caídas y otras lesiones por propiedades inseguras',
-      'Negligencia médica, incluidos diagnósticos omitidos y errores de tratamiento, y la atención en hospitales administrados por el condado',
     ],
     local: [
       { label: 'Dónde se presentan los casos (Condado de Riverside)', items: ['Tribunal Superior de Riverside (Riverside Superior Court) — los casos civiles se atienden en el Historic Courthouse, 4050 Main Street, Riverside, y en otros tribunales del condado, y el tribunal ha ajustado dónde se presentan los casos civiles de algunas comunidades, así que el despacho confirma la ubicación actual de cada caso'] },
@@ -773,18 +762,16 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       { question: '¿Dónde se presentaría un caso por lesiones del Inland Empire?', answer: 'Por lo general en el tribunal superior del condado donde ocurrió la lesión o donde vive un demandado (Código de Procedimiento Civil, sección 395). El Riverside Superior Court atiende casos civiles en el Historic Courthouse en Riverside y en otros tribunales del condado. El San Bernardino Superior Court atiende casos civiles en el San Bernardino Justice Center y en los tribunales de Rancho Cucamonga y Victorville, según la comunidad.' },
       { question: 'Un perro me mordió en Victorville, Joshua Tree o en otra parte del High Desert. ¿Quién toma el reporte?', answer: 'Depende de la comunidad. Victorville tiene su propia Animal Services Division, y Joshua Tree y otras áreas no incorporadas son atendidas por San Bernardino County Animal Care. Comuníquese con la agencia de la comunidad donde ocurrió la mordedura. Reciba atención médica, fotografíe las heridas y obtenga el nombre, la dirección y el seguro del dueño. Conforme al Código Civil, sección 3342, el dueño por lo general es responsable aunque el perro nunca hubiera mordido a nadie antes.' },
       { question: 'Me lesioné en un choque en la 91 cerca de la línea del condado. ¿Qué condado lo atiende?', answer: 'El condado donde ocurrió el choque, que en la 91 puede ser Orange o Riverside. Eso decide cuál tribunal superior corresponde, qué agencias tienen los informes y a dónde va cualquier reclamo gubernamental. El Área de Riverside de la Patrulla de Caminos de California patrulla la 91 en el oeste del Condado de Riverside. Guarde el número de informe que le dieron en el lugar.' },
-      { question: 'Me atendieron en un hospital del condado. ¿Eso cambia mi reclamo?', answer: 'Puede cambiarlo. Un condado es una entidad pública, así que un reclamo que involucra la atención en un hospital administrado por el condado por lo general requiere un reclamo gubernamental por escrito dentro de seis meses (Código de Gobierno, sección 911.2), además de los plazos de negligencia médica. Pregunte por los plazos desde temprano.' },
       { question: '¿Tengo que ir a Tustin?', answer: 'No. Kyle Scott Law no tiene oficina en el Condado de Riverside ni en el de San Bernardino; representa a sus clientes del Inland Empire desde 17671 Irvine Blvd. en Tustin. La primera consulta es gratuita y puede ser por teléfono o por videollamada, en inglés o en español, y las reuniones en persona se organizan cuando un caso las requiere.' },
     ],
-    guideSlugs: ['plazo-para-demandar-por-lesiones-personales-california', 'plazo-para-demandar-por-negligencia-medica-california', 'que-hacer-despues-de-una-mordedura-de-perro-condado-de-orange', 'reclamo-gubernamental-por-lesiones-condado-de-orange'],
-    relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-accidentes-de-peatones-condado-de-orange', '/es/abogado-de-negligencia-medica-condado-de-orange'],
+    guideSlugs: ['plazo-para-demandar-por-lesiones-personales-california', 'accidente-con-un-conductor-sin-seguro-california', 'que-hacer-despues-de-una-mordedura-de-perro-condado-de-orange', 'reclamo-gubernamental-por-lesiones-condado-de-orange'],
+    relatedPracticePaths: ['/es/abogado-de-accidentes-de-auto-condado-de-orange', '/es/abogado-de-mordeduras-de-perro-condado-de-orange', '/es/abogado-de-accidentes-de-peatones-condado-de-orange', '/es/abogado-de-resbalones-y-caidas-condado-de-orange'],
     featuredResults: ['Mother and her children hurt in a Fontana intersection crash', 'Pedestrian struck in a marked crosswalk', 'Child suffers dog bites to abdomen'],
     sources: [
       fuentes.ccp395,
       fuentes.civ3342,
       fuentes.gov911_2,
       fuentes.gov811_2,
-      fuentes.ccp340_5,
       { label: 'Patrulla de Caminos de California — Área de Riverside', url: 'https://www.chp.ca.gov/find-an-office/inland-division/840-riverside/' },
       { label: 'Patrulla de Caminos de California — Área de Rancho Cucamonga', url: 'https://www.chp.ca.gov/find-an-office/inland-division/855-rancho-cucamonga/' },
       { label: 'Patrulla de Caminos de California — Área de San Bernardino', url: 'https://www.chp.ca.gov/find-an-office/inland-division/860-san-bernardino/' },
@@ -814,7 +801,7 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
     containedIn: 'California',
     introTitle: 'Una oficina en Tustin, y resultados de cuatro tribunales de condado.',
     intro: [
-      'Kyle Scott Law representa a personas lesionadas en los condados de Orange, Los Ángeles, Riverside y San Bernardino, y maneja todos los tipos de casos de lesiones personales que aparecen en esta página, desde choques de auto y mordeduras de perro hasta negligencia médica y muerte injusta. La única oficina del despacho está en 17671 Irvine Blvd., Suite 210, en Tustin. No tiene oficina en el Condado de Los Ángeles, en el de Riverside ni en el de San Bernardino, así que si usted se lesionó en otro lugar puede empezar con una consulta gratuita por teléfono o por videollamada, en inglés o en español.',
+      'Kyle Scott Law representa a personas lesionadas en los condados de Orange, Los Ángeles, Riverside y San Bernardino, y maneja todos los tipos de casos de lesiones personales que aparecen en esta página, desde choques de auto y mordeduras de perro hasta abuso de personas mayores y muerte injusta. La única oficina del despacho está en 17671 Irvine Blvd., Suite 210, en Tustin. No tiene oficina en el Condado de Los Ángeles, en el de Riverside ni en el de San Bernardino, así que si usted se lesionó en otro lugar puede empezar con una consulta gratuita por teléfono o por videollamada, en inglés o en español.',
       'Los veredictos y los acuerdos publicados del despacho incluyen casos de los tribunales superiores de los condados de Orange, Los Ángeles, Riverside y San Bernardino. Cada condado tiene sus propios tribunales, reglas de presentación, agencias de policía y departamentos de control de animales. Esta página explica qué cambia cuando su lesión ocurrió fuera del Condado de Orange, y qué sigue igual.',
     ],
     keyPoints: [
@@ -827,7 +814,7 @@ export const spanishSouthRegionalServiceAreas: SpanishServiceAreaData[] = [
       'Choques de vehículos: auto, camión, motocicleta, viajes compartidos, peatones, bicicletas, autobuses, atropello y fuga, y choques con conductores ebrios',
       'Propiedades y lugares inseguros: caídas, responsabilidad de propiedades, mordeduras de perro, responsabilidad escolar, lesiones deportivas y recreativas, y reclamos contra entidades gubernamentales',
       'Lesiones graves: lesiones cerebrales traumáticas, de médula espinal, catastróficas y por quemaduras, y muerte injusta',
-      'Abuso, negligencia y negligencia profesional: negligencia médica, abuso y negligencia contra personas mayores, acoso y abuso sexual, abuso sexual infantil y mala fe de seguros',
+      'Abuso, negligencia y mala fe: abuso y negligencia contra personas mayores, acoso y abuso sexual, abuso sexual infantil y mala fe de seguros',
     ],
     local: [
       { label: 'Dónde se presentan los casos', items: ['Condado de Orange — el Tribunal Superior del Condado de Orange atiende los casos civiles ilimitados en el Central Justice Center, 700 Civic Center Drive West, Santa Ana', 'Condado de Los Ángeles — todo caso civil nuevo en el Tribunal Superior de Los Ángeles debe incluir una Declaración de ubicación (Statement of Location, formulario LASC CIV 109) que indique la razón del tribunal elegido; en los casos de lesiones la razón que se indica por lo general es el lugar donde ocurrió la lesión', 'Condado de Riverside — el Riverside Superior Court atiende casos civiles en el Historic Courthouse, 4050 Main Street, Riverside, y en otros tribunales del condado, y el tribunal ha ajustado dónde se presentan los casos civiles de algunas comunidades', 'Condado de San Bernardino — el San Bernardino Superior Court acepta casos civiles limitados e ilimitados en el San Bernardino Justice Center, el Rancho Cucamonga Courthouse y el Victorville Courthouse, cada uno al servicio de comunidades determinadas'] },
