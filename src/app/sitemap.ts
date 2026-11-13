@@ -29,6 +29,10 @@ const spanishServiceAreasDate = '2026-10-10';
 // Content round 4: the new city, regional, and city + case pages and the areas index, approved by Kyle J. Scott
 // (Spanish by the Spanish-reading reviewer) and published 2026-10-19.
 const roundFourDate = '2026-10-19';
+// Seven city car accident pages (Santa Ana, Anaheim, Huntington Beach, Garden Grove, Costa Mesa, Fullerton,
+// Yorba Linda), EN and ES: the day they were published (docs/website-content-compliance.md).
+const carAccidentCityPagesDate = '2026-11-12';
+const carAccidentCityPageKeys = new Set(['anaheim', 'costa-mesa', 'fullerton', 'garden-grove', 'huntington-beach', 'santa-ana', 'yorba-linda'].map((city) => `${city}-car-accidents`));
 const roundFourAreaPaths = new Set([...northWestCountyServiceAreas, ...southCountyServiceAreas, ...regionalServiceAreas, ...spanishRoundFourServiceAreas].map((area) => area.path));
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -163,7 +167,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // City + case pages pair with their Spanish versions through localizedRoutes, but take their entries here.
   const cityPracticeEntries = [...cityPracticePages, ...spanishCityPracticePages, areasWeServe, areasWeServeEs].map((page) => ({
     url: `${SITE_URL}${page.path}`,
-    lastModified: roundFourDate,
+    lastModified: 'key' in page && carAccidentCityPageKeys.has(page.key) ? carAccidentCityPagesDate : roundFourDate,
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   }));
