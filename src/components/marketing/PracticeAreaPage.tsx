@@ -4,14 +4,17 @@ import { HeroCallActions } from '@/components/marketing/CallActions';
 import { HowItWorks } from '@/components/marketing/HowItWorks';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { PageSources } from '@/components/marketing/PageSources';
+import { RelatedResultCard } from '@/components/marketing/RelatedResultCard';
 import { practiceIcons } from '@/components/marketing/practice-icons';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
-import { flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
+import { cityPracticePages } from '@/lib/marketing/data/cityPracticePages';
+import { flagshipResults, historicalResults } from '@/lib/marketing/data/results';
 import { legalGuidesForPractice } from '@/lib/marketing/data/legalGuides';
 import { spanishLegalGuidesForPractice } from '@/lib/marketing/data/spanishLegalGuides';
 import { practiceAreas, type PracticeAreaData } from '@/lib/marketing/data/practiceAreas';
+import { spanishCityPracticePages } from '@/lib/marketing/data/spanishCityPracticePages';
 import { spanishPracticeAreas } from '@/lib/marketing/data/spanishPracticeAreas';
 import type { SiteLocale } from '@/lib/marketing/i18n';
 import { noRecoveryTerms } from '@/lib/marketing/no-recovery-terms';
@@ -38,6 +41,14 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
   const currentIndex = localizedPractices.findIndex((item) => item.key === practiceKey);
   const related = (area.parentKey ? [0, 1, 2] : [1, 2, 3]).map((offset) => localizedPractices[(currentIndex + offset) % localizedPractices.length]);
   const guideLinks = spanish ? spanishLegalGuidesForPractice(practiceKey) : legalGuidesForPractice(practiceKey);
+  // The practice's city pages (Irvine car accidents, ...): a county-wide page links them all, a city page
+  // links the other cities and its county-wide page (docs/public-site-rendering.md).
+  const cityPages = (spanish ? spanishCityPracticePages : cityPracticePages).filter((page) => page.parentKey === practiceKey && page.path !== area.path);
+  const parentPractice = area.parentKey ? localizedPractices.find((item) => item.key === area.parentKey) : undefined;
+  const practiceNoun = practiceNounPhrase(area.shortTitle);
+  const cityPagesTitle = spanish
+    ? `Abogados de ${area.shortTitle.toLowerCase()} ${area.parentKey ? 'en todo el Condado de Orange' : 'por ciudad'}.`
+    : `${practiceNoun.charAt(0).toUpperCase()}${practiceNoun.slice(1)} lawyers ${area.parentKey ? 'across Orange County' : 'by city'}.`;
   const place = area.city ? `${area.city}, California` : spanish ? 'Condado de Orange y California' : 'Orange County and California';
   const structuredData = [
     {
@@ -139,13 +150,13 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           {results.length ? <section className="practice-related-results" id="results" aria-labelledby="practice-results-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Resultados publicados' : 'Published case results'}</p><h2 id="practice-results-title">{spanish ? 'Recuperaciones relacionadas.' : 'Related recoveries.'}</h2></div><a href={resultsPath}>{spanish ? 'Ver todos los resultados' : 'View all results'} <ArrowRight aria-hidden="true" /></a></div>
             <div className={`practice-results-grid results-count-${results.length}`}>
-              {results.map((result) => <article key={result.title}><span>{resultOutcomeLabel(result, spanish ? 'Recuperación' : 'Recovery')}</span><strong>{result.amount}</strong><h3>{result.title}</h3><p>{result.detail}</p></article>)}
+              {results.map((result) => <RelatedResultCard key={result.title} result={result} locale={locale} />)}
             </div>
             <p className="results-disclaimer">{spanish ? 'Los resultados anteriores no garantizan un resultado similar.' : 'Prior results do not guarantee a similar outcome.'}</p>
           </section> : null}
 
           {guideLinks.length ? <section className="practice-guide-links" id="guides" aria-labelledby="practice-guide-title">
-            <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Guías legales' : 'Legal guides'}</p><h2 id="practice-guide-title">{spanish ? `Respuestas a preguntas comunes sobre ${area.shortTitle.toLowerCase()}.` : `Answers to common ${area.shortTitle.toLowerCase()} questions.`}</h2></div><Link href={spanish ? '/es/guias' : '/guides'}>{spanish ? 'Ver todas las guías' : 'View all guides'} <ArrowRight aria-hidden="true" /></Link></div>
+            <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Guías legales' : 'Legal guides'}</p><h2 id="practice-guide-title">{spanish ? `Respuestas a preguntas comunes sobre ${area.shortTitle.toLowerCase()}.` : `Answers to common ${practiceNounPhrase(area.shortTitle)} questions.`}</h2></div><Link href={spanish ? '/es/guias' : '/guides'}>{spanish ? 'Ver todas las guías' : 'View all guides'} <ArrowRight aria-hidden="true" /></Link></div>
             <div className="practice-guide-grid">{guideLinks.map((guide) => <Link href={guide.path} key={guide.slug}><span>{guide.category}</span><strong>{guide.title}</strong><small>{guide.readingTime}</small><ArrowRight aria-hidden="true" /></Link>)}</div>
           </section> : null}
 
@@ -162,6 +173,10 @@ export function PracticeAreaPage({ area, locale = 'en' }: { area: PracticeAreaDa
           <section className="practice-more" aria-labelledby="more-practices-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{spanish ? 'Áreas de práctica relacionadas' : 'Related practice areas'}</p><h2 id="more-practices-title">{spanish ? 'Otros casos que maneja Kyle Scott Law.' : 'Other cases Kyle Scott Law handles.'}</h2></div><a href={practicesPath}>{spanish ? 'Ver todas las áreas de práctica' : 'View every practice area'} <ArrowRight aria-hidden="true" /></a></div>
             <div className="practice-more-grid">{related.map((item) => { const RelatedIcon = iconMap[item.icon]; return <a href={item.path} key={item.key}><RelatedIcon aria-hidden="true" /><span><strong>{item.shortTitle}</strong><small>{item.description}</small></span><ArrowRight aria-hidden="true" /></a>; })}</div>
+            {cityPages.length || parentPractice ? <>
+              <h3 className="practice-every-case-title">{cityPagesTitle}</h3>
+              <ul className="practice-every-case">{cityPages.map((page) => <li key={page.path}><Link href={page.path}>{page.title}</Link></li>)}{parentPractice ? <li><Link href={parentPractice.path}>{parentPractice.title}</Link></li> : null}</ul>
+            </> : null}
           </section>
         </article>
       </div>

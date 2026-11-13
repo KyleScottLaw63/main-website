@@ -625,6 +625,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .practice-results-grid h3 { margin: 20px 0 0; color: var(--ink); font-family: var(--font-serif); font-size: 25px; font-weight: 500; letter-spacing: -.025em; line-height: 1.1; }
 .practice-results-grid p { margin: 13px 0 0; color: var(--ink-soft); font-size: 15px; line-height: 1.5; }
 .practice-related-results .results-disclaimer { margin-top: 18px; }
+/* A card with a case story links it (RelatedResultCard): the whole card is the link target. */
+.practice-results-grid article.has-story { position: relative; }
+.practice-results-grid article.has-story:hover .result-story-link { color: var(--navy); text-decoration: underline; text-underline-offset: 4px; }
+.practice-results-grid article.has-story:has(.result-story-link:focus-visible) { outline: 3px solid var(--blue); outline-offset: 3px; }
+.practice-results-grid article > .result-story-cue { margin-top: 16px; }
 .practice-faq-list { margin-top: 32px; border-top: 1px solid rgba(13,67,143,.15); }
 .practice-faq-list details { border-bottom: 1px solid rgba(13,67,143,.15); }
 .practice-faq-list summary { display: flex; min-height: 82px; cursor: pointer; list-style: none; align-items: center; justify-content: space-between; gap: 25px; color: var(--ink); font-size: 19px; font-weight: 720; }

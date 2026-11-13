@@ -4,13 +4,14 @@ import { HeroCallActions } from '@/components/marketing/CallActions';
 import { HowItWorks } from '@/components/marketing/HowItWorks';
 import { ChatWidget } from '@/components/marketing/ChatWidget';
 import { PageSources } from '@/components/marketing/PageSources';
+import { RelatedResultCard } from '@/components/marketing/RelatedResultCard';
 import { SiteFooter } from '@/components/marketing/SiteFooter';
 import { SiteHeader } from '@/components/marketing/SiteHeader';
 import { StructuredData } from '@/components/marketing/StructuredData';
 import { cityPracticePages } from '@/lib/marketing/data/cityPracticePages';
 import { legalGuides } from '@/lib/marketing/data/legalGuides';
 import { practiceAreas } from '@/lib/marketing/data/practiceAreas';
-import { flagshipResults, historicalResults, resultOutcomeLabel } from '@/lib/marketing/data/results';
+import { flagshipResults, historicalResults } from '@/lib/marketing/data/results';
 import type { ServiceAreaData } from '@/lib/marketing/data/serviceAreas';
 import { spanishCityPracticePages } from '@/lib/marketing/data/spanishCityPracticePages';
 import { spanishLegalGuides } from '@/lib/marketing/data/spanishLegalGuides';
@@ -59,7 +60,6 @@ const copy = {
     resultsTitle: 'Related recoveries.',
     allResults: 'View all results',
     resultsPath: '/results',
-    recovery: 'Recovery',
     disclaimer: 'Prior results do not guarantee a similar outcome.',
     everyCase: (city: string) => `Every type of case we handle for ${city} clients.`,
     sources: 'Sources',
@@ -108,7 +108,6 @@ const copy = {
     resultsTitle: 'Recuperaciones relacionadas.',
     allResults: 'Ver todos los resultados',
     resultsPath: '/es/resultados',
-    recovery: 'Recuperación',
     disclaimer: 'Los resultados anteriores no garantizan un resultado similar.',
     everyCase: (city: string) => `Todos los tipos de casos que manejamos para clientes de ${city}.`,
     sources: 'Fuentes',
@@ -241,7 +240,7 @@ export function ServiceAreaPage({ area, locale = 'en' }: { area: ServiceAreaData
           {results.length ? <section className="practice-related-results" id="results" aria-labelledby="area-results-title">
             <div className="practice-results-heading"><div><p className="eyebrow">{text.results}</p><h2 id="area-results-title">{text.resultsTitle}</h2></div><Link href={text.resultsPath}>{text.allResults} <ArrowRight aria-hidden="true" /></Link></div>
             <div className={`practice-results-grid results-count-${results.length}`}>
-              {results.map((result) => <article key={result.title}><span>{resultOutcomeLabel(result, text.recovery)}</span><strong>{result.amount}</strong><h3>{result.title}</h3><p>{result.detail}</p></article>)}
+              {results.map((result) => <RelatedResultCard key={result.title} result={result} locale={locale} />)}
             </div>
             <p className="results-disclaimer">{text.disclaimer}</p>
           </section> : null}
